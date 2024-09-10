@@ -4,43 +4,64 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 
 def load_data(csv_file='datasets.csv'):
-    # Load the dataset from CSV
+    """
+    Load the dataset from CSV and use the 'generated_summary' column for FAISS indexing.
+    Ensure that the LLM-generated summaries are already present in the 'datasets.csv'.
+    """
+    # Load the dataset
     df = pd.read_csv(csv_file)
-    metadata = df[['title', 'summary', 'links']].apply(lambda row: ' '.join(row.values.astype(str)), axis=1)
-    content = df['content']
-    return df, metadata, content
+    
+    # Use the 'generated_summary' column for FAISS indexing
+    if 'generated_summary' not in df.columns:
+        raise ValueError("The 'generated_summary' column is missing. Run the LLM summary generation first.")
+    
+    # Use generated summaries for FAISS indexing
+    metadata = df['generated_summary'].tolist()
+    
+    return df, metadata
 
-def create_faiss_index(metadata, content):
+def create_faiss_index(metadata):
+    """
+    Create a FAISS index using the embeddings of the LLM-generated summaries.
+    """
+    # Load the pre-trained model
     model = SentenceTransformer('all-MiniLM-L6-v2')
     
-    # Encode metadata and content
-    metadata_embeddings = model.encode(metadata.tolist())
-    content_embeddings = model.encode(content.tolist())
+    # Encode the metadata (summaries) into embeddings
+    metadata_embeddings = model.encode(metadata)
     
-    # Create FAISS indices
+    # Create a FAISS index for the embeddings
     dimension = metadata_embeddings.shape[1]
     metadata_index = faiss.IndexFlatL2(dimension)
-    content_index = faiss.IndexFlatL2(dimension)
     
+    # Add embeddings to the FAISS index
     metadata_index.add(np.array(metadata_embeddings))
-    content_index.add(np.array(content_embeddings))
     
-    return model, metadata_index, content_index, content_embeddings
+    return model, metadata_index
 
-def search_faiss(query, model, metadata_index, content_index, content_embeddings, k=20):
+def search_faiss(query, model, metadata_index, k=20):
+    """
+    Perform a search query using the FAISS index based on the LLM-generated summaries.
+    """
+    # Encode the query into an embedding
     query_embedding = model.encode([query])
     
-    # Search in metadata index
+    # Perform the FAISS search
     metadata_distances, metadata_indices = metadata_index.search(np.array(query_embedding), k)
     
-    # Retrieve relevant content indices based on metadata search
-    if len(metadata_indices[0]) > 0:
-        relevant_indices = metadata_indices[0]
-        relevant_content_embeddings = np.array([content_embeddings[idx] for idx in relevant_indices])
-        
-        # Search in content index using relevant content embeddings
-        content_distances, content_indices = content_index.search(relevant_content_embeddings, k)
-        
-        return metadata_indices[0], metadata_distances[0], content_indices, content_distances
-    else:
-        return metadata_indices[0], metadata_distances[0], [], []
+    return metadata_indices[0], metadata_distances[0]
+
+if __name__ == "__main__":
+    # Load the data and LLM-generated summaries
+    df, metadata = load_data('datasets.csv')
+    
+    # Create the FAISS index using the generated summaries
+    model, metadata_index = create_faiss_index(metadata)
+    
+    # Perform a search query
+    query = "Your search query here"
+    indices, distances = search_faiss(query, model, metadata_index)
+    
+    # Display the search results
+    results = df.iloc[indices]
+    print(results[['title', 'generated_summary', 'links']])

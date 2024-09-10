@@ -1,88 +1,98 @@
 import requests
 import json
-import faiss
-import numpy as np
-import pandas as pd
-from sentence_transformers import SentenceTransformer
 
 class LLMChatbot:
-    def __init__(self, model_name='mistral', faiss_index_file='datasets.csv'):
+    def __init__(self, model_name='mistral'):
         self.model_name = model_name
         self.api_url = 'http://localhost:11434/api/generate'  # Local API endpoint for Ollama
-        
-        # Initialize FAISS and load data
-        self.model, self.index, self.dataframe = self.initialize_faiss(faiss_index_file)
 
-    def initialize_faiss(self, csv_file):
-        # Load the dataset from CSV
-        df = pd.read_csv(csv_file)
-        documents = df['title'] + ' ' + df['summary'] + ' ' + df['content'].fillna('')
+    def interpret_query(self, query):
+        """
+        Use the LLM to classify the query into 'single', 'multiple', or 'broad'.
         
-        # Initialize the Sentence Transformer model
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-        
-        # Encode documents
-        embeddings = model.encode(documents.tolist())
-        
-        # Create a FAISS index
-        dimension = embeddings.shape[1]
-        index = faiss.IndexFlatL2(dimension)
-        index.add(np.array(embeddings))
-        
-        return model, index, df
-
-    def search_faiss(self, query, k=10):
-        # Encode the query
-        query_embedding = self.model.encode([query])
-        
-        # Perform the search
-        distances, indices = self.index.search(np.array(query_embedding), k)
-        
-        # Retrieve the most relevant documents
-        relevant_docs = self.dataframe.iloc[indices[0]]
-        
-        # Combine titles, summaries, and content from the top k results
-        combined_results = " ".join(relevant_docs['title'] + " " + relevant_docs['summary'] + " " + relevant_docs['content'])
-        
-        return combined_results
-
-    def generate_response(self, context, query, k=5):
-        # Perform FAISS search to retrieve relevant dataset content
-        relevant_content = self.search_faiss(query, k=k)
-        
-        # Create a structured prompt by combining FAISS results, context, and the query
+        Args:
+            query (str): The user's query.
+            
+        Returns:
+            str: 'single', 'multiple', or 'broad' based on the query.
+        """
         prompt = (
-            f"Below are some relevant datasets based on your query:\n\n{relevant_content}\n\n"
-            f"Context: {context}\n\n"
-            f"Question: {query}\n\n"
-            "Based on the above datasets and context, provide a detailed response:"
+            f"The user query is: '{query}'.\n\n"
+            "Please classify this query as one of the following:\n"
+            "- 'single' if it asks for a single dataset,\n"
+            "- 'multiple' if it asks for multiple datasets,\n"
+            "- 'broad' if it asks for a general or aggregate response.\n\n"
+            "Return only one of these three words."
         )
         
-        # Setup the payload for the API request to the LLM
+        # Send the query to the LLM for interpretation
         payload = {
             'model': self.model_name,
             'prompt': prompt
         }
+
+        try:
+            response = requests.post(self.api_url, json=payload, stream=True)
+            response.raise_for_status()
+
+            # Process the streamed response
+            final_answer = ""
+            for line in response.iter_lines(decode_unicode=True):
+                if line:  # Ignore empty lines
+                    try:
+                        chunk = json.loads(line)
+                        if 'response' in chunk:
+                            final_answer += chunk['response']
+                    except json.JSONDecodeError:
+                        print(f"Failed to decode chunk: {line}")
+
+            return final_answer.strip()
+
+        except requests.exceptions.RequestException as e:
+            print(f"Request failed: {e}")
+            return "broad"  # Default to 'broad' if there's an issue
+
+    def generate_response(self, context, query):
+        """
+        Use the LLM to generate a natural language response to the query based on the context.
         
-        # Make the API request to Ollama's local endpoint
-        response = requests.post(self.api_url, json=payload, stream=True)
-        
-        if response.status_code == 200:
-            try:
-                # Collect all the lines and combine the responses
-                combined_response = []
-                for line in response.iter_lines(decode_unicode=True):
-                    if line.strip():  # Ignore empty lines
-                        result = json.loads(line)
-                        if 'response' in result:
-                            combined_response.append(result['response'])
-                
-                # Combine all the responses into one string
-                return ''.join(combined_response)
+        Args:
+            context (str): Contextual data (metadata and dataset results).
+            query (str): The user's query.
             
-            except ValueError:
-                return "Error decoding JSON response."
+        Returns:
+            str: Generated natural language response.
+        """
+        prompt = (
+            f"Context:\n{context}\n\n"
+            f"Question: {query}\n\n"
+            "Please generate a detailed and accurate response based on the provided context."
+        )
         
-        else:
-            print(f"Error: {response.status_code} - {response.text}")
-            return "Failed to generate response."
+        # Send the query to the LLM
+        payload = {
+            'model': self.model_name,
+            'prompt': prompt
+        }
+
+        try:
+            # Send a POST request with stream=True to handle streaming
+            response = requests.post(self.api_url, json=payload, stream=True)
+            response.raise_for_status()
+
+            # Process the streamed chunks of JSON
+            final_answer = ""
+            for line in response.iter_lines(decode_unicode=True):
+                if line:  # Skip empty lines
+                    try:
+                        chunk = json.loads(line)
+                        if 'response' in chunk:
+                            final_answer += chunk['response']
+                    except json.JSONDecodeError:
+                        print(f"Failed to decode chunk: {line}")
+            
+            return final_answer.strip()
+
+        except requests.exceptions.RequestException as e:
+            print(f"Request failed: {e}")
+            return "Error: Failed to retrieve a response from the LLM."

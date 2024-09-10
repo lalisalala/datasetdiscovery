@@ -40,6 +40,33 @@ def generate_summary_with_llm(metadata_row, llm_chatbot):
     new_summary = llm_chatbot.generate_response(metadata_content, prompt)
     return new_summary
 
+def directly_use_llm_for_answer(data_df, query, chatbot):
+    """
+    Use the LLM to directly analyze data from data.csv and answer the query.
+    
+    Args:
+        data_df (pd.DataFrame): The dataframe containing the downloaded data.
+        query (str): The user query to answer.
+        chatbot (LLMChatbot): An instance of the LLMChatbot class.
+    
+    Returns:
+        str: The LLM's answer based on the data and the query.
+    """
+    # Convert the dataframe to a string to send to the LLM (this can be refined)
+    # Limit the amount of data sent to avoid overwhelming the LLM
+    data_string = data_df.head(100).to_string()  # Take only the first 100 rows for now
+
+    # Construct the LLM prompt
+    prompt = (
+        f"The user query is: '{query}'.\n\n"
+        f"Here is a sample of the dataset (first 100 rows):\n{data_string}\n\n"
+        "Based on the dataset, please provide a detailed and accurate answer to the user's query."
+    )
+    
+    # Send the prompt to the LLM and get the answer
+    final_answer = chatbot.generate_response(context=data_string, query=query)
+    return final_answer
+
 def generate_summaries_for_datasets(df, llm_chatbot):
     """
     Generate new summaries for all datasets using the LLM and return a dataframe
@@ -55,7 +82,7 @@ def generate_summaries_for_datasets(df, llm_chatbot):
     df['metadatasummary'] = df.apply(lambda row: generate_summary_with_llm(row, llm_chatbot), axis=1)
     
     # Keep only the metadata summary and links in the final dataset
-    return df[['metadatasummary', 'links']]
+    return df[['title', 'metadatasummary', 'links']]
 
 def identify_text_columns(df):
     """
@@ -74,94 +101,220 @@ def identify_text_columns(df):
             text_columns.append(col)
     return text_columns
 
+def decide_faiss_or_llm(query, data_df, chatbot):
+    """
+    Use the LLM to decide whether the second FAISS search is necessary or whether 
+    the LLM can directly answer the query using data from the dataset.
+    
+    Args:
+        query (str): The user query.
+        data_df (pd.DataFrame): The dataframe containing the downloaded data.
+        chatbot (LLMChatbot): An instance of the LLMChatbot class.
+    
+    Returns:
+        dict: A dictionary indicating whether FAISS is needed, and if so, how many results (k).
+              Example: {'use_faiss': True, 'k': 5}
+    """
+    # Sample data from the dataset to feed to the LLM for better decision-making
+    sample_data = data_df.head(100).to_string()
+
+    # Construct a prompt for the LLM to decide the next steps
+    prompt = (
+        f"The user query is: '{query}'.\n\n"
+        f"Here is a sample of the dataset (first 100 rows):\n{sample_data}\n\n"
+        "Based on this query and the dataset, please answer the following:\n"
+        "- Should we perform a deeper search using FAISS (yes or no)?\n"
+        "- If FAISS is needed, how many top results (k) should we return?\n"
+        "Return the response in the following format: 'FAISS: <yes/no>, k: <number>'."
+    )
+
+    # Send the prompt to the LLM
+    decision = chatbot.generate_response(context=sample_data, query=prompt)
+
+    # Parse the LLM's decision
+    if 'FAISS: yes' in decision:
+        # Extract 'k' value (number of results for FAISS search)
+        try:
+            k_value = int(decision.split('k: ')[1].strip())
+            return {'use_faiss': True, 'k': max(1, k_value)}
+        except (ValueError, IndexError):
+            return {'use_faiss': True, 'k': 2}  # Default to 2 if parsing fails
+    else:
+        return {'use_faiss': False, 'k': 0}
+
+
+def decide_faiss_or_llm_for_metadata(query, df_with_summaries, chatbot):
+    """
+    Use the LLM to decide whether a FAISS search is necessary for the metadata or if the LLM 
+    can directly parse through datasets.csv and select relevant datasets.
+
+    Args:
+        query (str): The user's query.
+        df_with_summaries (pd.DataFrame): The dataframe containing metadata summaries and links.
+        chatbot (LLMChatbot): An instance of the LLMChatbot class.
+
+    Returns:
+        dict: A dictionary indicating whether FAISS is needed, and if so, how many results (k).
+              Example: {'use_faiss': True, 'k': 5} or {'use_faiss': False}.
+    """
+    # Convert a portion of the metadata to string to provide context to the LLM
+    sample_metadata = df_with_summaries.head(5).to_string()  # Limit to first 5 rows for context
+
+    # Construct a prompt for the LLM to decide whether to use FAISS or not
+    prompt = (
+        f"The user query is: '{query}'.\n\n"
+        f"Here is a sample of the metadata:\n{sample_metadata}\n\n"
+        "Should we perform a FAISS search to find relevant datasets, or can the datasets be selected "
+        "directly based on the metadata? Please respond with 'FAISS: yes' or 'FAISS: no'. If FAISS is needed, "
+        "also provide the number of top results (k) in this format: 'k: <number>'."
+    )
+
+    # Send the prompt to the LLM
+    decision = chatbot.generate_response(context=sample_metadata, query=prompt)
+
+    # Parse the LLM's decision
+    if 'FAISS: yes' in decision:
+        # Extract 'k' value (number of results for FAISS search)
+        try:
+            k_value = int(decision.split('k: ')[1].strip())
+            return {'use_faiss': True, 'k': max(1, k_value)}
+        except (ValueError, IndexError):
+            return {'use_faiss': True, 'k': 5}  # Default to 5 if parsing fails
+    else:
+        return {'use_faiss': False}
+
+def use_llm_for_metadata_selection(df_with_summaries, query, chatbot):
+    """
+    Use the LLM to directly parse through the metadata summaries in datasets.csv and select the relevant datasets.
+
+    Args:
+        df_with_summaries (pd.DataFrame): Dataframe containing metadata summaries and links.
+        query (str): The user query to determine relevant datasets.
+        chatbot (LLMChatbot): An instance of the LLMChatbot class.
+
+    Returns:
+        pd.DataFrame: A dataframe containing only the relevant datasets based on the LLM's decision.
+    """
+    relevant_indices = []
+
+    # Iterate through the metadata summaries and use the LLM to determine relevance
+    for idx, row in df_with_summaries.iterrows():
+        metadata_content = f"Title: {row['title']}\nSummary: {row['metadatasummary']}\nLink: {row['links']}"
+        prompt = (
+            f"The user query is: '{query}'.\n\n"
+            f"Below is a dataset metadata entry:\n\n{metadata_content}\n\n"
+            "Is this dataset relevant to the query? Answer with 'yes' or 'no'."
+        )
+
+        # Ask the LLM if the dataset is relevant
+        llm_response = chatbot.generate_response(context=metadata_content, query=prompt)
+        
+        if 'yes' in llm_response.lower():
+            relevant_indices.append(idx)
+
+    # Filter the dataframe to include only relevant datasets
+    relevant_datasets = df_with_summaries.iloc[relevant_indices]
+    return relevant_datasets
+
 def main():
+    # Load the user query
+    query = "How many audits were planned in 2016-2017?"
+
+    # Run web scraping if the CSV file is outdated or missing
     csv_file = 'datasets.csv'
     webscraping_file = 'webscraping.py'
-    
-    # Run web scraping if the CSV file is outdated or missing
     if not os.path.isfile(csv_file) or os.path.getmtime(csv_file) < os.path.getmtime(webscraping_file):
         run_webscraping()
 
     # Load the dataset metadata from the CSV file
     df = pd.read_csv(csv_file)
-    
-    # Initialize the LLM chatbot for generating summaries
+
+    # Initialize the LLM chatbot for generating summaries and relevance checking
     chatbot = LLMChatbot(model_name='mistral')
 
-    # Generate summaries using the LLM for all datasets
+    # Generate summaries using the LLM for all datasets (if not already done)
     print("Generating summaries using the LLM...")
     df_with_summaries = generate_summaries_for_datasets(df, chatbot)
-
-    # Save the new summaries and links to datasets.csv
     df_with_summaries.to_csv(csv_file, index=False)
-    print(f"Summaries and links saved to {csv_file}")
 
-    # Combine the 'metadatasummary' and 'links' to create a FAISS index for metadata
-    combined_text = df_with_summaries['metadatasummary'] + " " + df_with_summaries['links']
+    # Ask the LLM to decide whether a FAISS search is needed for metadata
+    print("Using LLM to decide if FAISS is necessary for the first search...")
+    faiss_decision = decide_faiss_or_llm_for_metadata(query, df_with_summaries, chatbot)
+    
+    if not faiss_decision['use_faiss']:
+        # If FAISS is not needed, directly use the LLM to select relevant datasets
+        print("LLM decided FAISS is not necessary. Selecting datasets directly from metadata...")
+        relevant_datasets = use_llm_for_metadata_selection(df_with_summaries, query, chatbot)
+        print(f"Relevant datasets selected by the LLM:\n{relevant_datasets[['title', 'links']]}")
 
-    # Create a FAISS index from the combined metadata summary and links
-    print("Creating FAISS index from generated metadata summaries and links...")
-    model, metadata_index = create_faiss_index(combined_text.tolist())
+        # Download the relevant datasets using the links and save them to data.csv
+        download_datasets(relevant_datasets, output_file='data.csv')
 
-    # Define the user query
-    query = "How many audits were planned in 2016?"
+    else:
+        # FAISS is necessary, so perform the FAISS search based on the LLM's decision
+        print(f"LLM decided FAISS is necessary. Performing FAISS search with top {faiss_decision['k']} results...")
+        combined_text = df_with_summaries['metadatasummary'] + " " + df_with_summaries['links']
+        model, metadata_index = create_faiss_index(combined_text.tolist())
+        best_indices, best_distances = query_faiss_index(query, model, metadata_index, k=faiss_decision['k'])
 
-    # Use the LLM to interpret the query (classify it as 'single', 'multiple', or 'broad')
-    query_type = chatbot.interpret_query(query)
-    print(f"LLM classified the query as: {query_type}")
+        # Ensure indices are within bounds of the DataFrame
+        valid_indices = [i for i in best_indices if i < len(df_with_summaries)]
+        print(f"Valid indices: {valid_indices}")
 
-    # Adjust the number of results (k) based on the LLM's interpretation
-    if query_type == 'single':
-        k = 1
-    elif query_type == 'multiple':
-        k = 5  # Adjust as needed
-    else:  # 'broad' or default case
-        k = 2  # Default to 2 datasets if it's a broad or unclear request
-    print(f"Determined number of results (k) for the query: {k}")
+        if not valid_indices:
+            print("No valid indices found. Exiting.")
+            return
 
-    # Perform FAISS search on metadata (first FAISS search)
-    best_indices, best_distances = query_faiss_index(query, model, metadata_index, k=k)
+        # Retrieve relevant datasets based on valid FAISS indices
+        relevant_datasets = df_with_summaries.iloc[valid_indices]
+        print(f"Best Metadata Results (Distances: {best_distances}):\n")
+        print(relevant_datasets[['title', 'metadatasummary', 'links']])
 
-    # Retrieve the best results based on the search and display the summaries and links
-    best_metadata = df_with_summaries.iloc[best_indices]
-    print(f"Best Metadata Results (Distances: {best_distances}):\n")
-    print(best_metadata[['metadatasummary', 'links']])
-
-    # Download the relevant datasets using the links from the search results
-    download_datasets(df_with_summaries, best_indices, output_file='data.csv')
+        # Download the relevant datasets using the links and save them to data.csv
+        download_datasets(relevant_datasets, output_file='data.csv')
 
     # Load the downloaded datasets (data.csv)
     data_df = pd.read_csv('data.csv')
 
-    # Identify the text columns dynamically
-    text_columns = identify_text_columns(data_df)
-    
-    if not text_columns:
-        print("No text columns found in the downloaded data.")
-        return
+    # Ask the LLM to decide whether a second FAISS search is needed
+    print("Using LLM to decide if a second FAISS search is necessary on the downloaded data...")
+    second_faiss_decision = decide_faiss_or_llm(query, data_df, chatbot)
 
-    # Concatenate all text columns into a single string for each row
-    data_df['combined_text'] = data_df[text_columns].apply(lambda row: ' '.join(row.values.astype(str)), axis=1)
+    if second_faiss_decision['use_faiss']:
+        # If FAISS is needed, perform a FAISS search on the downloaded data
+        print(f"LLM decided a second FAISS search is necessary. Performing FAISS search with top {second_faiss_decision['k']} results...")
+        
+        # Identify text columns for FAISS indexing
+        text_columns = identify_text_columns(data_df)
+        if not text_columns:
+            print("No text columns found in the downloaded data.")
+            return
+        
+        # Concatenate all text columns into a single string for each row
+        data_df['combined_text'] = data_df[text_columns].apply(lambda row: ' '.join(row.values.astype(str)), axis=1)
+        
+        # Create a FAISS index for the content in data.csv (second FAISS search)
+        data_model, data_index = create_faiss_index_for_data(data_df['combined_text'].tolist())
+        
+        # Perform a FAISS search on the data
+        data_results = search_data(query, data_model, data_index, k=second_faiss_decision['k'])
 
-    # Convert the combined text into a list for FAISS indexing
-    text_data = data_df['combined_text'].tolist()
+        # Display the top data results
+        for i, result in enumerate(data_results):
+            print(f"Data Result {i+1}:\n{result}\n")
+        
+        # Use the LLM to generate a final answer using both FAISS search results
+        final_answer = chatbot.generate_response(
+            context=f"Metadata Results:\n{relevant_datasets[['title', 'metadatasummary', 'links']].to_string(index=False)}\n\n"
+                    f"Data Results:\n{'\n'.join(data_results)}\n\n"
+                    "Based on the metadata and data analysis, provide a detailed answer to the query.",
+            query=query  # Passing the user query here
+        )
 
-    # Create a FAISS index for the content in data.csv (second FAISS search)
-    data_model, data_index = create_faiss_index_for_data(text_data)
-
-    # Perform a FAISS search on the data (second FAISS search)
-    data_results = search_data(query, data_model, data_index, text_data)
-
-    # Display the top data results
-    for i, result in enumerate(data_results):
-        print(f"Data Result {i+1}:\n{result}\n")
-
-    # Use the LLM to generate a final answer using both FAISS search results
-    final_answer = chatbot.generate_response(
-        context=f"Metadata Results:\n{best_metadata[['metadatasummary', 'links']].to_string()}\n"
-                f"Data Results:\n{'\n'.join(data_results)}\n\n",
-        query=query  # Passing the user query here
-    )
+    else:
+        # If FAISS is not needed, directly use the LLM to analyze data and provide the answer
+        print("LLM decided FAISS is not necessary for the downloaded data. Directly analyzing with LLM...")
+        final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
 
     print(f"Final Answer:\n{final_answer}")
 

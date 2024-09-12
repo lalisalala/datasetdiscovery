@@ -109,6 +109,10 @@ def save_to_csv(datasets, filename='datasets.csv'):
     df.to_csv(filename, index=False)
     print(f"Data saved to {filename}")
 
+def run_webscraping(yaml_path='data.yaml', output_file='datasets.csv'):
+    datasets = scrape_datasets(yaml_path)
+    save_to_csv(datasets, output_file)
+
 if __name__ == "__main__":
     datasets = scrape_datasets('data.yaml')
     save_to_csv(datasets) 

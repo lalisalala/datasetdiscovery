@@ -6,13 +6,14 @@ def download_datasets(relevant_datasets, output_file='data.csv'):
     Download and save relevant datasets based on the FAISS search results or LLM selection.
 
     Args:
-        relevant_datasets (pd.DataFrame): A dataframe containing the relevant dataset metadata, including 'links'.
+        relevant_datasets (pd.DataFrame): A dataframe containing the relevant dataset metadata, including 'metadatasummary' and 'links'.
         output_file (str): The output CSV file to save the downloaded data.
     """
-    all_data = []
+    all_data_with_metadata = []
     
     for _, row in relevant_datasets.iterrows():
         dataset_link = row['links']
+        metadata_summary = row['metadatasummary']  # Extract the metadata summary
         
         print(f"Attempting to download dataset from {dataset_link}")
         
@@ -34,36 +35,28 @@ def download_datasets(relevant_datasets, output_file='data.csv'):
             print(f"Successfully downloaded dataset from {dataset_link}")
             print(f"Sample Data from dataset before preprocessing:\n{temp_df.head()}")
             
-            all_data.append(temp_df)
+            all_data_with_metadata.append((metadata_summary, temp_df))  # Append metadata and dataset as a tuple
         except Exception as e:
             print(f"Failed to download dataset from {dataset_link}: {e}")
     
-    if all_data:
-        combined_df = pd.concat(all_data, ignore_index=True)
-        print(f"Combined DataFrame before saving:\n{combined_df.head()}")
-        
-        combined_df.to_csv(output_file, index=False)
-        print(f"Relevant datasets saved to {output_file}")
+    if all_data_with_metadata:
+        save_data_with_llm_metadata_header(all_data_with_metadata, output_file)
     else:
         print("No datasets to download.")
 
-def save_data_with_llm_metadata_header(relevant_datasets, combined_df, output_file='data.csv'):
+def save_data_with_llm_metadata_header(all_data, output_file):
     """
-    Save the dataset to a CSV file, including the generated LLM metadata summary as a header.
-    
+    Save downloaded data along with LLM-generated metadata summaries as a header.
+
     Args:
-        relevant_datasets (pd.DataFrame): DataFrame containing the relevant datasets and their metadata summaries.
-        combined_df (pd.DataFrame): The DataFrame containing the actual dataset content that was downloaded.
-        output_file (str): The path of the output CSV file.
+        all_data (list of tuples): List of tuples where each tuple contains a metadata summary and the corresponding dataset.
+        output_file (str): The output CSV file to save the data.
     """
-    # Extract the LLM-generated summary for the relevant datasets
-    metadata_summary = '\n\n'.join(relevant_datasets['metadatasummary'].tolist())
-
-    # Open the output file and write the metadata summary at the top
     with open(output_file, 'w') as f:
-        # Write the metadata summary as a header
-        f.write(f"LLM-Generated Metadata Summary:\n{metadata_summary}\n\n")
+        for metadata_summary, df in all_data:
+            # Write the metadata summary as a header
+            f.write(f"# {metadata_summary}\n")
+            df.to_csv(f, index=False)
+            f.write("\n\n")  # Add space between datasets
 
-    # Append the actual dataset content
-    combined_df.to_csv(output_file, mode='a', index=False)  # Append mode
-    print(f"Data saved to {output_file} with LLM-generated metadata as a header.")
+    print(f"Relevant datasets saved to {output_file} with metadata headers.")

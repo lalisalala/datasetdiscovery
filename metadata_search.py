@@ -1,6 +1,23 @@
 import faiss
 import numpy as np
 
+def generate_summaries_for_datasets(df, llm_chatbot):
+    """
+    Generate new summaries for all datasets using the LLM and return a dataframe
+    with the metadata summaries and links.
+
+    Args:
+        df (pd.DataFrame): The dataframe containing dataset metadata (title, summary, links).
+        llm_chatbot (LLMChatbot): The LLMChatbot instance used to generate summaries.
+
+    Returns:
+        pd.DataFrame: The dataframe with the new 'metadatasummary' and 'links' columns.
+    """
+    df['metadatasummary'] = df.apply(lambda row: generate_summary_with_llm(row, llm_chatbot), axis=1)
+    
+    # Keep only the metadata summary and links in the final dataset
+    return df[['title', 'metadatasummary', 'links']]
+
 def query_faiss_index(query, model, metadata_index, k=5):
     """
     Perform a FAISS search to find the top-k most relevant metadata.
@@ -27,3 +44,4 @@ def query_faiss_index(query, model, metadata_index, k=5):
     except Exception as e:
         print(f"Error querying FAISS index: {e}")
         raise
+

@@ -4,19 +4,19 @@ import yaml
 import pandas as pd
 import os
 
-def scrape_datasets(yaml_path='data.yaml'):
+def scrape_datasets(yaml_path='config/data.yaml'):
     with open(yaml_path, 'r') as file:
         data = yaml.safe_load(file)
     urls = [dataset['url'] for dataset in data['datasets']]
     
     all_datasets = []
     for url in urls:
-        datasets = scrape_data_from_url(url)
+        datasets = scrape_metadata_from_url(url)
         all_datasets.extend(datasets)
     
     return all_datasets
 
-def scrape_data_from_url(url):
+def scrape_metadata_from_url(url):
     datasets = []
     try:
         response = requests.get(url)
@@ -28,20 +28,18 @@ def scrape_data_from_url(url):
         dataset_links = extract_dataset_links(soup)
 
         for dataset in dataset_links:
-            dataset_content = download_and_extract_dataset(dataset['link'])
-            if dataset_content:
-                datasets.append({
-                    "title": dataset_title, 
-                    "summary": summary, 
-                    "name": dataset['name'],
-                    "links": dataset['link'], 
-                    "content": dataset_content
-                })
+            datasets.append({
+                "title": dataset_title, 
+                "summary": summary, 
+                "name": dataset['name'],
+                "links": dataset['link'],  # Only link, no content download
+            })
 
     except Exception as e:
         print(f"Failed to scrape {url}: {e}")
 
     return datasets
+
 
 def download_and_extract_dataset(link):
     try:
@@ -109,10 +107,10 @@ def save_to_csv(datasets, filename='datasets.csv'):
     df.to_csv(filename, index=False)
     print(f"Data saved to {filename}")
 
-def run_webscraping(yaml_path='data.yaml', output_file='datasets.csv'):
+def run_webscraping(yaml_path='config/data.yaml', output_file='datasets.csv'):
     datasets = scrape_datasets(yaml_path)
     save_to_csv(datasets, output_file)
 
 if __name__ == "__main__":
-    datasets = scrape_datasets('data.yaml')
+    datasets = scrape_datasets('config/data.yaml')
     save_to_csv(datasets) 

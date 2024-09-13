@@ -1,5 +1,17 @@
 import pandas as pd
 import requests
+import os 
+import yaml
+
+def load_query_from_yaml(yaml_path='config/query.yaml'):
+    with open(yaml_path, 'r') as file:
+        config = yaml.safe_load(file)
+    
+    # Debugging: print out the query
+    query = config['query']
+    print(f"Loaded query from YAML: {query}")  # This will print the query to the console
+    return query
+
 
 def download_datasets(relevant_datasets, output_file='data.csv'):
     """

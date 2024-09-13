@@ -133,7 +133,7 @@ class LLMChatbot:
     def determine_k_from_query(self, refined_query):
         prompt = (
             f"The refined query is: '{refined_query}'.\n\n"
-            "Based on the user's query, how many top results should be returned from the search?\n"
+            "Based on the user's query, how many results should be returned from the search?\n"
             "Return only a number, indicating how many results are expected."
         )
         k_value = self.generate_response(context="", query=prompt)
@@ -152,3 +152,4 @@ class LLMChatbot:
         )
         ranked_results = self.generate_response(context="", query=prompt)
         return ranked_results.split('\n')
+

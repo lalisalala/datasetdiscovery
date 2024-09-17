@@ -50,8 +50,8 @@ def save_data_with_llm_metadata_header(all_data, output_file):
     """
     with open(output_file, 'w') as f:
         for metadata_summary, df in all_data:
-            f.write(f"# {metadata_summary}\n")
+            # Remove '#' to ensure the metadata is not treated as a comment
+            f.write(f"{metadata_summary}\n")  # No '#' prefix here
             df.to_csv(f, index=False)
             f.write("\n\n")
-
 

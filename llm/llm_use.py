@@ -25,12 +25,12 @@ def directly_use_llm_for_answer(data_df, query, chatbot):
     final_answer = chatbot.generate_response(context=data_string, query=query)
     return final_answer
 
-def use_llm_for_metadata_selection(df_with_summaries, query, chatbot):
+def use_llm_for_metadata_selection(df, query, chatbot):
     """
     Use the LLM to directly parse through the metadata summaries in datasets.csv and select the relevant datasets.
 
     Args:
-        df_with_summaries (pd.DataFrame): Dataframe containing metadata summaries and links.
+        df (pd.DataFrame): Dataframe containing metadata (title, summary, links).
         query (str): The user query to determine relevant datasets.
         chatbot (LLMChatbot): An instance of the LLMChatbot class.
 
@@ -40,8 +40,8 @@ def use_llm_for_metadata_selection(df_with_summaries, query, chatbot):
     relevant_indices = []
 
     # Iterate through the metadata summaries and use the LLM to determine relevance
-    for idx, row in df_with_summaries.iterrows():
-        metadata_content = f"Title: {row['title']}\nSummary: {row['metadatasummary']}\nLink: {row['links']}"
+    for idx, row in df.iterrows():
+        metadata_content = f"Title: {row['title']}\nSummary: {row['summary']}\nLink: {row['links']}"
         prompt = (
             f"The user query is: '{query}'.\n\n"
             f"Below is a dataset metadata entry:\n\n{metadata_content}\n\n"
@@ -55,5 +55,5 @@ def use_llm_for_metadata_selection(df_with_summaries, query, chatbot):
             relevant_indices.append(idx)
 
     # Filter the dataframe to include only relevant datasets
-    relevant_datasets = df_with_summaries.iloc[relevant_indices]
+    relevant_datasets = df.iloc[relevant_indices]
     return relevant_datasets

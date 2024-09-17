@@ -1,4 +1,4 @@
-# The provided dataset is an Internal Audit Plan for the year 2022-2023, listing various internal audits planned throughout this period. It can be accessed via the link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv.
+# The Internal Audit Plan is a document outlining the list of scheduled internal audits for the year 2022-2023, which can be accessed through this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv. This plan provides a comprehensive overview of the audits planned for the specified period.
 Category,Audit Title,Outline Scope
 Business Audit,Environmental Management System Annual Audits,The audits will review the FSA's compliance to selected clauses of the Environment Management System - ISO 14001:2015 standards.
 Business Audit,National Food Crime Unit - Banking arrangements ,"To assess the effectiveness of the National Food Crime Unit's new banking processes and controls in place and recommend improvements where weaknesses are identified.
@@ -32,7 +32,7 @@ Local Authority Audits,Allergens,To assess the adequacy and effectiveness of Loc
 Local Authority Audits,Shellfish controls,To assess the suitability and effectiveness of key elements of the official control regime for shellfish. 
 
 
-# The "Internal Audit Plan" is a list of audits planned for various years, specifically for the year 2022-23, which can be accessed at this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv.
+# The "Internal Audit Plan" is a list of audits scheduled for the year 2022-2023, available as a CSV file at this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv. This plan outlines the internal audits that will be carried out over the specified period.
 Category,Audit Title,Outline Scope
 Business Audit,Environmental Management System Annual Audits,The audits will review the FSA's compliance to selected clauses of the Environment Management System - ISO 14001:2015 standards.
 Business Audit,National Food Crime Unit - Banking arrangements ,"To assess the effectiveness of the National Food Crime Unit's new banking processes and controls in place and recommend improvements where weaknesses are identified.
@@ -66,7 +66,7 @@ Local Authority Audits,Allergens,To assess the adequacy and effectiveness of Loc
 Local Authority Audits,Shellfish controls,To assess the suitability and effectiveness of key elements of the official control regime for shellfish. 
 
 
-# The Internal Audit Plan dataset provides a list of internal audits scheduled for execution in the 2021-2022 period, accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2021-22.csv.
+# The Internal Audit Plan provides a list of audits scheduled for the year 2021-2022, which can be accessed through this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2021-22.csv. This plan outlines the various internal audits planned for the specified timeframe.
 Category,AuditTitle,OutlineScope
 Business Audit,Performance Management,To assess the effectiveness of management information and controls over the Food Standards Agency's performance management and reward and recognition policies.
 Business Audit,Health and Safety,To assess the effectiveness of controls and reporting over health and safety policies and enforcement across the Food Standards Agency.
@@ -87,5 +87,32 @@ Official Controls,DAERA - Service Level Agreement (NI only),"To assess the effec
 Official Controls,Risk Prioritisation,To assess the effectiveness of the risk-based prioritisation of official control activities by the FSA to improve food safety. 
 Official Controls,Chemical safety ? additives and contaminants,To assess the effectiveness of Chemical Safety official controls - additives and contaminants 
 Official Controls,Local Authority: Allergens (NI only),"To assess the adequacy and effectiveness of local authority arrangements for the delivery of feed and food law enforcement services in Northern Ireland. Specifically, the impact of the allergen initiative on the delivery of allergen controls and the enforcement of specific controls laid out in the Food Information Regulations (Northern Ireland) 2014."
+
+
+# The Internal Audit Plan, as provided in the dataset link <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2020-21.csv>, outlines the list of internal audits scheduled for the years 2020 and 2021.
+Category,AuditTitle,OutlineScope
+Business Audit,Performance Management,To assess the effectivenss of management information and controls over the new performance management and reward and recognition policies.
+Business Audit,EU Exit Assurances,The audit will map the assurances / scrutiny over the FSA?s EU Exit work to identify duplications or gaps.
+Business Audit,Risk Management,To assess the effectiveness of the risk management standards compared to the HM Treasury risk management assessment framework.
+Business Audit,Learnings from Incident Response,To assess the effectiveness of the post incident review process in the FSA and compare to good practice.
+Business Audit,Operational timesheet and throughput recording,"To assess effectiveness of controls over validity, accuracy and completeness of timesheets and throughput records."
+Business Audit,Minimum Security Standards,To assess FSA compliance with the Cabinet Office Minimum Security Standards.
+Business Audit,Post Project Evaluation Reviews,"The audit will review effectiveness of the end of project processes, transition to business as usual and that learnings are captured and shared."
+Business Audit,Contract Management,To assess effectiveness of contract management systems and controls in place. 
+Official Controls,Management of OV & MHI Contract,The audit will review effectiveness of contract management arrangements.
+Official Controls,Traceability,To assure traceability official controls? effectiveness at all stages of production.
+Official Controls,Raw Drinking Milk,Follow up audit to assess effectiveness of management actions and policy implementation.
+Official Controls,Flexibility in Official Veterinarian Attendance,To assess use of official veterinarians flexibility at red and white meat establishments and effectiveness of official controls delivery.
+Official Controls,Microbiological Criteria,To assess the effectiveness of microbiological criteria official controls in achieving the objectives of UK / EU law in approved meat establishments.
+Official Controls Northern Ireland,DAERA ? Food Chain Information,To assess the effectiveness of the food chain information available in Northern Ireland markets.
+Local Authority Audits England,Officer authorisation and competency,The audit will review how contractor competency and authorisation is confirmed by Local Authorities.
+Local Authority Audits England,Shellfish,To review the suitability and effectiveness of arrangements to develop and implement guidance enabling successful delivery of shellfish official controls.
+Local Authority Audits England,Database and internal OFFC monitoring,"To assess the accuracy, completeness and timeliness of the information recorded by Local Authorities."
+Local Authority Audits Wales,Out of hours response test,The audit will review the provision of out of hours officers.
+Local Authority Audits Wales,Farm Assured Welsh Livestock scheme,To assess the re-approval criteria used for reassessing the Farm Assured Welsh Livestock (FAWL) scheme.
+Local Authority Audits Wales,Follow up audits,Follow up of prior audits to confirm implementation of actions agreed with the Local Authorities
+Local Authority Audits Wales,Local Authority Enforcement Monitoring System (LAEMS),"To audit the completeness, accuracy and timeliness of data."
+Local Authority Audits Wales,Allergens,To assess the impact of specific controls set out in the 2014 Food Information Regulations.
+Local Authority Audits Northern Ireland,Allergens,To assess the impact of specific controls set out in the 2014 Food Information Regulations.
 
 

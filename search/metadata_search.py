@@ -23,8 +23,8 @@ def generate_summaries_for_relevant_datasets(relevant_datasets, chatbot):
     """
     Generate summaries only for relevant datasets.
     """
-    relevant_datasets['metadatasummary'] = relevant_datasets.apply(
-        lambda row: generate_summary_with_llm(row, chatbot), axis=1
+    relevant_datasets.loc[:, 'metadatasummary'] = relevant_datasets.apply(
+    lambda row: generate_summary_with_llm(row, chatbot), axis=1
     )
     return relevant_datasets
 

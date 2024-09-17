@@ -1,4 +1,4 @@
-# The Internal Audit Plan is a document outlining the list of scheduled internal audits for the year 2022-2023, which can be accessed through this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv. This plan provides a comprehensive overview of the audits planned for the specified period.
+# The Internal Audit Plan, accessible via this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv, outlines a series of internal audits planned for the year 2022-23.
 Category,Audit Title,Outline Scope
 Business Audit,Environmental Management System Annual Audits,The audits will review the FSA's compliance to selected clauses of the Environment Management System - ISO 14001:2015 standards.
 Business Audit,National Food Crime Unit - Banking arrangements ,"To assess the effectiveness of the National Food Crime Unit's new banking processes and controls in place and recommend improvements where weaknesses are identified.
@@ -32,64 +32,7 @@ Local Authority Audits,Allergens,To assess the adequacy and effectiveness of Loc
 Local Authority Audits,Shellfish controls,To assess the suitability and effectiveness of key elements of the official control regime for shellfish. 
 
 
-# The "Internal Audit Plan" is a list of audits scheduled for the year 2022-2023, available as a CSV file at this link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv. This plan outlines the internal audits that will be carried out over the specified period.
-Category,Audit Title,Outline Scope
-Business Audit,Environmental Management System Annual Audits,The audits will review the FSA's compliance to selected clauses of the Environment Management System - ISO 14001:2015 standards.
-Business Audit,National Food Crime Unit - Banking arrangements ,"To assess the effectiveness of the National Food Crime Unit's new banking processes and controls in place and recommend improvements where weaknesses are identified.
-"
-Business Audit,Learning and Development,"To assess the effectiveness of the design, implementation and application of procedures for the FSA's Learning and Development activities to ensure that staff have the skills and knowledge to deliver the Agency?s strategy and that outcomes are aligned with the FSA's People Strategy.
-"
-Business Audit,Travel and Subsistence ,"To assess the effectiveness of the FSA's Travel and Subsistence policy and procedures to ensure that all travel and subsistence expenditure is valid, provides value for money, and complies with FSA policy.
-"
-Business Audit,Forecasting and Business Planning,"The audit will review the suitability and effectiveness of arrangements in place for business planning, forecasting and monitoring activities, and the deployment of funds and resources.
-"
-Business Audit,Health and Safety,To assess controls and reporting over health and safety policies and enforcement across the FSA.
-Business Audit,Science Evidence Research and Development,"The audit will review the suitability and effectiveness of arrangements in place for the commissioning and use of science, evidence and analysis; areas of research interest process and prioritisation and business case approval.
-"
-Business Audit,Cyber Security,"To assess the effectiveness of cyber/ information security systems and controls established by the Food Standards Agency
-and to ensure compliance with Cabinet Office?s mandatory requirements."
-Business Audit,Framework/ Policy review,"The audit will review the application, suitability and effectiveness of the FSA?s Framework policy across the FSA in line with the strategic objectives.
-"
-Official Controls,TSE Testing procedures?(England & Wales),To assess the effectiveness of the FSA?s Transmissible Spongiform Encephalopathies (TSE) sampling and testing controls in approved establishments in England and Wales with veterinary attendance. 
-Official Controls,Residue sampling procedures?,"To provide assurance on the suitability and effectiveness of procedures and controls in place for residue testing against the requirements of chapter five of the Manual of Official Controls and service level agreements in place.
-"
-Official Controls,Sampling and testing procedures?,To provide assurance that samples required by food hygiene law (with the exception of TSE testing and residue sampling) are taken by FSA Operations and Food Business Operators and are tested in line with the requirements under the retained Official Control Regulations 2017/625 (e.g. articles 18 and 39).??
-Official Controls,Warm meat policy?,"To assess the oversight and delivery of the warm meat legislation in chapter two of the Manual of Official Controls. 
-"
-Official Controls,Enforcement procedures??,"To provide assurance on the controls and decision making process in place, including associated legal investigations, in approved meat establishments with veterinary attendance in line with the requirements of chapter seven of the Manual of Official Controls.
-"
-Official Controls,Microbiological Criteria testing,"To assess the effectiveness of microbiological criteria official controls in achieving the objectives of UK / EU law in approved meat establishments.
-"
-Local Authority Audits,Recovery Road Map,"To support and assess the effectiveness of Local Authorities in implementing the FSAs Recovery Roadmap
-"
-Local Authority Audits,Allergens,To assess the adequacy and effectiveness of Local Authority arrangements for the delivery of feed and food law enforcement services in England.
-Local Authority Audits,Shellfish controls,To assess the suitability and effectiveness of key elements of the official control regime for shellfish. 
-
-
-# The Internal Audit Plan provides a list of audits scheduled for the year 2021-2022, which can be accessed through this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2021-22.csv. This plan outlines the various internal audits planned for the specified timeframe.
-Category,AuditTitle,OutlineScope
-Business Audit,Performance Management,To assess the effectiveness of management information and controls over the Food Standards Agency's performance management and reward and recognition policies.
-Business Audit,Health and Safety,To assess the effectiveness of controls and reporting over health and safety policies and enforcement across the Food Standards Agency.
-Business Audit,Recruitment and Retention Policy and Practice,The audit will review compliance to government guidance and management information on the effectiveness of the Food Standards Agency's recruitment and retention policies and comparison to best practices. 
-Business Audit,Science Commissioning,"The audit will review the suitability and effectiveness of arrangements in place for the  commissioning and use of science, evidence and analysis; areas of research interest process and prioritisation and business case approval."
-Business Audit,Key FSA Programmes,"The audit will review the suitability and effectiveness of arrangements in place for reporting on the governance, risk management and controls in place for key Food Standards Agency's programmes."
-Business Audit,Post Project Evaluation Reviews,"The audit will review the effectiveness of the end of project processes, transition to business as usual and that learnings are captured and shared."
-Business Audit,Risk Management,To assess the effectiveness of the Food Standards Agency's risk management standards against the HM Treasury risk management assessment framework.
-Business Audit,(Routine) Incident Management -Receipting System,"To assess the effectiveness of the Food Standards Agency's Incident Management Receipting system, and ability to respond to routine incidents and provide an effective and sustained response to long running or multiple incidents."
-Business Audit,Information Security,To assess the effectiveness of information security systems and controls established by the Food Standards Agency
-Business Audit,Environmental Management Systems,To assess the implementation and effectiveness of the Food Standards Agency's Environment Management System - ISO 14001:2015
-Official Controls,Approval of establishments requiring veterinary attendance (England and Wales only),To assess the effectiveness of approval and ongoing review of approval status for meat establishments. 
-Official Controls,FCI / CCIR Follow up (England and Wales only),Follow up audit to assess the effectiveness of management actions and policy implementation of the Food Chain Information (FCI) and the Collection & Communication of Inspection Results (CCIR) audit report (England and Wales) issued in September 2020
-Official Controls,Post Mortem Inspection (England and Wales only),To assess the effectiveness of official controls for post mortem inspection (including plant inspection assistants role but excluding game handling establishments).
-Official Controls,"Food Safety Management System (FSMS) (England, Wales and NI)",To assess the role of the FSA officials in providing assurance on the effectiveness of official controls for FSMS / HACCP (excluding traceability and microbiological testing)
-Official Controls,DAERA ? Food Chain Information (NI only),To assess the effectiveness of the food chain information available in Northern Ireland markets.
-Official Controls,DAERA - Service Level Agreement (NI only),"To assess the effectiveness of management controls and reporting on the contract with the Department of Agriculture, Environment and Rural Affairs."
-Official Controls,Risk Prioritisation,To assess the effectiveness of the risk-based prioritisation of official control activities by the FSA to improve food safety. 
-Official Controls,Chemical safety ? additives and contaminants,To assess the effectiveness of Chemical Safety official controls - additives and contaminants 
-Official Controls,Local Authority: Allergens (NI only),"To assess the adequacy and effectiveness of local authority arrangements for the delivery of feed and food law enforcement services in Northern Ireland. Specifically, the impact of the allergen initiative on the delivery of allergen controls and the enforcement of specific controls laid out in the Food Information Regulations (Northern Ireland) 2014."
-
-
-# The Internal Audit Plan, as provided in the dataset link <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2020-21.csv>, outlines the list of internal audits scheduled for the years 2020 and 2021.
+# The Internal Audit Plan is a list of audits scheduled for the years 2020 and 2021, accessible via this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2020-21.csv.
 Category,AuditTitle,OutlineScope
 Business Audit,Performance Management,To assess the effectivenss of management information and controls over the new performance management and reward and recognition policies.
 Business Audit,EU Exit Assurances,The audit will map the assurances / scrutiny over the FSA?s EU Exit work to identify duplications or gaps.
@@ -114,5 +57,62 @@ Local Authority Audits Wales,Follow up audits,Follow up of prior audits to confi
 Local Authority Audits Wales,Local Authority Enforcement Monitoring System (LAEMS),"To audit the completeness, accuracy and timeliness of data."
 Local Authority Audits Wales,Allergens,To assess the impact of specific controls set out in the 2014 Food Information Regulations.
 Local Authority Audits Northern Ireland,Allergens,To assess the impact of specific controls set out in the 2014 Food Information Regulations.
+
+
+# The Internal Audit Plan provides a list of audits scheduled for the years 2021 and 2022, which can be accessed through this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2021-22.csv. This plan offers an overview of the internal audits that are being planned for the specified period.
+Category,AuditTitle,OutlineScope
+Business Audit,Performance Management,To assess the effectiveness of management information and controls over the Food Standards Agency's performance management and reward and recognition policies.
+Business Audit,Health and Safety,To assess the effectiveness of controls and reporting over health and safety policies and enforcement across the Food Standards Agency.
+Business Audit,Recruitment and Retention Policy and Practice,The audit will review compliance to government guidance and management information on the effectiveness of the Food Standards Agency's recruitment and retention policies and comparison to best practices. 
+Business Audit,Science Commissioning,"The audit will review the suitability and effectiveness of arrangements in place for the  commissioning and use of science, evidence and analysis; areas of research interest process and prioritisation and business case approval."
+Business Audit,Key FSA Programmes,"The audit will review the suitability and effectiveness of arrangements in place for reporting on the governance, risk management and controls in place for key Food Standards Agency's programmes."
+Business Audit,Post Project Evaluation Reviews,"The audit will review the effectiveness of the end of project processes, transition to business as usual and that learnings are captured and shared."
+Business Audit,Risk Management,To assess the effectiveness of the Food Standards Agency's risk management standards against the HM Treasury risk management assessment framework.
+Business Audit,(Routine) Incident Management -Receipting System,"To assess the effectiveness of the Food Standards Agency's Incident Management Receipting system, and ability to respond to routine incidents and provide an effective and sustained response to long running or multiple incidents."
+Business Audit,Information Security,To assess the effectiveness of information security systems and controls established by the Food Standards Agency
+Business Audit,Environmental Management Systems,To assess the implementation and effectiveness of the Food Standards Agency's Environment Management System - ISO 14001:2015
+Official Controls,Approval of establishments requiring veterinary attendance (England and Wales only),To assess the effectiveness of approval and ongoing review of approval status for meat establishments. 
+Official Controls,FCI / CCIR Follow up (England and Wales only),Follow up audit to assess the effectiveness of management actions and policy implementation of the Food Chain Information (FCI) and the Collection & Communication of Inspection Results (CCIR) audit report (England and Wales) issued in September 2020
+Official Controls,Post Mortem Inspection (England and Wales only),To assess the effectiveness of official controls for post mortem inspection (including plant inspection assistants role but excluding game handling establishments).
+Official Controls,"Food Safety Management System (FSMS) (England, Wales and NI)",To assess the role of the FSA officials in providing assurance on the effectiveness of official controls for FSMS / HACCP (excluding traceability and microbiological testing)
+Official Controls,DAERA ? Food Chain Information (NI only),To assess the effectiveness of the food chain information available in Northern Ireland markets.
+Official Controls,DAERA - Service Level Agreement (NI only),"To assess the effectiveness of management controls and reporting on the contract with the Department of Agriculture, Environment and Rural Affairs."
+Official Controls,Risk Prioritisation,To assess the effectiveness of the risk-based prioritisation of official control activities by the FSA to improve food safety. 
+Official Controls,Chemical safety ? additives and contaminants,To assess the effectiveness of Chemical Safety official controls - additives and contaminants 
+Official Controls,Local Authority: Allergens (NI only),"To assess the adequacy and effectiveness of local authority arrangements for the delivery of feed and food law enforcement services in Northern Ireland. Specifically, the impact of the allergen initiative on the delivery of allergen controls and the enforcement of specific controls laid out in the Food Information Regulations (Northern Ireland) 2014."
+
+
+# The Internal Audit Plan provides a list of audits planned for the year 2022-2023, accessible via this link: <https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/AnnualAuditAssurancePlan2022-23.csv>. This plan outlines the audits to be conducted internally over the specified time period.
+Category,Audit Title,Outline Scope
+Business Audit,Environmental Management System Annual Audits,The audits will review the FSA's compliance to selected clauses of the Environment Management System - ISO 14001:2015 standards.
+Business Audit,National Food Crime Unit - Banking arrangements ,"To assess the effectiveness of the National Food Crime Unit's new banking processes and controls in place and recommend improvements where weaknesses are identified.
+"
+Business Audit,Learning and Development,"To assess the effectiveness of the design, implementation and application of procedures for the FSA's Learning and Development activities to ensure that staff have the skills and knowledge to deliver the Agency?s strategy and that outcomes are aligned with the FSA's People Strategy.
+"
+Business Audit,Travel and Subsistence ,"To assess the effectiveness of the FSA's Travel and Subsistence policy and procedures to ensure that all travel and subsistence expenditure is valid, provides value for money, and complies with FSA policy.
+"
+Business Audit,Forecasting and Business Planning,"The audit will review the suitability and effectiveness of arrangements in place for business planning, forecasting and monitoring activities, and the deployment of funds and resources.
+"
+Business Audit,Health and Safety,To assess controls and reporting over health and safety policies and enforcement across the FSA.
+Business Audit,Science Evidence Research and Development,"The audit will review the suitability and effectiveness of arrangements in place for the commissioning and use of science, evidence and analysis; areas of research interest process and prioritisation and business case approval.
+"
+Business Audit,Cyber Security,"To assess the effectiveness of cyber/ information security systems and controls established by the Food Standards Agency
+and to ensure compliance with Cabinet Office?s mandatory requirements."
+Business Audit,Framework/ Policy review,"The audit will review the application, suitability and effectiveness of the FSA?s Framework policy across the FSA in line with the strategic objectives.
+"
+Official Controls,TSE Testing procedures?(England & Wales),To assess the effectiveness of the FSA?s Transmissible Spongiform Encephalopathies (TSE) sampling and testing controls in approved establishments in England and Wales with veterinary attendance. 
+Official Controls,Residue sampling procedures?,"To provide assurance on the suitability and effectiveness of procedures and controls in place for residue testing against the requirements of chapter five of the Manual of Official Controls and service level agreements in place.
+"
+Official Controls,Sampling and testing procedures?,To provide assurance that samples required by food hygiene law (with the exception of TSE testing and residue sampling) are taken by FSA Operations and Food Business Operators and are tested in line with the requirements under the retained Official Control Regulations 2017/625 (e.g. articles 18 and 39).??
+Official Controls,Warm meat policy?,"To assess the oversight and delivery of the warm meat legislation in chapter two of the Manual of Official Controls. 
+"
+Official Controls,Enforcement procedures??,"To provide assurance on the controls and decision making process in place, including associated legal investigations, in approved meat establishments with veterinary attendance in line with the requirements of chapter seven of the Manual of Official Controls.
+"
+Official Controls,Microbiological Criteria testing,"To assess the effectiveness of microbiological criteria official controls in achieving the objectives of UK / EU law in approved meat establishments.
+"
+Local Authority Audits,Recovery Road Map,"To support and assess the effectiveness of Local Authorities in implementing the FSAs Recovery Roadmap
+"
+Local Authority Audits,Allergens,To assess the adequacy and effectiveness of Local Authority arrangements for the delivery of feed and food law enforcement services in England.
+Local Authority Audits,Shellfish controls,To assess the suitability and effectiveness of key elements of the official control regime for shellfish. 
 
 

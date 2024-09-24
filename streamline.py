@@ -10,10 +10,16 @@ import subprocess
 from decision_logic import decide_faiss_or_llm, decide_faiss_or_llm_for_metadata, identify_text_columns
 from web.webscraping import run_webscraping
 import yaml 
+from log import log_execution_details
+import time
 
-def main():
-    # Load the user query from the YAML file
-    query = load_query_from_yaml()
+def run_streamline_process(query):
+    """
+    Modified streamline process to integrate with FastAPI.
+    It accepts a query string as an argument.
+    """
+
+    start_time = time.time()  # Track start time
 
     # Define the CSV file for saving the datasets
     csv_file = 'datasets.csv'
@@ -39,8 +45,7 @@ def main():
     # Ensure indices are within bounds of the DataFrame
     valid_indices = [i for i in best_indices if i < len(df)]
     if not valid_indices:
-        print("No valid indices found. Exiting.")
-        return
+        return "No valid indices found."
 
     # Retrieve relevant datasets based on valid FAISS indices
     relevant_datasets = df.iloc[valid_indices]
@@ -54,24 +59,30 @@ def main():
     # Load the results from datasets2.csv
     df_faiss_results = pd.read_csv('datasets2.csv')
 
-    
     # Use the LLM to further refine the FAISS results and find the most relevant datasets
     refined_datasets = use_llm_for_metadata_selection(df_faiss_results, query, chatbot)
 
-    # Generate metadatasummaries for the found datasets
+    # Generate metadata summaries for the found datasets
     refined_datasets_with_summaries = generate_summaries_for_relevant_datasets(refined_datasets, chatbot)
 
-
     # Download the final refined datasets using the links
+    successful_links = []
     combined_df = download_datasets(refined_datasets_with_summaries, output_file='data.csv')
-
 
     # Load the downloaded datasets (data.csv)
     data_df = pd.read_csv('data.csv')
 
-    
-    # If FAISS is not needed, directly use the LLM to analyze the data and provide the answer
+    # Use the LLM to analyze the data and provide the answer
     print("Directly analyzing with LLM...")
     final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
 
-    print(f"Final Answer:\n{final_answer}") 
+    print(f"Final Answer:\n{final_answer}")
+
+    # Calculate total execution time
+    end_time = time.time()
+    total_time = end_time - start_time
+
+    # Log execution details to a file
+    log_execution_details(query, relevant_datasets, final_answer, successful_links, total_time)
+
+    return final_answer  # Return the final answer for the API

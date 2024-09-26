@@ -1,4 +1,4 @@
-The "Internal Audit Plan" provides a list of internal audits that were planned for the years 2016 and 2017, which can be found in the associated CSV file located at this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv.
+Dataset Metadata: This dataset outlines the scheduled internal audits for the years 2016 and 2017, which can be accessed at this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv.
 Category,AuditTitle,OutlineScope
 Business Audits,Defra SLA / MoUs,What SLAs are in place; what are the agreed outcomes; what payments are received. Links to corporate risks 6 and 11.
 Business Audits,Follow up policy initiation and evaluation audit,Follow up on the report issued May 2014. Review timeliness and follow up on external policy reviews.
@@ -16,7 +16,7 @@ Official Controls Audits,Incidents Resilience,"Are Incidents team learning after
 Official Controls Audits,Animal Health/ Notifiable Diseases,Assess animal health controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls. Links to corporate risks 1 and 2.
 
 
-The "Internal Audit Plan" provides a list of planned internal audits, specifically for the year 2017-2018, which can be found at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv]. This plan outlines various audits scheduled for the specified period.
+Dataset Metadata: The Internal Audit Plan is a list of scheduled internal audits for the year 2017-18, accessible via this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv].
 Category,AuditTitle,OutlineScope
 Business Audits,Stow 1,Benefits realisation audit following implementation of new meat charging discount system. Audit will review how well original objectives have been met
 Business Audits,Open data,To review implementation and application of policy and procedures on open data specifically in relation to publication of data sets  

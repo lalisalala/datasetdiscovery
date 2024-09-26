@@ -1,4 +1,3 @@
-import faiss
 import numpy as np
 
 def generate_summary_with_llm(metadata_row, chatbot):

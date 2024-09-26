@@ -103,7 +103,7 @@ def chatbot_ui():
                 });
                 const result = await response.json();
 
-                // Display chatbot response with HTML formatting
+                // Display chatbot response in chatbox
                 chatBox.innerHTML += `<div><strong>Chatbot:</strong> ${result.final_answer}</div>`;
                 chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
             }
@@ -118,9 +118,8 @@ def chatbot_ui():
 def run_analysis(query_input: QueryInput):
     """
     This endpoint runs the analysis using the 'run_streamline_process' function 
-    and returns the final formatted result.
+    and returns the final result.
     """
     query = query_input.query  # Extract the query from the request
     final_answer = run_streamline_process(query)  # Call the streamline process with the query
-    return {"final_answer": final_answer}  # Return the formatted LLM response
-
+    return {"final_answer": final_answer}

@@ -1,0 +1,1852 @@
+2024-09-26 13:41:01,821 - root - INFO - Logging is configured.
+2024-09-26 13:41:50,620 - root - INFO - Logging is configured.
+2024-09-26 13:42:11,327 - root - INFO - Logging is configured.
+2024-09-26 13:42:23,075 - root - INFO - Logging is configured.
+2024-09-26 13:44:17,189 - root - INFO - Logging is configured.
+2024-09-26 13:44:24,896 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:44:26,183 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:44:26,184 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.7, max_tokens: 1024, api_url: http://localhost:11434/api/generate
+2024-09-26 13:44:26,184 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:44:26,212 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:44:26,212 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:44:27,985 - streamline - INFO - Best Metadata Results (Distances: [0.7858304  0.7858304  0.82779837 0.8717786  0.8898811  0.90128684
+ 0.91091716 0.9278511  0.93414676 0.9357631 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 13:44:27,986 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:44:27,986 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:44:35,676 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:44:35,676 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:44:37,011 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:51:39,654 - root - INFO - Logging is configured.
+2024-09-26 13:51:45,443 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:51:46,679 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:51:46,679 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.7, max_tokens: 1024, api_url: http://localhost:11434/api/generate
+2024-09-26 13:51:46,679 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:51:46,708 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:51:46,708 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:51:48,571 - streamline - INFO - Best Metadata Results (Distances: [0.7858304  0.7858304  0.82779837 0.8717786  0.8898811  0.90128684
+ 0.91091716 0.9278511  0.93414676 0.9357631 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 13:51:48,572 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:51:48,572 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:51:55,064 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:51:55,064 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:51:56,409 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:51:56,809 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 13:51:56,809 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 13:51:56,810 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 13:52:02,467 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 13:52:02,468 - streamline - INFO - Final Answer:
+Based on the provided dataset, it appears that the user is asking about the types of audits being conducted by the Food Standards Agency (FSA). Here are some examples of the audits mentioned in the dataset:
+
+1. Benefits realisation audit following implementation of new meat charging discount system. This audit will review how well the original objectives have been met after the implementation of the new system.
+
+2. Open data audit. This audit aims to review the implementation and application of the policy and procedures related to open data, particularly focusing on the publication of data sets.
+
+3. Evolve Programme audit. This audit will assess the plans in place to manage the risk of disruption arising from transitioning to a new IT contract model, which involves disaggregating services and increasing the number of suppliers managed by the FSA.
+
+4. LAEMS (Laboratory Information Management System) follow-up audit. This audit will review the implementation of agreed actions related to the system.
+
+5. Business planning and performance management audit. This audit will assess objective setting, key performance indicators (KPIs), and monitoring and reporting of performance at various levels within the FSA. It will also be used to validate the controls management assurance framework self-assessment score for business planning and performance management.
+
+6. Management of Contract for supply of OVs (Official Veterinarians) and MHIs (Meat Hygiene Inspectors) audit. This audit will review the effectiveness of contract management arrangements.
+
+7. Training and development budgets audit. This audit will review budgets available at corporate, directorate, and team levels to ensure they are aligned with FSA priorities.
+
+8. Science, Evidence, and Information programme audit. This audit will review the transfer of programme outcomes to business as usual.
+
+9. Planning for Brexit audit. This audit will review risk identification, assessment, and mitigation plans related to Brexit.
+
+10. Investment Board audit. This audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. Campylobacter Programme audit. This audit will review the effectiveness of business as usual controls that the FSA is responsible for following the implementation of the programme.
+
+12. Raw Drinking Milk audit. This audit will assess the effectiveness of FSA controls for raw drinking milk on farms where the FSA is directly responsible.
+
+13. ABP (Animal By-Products) official controls follow-up audit. This audit will assess the effectiveness of management actions taken to address issues identified in a previous report.
+
+14. Approved Game Meat Handling Establishments audit. This audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report.
+
+15. Slaughterhouse hygiene verification system audit. This audit will review the effectiveness of the recently introduced system in approved slaughterhouses.
+
+16. Product Recall system audit. This audit will review the effectiveness of the new product recall model that the FSA is currently reviewing and planning to develop and implement.
+2024-09-26 13:52:02,469 - streamline - INFO - Streamline process completed in 17.02 seconds.
+2024-09-26 13:52:02,469 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 13:52:29,293 - root - INFO - Logging is configured.
+2024-09-26 13:52:42,608 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:52:43,660 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:52:43,660 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 13:52:43,660 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:52:43,691 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:52:43,692 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:52:45,968 - streamline - INFO - Best Metadata Results (Distances: [0.70748097 0.70748097 0.7490829  0.8518672  0.8675264  0.8913586
+ 0.90017736 0.9037345  0.9050368  0.91270363]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 13:52:45,968 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:52:45,969 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:52:48,551 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:52:48,552 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:52:50,136 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:52:50,507 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 13:52:50,507 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 13:52:50,508 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 13:52:54,900 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 13:52:54,901 - streamline - INFO - Final Answer:
+Based on the provided dataset, it appears that the scope of the audits for the Food Standards Agency (FSA) covers various areas related to their operations. Here are some examples:
+
+1. Benefits realisation audit following implementation of new meat charging discount system: This audit will review how well the original objectives were met after implementing a new meat charging discount system.
+
+2. Open data audit: The goal here is to assess the implementation and application of the open data policy, specifically in relation to the publication of data sets.
+
+3. Evolve Programme audit: This audit will review the plans in place for managing the risk of disruption during the transition from the current IT contract to a new model where more suppliers will be managed by the FSA.
+
+4. LAEMS follow-up audit: This audit will assess the implementation of agreed actions following the initial audit.
+
+5. Business planning and performance management audit: The audit will assess objective setting, key performance indicators (KPIs), and performance monitoring and reporting at Directorate and team levels to improve Value for Money (Vfm).
+
+6. Management of Contract for supply of OVs and MHIs audit: This audit will review the effectiveness of contract management arrangements.
+
+7. Training and development budgets audit: The aim is to ensure that budgets are aligned with FSA priorities at corporate, directorate, and team levels.
+
+8. Science, Evidence, and Information programme audit: This audit will assess whether programme outcomes have been effectively transferred to business as usual operations.
+
+9. Planning for Brexit audit: The focus here is on reviewing risk identification, assessment, and mitigation plans related to Brexit.
+
+10. Investment Board audit: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. Various follow-up audits for specific programmes (Campylobacter Programme, Raw Drinking Milk, ABP official controls, Approved Game Meat Handling Establishments, Slaughterhouse hygiene verification system, Product Recall system) will assess the effectiveness of the business as usual controls and the new models or systems that have been implemented.
+
+Please note that this is a general interpretation based on the data provided. For a more specific or detailed answer, it would be best to consult with an expert in this field or refer to the official documentation related to these audits.
+2024-09-26 13:52:54,902 - streamline - INFO - Streamline process completed in 12.29 seconds.
+2024-09-26 13:52:54,902 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 13:53:34,636 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:53:35,523 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:53:35,523 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 13:53:35,523 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:53:35,523 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:53:35,523 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:53:36,803 - streamline - INFO - Best Metadata Results (Distances: [0.7264433  0.748931   0.76256657 0.7634131  0.7634131  0.7657221
+ 0.7727599  0.78788185 0.7904743  0.8067038 ]):
+                  title                                              links
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+2024-09-26 13:53:36,804 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:53:36,805 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:53:41,104 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:53:41,104 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:53:42,534 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:53:43,100 - streamline - INFO - Loaded downloaded data from data.csv with 35 records.
+2024-09-26 13:53:43,100 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 13:53:43,101 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 13:53:46,149 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 13:53:46,149 - streamline - INFO - Final Answer:
+Based on the provided dataset, here are the details about the approved meat establishments:
+
+- The data is from the Internal Audit Plan for the years 2015-2016 and can be accessed via this link: [Internal Audit Plan - 2015-2016](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2015-2016.csv).
+
+- The FSA conducted an audit of FBO controls and Animal Welfare Controls, including Slaughter Licences, in August 2011. However, the commitment for annual audits in the first years of a new system focused on specific aspects of the system.
+
+- The Audit of FBO controls was deferred from 2015/16 due to the implementation date of WATOK (Welfare Assurance Trading Scheme) audit, which was deferred from 2015/16 because of legislation implementation delays.
+
+- Incidents Resilience was audited with a focus on whether the Incidents team is learning after practices, linking to corporate risks 3 and 4.
+
+- Animal Health/ Notifiable Diseases were assessed for controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls, which links to corporate risks 1 and 2.
+
+The dataset does not provide information about the last audit of these establishments or any updates after 2016. Therefore, I am uncertain about the current status of these approvals and audits.
+2024-09-26 13:53:46,151 - streamline - INFO - Streamline process completed in 11.51 seconds.
+2024-09-26 13:53:46,151 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 13:55:00,858 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:55:02,512 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:55:02,512 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 13:55:02,512 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:55:02,512 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:55:02,512 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:55:03,988 - streamline - INFO - Best Metadata Results (Distances: [0.70748097 0.70748097 0.7490829  0.8518672  0.8675264  0.8913586
+ 0.90017736 0.9037345  0.9050368  0.91270363]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 13:55:03,989 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:55:03,990 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:55:06,664 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:55:06,664 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:55:08,372 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:55:09,149 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 13:55:09,149 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 13:55:09,150 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 13:55:15,302 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 13:55:15,302 - streamline - INFO - Final Answer:
+Based on the provided dataset, it appears that the items listed are outlines for various audits and reviews to be conducted by the Food Standards Agency (FSA). Here is a summary of each item and its intended purpose:
+
+1. Benefits realisation audit following implementation of new meat charging discount system - This audit will assess whether the objectives set for the new meat charging discount system have been effectively met.
+
+2. Open data review - This review aims to evaluate the implementation and application of the FSA's open data policy, particularly in relation to the publication of data sets.
+
+3. Evolve Programme audit - The Evolve programme will replace the current IT contract with a new model involving an increase in the number of suppliers managed by the FSA, as well as an assumption of additional responsibilities from Capita. This audit will evaluate the plans in place to manage the potential disruption arising from this transition.
+
+4. LAEMS follow-up audit - This audit will review the implementation of agreed actions following the initial assessment of the system.
+
+5. Business planning and performance management audit - This audit will assess objective setting, key performance indicators (KPIs), and performance monitoring and reporting at Directorate and team levels, as well as validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+6. Management of Contract for supply of OVs and MHIs - This audit will evaluate the effectiveness of contract management arrangements.
+
+7. Training and development budgets review - This review will ensure that training and development budgets are aligned with FSA priorities at corporate, directorate, and team levels.
+
+8. Science, Evidence, and Information programme audit - This audit will assess whether the outcomes of the programme have been effectively transferred to business as usual operations.
+
+9. Planning for Brexit risk assessment - This audit will evaluate risk identification, assessment, and mitigation plans related to Brexit.
+
+10. Investment Board examination - This audit will examine the Investment Board's role in prioritizing resource allocation.
+
+11. Campylobacter Programme effectiveness review - The audit will assess the effectiveness of business-as-usual controls following the implementation of the Campylobacter programme.
+
+12. Raw Drinking Milk assessment - This audit will evaluate the FSA's controls for raw drinking milk on farms where the FSA is directly responsible.
+
+13. ABP official controls (follow-up audit) - The original audit resulted in a "Limited" assurance opinion, and this follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+
+14. Approved Game Meat Handling Establishments review - This audit will evaluate the effectiveness of official controls and policy-related issues highlighted in the previous audit report.
+
+15. Slaughterhouse hygiene verification system assessment - The audit will assess the effectiveness of the recently introduced slaughterhouse hygiene verification system in approved slaughterhouses.
+
+16. Product Recall system review - This audit will evaluate the effectiveness of the new product recall model being developed and implemented by the FSA.
+
+Please note that this information is based on the provided dataset, which contains outlines for various audits to be conducted by the Food Standards Agency. For specific updates or additional details, you may need to consult official FSA reports or publications.
+2024-09-26 13:55:15,303 - streamline - INFO - Streamline process completed in 14.44 seconds.
+2024-09-26 13:55:15,304 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 13:56:00,362 - root - INFO - Logging is configured.
+2024-09-26 13:56:08,252 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 13:56:09,439 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 13:56:09,439 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 13:56:09,439 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 13:56:09,468 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 13:56:09,468 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 13:56:11,342 - streamline - INFO - Best Metadata Results (Distances: [0.70748097 0.70748097 0.7490829  0.8518672  0.8675264  0.8913586
+ 0.90017736 0.9037345  0.9050368  0.91270363]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 13:56:11,343 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 13:56:11,344 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 13:56:13,668 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 13:56:13,668 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 13:56:14,815 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 13:56:15,201 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 13:56:15,201 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 13:56:15,202 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 13:56:19,658 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 13:56:19,658 - streamline - INFO - Final Answer:
+Based on the provided dataset, it appears that the FSA (Food Standards Agency) conducts various audits to review different aspects of its operations. Here are some key areas where audits are performed:
+
+1. Evolve Programme Audit: To review the efficacy of plans in place to manage the risk of disruption arising from the transition to a new IT contract model, and assess the objective setting and KPIs at Directorate and team level for Business Planning and Performance Management.
+
+2. LAEMS (Livestock Animal Electronic Movement System) Follow-up Audit: To review implementation of agreed actions.
+
+3. Contract Management Audits: To review the effectiveness of contract management arrangements, specifically for the supply of On Farm Vets and Mobile Housing Inspections, and the Transfer of programme outcomes to business as usual.
+
+4. Training and Development Budgets Audit: To review budgets available at corporate, directorate and team level to ensure these are aligned with FSA priorities.
+
+5. Science, Evidence, and Information Programme Audit: To review the transfer of programme outcomes to business as usual.
+
+6. Brexit Preparedness Audits: To review risk identification, assessment, and mitigation plans for Brexit.
+
+7. Investment Board Audit: To examine work of the Investment Board in prioritizing resource allocation.
+
+8. Official Controls Audits:
+   - Campylobacter Programme: To review effectiveness of business as usual controls that the FSA is responsible for following implementation of the programme.
+   - Raw Drinking Milk: To assess effectiveness of FSA controls for RDM on farms where the FSA is directly responsible.
+   - ABP (Animal By-Product) official controls (follow-up audit): To assess effectiveness of management actions taken to address issues identified in the previous report.
+   - Approved Game Meat Handling Establishments: To review effectiveness of official controls and follow-up on policy related issues highlighted in previous audit report.
+   - Slaughterhouse Hygiene Verification System: To review effectiveness of the recently introduced system in approved slaughter houses.
+   - Product Recall system: To review effectiveness of the new product recall model.
+
+Please note that this is a summary of the audits mentioned in the dataset. For more detailed information, it would be best to refer to the original reports or consult with the FSA directly.
+2024-09-26 13:56:19,659 - streamline - INFO - Streamline process completed in 11.41 seconds.
+2024-09-26 13:56:19,659 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:01:01,523 - root - INFO - Logging is configured.
+2024-09-26 14:01:17,206 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:02:00,209 - streamline - INFO - Loaded 30 datasets from datasets.csv.
+2024-09-26 14:02:00,210 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:02:00,210 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:02:00,242 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:02:00,242 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:02:02,135 - streamline - INFO - Best Metadata Results (Distances: [1.178199  1.2007682 1.2109962 1.2628137 1.286822  1.2875841 1.3326206
+ 1.3378692 1.3451111 1.3468099]):
+                                                title                                              links
+27  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+28  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+29  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+13  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+14  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+12  Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+11  Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+15  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+10  Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+8   Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+2024-09-26 14:02:02,136 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:02:02,137 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:02:09,948 - llm.llm_use - INFO - Metadata selection completed. 1 out of 10 datasets are relevant.
+2024-09-26 14:02:09,949 - streamline - INFO - Refined to 1 relevant datasets after LLM processing.
+2024-09-26 14:02:10,506 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:02:10,866 - streamline - INFO - Loaded downloaded data from data.csv with 1170 records.
+2024-09-26 14:02:10,867 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:02:10,867 - llm.llm_use - WARNING - 'metadatasummary' column not found in the data. Proceeding without metadata summaries.
+2024-09-26 14:02:10,869 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 14:02:15,569 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 14:02:15,570 - streamline - INFO - Final Answer:
+Based on the provided dataset, it appears to be a list of job roles within an organization, along with their respective departments, functions, and related records management categories. Here are some answers to potential user queries:
+
+1. Who are the Information Architects in the organization?
+- The Information Architects in the organization are listed as follows: Feb-17 72, Feb-17 75, Feb-17 78, Feb-17 80, Feb-17 82, and Feb-17 88. They work in various departments such as Finance and Performance, Regulatory and Legal Strategy, and Policy and Science. Their records management categories include Records Management - Wisdom and Records Management - Other.
+
+2. Who are the Security Managers in the organization?
+- The Security Managers in the organization are listed as follows: Feb-17 77, Feb-17 83, Feb-17 84, Jan-17 95, and Feb-17 96. They work in various departments such as Policy and Science, Wales and Regulatory Delivery, Regulatory and Legal Strategy, and External Requester. Their records management categories include Security and Records Management - Other.
+
+3. What is the role of the Deputy IT Security Officer?
+- The Deputy IT Security Officer's role in the organization is listed as Feb-17 69 and Jan-17 90. They work in various departments such as NI and Organisational Development, Openness Data and Digital, and Finance and Performance. Their records management categories include Security and Records Management - Other.
+
+4. What is the role of the Information & security Team Leader?
+- The roles of the Information & security Team Leader are listed as follows: Feb-17 81, Feb-17 86, Feb-17 91, Feb-17 92, Feb-17 97, and Jan-17 90. They work in various departments such as Policy and Science, Private Office, Operations, Finance and Performance, and Openness Data and Digital. Their records management categories include Information Governance, Records Management - Wisdom, and Records Management - Other.
+
+5. What is the role of the Information Governance Manager?
+- The role of the Information Governance Manager in the organization is listed as Feb-17 96. They work in the department of Wales and Regulatory Delivery and their records management category is Information Governance.
+2024-09-26 14:02:15,571 - streamline - INFO - Streamline process completed in 58.36 seconds.
+2024-09-26 14:02:15,571 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:02:37,821 - root - INFO - Logging is configured.
+2024-09-26 14:02:50,706 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:03:07,231 - streamline - INFO - Loaded 41 datasets from datasets.csv.
+2024-09-26 14:03:07,231 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:03:07,231 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:03:07,260 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:03:07,261 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:03:09,290 - streamline - INFO - Best Metadata Results (Distances: [0.74874127 0.7487413  0.78640676 0.8509264  0.8734882  0.8816228
+ 0.9078365  0.91195273 0.91375434 0.9153502 ]):
+                  title                                              links
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:03:09,290 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:03:09,291 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:03:12,215 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:03:12,215 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:03:13,699 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:03:14,114 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:03:14,114 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:03:14,115 - llm.llm_use - WARNING - 'metadatasummary' column not found in the data. Proceeding without metadata summaries.
+2024-09-26 14:03:14,116 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 14:03:19,287 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 14:03:19,287 - streamline - INFO - Final Answer:
+The provided datasets outline various audits and reviews planned by the Food Standards Agency (FSA) across different areas of their operations. Here are some details about each audit:
+
+1. Benefits realisation audit following implementation of new meat charging discount system. This audit will assess how well the original objectives have been met after the implementation of the new system.
+
+2. Open data audit aims to review the implementation and application of policies and procedures regarding open data, specifically focusing on the publication of data sets.
+
+3. Evolve Programme: The FSA plans to replace their current IT contract with a different model, involving gradual disaggregation of services and increased management of suppliers. The audit for this program will review the risk management plans in place during the transition to the new model.
+
+4. LAEMS follow-up audit will examine the implementation of agreed actions related to the system.
+
+5. Business planning and performance management: The audit will assess objective setting, key performance indicators (KPIs), and monitoring and reporting of performance at different levels within the Agency.
+
+6. Management of Contract for supply of OVs and MHIs: This audit will review the effectiveness of contract management arrangements.
+
+7. Training and development budgets: The audit will ensure that budgets are aligned with FSA priorities at corporate, directorate, and team levels.
+
+8. Science, Evidence, and Information program: The audit will examine the transfer of program outcomes to business as usual operations.
+
+9. Planning for Brexit: The audit will review risk identification, assessment, and mitigation plans related to Brexit.
+
+10. Investment Board: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. Campylobacter Programme: The audit will assess the effectiveness of business as usual controls after implementation of the program.
+
+12. Raw Drinking Milk: The audit will evaluate the FSA's controls for RDM on farms where they are directly responsible.
+
+13. ABP official controls (follow-up audit): An original audit in 2016/17 resulted in a 'Limited' assurance opinion, and this follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+
+14. Approved Game Meat Handling Establishments: The audit will review the effectiveness of official controls and policy-related issues highlighted in previous audit reports.
+
+15. Slaughterhouse hygiene verification system: This audit will assess the effectiveness of the recently introduced system in approved slaughterhouses.
+
+16. Product Recall system: The FSA is currently reviewing the efficacy of the product recall system, with a view to developing and implementing an improved model. The audit will review the effectiveness of the new product recall model.
+2024-09-26 14:03:19,288 - streamline - INFO - Streamline process completed in 28.58 seconds.
+2024-09-26 14:03:19,289 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:07:50,941 - root - INFO - Logging is configured.
+2024-09-26 14:07:56,439 - root - INFO - Logging is configured.
+2024-09-26 14:09:03,609 - root - INFO - Logging is configured.
+2024-09-26 14:09:12,897 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:09:14,116 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:09:14,116 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:09:14,116 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:09:14,237 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:09:14,237 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:09:16,115 - streamline - INFO - Best Metadata Results (Distances: [0.6613373  0.6613373  0.686643   0.7725075  0.78818506 0.80347943
+ 0.8180489  0.82387495 0.82401896 0.83518463]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:09:16,116 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:09:16,116 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:09:23,594 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:09:23,594 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:09:25,364 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:09:26,207 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:09:26,207 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:09:26,207 - llm.llm_use - WARNING - 'metadatasummary' column not found in the data. Proceeding without metadata summaries.
+2024-09-26 14:09:26,209 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 14:09:31,780 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 14:09:31,781 - streamline - INFO - Final Answer:
+The provided data represents a list of audits scheduled for various areas within an organization, categorized under Business Audits and Official Controls Audits.
+
+1. **Business Audits**: These audits focus on several key areas for the Agency such as performance management, contract management for supply of Operational Vehicles (OVs) and Mobile Homes & Installations (MHIs), training and development budgets, Science, Evidence and Information programme, Planning for Brexit, Investment Board, and Business planning and performance management self-assessment score validation.
+   - **Performance Management**: The audit will assess objective setting and Key Performance Indicators (KPIs) at Directorate and team level, and the subsequent monitoring and reporting of performance.
+   - **Contract Management for OVs and MHIs**: The audit will review the effectiveness of contract management arrangements.
+   - **Training and Development Budgets**: The audit will verify that budgets are aligned with FSA priorities at corporate, directorate, and team levels.
+   - **Science, Evidence, and Information programme**: The audit will examine how program outcomes are transferred to business as usual.
+   - **Planning for Brexit**: The audit will review risk identification, assessment, and mitigation plans.
+   - **Investment Board**: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+   - **Business Planning and Performance Management self-assessment score validation**: The audit will validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+2. **Official Controls Audits**: These audits focus on various official control programs, such as Campylobacter Programme, Raw Drinking Milk, ABP official controls (follow-up audit), Approved Game Meat Handling Establishments, Slaughterhouse hygiene verification system, Product Recall system.
+   - **Campylobacter Programme**: The audit will review the effectiveness of business as usual controls that the FSA is responsible for following implementation of the programme.
+   - **Raw Drinking Milk**: The audit will assess the effectiveness of FSA controls for Raw Drinking Milk on farms where the FSA is directly responsible.
+   - **ABP official controls (follow-up audit)**: The original audit in 2016/17 resulted in a Limited assurance opinion, and this follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+   - **Approved Game Meat Handling Establishments**: The audit will review the effectiveness of official controls and follow up on policy related issues highlighted in previous audit reports.
+   - **Slaughterhouse hygiene verification system**: The audit will review the effectiveness of the recently introduced system in approved slaughter houses.
+   - **Product Recall system**: The FSA is currently reviewing the efficacy of the product recall system with a view to developing and implementing an improved model, and this audit will review the effectiveness of the new product recall model.
+2024-09-26 14:09:31,782 - streamline - INFO - Streamline process completed in 18.88 seconds.
+2024-09-26 14:09:31,782 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:09:53,013 - root - INFO - Logging is configured.
+2024-09-26 14:10:04,912 - root - INFO - Logging is configured.
+2024-09-26 14:10:07,911 - root - INFO - Logging is configured.
+2024-09-26 14:10:19,765 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:10:20,995 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:10:20,995 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:10:20,995 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:10:21,028 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:10:21,028 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:10:22,798 - streamline - INFO - Best Metadata Results (Distances: [0.7348935 0.7348935 0.7728374 0.8538743 0.8741498 0.884203  0.9062005
+ 0.9130908 0.9149394 0.9168813]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+2024-09-26 14:10:22,799 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:10:22,799 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:10:22,801 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,802 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,803 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,805 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,806 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,808 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,809 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,810 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,811 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,812 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,812 - llm.llm_use - INFO - Metadata selection completed. 0 out of 10 datasets are relevant.
+2024-09-26 14:10:22,813 - streamline - INFO - Refined to 0 relevant datasets after LLM processing.
+2024-09-26 14:10:22,814 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-09-26 14:10:22,814 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:10:42,019 - root - INFO - Logging is configured.
+2024-09-26 14:10:44,353 - root - INFO - Logging is configured.
+2024-09-26 14:10:52,667 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:10:53,632 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:10:53,632 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:10:53,632 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:10:53,660 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:10:53,660 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:10:55,486 - streamline - INFO - Best Metadata Results (Distances: [0.7348935 0.7348935 0.7728374 0.8538743 0.8741498 0.884203  0.9062005
+ 0.9130908 0.9149394 0.9168813]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+2024-09-26 14:10:55,486 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:10:55,487 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:10:58,323 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:10:58,324 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:10:59,808 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:11:00,176 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:11:00,176 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:11:00,176 - llm.llm_use - WARNING - 'metadatasummary' column not found in the data. Proceeding without metadata summaries.
+2024-09-26 14:11:00,178 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 14:11:08,612 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 14:11:08,612 - streamline - INFO - Final Answer:
+Based on the provided datasets, it appears that each one outlines a specific audit or review task undertaken by the Food Standards Agency (FSA) for various aspects of their operations. Here are some examples:
+
+1. Benefits realisation audit following implementation of new meat charging discount system: This audit will assess how well the original objectives set for the new meat charging discount system have been met. It's important to ensure that the implementation is meeting its intended goals and providing the desired benefits.
+
+2. Open data audit: The purpose of this review is to examine the implementation and application of policies and procedures regarding open data, particularly in relation to publishing data sets. Ensuring transparency and accessibility to data is crucial for maintaining public trust and promoting informed decision-making.
+
+3. Evolve Programme audit: This audit will evaluate the plans in place to manage the risk of disruption arising from transitioning to a new IT contract model, which involves changing the current IT contract with a different management model, increasing the number of suppliers, and assuming responsibility for elements currently managed by Capita.
+
+4. LAEMS (Laboratory Animal Exemptions Management System) follow-up audit: This audit will assess implementation of agreed actions related to the LAEMS system. The specifics aren't clear from the summary, but it seems that this system is relevant to managing laboratory animal exemptions in some capacity.
+
+5. Business planning and performance management audit: The audit will evaluate objective setting, KPIs (Key Performance Indicators), and monitoring and reporting of performance within the Agency. This is crucial for improving Value for Money (Vfm) and ensuring that objectives are cascaded effectively from Directorate to individual team levels.
+
+6. Management of Contract for supply of OVs and MHIs: This audit will review the effectiveness of contract management arrangements. It's not specified what OVs and MHIs stand for, but it appears to relate to contracts for supplying certain goods or services.
+
+7. Training and development budgets audit: The purpose of this audit is to ensure that training and development budgets are aligned with FSA priorities at corporate, directorate, and team levels. This is crucial for ensuring the ongoing skill development of employees and the organization as a whole.
+
+8. Science, Evidence, and Information programme audit: This audit will assess transfer of programme outcomes to business as usual operations. The specifics aren't clear from the summary, but it seems that this program focuses on the use of science, evidence, and information in FSA operations.
+
+9. Planning for Brexit audit: The audit will review risk identification, assessment, and mitigation plans related to Brexit. This is crucial for ensuring preparedness and resilience in the face of changes due to the United Kingdom's exit from the European Union.
+
+10. Investment Board audit: The audit will examine the work of the Investment Board in prioritizing resource allocation. Efficient resource allocation is essential for maximizing the impact of limited resources and ensuring value for money.
+
+11. Campylobacter Programme audit: The audit will assess the effectiveness of business-as-usual controls following the implementation of the Campylobacter Programme. This programme seems to focus on addressing issues related to Campylobacter, a common type of bacteria that can cause foodborne illness.
+
+12. Raw Drinking Milk audit: The audit will assess the effectiveness of FSA controls for raw drinking milk on farms where the FSA is directly responsible. Ensuring the safety and quality of milk products is crucial for public health.
+
+13. ABP (Animal By-Product) official controls follow-up audit: This audit will assess the effectiveness of management actions taken to address issues identified in a previous report related to ABP official controls.
+
+14. Approved Game Meat Handling Establishments audit: The audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report. This appears to relate to establishments that process game meat for sale, ensuring compliance with relevant regulations and standards.
+
+15. Slaughterhouse hygiene verification system audit: This audit will assess the effectiveness of the recently introduced system for verifying hygiene practices in approved slaughterhouses. Ensuring proper sanitation and hygiene is crucial for maintaining food safety.
+
+16. Product Recall system: The FSA is currently reviewing the efficacy of their product recall system with a view to developing and implementing an improved model. The audit will review the effectiveness of the new product recall model. Effective product recalls are essential for ensuring consumer safety when issues arise with food products.
+2024-09-26 14:11:08,614 - streamline - INFO - Streamline process completed in 15.94 seconds.
+2024-09-26 14:11:08,614 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:12:58,225 - root - INFO - Logging is configured.
+2024-09-26 14:13:15,748 - root - INFO - Logging is configured.
+2024-09-26 14:13:18,095 - root - INFO - Logging is configured.
+2024-09-26 14:13:25,034 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:13:26,287 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:13:26,287 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:13:26,287 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:13:26,325 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:13:26,325 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:13:28,184 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:13:28,184 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:13:28,185 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:13:31,862 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:13:31,862 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:13:33,440 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:13:33,859 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:13:33,859 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:13:33,859 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer: expected str, bytes or os.PathLike object, not DataFrame
+2024-09-26 14:13:33,860 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request.
+2024-09-26 14:13:33,861 - streamline - INFO - Streamline process completed in 8.83 seconds.
+2024-09-26 14:13:33,861 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:14:45,516 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:14:46,708 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:14:46,708 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:14:46,708 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:14:46,708 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:14:46,708 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:14:48,291 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:14:48,291 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:14:48,292 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:14:51,127 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:14:51,127 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:14:52,534 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:14:52,915 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:14:52,915 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:14:52,915 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer: expected str, bytes or os.PathLike object, not DataFrame
+2024-09-26 14:14:52,916 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request.
+2024-09-26 14:14:52,917 - streamline - INFO - Streamline process completed in 7.40 seconds.
+2024-09-26 14:14:52,917 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:19:47,766 - root - INFO - Logging is configured.
+2024-09-26 14:19:53,989 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:19:55,255 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:19:55,255 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:19:55,255 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:19:55,297 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:19:55,297 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:19:57,267 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:19:57,267 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:19:57,268 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:20:04,414 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:20:04,414 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:20:05,964 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:20:06,784 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:20:06,784 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:20:06,788 - llm.llm_use - INFO - Attempting to read the data file:                                                    Dataset Metadata: The Internal Audit Plan provides a list of audits planned for the years 2016 and 2017  accessible via the link: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv>.
+Category                                                                                   AuditTitle                                                                                            OutlineScope                                                               
+Business Audits                                                                      Defra SLA / MoUs                                                       What SLAs are in place; what are the agreed ou...                                                               
+Business Audits                                      Follow up policy initiation and evaluation audit                                                       Follow up on the report issued May 2014. Revie...                                                               
+Business Audits                                                                 Whistleblowing policy                                                       To meet Dear Accounting Officer Letter 2/15 re...                                                               
+Business Audits                                             Tracing Non-Financial Information Sources                                                       Tracing non-financial information in the Busin...                                                               
+Business Audits                                                 Contract Management: Feed OC delivery                                                       Two years into new Feed OC regime. Review cont...                                                               
+Business Audits                                             Process for recognising assurance schemes                                                       Review of the effectiveness of the process for...                                                               
+Business Audits                                                Review Security Risk Management return                                                       Mandatory requirement, annual review. Provide ...                                                               
+Business Audits                                                                  Information Security                                                       Assurance that information security and contro...                                                               
+Business Audits                                                                   Financial assurance                                                       Audit financial controls operating centrally a...                                                               
+Official Controls Audits                                                           Animal By-products                                                       Assessment of animal by-products official cont...                                                               
+Official Controls Audits                                                    FSA audit of FBO controls                                                       Commitment for annual audit in first years of ...                                                               
+Official Controls Audits                              Animal Welfare Controls incl slaughter licences                                                       WATOK implementation ? audit deferred from 201...                                                               
+Official Controls Audits                                                         Incidents Resilience                                                       Are Incidents team learning after the practice...                                                               
+Official Controls Audits                                           Animal Health/ Notifiable Diseases                                                       Assess animal health controls implemented on b...                                                               
+Dataset Metadata: The Internal Audit Plan is a ...   accessible via the provided CSV link at [http...                                                                                                     NaN                                                               
+Category                                                                                   AuditTitle                                                                                            OutlineScope                                                               
+Business Audits                                                                                Stow 1                                                       Benefits realisation audit following implement...                                                               
+Business Audits                                                                             Open data                                                       To review implementation and application of po...                                                               
+Business Audits                                                                      Evolve Programme                                                       Evolve programme will replace the current IT c...                                                               
+Business Audits                                                                LAEMS follow-up audit                                                        The audit will review implementation of agreed...                                                               
+Business Audits                                         Business planning and performance management                                                        Performance management is a key area for the A...                                                               
+Business Audits                                     Management of Contract for supply of OVs and M...                                                       The audit will review effectiveness of contrac...                                                               
+Business Audits                                                     Training and development budgets                                                        The audit will review budgets available at cor...                                                               
+Business Audits                                        Science,  Evidence  and Information programme                                                        The audit will review transfer of programme ou...                                                               
+Business Audits                                                                  Planning for Brexit                                                        The audit will review risk identification, ass...                                                               
+Business Audits                                                                      Investment Board                                                       The audit will examine work of the Investment ...                                                               
+Official Controls Audits                                                     Campylobacter Programme                                                        The audit will review effectiveness of busines...                                                               
+Official Controls Audits                                                            Raw Drinking Milk                                                       The audit will assess effectiveness of FSA con...                                                               
+Official Controls Audits                                      ABP official controls (follow-up audit)                                                       Original audit in 2016/17 resulted in ?Limited...                                                               
+Official Controls Audits                                  Approved Game Meat Handling Establishments                                                        The audit will review effectiveness of officia...                                                               
+Official Controls Audits                                 Slaughterhouse hygiene verification system                                                         The audit will review effectiveness of the rec...                                                               
+Official Controls Audits                                                      Product  Recall system                                                        FSA currently reviewing efficacy of product re...                                                               
+2024-09-26 14:20:06,788 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer: name 'os' is not defined
+2024-09-26 14:20:06,788 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request.
+2024-09-26 14:20:06,789 - streamline - INFO - Streamline process completed in 12.80 seconds.
+2024-09-26 14:20:06,789 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 14:22:33,166 - root - INFO - Logging is configured.
+2024-09-26 14:44:31,387 - root - INFO - Logging is configured.
+2024-09-26 14:44:40,031 - streamline - INFO - Received user query: 'What audits were planned in 2017? '
+2024-09-26 14:44:40,031 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 14:44:41,279 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 14:44:41,279 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 14:44:41,280 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 14:44:41,317 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 14:44:41,317 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 14:44:43,120 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 14:44:43,121 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 14:44:43,121 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 14:44:49,669 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 14:44:49,669 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 14:44:51,043 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 14:44:51,852 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 14:44:51,852 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 14:44:51,852 - llm.llm_use - INFO - Received user query: 'What audits were planned in 2017? '
+2024-09-26 14:44:51,852 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer while processing query 'What audits were planned in 2017? ': name 'os' is not defined
+2024-09-26 14:44:51,852 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request.
+2024-09-26 14:44:51,854 - streamline - INFO - Streamline process completed in 11.82 seconds.
+2024-09-26 14:44:51,854 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 17:22:21,340 - root - INFO - Logging is configured.
+2024-09-26 17:22:23,666 - root - INFO - Logging is configured.
+2024-09-26 17:22:26,033 - root - INFO - Logging is configured.
+2024-09-26 17:22:28,368 - root - INFO - Logging is configured.
+2024-09-26 17:22:30,733 - root - INFO - Logging is configured.
+2024-09-26 17:22:33,092 - root - INFO - Logging is configured.
+2024-09-26 17:22:35,466 - root - INFO - Logging is configured.
+2024-09-26 17:23:04,633 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:23:04,634 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 17:23:05,875 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 17:23:05,875 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 17:23:05,875 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 17:23:05,914 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 17:23:05,914 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 17:23:07,696 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 17:23:07,696 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 17:23:07,697 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 17:23:15,212 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 17:23:15,212 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 17:23:16,601 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 17:23:17,466 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 17:23:17,466 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 17:23:17,466 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:23:17,466 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer while processing query 'what audits were planned in 2017? ': name 'os' is not defined
+2024-09-26 17:23:17,466 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request.
+2024-09-26 17:23:17,468 - streamline - INFO - Streamline process completed in 12.83 seconds.
+2024-09-26 17:23:17,468 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 17:29:31,579 - root - INFO - Logging is configured.
+2024-09-26 17:29:34,535 - root - INFO - Logging is configured.
+2024-09-26 17:29:36,874 - root - INFO - Logging is configured.
+2024-09-26 17:29:43,515 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:29:43,515 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 17:29:44,835 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 17:29:44,835 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 17:29:44,835 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 17:29:44,865 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 17:29:44,865 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 17:29:46,676 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 17:29:46,677 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 17:29:46,677 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 17:29:53,107 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 17:29:53,107 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 17:29:54,774 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 17:29:55,432 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 17:29:55,432 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 17:29:55,433 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:29:55,433 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer while processing query 'what audits were planned in 2017? ': name 'os' is not defined
+2024-09-26 17:29:55,433 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request. Details: name 'os' is not defined
+2024-09-26 17:29:55,434 - streamline - INFO - Streamline process completed in 11.92 seconds.
+2024-09-26 17:29:55,434 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 17:30:17,349 - root - INFO - Logging is configured.
+2024-09-26 17:30:24,144 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:30:24,145 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 17:30:25,145 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 17:30:25,145 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 17:30:25,145 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 17:30:25,171 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 17:30:25,172 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 17:30:26,976 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 17:30:26,976 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 17:30:26,977 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 17:30:29,485 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 17:30:29,486 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 17:30:30,856 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 17:30:31,243 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 17:30:31,243 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 17:30:31,243 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:30:31,244 - llm.llm_use - ERROR - Error in directly_use_llm_for_answer while processing query 'what audits were planned in 2017? ': stat: path should be string, bytes, os.PathLike or integer, not DataFrame
+2024-09-26 17:30:31,244 - streamline - INFO - Final Answer:
+Sorry, I encountered an error while processing your request. Details: stat: path should be string, bytes, os.PathLike or integer, not DataFrame
+2024-09-26 17:30:31,245 - streamline - INFO - Streamline process completed in 7.10 seconds.
+2024-09-26 17:30:31,245 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 17:34:30,856 - root - INFO - Logging is configured.
+2024-09-26 17:34:40,383 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:34:40,383 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 17:34:41,688 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 17:34:41,688 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 17:34:41,688 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 17:34:41,716 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 17:34:41,716 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 17:34:43,524 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 17:34:43,525 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 17:34:43,525 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 17:34:46,393 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 17:34:46,393 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 17:34:47,966 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 17:34:48,561 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 17:34:48,562 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 17:34:48,562 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 17:34:48,562 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 17:34:48,562 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 17:34:54,012 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 17:34:54,012 - streamline - INFO - Final Answer:
+Based on the provided information, it appears the document outlines the internal audit plan for the Financial Services Authority (FSA) in 2017-18. The plan includes various audits focused on different areas of FSA operations and risk management.
+
+Here are some of the key audit titles and their scopes:
+
+1. Stow 1 - Benefits realisation audit following implementation of a new meat charging discount system to review how well original objectives have been met.
+2. Open data - Review of the implementation and application of policy and procedures on open data specifically in relation to the publication of data sets.
+3. Evolve Programme - Audit of the Evolve programme, which aims to replace the current IT contract with a different model involving gradual disaggregation of services and increased management of suppliers by the FSA. The audit will review the efficacy of plans in place to manage the risk of disruption arising from the transition to the new model.
+4. LAEMS follow-up audit - Review of implementation of agreed actions following a previous audit report.
+5. Business planning and performance management - Audit assessing objective setting, KPIs at Directorate and team level, and monitoring and reporting of performance in business planning and performance management.
+6. Management of Contract for supply of OVs and MHIs - Review of the effectiveness of contract management arrangements.
+7. Training and development budgets - Audit reviewing budget availability at corporate, directorate, and team levels to ensure alignment with FSA priorities.
+8. Science, Evidence, and Information programme - Audit reviewing transfer of programme outcomes to business as usual.
+9. Planning for Brexit - Review of risk identification, assessment, and mitigation plans.
+10. Investment Board - Examination of the work of the Investment Board in prioritizing resource allocation.
+11. Campylobacter Programme - Audit reviewing the effectiveness of business-as-usual controls following the implementation of the programme.
+12. Raw Drinking Milk - Assessment of FSA controls for RDM on farms where the FSA is directly responsible.
+13. ABP official controls (follow-up audit) - Follow-up audit assessing the effectiveness of management actions taken to address issues identified in a previous report regarding animal by-products official controls.
+14. Approved Game Meat Handling Establishments - Review of the effectiveness of official controls and addressing policy-related issues highlighted in a previous audit report.
+15. Slaughterhouse hygiene verification system - Review of the effectiveness of the recently introduced system in approved slaughterhouses.
+16. Product Recall system - Audit reviewing the effectiveness of the new product recall model currently under development and implementation.
+
+You can find more details, including the audit outlines, by accessing the provided CSV link at [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv].
+2024-09-26 17:34:54,014 - streamline - INFO - Streamline process completed in 13.63 seconds.
+2024-09-26 17:34:54,014 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:24:49,219 - root - INFO - Logging is configured.
+2024-09-26 18:24:53,480 - root - INFO - Logging is configured.
+2024-09-26 18:24:55,825 - root - INFO - Logging is configured.
+2024-09-26 18:25:04,707 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:25:04,707 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:25:05,959 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:25:05,960 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.9, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:25:05,960 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:25:05,997 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:25:05,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:25:07,803 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:25:07,803 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:25:07,804 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:25:14,664 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:25:14,665 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:25:16,232 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:25:17,067 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:25:17,067 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:25:17,068 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:25:17,068 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:25:17,068 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:25:20,783 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:25:20,783 - streamline - INFO - Final Answer:
+Based on the provided metadata and dataset content, it appears that the document outlines an Internal Audit Plan for the year 2017-18 for the Food Standards Agency (FSA). This plan includes various audits focused on different areas of the agency's operations, including information security, financial assurance, animal by-products, FSA audit of FBO controls, animal welfare controls, incidents resilience, animal health/notifiable diseases, and more.
+
+Each audit has a specific scope and title, such as "Benefits realisation audit following implementation of new meat charging discount system," "Review of open data implementation and application," or "Evolve Programme review." Some audits are follow-up audits to previous years' reports, like the one for Animal By-products, which was last audited in August 2011.
+
+The dataset also includes links to corporate risks associated with each audit, such as risk 6 (Security Risk Management) and risks 1, 2, 3, and 4 in various audits. The purpose of these audits is to ensure that the FSA's systems, controls, and practices comply with relevant guidelines, policies, and legislation, and that they are operating effectively and efficiently.
+
+For example, the "Animal Welfare Controls incl slaughter licences" audit is linked to the WATOK implementation (an animal welfare program) and was deferred from 2015/16 due to legislation implementation date. The "Planning for Brexit" audit will review risk identification, assessment, and mitigation plans.
+
+The audits are scheduled annually or as needed, such as the commitment for an annual audit in the first years of the new system for FSA audit of FBO controls. Some audits focus on specific aspects of a system or program, like the "Campylobacter Programme" audit that will review the effectiveness of business as usual controls following its implementation.
+
+The dataset also includes an external link to the CSV file containing more detailed information about each audit.
+2024-09-26 18:25:20,785 - streamline - INFO - Streamline process completed in 16.08 seconds.
+2024-09-26 18:25:20,785 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:25:44,241 - root - INFO - Logging is configured.
+2024-09-26 18:25:49,015 - root - INFO - Logging is configured.
+2024-09-26 18:25:51,360 - root - INFO - Logging is configured.
+2024-09-26 18:25:56,099 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:25:56,099 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:25:57,179 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:25:57,179 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:25:57,179 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:25:57,207 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:25:57,207 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:25:58,965 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:25:58,965 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:25:58,966 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:26:02,317 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:26:02,317 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:26:03,875 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:26:04,265 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:26:04,265 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:26:04,265 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:26:04,265 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:26:04,266 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:26:07,598 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:26:07,598 - streamline - INFO - Final Answer:
+Based on the provided metadata, it appears that the Internal Audit Plan provides a list of audits scheduled for the year 2017-18. The audits can be categorized as Official Controls Audits and Business Audits.
+
+Official Controls Audits focus on various aspects related to official controls such as Animal Welfare, Notifiable Diseases, Incidents Resilience, Raw Drinking Milk, Approved Game Meat Handling Establishments, Slaughterhouse Hygiene Verification System, and Product Recall system. For instance, the audit for Animal Health/Notifiable Diseases assesses animal health controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls. This links to corporate risks 1 and 2.
+
+Business Audits, on the other hand, focus on various business-related aspects such as Stow 1, Open data, Evolve Programme, LAEMS follow-up audit, Business planning and performance management, Management of Contract for supply of OVs and MHIs, Training and development budgets, Science, Evidence and Information programme, Planning for Brexit, Investment Board, and others. For example, the audit for Business Planning and Performance Management assesses objective setting and KPIs at Directorate and cascading these to individual team level and the subsequent monitoring and reporting of performance. This audit also validates the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+You can find more details about each audit, including their titles, scopes, and links to the actual audit plans in the dataset available at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv]
+2024-09-26 18:26:07,599 - streamline - INFO - Streamline process completed in 11.50 seconds.
+2024-09-26 18:26:07,600 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:36:49,552 - root - INFO - Logging is configured.
+2024-09-26 18:36:58,278 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:36:58,279 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:36:59,513 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:36:59,513 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:36:59,513 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:36:59,540 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:36:59,540 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:37:01,549 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:37:01,550 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:37:01,550 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:37:09,087 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:37:09,087 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:37:10,677 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:37:11,504 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:37:11,504 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:37:11,504 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:37:11,504 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:37:11,505 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:37:15,612 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:37:15,612 - streamline - INFO - Final Answer:
+Based on the provided information, the internal audit plan for the 2017-18 fiscal year outlines several audits related to various aspects of corporate risk management within the Food Standards Agency (FSA). Here are some examples:
+
+1. **Security Risk Management Return**: Mandatory requirement with an annual review. The independent challenge required here could be evaluating the effectiveness of the processes for recognizing assurance schemes that may be relied on more in future, as suggested by the user's query.
+
+2. **Information Security**: This involves an audit of information security and controls to ensure they comply with Cabinet Office guidelines. The annual audit provides a means to maintain the required level of security.
+
+3. **Financial Assurance**: Audits of financial controls operating centrally and in devolved offices are conducted annually. These audits help ensure the accuracy and reliability of financial data.
+
+4. **Animal By-products**: The assessment of animal by-products official controls at approved meat establishments is linked to corporate risks 1 and 4. The last audit was performed in August 2011, so it would be beneficial to review this scheme for any necessary updates or improvements.
+
+5. **Incidents Resilience**: This audit focuses on whether the Incidents team is learning from past practices. It links to corporate risks 3 and 4, which may involve assessing the agency's ability to respond effectively to crises and improve over time.
+
+6. **Animal Health/ Notifiable Diseases**: Audits are conducted to assess animal health controls implemented on behalf of Defra / APHA, including human health controls. This helps manage risks related to both animal and human health.
+
+The detailed internal audit plan can be found at [this link](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv), which outlines additional audits for the 2017-18 fiscal year. These audits cover areas such as benefits realisation, open data implementation, the Evolve Programme, and more. Each audit is designed to provide assurance that the FSA's controls and systems are functioning effectively in addressing various corporate risks.
+2024-09-26 18:37:15,613 - streamline - INFO - Streamline process completed in 17.33 seconds.
+2024-09-26 18:37:15,614 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:38:27,401 - root - INFO - Logging is configured.
+2024-09-26 18:39:01,506 - root - INFO - Logging is configured.
+2024-09-26 18:39:13,001 - streamline - INFO - Received user query: 'what audits were planned in 2018? '
+2024-09-26 18:39:13,001 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:39:14,187 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:39:14,187 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:39:14,187 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:39:14,216 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:39:14,217 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:39:16,007 - streamline - INFO - Best Metadata Results (Distances: [0.72891843 0.72891843 0.76202    0.86749583 0.88011754 0.88240516
+ 0.88713837 0.8939899  0.8996054  0.9112724 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:39:16,008 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:39:16,008 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:39:18,890 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:39:18,890 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:39:20,183 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:39:20,798 - streamline - INFO - Loaded downloaded data from data.csv with 41 records.
+2024-09-26 18:39:20,798 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:39:20,798 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-09-26 18:39:20,798 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:39:20,799 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:39:25,576 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:39:25,576 - streamline - INFO - Final Answer:
+Based on the provided metadata, it appears that the data represents an internal audit plan for the Food Standards Agency (FSA) in the United Kingdom for the year 2017-18. The audit titles and their scopes are outlined below:
+
+1. Stow 1: Benefits realisation audit following implementation of a new meat charging discount system, reviewing how well original objectives have been met.
+2. Open data: Audit to review implementation and application of policy and procedures on open data specifically in relation to the publication of data sets.
+3. Evolve Programme: Audit to review the efficacy of plans in place to manage the risk of disruption arising from the transition to a new IT model that replaces the current contract with a different model.
+4. LAEMS follow-up audit: Audit to review implementation of agreed actions following the original audit.
+5. Business planning and performance management: Audit to assess objective setting, key performance indicators (KPIs), and monitoring and reporting of performance across directorates and teams.
+6. Management of Contract for supply of OVs and MHIs: Audit to review effectiveness of contract management arrangements.
+7. Training and development budgets: Audit to review budgets available at corporate, directorate, and team levels to ensure they are aligned with FSA priorities.
+8. Science, Evidence, and Information programme: Audit to review transfer of programme outcomes to business as usual.
+9. Planning for Brexit: Audit to review risk identification, assessment, and mitigation plans.
+10. Investment Board: Audit to examine the work of the Investment Board in prioritising resource allocation.
+11. Campylobacter Programme: Audit to review effectiveness of business as usual controls following implementation of the programme.
+12. Raw Drinking Milk: Audit to assess effectiveness of FSA controls for RDM on farms where the FSA is directly responsible.
+13. ABP official controls (follow-up audit): Audit to assess effectiveness of management actions taken to address issues identified in the original audit report for Animal By-Products.
+14. Approved Game Meat Handling Establishments: Audit to review effectiveness of official controls and follow up on policy related issues highlighted in previous audit reports.
+15. Slaughterhouse hygiene verification system: Audit to review effectiveness of the recently introduced system in approved slaughterhouses.
+16. Product Recall system: Audit to review the effectiveness of the new product recall model, as the FSA currently reviews its efficacy with a view to developing and implementing an improved model.
+2024-09-26 18:39:25,578 - streamline - INFO - Streamline process completed in 12.57 seconds.
+2024-09-26 18:39:25,578 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:40:06,194 - root - INFO - Logging is configured.
+2024-09-26 18:41:05,499 - root - INFO - Logging is configured.
+2024-09-26 18:42:42,053 - root - INFO - Logging is configured.
+2024-09-26 18:42:49,590 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:42:49,591 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:42:50,859 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:42:50,859 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:42:50,859 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:42:50,888 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:42:50,888 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:42:52,701 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:42:52,702 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:42:52,702 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:42:56,822 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:42:56,823 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:42:58,619 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:42:59,033 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:42:59,033 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:42:59,033 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:42:59,033 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:42:59,034 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:43:05,581 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:43:05,581 - streamline - INFO - Final Answer:
+Based on the provided metadata and dataset content, the following are the internal audits planned by the Food Standards Agency (FSA) for the year 2017-18:
+
+1. Benefits realisation audit following implementation of new meat charging discount system (Stow 1). This audit will review how well the original objectives have been met after the implementation of the new system.
+
+2. Review of implementation and application of policy and procedures on open data specifically in relation to the publication of data sets (Open data).
+
+3. Evolve programme audit, which will replace the current IT contract with a different model. The change involves gradual disaggregation of services and increasing the number of suppliers to be managed by the FSA as well as the FSA assuming responsibility for elements of the contract that are currently managed by Capita. The audit will review the efficacy of the plans in place to manage the risk of disruption arising from the transition to the new model (Evolve Programme).
+
+4. Audit to review implementation of agreed actions following the LAEMS follow-up audit.
+
+5. Performance management audit, which will assess objective setting and Key Performance Indicators (KPIs) at Directorate and cascading these to individual team level and the subsequent monitoring and reporting of performance. The audit will also be used to validate the controls management assurance framework self-assessment score for Business Planning and Performance Management (Business planning and performance management).
+
+6. Audit of contract management arrangements for the supply of Official Veterinarians (OVs) and Meat Hygiene Inspectors (MHIs) (Management of Contract for supply of OVs and MHIs).
+
+7. Audit to review budgets available at corporate, directorate, and team levels to ensure these are aligned with FSA priorities (Training and development budgets).
+
+8. Science, Evidence, and Information programme audit, which will review the transfer of programme outcomes to business as usual.
+
+9. Audit to review risk identification, assessment, and mitigation plans for Planning for Brexit.
+
+10. The Investment Board audit will examine the work of the Investment Board in prioritizing resource allocation (Investment Board).
+
+11. Campylobacter Programme audit, which will review the effectiveness of business as usual controls following the implementation of the programme.
+
+12. Audit to assess the effectiveness of FSA controls for Raw Drinking Milk on farms where the FSA is directly responsible (Raw Drinking Milk).
+
+13. ABP official controls follow-up audit, which will assess the effectiveness of management actions taken to address issues identified in the report from the original audit in 2016/17 (ABP official controls (follow-up audit)).
+
+14. Audit to review effectiveness of official controls and follow up on policy related issues highlighted in previous audit reports for Approved Game Meat Handling Establishments (Approved Game Meat Handling Establishments).
+
+15. The audit will review the effectiveness of the recently introduced system in approved slaughter houses for Slaughterhouse hygiene verification system (Slaughterhouse hygiene verification system).
+
+16. The audit will review the effectiveness of the new product recall model following a current review by the FSA with a view to developing and implementing an improved model (Product Recall system).
+
+The detailed descriptions for each audit can be found in the provided link: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>.
+2024-09-26 18:43:05,581 - streamline - INFO - Streamline process completed in 15.99 seconds.
+2024-09-26 18:43:05,581 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:43:43,296 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:43:43,296 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:43:44,242 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:43:44,242 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:43:44,242 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:43:44,242 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:43:44,242 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:43:45,587 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:43:45,587 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:43:45,588 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:43:49,058 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:43:49,058 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:43:50,713 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:43:51,098 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:43:51,098 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:43:51,098 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:43:51,098 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:43:51,099 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:43:56,994 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:43:56,994 - streamline - INFO - Final Answer:
+Based on the provided Internal Audit Plan for the year 2017-2018, the audits fall under two main categories: Business Audits and Official Controls Audits.
+
+In Business Audits, there are several scheduled audits including:
+1. Stow 1: A benefits realization audit following the implementation of a new meat charging discount system. The audit will review how well the original objectives have been met.
+2. Open Data: An audit to review the implementation and application of the policy and procedures on open data, specifically in relation to the publication of data sets.
+3. Evolve Programme: An audit to review the efficacy of plans in place to manage the risk of disruption arising from the transition to a new IT model that replaces the current contract with a different model.
+4. LAEMS follow-up audit: The audit will review the implementation of agreed actions.
+5. Business planning and performance management: An audit to assess objective setting and KPIs at Directorate and cascading these to individual team level, and the subsequent monitoring and reporting of performance. The audit will also be used to validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+6. Management of Contract for supply of OVs and MHIs: The audit will review the effectiveness of contract management arrangements.
+7. Training and development budgets: The audit will review budgets available at corporate, directorate, and team level to ensure these are aligned with FSA priorities.
+8. Science, Evidence and Information programme: The audit will review the transfer of programme outcomes to business as usual.
+9. Planning for Brexit: The audit will review risk identification, assessment, and mitigation plans.
+10. Investment Board: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+In Official Controls Audits, there are also several scheduled audits including:
+1. Campylobacter Programme: The audit will review the effectiveness of business as usual controls that the FSA is responsible for following the implementation of the programme.
+2. Raw Drinking Milk: The audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible.
+3. ABP official controls (follow-up audit): The original audit in 2016/17 resulted in a "Limited" assurance opinion. This follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+4. Approved Game Meat Handling Establishments: The audit will review the effectiveness of official controls and follow-up on policy related issues highlighted in previous audit reports.
+5. Slaughterhouse hygiene verification system: The audit will review the effectiveness of the recently introduced system in approved slaughterhouses.
+6. Product Recall system: The FSA is currently reviewing the efficacy of the product recall system with a view to developing and implementing an improved model. The audit will review the effectiveness of the new product recall model.
+
+The metadata for this dataset can be found at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv].
+2024-09-26 18:43:56,994 - streamline - INFO - Streamline process completed in 13.70 seconds.
+2024-09-26 18:43:56,994 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:47:00,774 - root - INFO - Logging is configured.
+2024-09-26 18:47:05,597 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:47:05,597 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:47:06,843 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:47:06,843 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:47:06,843 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:47:06,872 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:47:06,872 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:47:08,653 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:47:08,653 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:47:08,654 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:47:11,684 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:47:11,684 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:47:13,549 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:47:14,364 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:47:14,364 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:47:14,364 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:47:14,364 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:47:14,364 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:47:22,619 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:47:22,619 - streamline - INFO - Final Answer:
+Based on the provided Internal Audit Plan for 2017-18, here are some details regarding the assurance schemes:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system** - This audit will review how well the original objectives have been met after the implementation of a new meat charging discount system. It links to corporate risk 6 (Security Risk Management) as effective implementation of such systems is crucial for ensuring security and control over financial transactions.
+
+2. **Open data** - This audit aims to review the implementation and application of open data policy and procedures, specifically in relation to the publication of data sets. It does not explicitly link to specific corporate risks but could indirectly relate to transparency and accountability (corporate risk 3).
+
+3. **Evolve Programme** - This programme aims to replace the current IT contract with a different model, involving disaggregation of services and increased supplier management. The audit will review the efficacy of the plans in place to manage the risk of disruption arising from this transition, which links to corporate risk 6 (Security Risk Management).
+
+4. **LAEMS follow-up audit** - This audit will review the implementation of agreed actions following a previous audit. It does not explicitly link to specific corporate risks but could be related to compliance and assurance (corporate risk 1 and 2).
+
+5. **Business planning and performance management** - This audit assesses objective setting, KPIs at Directorate and team level, and the subsequent monitoring and reporting of performance. It links to corporate risk 6 as effective business planning and performance management is crucial for ensuring security and control over resources and operations.
+
+6. **Management of Contract for supply of OVs and MHIs** - This audit will review the effectiveness of contract management arrangements, which could be related to compliance and assurance (corporate risk 1 and 2).
+
+7. **Training and development budgets** - This audit will review budgets available at corporate, directorate, and team level to ensure these are aligned with FSA priorities, which could indirectly link to transparency and accountability (corporate risk 3).
+
+8. **Science, Evidence, and Information programme** - This audit aims to review the transfer of programme outcomes to business as usual, which does not explicitly link to specific corporate risks but could be related to effectiveness and efficiency (corporate risk 4).
+
+9. **Planning for Brexit** - This audit will review risk identification, assessment, and mitigation plans, which directly links to corporate risk 1 (Compliance and Assurance) as effective planning is crucial for ensuring the FSA can continue its operations in a post-Brexit environment.
+
+10. **Investment Board** - This audit will examine work of the Investment Board in prioritizing resource allocation, which links to corporate risk 6 (Security Risk Management) as effective resource allocation is crucial for ensuring security and control over resources and operations.
+
+11. **Campylobacter Programme** - This audit will review the effectiveness of business-as-usual controls following the implementation of the programme, which could be related to compliance and assurance (corporate risk 1 and 2).
+
+12. **Raw Drinking Milk** - This audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible, which could be related to animal health/notifiable diseases (corporate risk 1 and 2).
+
+13. **ABP official controls (follow-up audit)** - This follow-up audit will assess the effectiveness of management actions taken to address issues identified in a previous report, which could be related to compliance and assurance (corporate risk 1 and 2).
+
+14. **Approved Game Meat Handling Establishments** - This audit will review the effectiveness of official controls and follow-up on policy related issues highlighted in a previous audit report, which could be related to compliance and assurance (corporate risk 1 and 2).
+
+15. **Slaughterhouse hygiene verification system** - This audit will review the effectiveness of the recently introduced slaughterhouse hygiene verification system, which could be related to animal health/notifiable diseases (corporate risk 1 and 2).
+
+16. **Product Recall system** - This audit will review the effectiveness of the new product recall model, which could be related to compliance and assurance (corporate risk 1 and 2).
+2024-09-26 18:47:22,619 - streamline - INFO - Streamline process completed in 17.02 seconds.
+2024-09-26 18:47:22,619 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:48:45,969 - root - INFO - Logging is configured.
+2024-09-26 18:48:58,463 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:48:58,463 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:48:59,720 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:48:59,720 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:48:59,720 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:48:59,749 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:48:59,749 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:49:01,722 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:49:01,723 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:49:01,723 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:49:05,604 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:49:05,604 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:49:07,375 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:49:07,780 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:49:07,780 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:49:07,780 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:49:07,781 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:49:07,781 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:49:14,421 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:49:14,421 - streamline - INFO - Final Answer:
+Based on the provided information, here is a detailed analysis of the internal audit plan for the year 2017-2018:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system**: This audit will review how well the original objectives have been met after the implementation of the new meat charging discount system. It's crucial to ensure that the benefits promised by this system are realized as intended.
+
+2. **Open data**: The purpose of this review is to assess the implementation and application of policy and procedures related to open data, specifically in relation to the publication of data sets. This audit is significant for transparency and accountability.
+
+3. **Evolve Programme**: This change involves moving from the current IT contract to a different model with increased suppliers managed by the FSA. The audit will review the plans in place to manage the risk of disruption during this transition.
+
+4. **LAEMS follow-up audit**: The audit will review the implementation of agreed actions after the initial LAEMS (Labour Abuse and Enforcement Strategies) audit.
+
+5. **Business planning and performance management**: This audit aims to assess objective setting, key performance indicators (KPIs), and performance monitoring and reporting at various levels within the FSA. It also validates the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+6. **Management of Contract for supply of OVs and MHIs**: This audit will review the effectiveness of contract management arrangements.
+
+7. **Training and development budgets**: The audit will ensure that budgets available at corporate, directorate, and team levels are aligned with FSA priorities.
+
+8. **Science, Evidence, and Information programme**: The audit will assess whether outcomes from this program have been successfully transferred to business as usual operations.
+
+9. **Planning for Brexit**: This audit will review the risk identification, assessment, and mitigation plans related to Brexit.
+
+10. **Investment Board**: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. **Campylobacter Programme**: The audit will assess the effectiveness of business-as-usual controls following the implementation of the Campylobacter program.
+
+12. **Raw Drinking Milk**: The audit will assess the effectiveness of FSA controls for raw drinking milk on farms where the FSA is directly responsible.
+
+13. **ABP official controls (follow-up audit)**: The original audit in 2016/17 resulted in a 'Limited' assurance opinion. This follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+
+14. **Approved Game Meat Handling Establishments**: This audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in the previous audit report.
+
+15. **Slaughterhouse hygiene verification system**: The audit will review the effectiveness of the recently introduced hygiene verification system in approved slaughterhouses.
+
+16. **Product Recall system**: The audit will review the effectiveness of the new product recall model currently being developed and implemented by the FSA.
+
+The metadata provides context for each audit, including links to corporate risks, the frequency of audits, and whether they are annual reviews or one-time assessments. For example, the Financial assurance audit is a mandatory requirement for an annual review, while the Incidents Resilience audit requires independent challenge annually. Some audits, like Animal Welfare Controls incl slaughter licences, have been deferred due to legislation implementation dates.
+2024-09-26 18:49:14,421 - streamline - INFO - Streamline process completed in 15.96 seconds.
+2024-09-26 18:49:14,421 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:50:53,926 - root - INFO - Logging is configured.
+2024-09-26 18:50:56,272 - root - INFO - Logging is configured.
+2024-09-26 18:50:59,014 - root - INFO - Logging is configured.
+2024-09-26 18:51:04,466 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:51:04,466 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:51:05,706 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:51:05,706 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:51:05,706 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:51:05,737 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:51:05,737 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:51:07,509 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:51:07,510 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:51:07,511 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:51:10,926 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:51:10,926 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:51:12,538 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:51:12,967 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:51:12,967 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:51:12,967 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-09-26 18:51:12,967 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:51:12,968 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:51:18,523 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:51:18,523 - streamline - INFO - Final Answer:
+Based on the provided Internal Audit Plan 2017-18, here are some details about the audits:
+
+1. Benefits realisation audit following implementation of new meat charging discount system (Stow 1) - This audit will review how well the original objectives were met after the implementation of a new meat charging discount system.
+
+2. Open data - The audit aims to review the implementation and application of policy and procedures on open data specifically in relation to the publication of data sets.
+
+3. Evolve Programme - This change involves transitioning from the current IT contract to a different model, with an increased number of suppliers to be managed by the FSA. The audit will review the efficacy of the plans in place to manage the risk of disruption arising from this transition.
+
+4. LAEMS follow-up audit - The audit will review implementation of agreed actions after a previous audit.
+
+5. Business planning and performance management - Performance management is a key area for the Agency, with work continuing to develop Key Performance Indicators (KPIs) to improve Value for Money (Vfm). The audit will assess objective setting and KPIs at Directorate and cascading these to individual team level and the subsequent monitoring and reporting of performance.
+
+6. Management of Contract for supply of OVs and MHIs - The audit will review effectiveness of contract management arrangements.
+
+7. Training and development budgets - The audit will review budgets available at corporate, directorate and team level to ensure these are aligned with FSA priorities.
+
+8. Science, Evidence, and Information programme - The audit will review transfer of programme outcomes to business as usual.
+
+9. Planning for Brexit - The audit will review risk identification, assessment, and mitigation plans.
+
+10. Investment Board - The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. Campylobacter Programme - The audit will review the effectiveness of business as usual controls following implementation of the programme.
+
+12. Raw Drinking Milk - The audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible.
+
+13. ABP official controls (follow-up audit) - This is a follow-up audit on Animal By-Products (ABP) official controls, which resulted in a "Limited" assurance opinion in the previous audit. The new audit will assess the effectiveness of management actions taken to address issues identified in the report.
+
+14. Approved Game Meat Handling Establishments - This audit will review the effectiveness of official controls and follow-up on policy related issues highlighted in a previous audit report.
+
+15. Slaughterhouse hygiene verification system - The audit will review the effectiveness of the recently introduced system in approved slaughter houses.
+
+16. Product Recall system - The audit will review the effectiveness of the new product recall model, as the FSA is currently reviewing the efficacy of the existing system with a view to developing and implementing an improved model.
+2024-09-26 18:51:18,523 - streamline - INFO - Streamline process completed in 14.06 seconds.
+2024-09-26 18:51:18,523 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:52:21,797 - root - INFO - Logging is configured.
+2024-09-26 18:52:37,174 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:52:37,174 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:52:38,411 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:52:38,411 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:52:38,411 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:52:38,442 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:52:38,442 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:52:40,698 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:52:40,699 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:52:40,699 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:52:43,590 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:52:43,590 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:52:45,149 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:52:45,533 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:52:45,533 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:52:45,533 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:52:45,533 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:52:45,534 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:52:51,369 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:52:51,369 - streamline - INFO - Final Answer:
+Based on the provided metadata, here are some details about the contract management reviews conducted by the National Trading Standards Board delivery:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system**: This audit will review how well the original objectives have been met after implementing a new meat charging discount system. It aims to assess the effectiveness of the new system.
+
+2. **Open data**: This review is intended to check the implementation and application of policy and procedures regarding open data, specifically focusing on the publication of data sets.
+
+3. **Evolve Programme**: The Evolve programme aims to replace the current IT contract with a different model. The audit will assess the plans in place to manage any potential disruption arising from this transition to the new model.
+
+4. **LAEMS follow-up audit**: This audit will review the implementation of agreed actions following a previous audit.
+
+5. **Business planning and performance management**: The audit here will focus on assessing objective setting, key performance indicators (KPIs), and performance monitoring and reporting at various levels within the organization. It also aims to validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+6. **Management of Contract for supply of OVs and MHIs**: This audit will review the effectiveness of contract management arrangements for the supply of Official Verifiers (OVs) and Meat Hygiene Inspectors (MHIs).
+
+7. **Training and development budgets**: The audit here will review budgets at corporate, directorate, and team levels to ensure they are aligned with FSA priorities.
+
+8. **Science, Evidence, and Information programme**: This audit will assess the transfer of programme outcomes to business as usual.
+
+9. **Planning for Brexit**: The audit will review risk identification, assessment, and mitigation plans related to Brexit.
+
+10. **Investment Board**: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. **Campylobacter Programme**: This audit will review the effectiveness of business as usual controls following the implementation of the Campylobacter programme.
+
+12. **Raw Drinking Milk**: The audit will assess the effectiveness of FSA controls for raw drinking milk on farms where the FSA is directly responsible.
+
+13. **ABP official controls (follow-up audit)**: An initial audit in 2016/17 resulted in a "Limited" assurance opinion. This follow-up audit will assess the effectiveness of management actions taken to address issues identified in the report.
+
+14. **Approved Game Meat Handling Establishments**: This audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report.
+
+15. **Slaughterhouse hygiene verification system**: The audit will review the effectiveness of a recently introduced slaughterhouse hygiene verification system.
+
+16. **Product Recall system**: The FSA is currently reviewing the efficacy of the product recall system with a view to developing and implementing an improved model. The audit will review the effectiveness of the new product recall model.
+2024-09-26 18:52:51,369 - streamline - INFO - Streamline process completed in 14.20 seconds.
+2024-09-26 18:52:51,369 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:53:21,836 - root - INFO - Logging is configured.
+2024-09-26 18:53:24,614 - root - INFO - Logging is configured.
+2024-09-26 18:53:26,954 - root - INFO - Logging is configured.
+2024-09-26 18:53:34,733 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:53:34,733 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:53:35,915 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:53:35,915 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:53:35,915 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:53:35,944 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:53:35,944 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:53:37,690 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:53:37,690 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:53:37,691 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:53:41,335 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:53:41,335 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:53:42,670 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:53:43,064 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:53:43,064 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:53:43,064 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:53:43,064 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:53:43,065 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:53:49,572 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:53:49,572 - streamline - INFO - Final Answer:
+Based on the provided CSV file, here is a summary of audits and reviews that are planned or ongoing for the National Trading Standards Board delivery:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system:** This audit will review how well the original objectives have been met after the implementation of the new meat charging discount system. (Stow 1)
+
+2. **Open data:** This review will assess the implementation and application of policies and procedures related to open data, specifically focusing on the publication of data sets.
+
+3. **Evolve Programme:** This audit will examine the efficacy of plans in place to manage the risk of disruption arising from the transition to a new IT contract model that involves managing more suppliers and assuming responsibility for elements of the contract currently managed by Capita.
+
+4. **LAEMS follow-up audit:** This audit will review the implementation of agreed actions following a previous audit.
+
+5. **Business planning and performance management:** This audit will assess objective setting, KPIs, and their cascading to individual team levels, as well as monitoring and reporting of performance. It will also be used to validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+6. **Management of Contract for supply of OVs and MHIs:** This audit will review the effectiveness of contract management arrangements.
+
+7. **Training and development budgets:** This audit will review budgets available at corporate, directorate, and team levels to ensure they are aligned with FSA priorities.
+
+8. **Science, Evidence, and Information programme:** This audit will review the transfer of programme outcomes to business as usual.
+
+9. **Planning for Brexit:** This audit will review risk identification, assessment, and mitigation plans.
+
+10. **Investment Board:** This audit will examine the work of the Investment Board in prioritising resource allocation.
+
+11. **Campylobacter Programme:** This audit will review the effectiveness of business as usual controls following the implementation of the programme.
+
+12. **Raw Drinking Milk:** This audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible.
+
+13. **ABP official controls (follow-up audit):** This follow-up audit will assess the effectiveness of management actions taken to address issues identified in a previous report.
+
+14. **Approved Game Meat Handling Establishments:** This audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report.
+
+15. **Slaughterhouse hygiene verification system:** This audit will review the effectiveness of the recently introduced system in approved slaughterhouses.
+
+16. **Product Recall system:** This audit will review the effectiveness of the new product recall model that is currently being developed and implemented.
+
+Please find the original data from the CSV file here: [Audit and Assurance Plans](https://github.com/foodstandardsagency/audit-assurance-plans/blob/master/FSA%20Audit%20and%20Assurance%20Plans%20July%2018.csv)
+
+For non-financial assurance, the following areas were mentioned: Incidents Resilience and Animal Welfare Controls incl slaughter licences (linked to corporate risks 3, 4, 1, and 2 respectively). However, no specific audit or review plans were provided for these areas in the dataset.
+2024-09-26 18:53:49,572 - streamline - INFO - Streamline process completed in 14.84 seconds.
+2024-09-26 18:53:49,572 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:54:38,513 - root - INFO - Logging is configured.
+2024-09-26 18:54:54,390 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:54:54,390 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:54:55,661 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:54:55,662 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:54:55,662 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:54:55,692 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:54:55,692 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:54:57,527 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:54:57,528 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:54:57,529 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:55:00,238 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:55:00,238 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:55:01,998 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:55:02,609 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:55:02,609 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:55:02,609 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:55:02,609 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:55:02,610 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:55:07,898 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:55:07,898 - streamline - INFO - Final Answer:
+Based on the provided Internal Audit Plan - 2017-2018 CSV link, the audits scheduled for the year cover a wide range of areas related to corporate risk and assurance schemes. Here's a brief overview:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system**: This audit will review how well the original objectives have been met after the implementation of the new system. (Stow 1)
+
+2. **Open data**: The audit aims to review the implementation and application of open data policies and procedures, specifically in relation to the publication of data sets.
+
+3. **Evolve Programme**: This audit will assess the efficacy of plans in place to manage the risk of disruption arising from transitioning to a new IT contract model.
+
+4. **LAEMS follow-up audit**: The audit will review implementation of agreed actions following a previous audit.
+
+5. **Business planning and performance management**: This audit will assess objective setting, KPIs at Directorate and team level, and the subsequent monitoring and reporting of performance. It will also be used to validate the controls management assurance framework self-assessment score for Business Planning and Performance Management.
+
+6. **Management of Contract for supply of OVs and MHIs**: The audit will review the effectiveness of contract management arrangements.
+
+7. **Training and development budgets**: The audit will verify that budgets available at corporate, directorate, and team level are aligned with FSA priorities.
+
+8. **Science, Evidence, and Information programme**: The audit will review the transfer of programme outcomes to business as usual.
+
+9. **Planning for Brexit**: The audit will review risk identification, assessment, and mitigation plans.
+
+10. **Investment Board**: The audit will examine the work of the Investment Board in prioritizing resource allocation.
+
+11. **Campylobacter Programme**: The audit will review the effectiveness of business-as-usual controls following the implementation of the Campylobacter programme.
+
+12. **Raw Drinking Milk**: The audit will assess the effectiveness of FSA controls for raw drinking milk on farms where the FSA is directly responsible.
+
+13. **ABP official controls (follow-up audit)**: A follow-up audit will be conducted to assess the effectiveness of management actions taken to address issues identified in a previous report.
+
+14. **Approved Game Meat Handling Establishments**: The audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report.
+
+15. **Slaughterhouse hygiene verification system**: The audit will review the effectiveness of the recently introduced system in approved slaughterhouses.
+
+16. **Product Recall system**: The audit will review the effectiveness of the new product recall model currently being developed and implemented.
+2024-09-26 18:55:07,898 - streamline - INFO - Streamline process completed in 13.51 seconds.
+2024-09-26 18:55:07,898 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 18:57:07,590 - root - INFO - Logging is configured.
+2024-09-26 18:57:13,253 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:57:13,254 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 18:57:14,448 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 18:57:14,448 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 18:57:14,448 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 18:57:14,475 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 18:57:14,476 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 18:57:16,259 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 18:57:16,260 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 18:57:16,261 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 18:57:19,449 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 18:57:19,449 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 18:57:20,773 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 18:57:21,557 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 18:57:21,557 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 18:57:21,557 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 18:57:21,557 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 18:57:21,558 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 18:57:32,570 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 18:57:32,570 - streamline - INFO - Final Answer:
+Based on the provided Internal Audit Plan for the year 2017-2018, here is a summary of the audits planned under both Business Audits and Official Controls Audits categories:
+
+**Business Audits:**
+1. Stow 1: Benefits realisation audit following implementation of new meat charging discount system. The audit will review how well original objectives have been met. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+2. Open data: To review implementation and application of policy and procedures on open data specifically in relation to publication of data sets. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+3. Evolve Programme: Evolve programme will replace the current IT contract with a different model. The audit will review the efficacy of the plans in place to manage the risk of disruption arising from the transition to the new model. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+4. LAEMS follow-up audit: The audit will review implementation of agreed actions. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+5. Business planning and performance management: Performance management is a key area for the Agency with work continuing to develop KPIs to improve Vfm. The audit will assesses objective setting and KPIs at Directorate and cascading these to individual team level and the subsequent monitoring and reporting of performance. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+6. Management of Contract for supply of OVs and MHIs: The audit will review effectiveness of contract management arrangements. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+7. Training and development budgets: The audit will review budgets available at corporate, directorate and team level to ensure these are aligned with FSA priorities. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+8. Science, Evidence and Information programme: The audit will review transfer of programme outcomes to business as usual. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+9. Planning for Brexit: The audit will review risk identification, assessment and mitigation plans. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+10. Investment Board: The audit will examine work of the Investment Board in prioritizing resource allocation. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+
+**Official Controls Audits:**
+1. Campylobacter Programme: The audit will review effectiveness of business as usual controls that the FSA is responsible for following implementation of the programme. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+2. Raw Drinking Milk: The audit will assess effectiveness of FSA controls for RDM on farms where the FSA is directly responsible. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+3. ABP official controls (follow-up audit): The original audit in 2016/17 resulted in a "Limited" assurance opinion. This follow-up audit will review implementation of agreed actions. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+4. Animal Welfare: The audit will assess the effectiveness and efficiency of FSA's approach to animal welfare enforcement. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+5. Export Certification: The audit will assess the operational and financial performance of FSA's export certification services. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+6. Food Crime: The audit will assess the effectiveness and efficiency of FSA's food crime strategy and operations. [Link to the Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv)
+
+These audits cover a wide range of topics, from IT transitions, contract management, and investment decisions, to food safety, animal welfare, and export certification.
+2024-09-26 18:57:32,570 - streamline - INFO - Streamline process completed in 19.32 seconds.
+2024-09-26 18:57:32,570 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 19:03:53,914 - root - INFO - Logging is configured.
+2024-09-26 19:04:02,360 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 19:04:02,360 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 19:04:03,623 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 19:04:03,623 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 19:04:03,623 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 19:04:03,652 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 19:04:03,653 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 19:04:05,719 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 19:04:05,720 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 19:04:05,721 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 19:04:12,013 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 19:04:12,013 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 19:04:13,389 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 19:04:13,878 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 19:04:13,878 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 19:04:13,878 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 19:04:13,878 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 19:04:13,879 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 19:04:18,848 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 19:04:18,848 - streamline - INFO - Final Answer:
+Based on the provided metadata, it appears that the following audits and reviews are planned or ongoing within the National Trading Standards Board delivery:
+
+1. Benefits realisation audit following implementation of a new meat charging discount system (Stow 1).
+2. Review of the implementation and application of open data policies and procedures, specifically in relation to the publication of data sets.
+3. Evolve Programme review, which involves the transition from the current IT contract to a different model that increases the number of suppliers managed by the FSA.
+4. Audit of agreed actions following the LAEMS (Local Authority Enforcement Management System) follow-up audit.
+5. Assessment of objective setting and Key Performance Indicators (KPIs) at Directorate and team levels, as part of business planning and performance management.
+6. Review of the effectiveness of contract management arrangements for supplies of Official Veterinarians (OVs) and Meat Hygiene Inspectors (MHIs).
+7. Review of budgets available at corporate, directorate, and team levels to ensure they are aligned with FSA priorities.
+8. Review of the transfer of outcomes from the Science, Evidence, and Information programme to business as usual.
+9. Audit of risk identification, assessment, and mitigation plans for planning for Brexit.
+10. Examination of the work of the Investment Board in prioritizing resource allocation.
+11. Review of the effectiveness of the Campylobacter Programme controls that the FSA is responsible for following its implementation.
+12. Assessment of the effectiveness of FSA controls for Raw Drinking Milk on farms where the FSA is directly responsible.
+13. Follow-up audit on Animal By-products official controls, which resulted in a 'Limited' assurance opinion in 2016/17.
+14. Review of policy-related issues and the effectiveness of official controls at Approved Game Meat Handling Establishments following a previous audit report.
+15. Audit of the effectiveness of the recently introduced Slaughterhouse hygiene verification system in approved slaughterhouses.
+16. Review of the effectiveness of the FSA's current product recall system, with a view to developing and implementing an improved model.
+
+These audits and reviews are designed to ensure compliance with various guidelines, assess the effectiveness of systems and controls, and validate assurance schemes for potential future reliance. They help manage corporate risks, improve business planning and performance management, and provide independent challenge where necessary, such as in the case of annual security risk management reviews and financial audits.
+
+For more detailed information about each audit or review, please refer to the specific links provided within the metadata for further context and updates on their progress.
+2024-09-26 19:04:18,849 - streamline - INFO - Streamline process completed in 16.49 seconds.
+2024-09-26 19:04:18,849 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-09-26 19:14:17,411 - root - INFO - Logging is configured.
+2024-09-26 19:14:26,677 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 19:14:26,678 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-09-26 19:14:27,976 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-09-26 19:14:27,976 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-09-26 19:14:27,976 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-09-26 19:14:28,022 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-09-26 19:14:28,022 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-09-26 19:14:30,078 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-09-26 19:14:30,078 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-09-26 19:14:30,079 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-09-26 19:14:36,371 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-09-26 19:14:36,371 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-09-26 19:14:37,894 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-09-26 19:14:38,727 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-09-26 19:14:38,727 - streamline - INFO - Directly analyzing with LLM...
+2024-09-26 19:14:38,728 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-09-26 19:14:38,728 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-09-26 19:14:38,728 - llm.llm_use - INFO - Prompt constructed for directly_use_llm_for_answer.
+2024-09-26 19:14:44,273 - llm.llm_use - INFO - Received response from LLM.
+2024-09-26 19:14:44,274 - streamline - INFO - Final Answer:
+Based on the provided data from the National Trading Standards Board's internal audit plan, here is a summary of some of the key audits and reviews planned or being conducted:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system**: This audit will review how well the original objectives have been met after implementing a new meat charging discount system.
+
+2. **Open data review**: This is to review the implementation and application of policies and procedures related to open data, specifically concerning the publication of data sets.
+
+3. **Evolve Programme**: This audit will assess the efficacy of plans in place to manage the risk of disruption arising from the transition to a new IT contract model that replaces the current one.
+
+4. **LAEMS follow-up audit**: The audit will review the implementation of agreed actions following a previous audit.
+
+5. **Business planning and performance management**: This audit will assess objective setting, key performance indicators (KPIs), and their cascading to individual team levels, as well as monitoring and reporting of performance.
+
+6. **Management of Contract for supply of OVs and MHIs**: The audit will review the effectiveness of contract management arrangements.
+
+7. **Training and development budgets**: The audit will ensure that these budgets are aligned with FSA priorities at corporate, directorate, and team levels.
+
+8. **Science, Evidence, and Information programme**: The audit will review the transfer of programme outcomes to business as usual.
+
+9. **Planning for Brexit**: The audit will review risk identification, assessment, and mitigation plans related to Brexit.
+
+10. **Investment Board**: The audit will examine the work of the Investment Board in prioritising resource allocation.
+
+11. **Campylobacter Programme**: The audit will review the effectiveness of business-as-usual controls following the implementation of the Campylobacter programme.
+
+12. **Raw Drinking Milk**: The audit will assess the effectiveness of FSA controls for Raw Drinking Milk on farms where the FSA is directly responsible.
+
+13. **ABP official controls (follow-up audit)**: This follow-up audit will assess the effectiveness of management actions taken to address issues identified in a previous report concerning Animal By-products official controls.
+
+14. **Approved Game Meat Handling Establishments**: The audit will review the effectiveness of official controls and follow up on policy-related issues highlighted in a previous audit report.
+
+15. **Slaughterhouse hygiene verification system**: The audit will review the effectiveness of the recently introduced slaughterhouse hygiene verification system.
+
+16. **Product Recall system**: The audit will review the effectiveness of the new product recall model currently under development and implementation.
+
+Please find the original data linked here: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv] for reference.
+2024-09-26 19:14:44,274 - streamline - INFO - Streamline process completed in 17.60 seconds.
+2024-09-26 19:14:44,274 - llm.llm_chatbot - INFO - Closed LLMChatbot session.

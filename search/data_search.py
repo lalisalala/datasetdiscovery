@@ -1,16 +1,5 @@
 import pandas as pd
 import requests
-import os 
-import yaml
-
-def load_query_from_yaml(yaml_path='config/query.yaml'):
-    with open(yaml_path, 'r') as file:
-        config = yaml.safe_load(file)
-    
-    # Debugging: print out the query
-    query = config['query']
-    print(f"Loaded query from YAML: {query}")  # This will print the query to the console
-    return query
 
 
 def download_datasets(relevant_datasets, output_file='data.csv', successful_links=None):
@@ -65,10 +54,11 @@ def download_datasets(relevant_datasets, output_file='data.csv', successful_link
     return successful_links
 
 
+
 def save_data_with_llm_metadata_header(all_data, output_file):
     """
     Save downloaded datasets with LLM-generated metadata summaries as headers.
-    
+
     Args:
         all_data (list): A list of tuples where each tuple contains a metadata summary and a dataset (DataFrame).
         output_file (str): The output file to save the datasets.
@@ -76,8 +66,10 @@ def save_data_with_llm_metadata_header(all_data, output_file):
     with open(output_file, 'w') as f:
         for metadata_summary, df in all_data:
             # Write the metadata summary as a header (no '#' prefix)
-            f.write(f"{metadata_summary}\n")
-            # Write the dataset to the file
+            f.write(f"Dataset Metadata: {metadata_summary}\n")
+
+            # Write the dataset to the file without index
             df.to_csv(f, index=False)
-            # Add some space between datasets
+
+            # Add some space between datasets for readability
             f.write("\n\n")

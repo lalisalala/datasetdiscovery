@@ -13,7 +13,7 @@ def generate_summary_with_llm(metadata_row, chatbot):
     prompt = (
         f"Based on the following dataset metadata, generate a concise summary in 1-2 sentences:\n\n"
         f"{metadata_content}\n\n"
-        "Please provide a concise summary."
+        "Please provide a concise summary including all the mentioned metadata."
     )
     new_summary = chatbot.generate_response(context=metadata_content, query=prompt)
     return new_summary.strip()

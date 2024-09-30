@@ -1,9 +1,19 @@
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse  # We will use HTMLResponse for formatting
 from pydantic import BaseModel
 from streamline import run_streamline_process  # Import your existing streamline function
+from fastapi.middleware.cors import CORSMiddleware  # Import for CORS handling
 
 app = FastAPI()
+
+# Enable CORS for all origins (you can restrict this to specific origins if necessary)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # You can replace '*' with a specific domain if necessary
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Define the structure of the input request
 class QueryInput(BaseModel):
@@ -101,9 +111,12 @@ def chatbot_ui():
                     },
                     body: JSON.stringify({ query }),
                 });
-                const result = await response.json();
 
-                // Display chatbot response in chatbox
+                // Ensure that the response is JSON and handled properly
+                const result = await response.json();
+                console.log(result); // Log the response for debugging purposes
+
+                // Display chatbot response in chatbox, assuming it's properly formatted with <br> tags
                 chatBox.innerHTML += `<div><strong>Chatbot:</strong> ${result.final_answer}</div>`;
                 chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
             }
@@ -114,12 +127,17 @@ def chatbot_ui():
 
 
 # Endpoint to handle the chatbot queries
-@app.post("/run_analysis/")
+@app.post("/run_analysis/", response_class=JSONResponse)
 def run_analysis(query_input: QueryInput):
     """
     This endpoint runs the analysis using the 'run_streamline_process' function 
-    and returns the final result.
+    and returns the final result formatted for HTML.
     """
     query = query_input.query  # Extract the query from the request
     final_answer = run_streamline_process(query)  # Call the streamline process with the query
-    return {"final_answer": final_answer}
+
+    # Replace newlines with <br> tags to preserve formatting in the frontend
+    formatted_answer = final_answer.replace("\n", "<br>")
+
+    # Return the formatted answer as JSON
+    return JSONResponse(content={"final_answer": formatted_answer})

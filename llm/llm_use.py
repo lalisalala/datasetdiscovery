@@ -9,18 +9,22 @@ import os
 
 logger = logging.getLogger(__name__)
 
-def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot) -> str:
+import pandas as pd
+import os
+import requests
+
+def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 200) -> str:
     """
-    Use the LLM to directly analyze data from a DataFrame or a file.
-    The LLM is prompted to reference the metadata in its response.
+    Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
 
     Args:
-        data_input (str or pd.DataFrame): Either the file path of the dataset or the dataset as a DataFrame.
+        data_input (str or pd.DataFrame): File path of the dataset or a DataFrame containing datasets and metadata.
         query (str): The user query to answer.
         chatbot (LLMChatbot): An instance of the LLMChatbot class.
+        chunk_size (int): The number of rows to include in each chunk.
 
     Returns:
-        str: The LLM's answer based on the metadata and dataset content in the file and the query.
+        str: The LLM's answer based on the metadata and dataset content in chunks, without filtering by year.
     """
     try:
         logger.info(f"Received user query: '{query}'")
@@ -28,44 +32,56 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot) -> 
         # Check if data_input is a file path or DataFrame
         if isinstance(data_input, pd.DataFrame):
             logger.info("Data input is a DataFrame, proceeding with DataFrame processing.")
-            data_content = data_input.to_csv(index=False)
+            data_df = data_input
         elif isinstance(data_input, str):
             # Ensure the file exists and is accessible
             if not os.path.exists(data_input):
                 logger.error(f"File not found: {data_input}")
                 return f"Error: File not found: {data_input}"
 
-            # Open the file and read the contents as text
-            with open(data_input, 'r') as f:
-                data_content = f.read()
+            # Read the file into a DataFrame
+            data_df = pd.read_csv(data_input, header=None, skip_blank_lines=False)
         else:
             logger.error("Unsupported data input type. Must be either a DataFrame or a file path.")
             return "Error: Invalid data input type. Must be a DataFrame or a file path."
 
-        # Log the file or DataFrame contents (first few lines for debugging)
-        logger.debug(f"Data content (first 500 chars): {data_content[:500]}")
+        # Process each dataset, chunking it by the chunk_size and ensuring the metadata is included
+        final_answer = ""
+        current_metadata = ""
+        current_dataset = []
+        in_metadata = False  # Track if we are in the metadata section
 
-        # Construct the LLM prompt
-        prompt = (
-            f"The user query is: '{query}'.\n\n"
-            f"Here are the relevant datasets along with their metadata summaries:\n{data_content}\n\n"
-            "Please use the metadata and dataset content to generate a detailed and accurate answer to the user's query. "
-            "Ensure that the metadata (including the link) are referenced for context."
+        for index, row in data_df.iterrows():
+            row_str = ' '.join(str(x) for x in row)
+
+            # Detect metadata (assuming metadata starts with "Dataset Metadata:")
+            if row_str.startswith("Dataset Metadata:"):
+                # Finalize any existing dataset before starting the new one
+                if current_dataset:
+                    final_answer += process_dataset_chunk(current_metadata, pd.DataFrame(current_dataset), query, chatbot, chunk_size)
+                    current_dataset = []  # Reset dataset collection
+
+                # Start processing new metadata
+                current_metadata = row_str.replace("Dataset Metadata:", "").strip()
+                in_metadata = True  # Mark we are now in a metadata section
+
+            elif row_str.strip() == "":
+                # Empty lines indicate the end of a dataset (or gap between datasets)
+                in_metadata = False  # Metadata section ends when we hit an empty line
+
+            else:
+                # If not metadata or empty, it's dataset content
+                current_dataset.append(row)
+        
+        # Process the last dataset if it exists
+        if current_dataset:
+            final_answer += process_dataset_chunk(current_metadata, pd.DataFrame(current_dataset), query, chatbot, chunk_size)
+
+        # Return structured final output
+        return (
+            f"Query: {query}\n\n"
+            f"Answer based on the provided datasets:\n{final_answer.strip()}"
         )
-        logger.info("Prompt constructed for directly_use_llm_for_answer.")
-        logger.debug(f"Prompt (first 500 chars): {prompt[:500]}")
-
-        # Send the prompt to the LLM and get the answer
-        try:
-            final_answer = chatbot.generate_response(context=data_content, query=prompt)
-            logger.info("Received response from LLM.")
-            logger.debug(f"LLM response (first 500 chars): {final_answer[:500]}")
-
-        except Exception as api_error:
-            logger.error(f"Error in LLM API call: {api_error}")
-            return f"Error: The LLM encountered an issue while processing your request. Details: {str(api_error)}"
-
-        return final_answer
 
     except FileNotFoundError as fnf_error:
         logger.error(f"FileNotFoundError: {fnf_error}")
@@ -76,7 +92,47 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot) -> 
         return f"Sorry, I encountered an error while processing your request. Details: {str(e)}"
 
 
+def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
+    """
+    Process a dataset in chunks with the associated metadata.
 
+    Args:
+        metadata (str): Metadata summary for the dataset.
+        dataset (pd.DataFrame): The actual dataset to process.
+        query (str): The user query.
+        chatbot (LLMChatbot): The chatbot instance to generate responses.
+        chunk_size (int): The number of rows in each chunk.
+
+    Returns:
+        str: The combined answer for all chunks, structured clearly with metadata and dataset content.
+    """
+    total_rows = len(dataset)
+    logger.info(f"Processing dataset with {total_rows} rows, chunking into {chunk_size}-row parts.")
+    
+    dataset_answer = ""
+    for i in range(0, total_rows, chunk_size):
+        # Get the chunk of data
+        data_chunk = dataset.iloc[i:i+chunk_size].to_csv(index=False)
+
+        # Structure the LLM prompt for better response generation
+        prompt = (
+            f"The user query is: '{query}'.\n\n"
+            f"Metadata for this dataset:\n{metadata}\n\n"  # Include metadata
+            f"Here is a chunk of the dataset:\n{data_chunk}\n\n"  # Include chunked dataset
+            "Please analyze this chunk and answer the query by considering the entire dataset."
+            "Also make sure to reference the dataset link found in the metadata found on top of the relevant datasets."
+        )
+
+        # Send the prompt to the LLM and get the answer for this chunk
+        try:
+            chunk_answer = chatbot.generate_response(context=data_chunk, query=prompt)
+            dataset_answer += chunk_answer + "\n"
+            logger.info(f"Received response for chunk {i // chunk_size + 1}.")
+        except Exception as api_error:
+            logger.error(f"Error in LLM API call for chunk {i // chunk_size + 1}: {api_error}")
+            return f"Error: The LLM encountered an issue while processing chunk {i // chunk_size + 1}. Details: {str(api_error)}"
+
+    return dataset_answer
 
 def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMChatbot) -> pd.DataFrame:
     """

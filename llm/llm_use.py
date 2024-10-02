@@ -6,12 +6,9 @@ from typing import Any
 from llm.llm_chatbot import LLMChatbot 
 from config_loader import config_loader
 import os 
-
+import re
 logger = logging.getLogger(__name__)
 
-import pandas as pd
-import os
-import requests
 
 def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 200) -> str:
     """
@@ -50,6 +47,8 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
         current_metadata = ""
         current_dataset = []
         in_metadata = False  # Track if we are in the metadata section
+        all_metadata = []
+        all_datasets = []
 
         for index, row in data_df.iterrows():
             row_str = ' '.join(str(x) for x in row)
@@ -58,11 +57,12 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
             if row_str.startswith("Dataset Metadata:"):
                 # Finalize any existing dataset before starting the new one
                 if current_dataset:
-                    final_answer += process_dataset_chunk(current_metadata, pd.DataFrame(current_dataset), query, chatbot, chunk_size)
+                    all_datasets.append((current_metadata, pd.DataFrame(current_dataset)))
                     current_dataset = []  # Reset dataset collection
 
                 # Start processing new metadata
                 current_metadata = row_str.replace("Dataset Metadata:", "").strip()
+                all_metadata.append(current_metadata)
                 in_metadata = True  # Mark we are now in a metadata section
 
             elif row_str.strip() == "":
@@ -75,7 +75,11 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
         
         # Process the last dataset if it exists
         if current_dataset:
-            final_answer += process_dataset_chunk(current_metadata, pd.DataFrame(current_dataset), query, chatbot, chunk_size)
+            all_datasets.append((current_metadata, pd.DataFrame(current_dataset)))
+
+        # Now process all datasets with their metadata
+        for metadata, dataset in all_datasets:
+            final_answer += process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size)
 
         # Return structured final output
         return (
@@ -91,6 +95,24 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
         logger.error(f"Error in directly_use_llm_for_answer while processing query '{query}': {e}")
         return f"Sorry, I encountered an error while processing your request. Details: {str(e)}"
 
+
+def extract_link_from_metadata(metadata):
+    """
+    Extract the link from the metadata string using regex.
+
+    Args:
+        metadata (str): Metadata string that contains a URL.
+
+    Returns:
+        str: The extracted link, or None if no link is found.
+    """
+    # Regular expression to find URLs in the metadata
+    url_pattern = r"(https?://[^\s]+)"
+    match = re.search(url_pattern, metadata)
+    
+    if match:
+        return match.group(0)  # Return the first matched URL
+    return None
 
 def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
     """
@@ -110,6 +132,13 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
     logger.info(f"Processing dataset with {total_rows} rows, chunking into {chunk_size}-row parts.")
     
     dataset_answer = ""
+    
+    # Extract the link from the metadata using the regex-based function
+    link = extract_link_from_metadata(metadata)
+    
+    # Fall back if no link is found
+    link_reference = f"Link: {link}" if link else "No link available in metadata."
+
     for i in range(0, total_rows, chunk_size):
         # Get the chunk of data
         data_chunk = dataset.iloc[i:i+chunk_size].to_csv(index=False)
@@ -119,8 +148,10 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
             f"The user query is: '{query}'.\n\n"
             f"Metadata for this dataset:\n{metadata}\n\n"  # Include metadata
             f"Here is a chunk of the dataset:\n{data_chunk}\n\n"  # Include chunked dataset
-            "Please analyze this chunk and answer the query by considering the entire dataset."
-            "Also make sure to reference the dataset link found in the metadata found on top of the relevant datasets."
+            f"Make sure to reference the following link in your response: {link_reference}\n\n"  # Add the link explicitly
+            "You are a helpful Chat Bot specialized in answering questions about, discussing, and referencing datasets from open data portals."
+            " Please analyze this chunk and answer the query by considering the entire dataset."
+            " Always reference the dataset links found in the metadata."
         )
 
         # Send the prompt to the LLM and get the answer for this chunk
@@ -133,6 +164,9 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
             return f"Error: The LLM encountered an issue while processing chunk {i // chunk_size + 1}. Details: {str(api_error)}"
 
     return dataset_answer
+
+
+
 
 def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMChatbot) -> pd.DataFrame:
     """

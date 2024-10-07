@@ -6091,3 +6091,1547 @@ The audits planned for the year 2018 include:
 Please note that this list represents the audits planned for the year 2018 (2017-18) as per the provided dataset, and the complete list can be found in the specified dataset link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv].
 2024-10-02 14:57:49,885 - streamline - INFO - Streamline process completed in 17.79 seconds.
 2024-10-02 14:57:49,885 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:02:21,391 - root - INFO - Logging is configured.
+2024-10-02 17:02:30,158 - streamline - INFO - Received user query: 'what audits were planned in 2019?'
+2024-10-02 17:02:30,158 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:02:31,581 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:02:31,581 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:02:31,581 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:02:31,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:02:31,630 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:02:33,559 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:02:33,560 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:02:33,560 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:02:36,999 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-02 17:02:36,999 - streamline - INFO - Refined to 10 relevant datasets after LLM processing.
+2024-10-02 17:02:39,722 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:03:10,767 - root - INFO - Logging is configured.
+2024-10-02 17:03:22,222 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:03:22,222 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:03:23,226 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:03:23,226 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:03:23,226 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:03:23,256 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:03:23,256 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:03:25,010 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:03:25,011 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:03:25,012 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:03:32,446 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-02 17:03:32,446 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-02 17:03:34,015 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:03:34,405 - streamline - INFO - Loaded downloaded data from data.csv with 46 records.
+2024-10-02 17:03:34,405 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:03:34,405 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:03:34,405 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:03:34,408 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 200-row parts.
+2024-10-02 17:03:38,157 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:03:38,158 - llm.llm_use - INFO - Processing dataset with 23 rows, chunking into 200-row parts.
+2024-10-02 17:03:43,698 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:03:43,698 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019? 
+
+Answer based on the provided datasets:
+Based on the dataset provided, there were several audits planned for the year 2019. These include:
+
+1. Minimum Security Standards (Business Audits)
+2. Payroll Leavers / Joiners (Business Audits)
+3. Post Project Evaluation Reviews (Business Audits)
+4. DAERA Contract Management (Business Audits)
+5. Information / Data Security (Business Audits)
+6. Product Recall Delivery Assurance (Business Audits)
+7. Conflicts of Interest Policy (Business Audits)
+8. Financial Assurance (Business Audits)
+9. Official Veterinarian / Official Auxiliaries Training (Official Controls Audits)
+10. Animal Welfare (Official Controls Audits)
+11. Shellfish (Official Controls Audits)
+12. Food Chain Information and Collection & Communication of Inspection Results (Official Controls Audits)
+13. Wine Inspection (Official Controls Audits)
+14. Raw Drinking Milk (Follow up audit, Official Controls Audits)
+15. Warm meat legislation (Official Controls Audits)
+16. Export Certification (Official Controls Audits)
+17. Allergens in England, Wales and Northern Ireland (Local Authority Audits)
+18. LA Approved Premises in England (Local Authority Audits)
+19. Food Hygiene Rating Scheme implementation - formal review in Northern Ireland (Local Authority Audits)
+20. Delivery of Animal Feed Law Enforcement Services in Wales (Local Authority Audits)
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales (Local Authority Audits)
+
+For more information, please refer to the dataset at: [No link available in metadata]
+The audits planned for the year 2019 can be found in the Internal Audit Plan accessible via this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv]. However, to provide a more precise answer, I would recommend referring to the dataset for the year 2018-2019 since it contains information for both years 2019 and 2020.
+
+In this dataset, you'll find various types of audits categorized as Business Audit and Official Controls. For the Business Audit category, some of the planned audits include assessing FSA compliance with Cabinet Office Minimum Security Standards, evaluating the effectiveness of managing attendance policies in the context of OWOW, reviewing the effectiveness of FSA's asset management policies, ensuring compliance with the General Data Protection Regulation, conducting a gateway review for product recall delivery assurance, and assessing the effectiveness of supplier management arrangements related to IT Help Desk Services.
+
+For the Official Controls category, some of the planned audits include assessing the effectiveness of FSA official controls for minced meat, meat preparations, and ready-to-eat products in achieving EU law objectives; evaluating the effectiveness of FSA official controls for eggs hygiene implemented by APHA; assessing the effectiveness of FSA official controls for bovine TB; assessing the effectiveness of FSA official controls for Notifiable Diseases in achieving EU law objectives; conducting a follow-up audit to assess the effectiveness of management actions implemented in addressing issues identified regarding Game Handling Establishments; evaluating the effectiveness of FSA official controls for approval and re-approval of meat establishments premises; assessing the effectiveness of FSA official controls for animal welfare in achieving EU law objectives; conducting a follow-up audit requested by ARAC to review the effectiveness of management actions related to Animal By-Products; assessing the effectiveness of management actions implemented to address issues identified regarding Raw Drinking Milk; and evaluating the effectiveness of FSA official controls for cutting establishments.
+
+In addition, there are also Local Authority Audits planned, including addressing complaints about food hygiene/food premises and infectious disease control in England, conducting follow-up audits to check progress by LAs in implementing full audit action plans in Wales, assessing the adequacy/effectiveness of LA arrangements for delivering feed and food law enforcement services in Northern Ireland, evaluating the engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E, assessing the effectiveness of the new model audits in Wales regarding Animal Feed Law Enforcement Services, and assessing the adequacy/effectiveness of LA arrangements for delivering feed and food law enforcement services in England related to Allergens.
+2024-10-02 17:03:43,698 - streamline - INFO - Streamline process completed in 21.48 seconds.
+2024-10-02 17:03:43,699 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:07:10,323 - root - INFO - Logging is configured.
+2024-10-02 17:07:18,679 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:07:18,679 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:07:20,528 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:07:20,528 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:07:20,528 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:07:20,604 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:07:20,604 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:07:22,435 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:07:22,436 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:07:22,436 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:07:29,757 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:07:29,757 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:07:30,960 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:07:31,288 - streamline - INFO - Loaded downloaded data from data.csv with 22 records.
+2024-10-02 17:07:31,288 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:07:31,288 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:07:31,289 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:07:31,291 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 200-row parts.
+2024-10-02 17:07:38,749 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:07:38,749 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019? 
+
+Answer based on the provided datasets:
+The audits planned for 2019 were part of an organized overview of annual audit schedules under the title "Internal Audit Plan". This plan provides stakeholders with comprehensive information about scheduled internal audits each year, ensuring they understand and follow the planned auditing activities comprehensively.
+
+The internal audits detailed in this dataset are categorized into several types:
+
+### Business Audits
+- **Minimum Security Standards**: Evaluates FSAs' compliance with Cabinet Office Minimum Security Standards.
+- **Payroll Leavers / Joiners**: Checks on the completeness, timeliness, and accuracy of joiner and leaver records to provide assurance on management controls.  
+- **Post Project Evaluation Reviews**: Reviews end-of-project processes to ensure smooth transition to business as usual and captures lessons learned.
+- **DAERA Contract Management**: Assesses management controls and reporting in relation to DAERA contracts.
+- **Information / Data Security**: Evaluates the effectiveness of information/data security measures taken by FSAs, Wales, and Northern Ireland's financial systems.  
+- **Product Recall Delivery Assurance**: Ensures the effectiveness of the product recall system that was implemented in 2019.
+- **Conflicts of Interest Policy**: Assesses processes for compliance with conflicts of interest policies regarding board members and FSA staff.
+- **Financial Assurance**: Reviews key financial systems' efficiency and related controls within FSAs, Wales, and Northern Ireland.
+
+### Official Controls Audits
+This category includes audits focused on various aspects of food safety, livestock health management, and export certification:
+
+- **Official Veterinarian / Official Auxiliaries Training**: Checks the delivery and oversight of training for official veterinarians.
+- **Animal Welfare**: Ensures FSA's official controls achieve EU animal welfare objectives.  
+- **Shellfish**: Evaluates arrangements to develop guidance that enables effective shellfish official control procedures.
+- **Food Chain Information and Collection**: Assesses food chain information systems' effectiveness and inspection results communication.
+- **Wine Inspection**: Evaluates management assurance of standards established by the Office for Food Safety Council (OFFC).
+- **Raw Drinking Milk**: Follow-up audit to confirm actions taken after previous audits addressing issues related to milk quality.
+- **Warm Meat Legislation**: Reviews oversight and implementation of warm meat legislation.
+- **Export Certification**: Examines systems used to certify exports.
+
+### Local Authority Audits
+These audits concentrate on food law enforcement services delivered by local authorities:
+
+- **Allergens in England, Wales, and Northern Ireland**: Checks adequacy/efficiency of LA arrangements for delivering feed and food law enforcement.
+- **LA Approved Premises in England**: Evaluates the effectiveness of LA approval processes for premises requiring LA oversight.
+- **Food Hygiene Rating Scheme**: Assess compliance with statutory requirements set out by Food Hygiene Rating Act (Northern Ireland) 2016 and evaluates the adequacy of official controls delivered by LAs.  
+- **Delivery of Animal Feed Law Enforcement Services in Wales**: Conducts a comprehensive assessment across Welsh regional feed services.
+
+### Follow-up Audits
+For these audits, the focus is on assessing progress after initial audits:
+
+- **Follow-up Audits of Local Authorities**: Evaluates the implementation and effectiveness of agreed action plans by local authorities following previous audit findings.
+
+Each category contains detailed descriptions of specific tasks or standards being assessed through audits. This allows stakeholders to understand the specific expectations for FSAs, their employees, and local authorities in terms of compliance with relevant laws, regulations, policies, and industry best practices.
+
+For more detailed information about this dataset and its contents, please refer to the following link:
+
+No link available in metadata
+
+This dataset provides a comprehensive overview of auditing activities carried out by FSAs across business operations, official controls on food safety, animal welfare, and livestock health management, as well as local authority enforcement of food laws.
+2024-10-02 17:07:38,749 - streamline - INFO - Streamline process completed in 20.07 seconds.
+2024-10-02 17:07:38,750 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:08:11,195 - streamline - INFO - Received user query: 'what audits were planned in 2019?'
+2024-10-02 17:08:11,195 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:08:12,520 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:08:12,520 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:08:12,520 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:08:12,520 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:08:12,520 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:08:13,834 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:08:13,835 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:08:13,835 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:08:19,595 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:08:19,595 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:08:20,711 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:08:21,052 - streamline - INFO - Loaded downloaded data from data.csv with 22 records.
+2024-10-02 17:08:21,053 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:08:21,053 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019?'
+2024-10-02 17:08:21,053 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:08:21,054 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 200-row parts.
+2024-10-02 17:08:27,374 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:08:27,374 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019?
+
+Answer based on the provided datasets:
+The audits planned for 2019 as listed in the "Internal Audit Plan" dataset accessible via the link <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv> encompass a wide range of categories including Business Audits, Official Controls Audits and Local Authority Audits.
+
+In 2019, the following audits were scheduled:
+
+Business Audits:
+1. Minimum Security Standards: To assess FSA compliance with Cabinet Office Minimum Security Standards.
+2. Payroll Leavers / Joiners: To ensure completeness, timeliness, and accuracy of joiner and leaver records for management controls assurance.
+3. Post Project Evaluation Reviews: To evaluate end-of-project processes and the transition to business as usual with a focus on capturing lessons learned.
+4. DAERA Contract Management: To examine management controls and reporting related to contracts with DAERA.
+5. Information / Data Security: An assessment of effectiveness in management actions regarding information/data security.
+6. Product Recall Delivery Assurance: Evaluation of the product recall system implemented in 2019 for its efficiency.
+7. Conflicts of Interest Policy: Assessment of processes, compliance and reporting on conflicts of interest by Board Members and FSA staff.
+8. Financial Assurance: To assess effectiveness of financial systems and related controls within FSA.
+
+Official Controls Audits:
+1. Official Veterinarian / Official Auxiliaries Training: Overseeing the management delivery and oversight of training for these professionals.
+2. Animal Welfare: Ensuring that FSA official controls effectively achieve objectives set by EU law on animal welfare.
+3. Shellfish: Assessing suitability and effectiveness in setting up guidelines to execute successful shellfish official control implementations.
+4. Food Chain Information & Collection & Communication of Inspection Results: Evaluating the effectiveness of food chain information systems.
+5. Wine Inspection: Guaranteeing management assurance on OFFC's delivery for wine standards.
+6. Raw Drinking Milk: Follow-up audit evaluating effectiveness in addressing management actions post-audit to improve processes.
+7. Warm Meat Legislation: Reviewing oversight and delivery pertaining to warm meat legislation.
+8. Export Certification: Ensuring the adequacy of systems used to certify exports.
+
+Local Authority Audits:
+1. Allergens in England, Wales & Northern Ireland: Assessing LA's arrangements for delivering feed and food law enforcement services effectiveness across these regions.
+2. LA Approved Premises in England: Evaluating the efficiency of LA approval processes for establishments needing such approval.
+3. Food Hygiene Rating Scheme implementation - Formal Review in Northern Ireland: Checking compliance with statutory requirements set forth by Food Hygiene Rating Act (Northern Ireland) 2016 and ensuring suitability/efficacy of relevant official controls by LAs.
+4. Delivery of Animal Feed Law Enforcement Services in Wales: Conducting comprehensive assessments through new models across the Wales regional feed services.
+5. Follow-up audits of LAs to check progress on implementing full audit action plans in Wales: Ensuring LA actions align with previously identified issues and improvements.
+
+These audits cover a broad spectrum, reflecting rigorous evaluations aimed at enhancing operational effectiveness, compliance adherence, and service quality across multiple sectors in 2019.
+2024-10-02 17:08:27,374 - streamline - INFO - Streamline process completed in 16.18 seconds.
+2024-10-02 17:08:27,375 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:09:37,751 - root - INFO - Logging is configured.
+2024-10-02 17:09:47,971 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:09:47,971 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:09:49,668 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:09:49,668 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:09:49,668 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:09:49,727 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:09:49,727 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:09:51,641 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:09:51,642 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:09:51,642 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:10:09,658 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:10:09,658 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:10:11,585 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:10:45,641 - root - INFO - Logging is configured.
+2024-10-02 17:11:02,604 - streamline - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-02 17:11:02,604 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:11:03,859 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:11:03,859 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:11:03,859 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:11:03,889 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:11:03,889 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:11:06,037 - streamline - INFO - Best Metadata Results (Distances: [0.72891843 0.72891843 0.76202    0.86749583 0.88011754 0.88240516
+ 0.88713837 0.8939899  0.8996054  0.9112724 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:11:06,038 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:11:06,039 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:11:07,127 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:11:07,127 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:11:09,133 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:11:09,396 - streamline - INFO - Loaded downloaded data from data.csv with 29 records.
+2024-10-02 17:11:09,396 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:11:09,396 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-02 17:11:09,396 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:11:09,398 - llm.llm_use - INFO - Processing dataset with 19 rows, chunking into 200-row parts.
+2024-10-02 17:11:10,660 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:11:10,660 - llm.llm_use - INFO - Processing dataset with 9 rows, chunking into 200-row parts.
+2024-10-02 17:11:12,322 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:11:12,322 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2018? 
+
+Answer based on the provided datasets:
+The provided dataset contains information about planned internal audits for the **2018-2019 fiscal year**.  
+
+Therefore, all the audits listed in the dataset were planned for 2018. 
+
+
+Let me know if you have any other questions about this dataset or need further clarification!
+The user wants to know what audits were planned for 2018.  
+
+According to the provided metadata, the dataset at https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv contains information about audits planned for the 2017-2018 fiscal year.
+
+
+Let me know if you have any other questions about this dataset or need further clarification!
+2024-10-02 17:11:12,322 - streamline - INFO - Streamline process completed in 9.72 seconds.
+2024-10-02 17:11:12,322 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:11:28,918 - streamline - INFO - Received user query: 'what audits were planned in 2018?'
+2024-10-02 17:11:28,918 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:11:30,535 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:11:30,535 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:11:30,535 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:11:30,536 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:11:30,536 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:11:31,825 - streamline - INFO - Best Metadata Results (Distances: [0.72891843 0.72891843 0.76202    0.86749583 0.88011754 0.88240516
+ 0.88713837 0.8939899  0.8996054  0.9112724 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:11:31,825 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:11:31,826 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:11:32,936 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:11:32,936 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:11:34,998 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:11:35,146 - streamline - INFO - Loaded downloaded data from data.csv with 29 records.
+2024-10-02 17:11:35,146 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:11:35,146 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018?'
+2024-10-02 17:11:35,146 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:11:35,149 - llm.llm_use - INFO - Processing dataset with 19 rows, chunking into 200-row parts.
+2024-10-02 17:11:36,943 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:11:36,943 - llm.llm_use - INFO - Processing dataset with 9 rows, chunking into 200-row parts.
+2024-10-02 17:11:39,487 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:11:39,487 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2018?
+
+Answer based on the provided datasets:
+The provided dataset describes planned internal audits for the **2018-2019 fiscal year**.  
+
+Therefore, all the audits listed in the dataset were planned for 2018. 
+
+
+To see a complete list of the audits planned for 2018, you can access the full dataset at: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+The provided dataset contains information on planned internal audits for the 2018-2019 fiscal year (link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv).  There isn't any data for 2017 in this dataset.
+
+To get information about audits planned for 2017, you would need to refer to the dataset linked in the metadata: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv .  
+
+
+
+Let me know if you have any other questions about this dataset or need help finding specific information within it!
+2024-10-02 17:11:39,487 - streamline - INFO - Streamline process completed in 10.57 seconds.
+2024-10-02 17:11:39,487 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:11:56,176 - streamline - INFO - Received user query: 'Yes I want to know which audits were planned, can you list them? '
+2024-10-02 17:11:56,176 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:11:57,908 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:11:57,909 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:11:57,909 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:11:57,909 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:11:57,909 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:11:59,145 - streamline - INFO - Best Metadata Results (Distances: [0.7150109  0.7150109  0.74446374 0.8276166  0.8290251  0.8311842
+ 0.83123004 0.83598185 0.83724284 0.84276736]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:11:59,145 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:11:59,146 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:12:00,273 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-02 17:12:00,273 - streamline - INFO - Refined to 10 relevant datasets after LLM processing.
+2024-10-02 17:12:10,319 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:15:35,038 - streamline - INFO - Received user query: 'which audits were planned in 2018? '
+2024-10-02 17:15:35,038 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:15:36,343 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:15:36,343 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: gemma2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:15:36,343 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:15:36,344 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:15:36,344 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:15:40,812 - streamline - INFO - Best Metadata Results (Distances: [0.74352634 0.74352634 0.78180254 0.87491626 0.8852129  0.8878101
+ 0.89418626 0.8986365  0.90520716 0.9190216 ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:15:40,813 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:15:40,814 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:15:42,596 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:15:42,596 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:15:44,455 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:15:44,903 - streamline - INFO - Loaded downloaded data from data.csv with 29 records.
+2024-10-02 17:15:44,903 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:15:44,903 - llm.llm_use - INFO - Received user query: 'which audits were planned in 2018? '
+2024-10-02 17:15:44,903 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:15:44,905 - llm.llm_use - INFO - Processing dataset with 19 rows, chunking into 200-row parts.
+2024-10-02 17:15:47,083 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:15:47,083 - llm.llm_use - INFO - Processing dataset with 9 rows, chunking into 200-row parts.
+2024-10-02 17:15:51,692 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:15:51,692 - streamline - INFO - Final Answer:
+Query: which audits were planned in 2018? 
+
+Answer based on the provided datasets:
+Unfortunately, I cannot directly access external websites or specific files, including the CSV file you linked. My knowledge is based on the text provided in the prompt. 
+
+However, based on the sample data you shared, it appears that the dataset contains information about planned internal audits categorized by year.  To answer your question about which audits were planned in 2018, I would need to see the full dataset and specifically look for entries with the year "2018" associated with them. 
+
+
+Let me know if you have any other questions about data analysis or dataset interpretation that don't require accessing external files.
+The provided text snippet shows a portion of the 2018-19 Internal Audit Plan dataset (Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv).  
+
+To answer your question about audits planned for **2018**, we need to look at the 2017-18 dataset (Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv). 
+
+
+Please note that I cannot directly access or browse external websites or specific files online, including the CSV datasets you linked. My knowledge is based on the information you provide in your prompt.  
+
+**To get the answer to your question, you'll need to:**
+
+1. **Access the 2017-18 dataset link:** https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv
+2. **Open the CSV file in a spreadsheet program or text editor.**
+3. **Look for the "Year" column** (or a similar column indicating the audit year).
+4. **Identify the audits listed for the year 2018.** 
+
+
+
+Let me know if you have any other questions about datasets or need help understanding data analysis concepts.
+2024-10-02 17:15:51,692 - streamline - INFO - Streamline process completed in 16.65 seconds.
+2024-10-02 17:15:51,692 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:16:32,671 - root - INFO - Logging is configured.
+2024-10-02 17:16:43,335 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:16:43,335 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:16:44,571 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:16:44,571 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: llama3, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:16:44,571 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:16:44,600 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:16:44,600 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:16:46,371 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:16:46,372 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:16:46,372 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:17:01,095 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-02 17:17:01,096 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-02 17:17:02,931 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:17:03,525 - streamline - INFO - Loaded downloaded data from data.csv with 48 records.
+2024-10-02 17:17:03,525 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:17:03,525 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:17:03,525 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:17:03,529 - llm.llm_use - INFO - Processing dataset with 48 rows, chunking into 200-row parts.
+2024-10-02 17:17:05,584 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:17:05,584 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019? 
+
+Answer based on the provided datasets:
+I'd be happy to help!
+
+To answer your question, "what audits were planned in 2019?", I'll review the provided dataset.
+
+After analyzing the chunk, I noticed that there are two instances where the year is explicitly mentioned: 
+
+1. `internal-audit-plan-2019-20.csv` - This suggests that the dataset contains information about audit plans for both 2019 and 2020.
+2. `implemented in 2019` - This phrase indicates that at least one audit was planned or conducted in 2019.
+
+Based on this analysis, I can confidently say that some audits were planned in 2019. However, without further information from the entire dataset, it's difficult to determine the exact number of audits or their specific scopes.
+
+If you're interested in learning more about these audits or exploring other details within the dataset, please feel free to ask!
+2024-10-02 17:17:05,584 - streamline - INFO - Streamline process completed in 22.25 seconds.
+2024-10-02 17:17:05,584 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:17:51,996 - root - INFO - Logging is configured.
+2024-10-02 17:18:02,987 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:18:02,987 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:18:04,262 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:18:04,262 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:18:04,263 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:18:04,292 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:18:04,292 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:18:06,097 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:18:06,097 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:18:06,098 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:18:15,478 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-02 17:18:15,478 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-02 17:18:16,642 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:18:16,800 - streamline - INFO - Loaded downloaded data from data.csv with 46 records.
+2024-10-02 17:18:16,800 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:18:16,800 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:18:16,800 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:18:16,802 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 200-row parts.
+2024-10-02 17:18:22,922 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:18:22,922 - llm.llm_use - INFO - Processing dataset with 23 rows, chunking into 200-row parts.
+2024-10-02 17:18:26,991 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:18:26,991 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019? 
+
+Answer based on the provided datasets:
+The planned audits for 2019 as outlined in the "Internal Audit Plan" dataset are diverse and cover various domains including:
+
+- **Business Audits**:
+    - Minimum Security Standards: This audit aims to evaluate FSA's compliance with the Cabinet Office Minimum Security Standards.
+    - Payroll Leavers / Joiners: The focus here is on ensuring accuracy, completeness, and timeliness of records related to joiner and leaver processes to provide assurance about management controls.
+    - Post Project Evaluation Reviews: These audits assess end-of-project procedures, transition to business-as-usual operations, and the sharing of learnings.
+    - DAERA Contract Management: This audit evaluates management controls and reporting in relation to contracts with DAERA (Department of Agriculture, Environment and Rural Affairs).
+    - Information / Data Security: The objective is to evaluate the effectiveness of management actions related to information/data security practices.
+    - Product Recall Delivery Assurance: An assessment of a product recall system implemented in 2019 for its effectiveness.
+    - Conflicts of Interest Policy: This audit aims to assess the process, compliance, and reporting of conflicts of interest for Board Members and FSA staff.
+    - Financial Assurance: The aim is to evaluate the effectiveness of key financial systems and related controls within FSA, Wales, and Northern Ireland.
+
+- **Official Controls Audits**:
+    - Official Veterinarian / Official Auxiliaries Training: This audit focuses on management delivery and oversight of training for these professionals.
+    - Animal Welfare: Ensuring that Food Safety Authority (FSA) official controls are effective in achieving the objectives set by EU laws regarding animal welfare. 
+    - Shellfish: Evaluating the suitability and effectiveness of arrangements supporting shellfish official controls.
+    - Food Chain Information, Collection & Communication of Inspection Results: The focus is on assessing the effectiveness of food chain information systems.
+    - Wine Inspection: This audit aims to ensure management assurance in OFFC (Office for Food Safety) delivery of wine standards.
+    - Raw Drinking Milk and Warm Meat Legislation Audits: These aim to assess the effectiveness of management actions taken to address these specific regulations.
+    - Export Certification: Evaluating the system of certifying exports by authorities.
+
+- **Local Authority Audits**:
+    - Allergens in England, Wales, and Northern Ireland: Assessing adequacy and effectiveness of local authority arrangements for feed and food law enforcement services delivery.
+    - LA Approved Premises in England: This audit focuses on assessing the effectiveness of Local Authorities approving premises requiring such approvals.
+    - Food Hygiene Rating Scheme Implementation (Northern Ireland): Evaluating compliance with statutory requirements and assessing suitability of official controls provided by local authorities.
+    - Delivery of Animal Feed Law Enforcement Services in Wales: Conducting comprehensive audits to assess new models across regional services.
+    - Follow-up audits on LA implementations in Wales: These aim at checking progress after full audit action plans have been implemented.
+
+All these audits are designed to ensure compliance with applicable laws and regulations, improve operational efficiency, or provide assurance about the management of specific policies.
+Based on the provided Internal Audit Plan dataset, audits planned for 2019 encompass several categories including Business Audit, Official Controls, Local Authority Audits, and more. Here are some examples of audits that were scheduled:
+
+### Business Audit:
+- **Minimum Security Standards**: This audit assesses compliance with Cabinet Office Minimum Security Standards.
+- **Managing Attendance**: Evaluates the effectiveness of attendance management policies within the organization in relation to a specific context (OWOW).
+- **Asset Management**: Reviews procurement, records, security measures, and disposal strategies related to assets.
+
+### Official Controls:
+This category involves audits that are focused on ensuring compliance with regulations regarding various food products, animal welfare, and official controls for diseases like TB. 
+
+- **Minced Meat, Meat Preparations & Ready-to-Eat Products**: Ensures effectiveness in achieving objectives set by EU law.
+- **Eggs Hygiene**: Focuses on the efficiency of FSA's efforts to comply with standards via APHA (Animal and Plant Health Agency).
+- **Bovine TB**: Assesses the effectiveness of official controls against Bovine Tuberculosis.
+
+### Local Authority Audits:
+These audits target areas like food hygiene, infectious disease control in England as well as the adequacy/effectiveness of Local Authorities’ arrangements for enforcement services in Northern Ireland and Wales. 
+
+- **Complaints about Food Hygiene**: Evaluates LA systems' capability to address complaints.
+- **Follow-up Audits of LAs in Wales**: Tracks progress after initial audits, assessing effectiveness of action plans.
+
+### Additional audits cover areas such as approval processes for meat establishments, animal welfare practices, handling of animal by-products, management of raw drinking milk products, and inspections on cutting establishments.
+
+Each audit aims to ensure that the respective organizations are adhering to legal standards or best practices within their industry or jurisdiction. For comprehensive details about each specific audit conducted in 2019, refer to the dataset linked in the metadata provided above.
+2024-10-02 17:18:26,991 - streamline - INFO - Streamline process completed in 24.00 seconds.
+2024-10-02 17:18:26,991 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-02 17:21:43,353 - root - INFO - Logging is configured.
+2024-10-02 17:21:54,460 - streamline - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:21:54,460 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-02 17:21:55,747 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-02 17:21:55,747 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: phi3, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-02 17:21:55,747 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-02 17:21:55,777 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-02 17:21:55,777 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-02 17:21:57,755 - streamline - INFO - Best Metadata Results (Distances: [0.74609196 0.74609196 0.774326   0.888608   0.90736234 0.9135581
+ 0.929876   0.9307507  0.93102896 0.93462944]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-02 17:21:57,755 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-02 17:21:57,756 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-02 17:22:05,044 - llm.llm_use - INFO - Metadata selection completed. 6 out of 10 datasets are relevant.
+2024-10-02 17:22:05,044 - streamline - INFO - Refined to 6 relevant datasets after LLM processing.
+2024-10-02 17:22:07,535 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-02 17:22:08,530 - streamline - INFO - Loaded downloaded data from data.csv with 104 records.
+2024-10-02 17:22:08,530 - streamline - INFO - Directly analyzing with LLM...
+2024-10-02 17:22:08,530 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-02 17:22:08,530 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-02 17:22:08,537 - llm.llm_use - INFO - Processing dataset with 104 rows, chunking into 200-row parts.
+2024-10-02 17:22:10,019 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-02 17:22:10,020 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2019? 
+
+Answer based on the provided datasets:
+I'm sorry, but as an AI developed by Microsoft, I don't have direct access to external databases or personal data about individuals unless it has been shared with me during our conversation. However, based on your request involving audits and open data related activities from a specific dataset referenced in the metadata you provided at https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv., I can assist with questions about how to analyze datasets, understand audit plans and objectives within open data portals or discuss the importance of transparency in governmental operations if they relate broadly to general knowledge up until my last update in 2023.
+
+If you have a specific question regarding internal audits for local authorities (LAs) as mentioned, please provide more details on what kind of analysis is required or ask about the nature and objectives of these audits based on common practices related to such procedures up until my last knowledge update in 2023.
+2024-10-02 17:22:10,024 - streamline - INFO - Streamline process completed in 15.56 seconds.
+2024-10-02 17:22:10,024 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 11:43:32,871 - root - INFO - Logging is configured.
+2024-10-07 11:44:02,488 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-10-07 11:44:02,488 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 11:44:03,704 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 11:44:03,704 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 11:44:03,704 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 11:44:03,749 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 11:44:03,749 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 11:44:05,925 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 11:44:05,926 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 11:44:05,926 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 11:44:20,738 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 11:44:20,738 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 11:44:22,337 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 11:44:23,051 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 11:44:23,051 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 11:44:23,051 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-10-07 11:44:23,051 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 11:44:23,053 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 11:44:27,782 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 11:44:27,782 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017?
+
+Answer based on the provided datasets:
+Based on the provided internal audit plan for 2017-18 (<https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>), it appears that various aspects of corporate risk are being addressed through security, financial, animal by-products, and animal health audits. Here's a breakdown:
+
+1. **Security Risk Management** - The annual review ensures the information security and controls comply with Cabinet Office guidelines (Information Security). Financial assurance is also maintained through regular audits of central and devolved offices' financial controls.
+
+2. **Animal By-products** - Official controls at approved meat establishments are assessed, which can impact corporate risks 1 and 4. The last audit was conducted in August 2011.
+
+3. **FSA Audit of FBO Controls** - This involves an annual audit of specific aspects of the system for the first years of a new system.
+
+4. **Animal Welfare Controls incl Slaughter Licences** - The WATOK implementation is being audited, but this was deferred from 2015/16 due to legislation implementation date.
+
+5. **Incidents Resilience** - This audit checks whether the Incidents team is learning from past incidents, linking to corporate risks 3 and 4.
+
+6. **Animal Health/ Notifiable Diseases** - This audits animal health controls implemented on behalf of Defra / APHA, linking to corporate risks 1 and 2.
+
+7. **Benefits realisation audit following implementation of new meat charging discount system**, Open data, Evolve Programme, LAEMS follow-up audit ,Business planning and performance management ,Management of Contract for supply of OVs and MHIs ,Training and development budgets ,Science, Evidence  and Information programme ,Planning for Brexit ,Investment Board,Campylobacter Programme ,Raw Drinking Milk,ABP official controls (follow-up audit),Approved Game Meat Handling Establishments ,Slaughterhouse hygiene verification system ,Product Recall system - These audits cover various areas such as benefits realisation, open data implementation, program changes, contract management, training budgets, science and information programs, Brexit planning, investment allocation, Campylobacter controls, raw drinking milk controls, follow-ups on previous audit reports, game meat handling establishments, slaughterhouse hygiene verification systems, product recall system improvements.
+2024-10-07 11:44:27,782 - streamline - INFO - Streamline process completed in 25.29 seconds.
+2024-10-07 11:44:27,782 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 11:45:12,449 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 11:45:12,449 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 11:45:13,690 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 11:45:13,691 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 11:45:13,691 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 11:45:13,691 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 11:45:13,691 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 11:45:14,952 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 11:45:14,953 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 11:45:14,953 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 11:45:17,342 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 11:45:17,342 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 11:45:18,811 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 11:45:19,268 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 11:45:19,268 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 11:45:19,268 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 11:45:19,268 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 11:45:19,271 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 11:45:25,804 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 11:45:25,804 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+Based on the internal audit plan for 2017-18 provided in the dataset (link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv), there are several areas where assurance schemes may be relied on more in future, and they have a direct link to corporate risk. Here's a summary:
+
+1. **Benefits realisation audit following implementation of new meat charging discount system.** This audit will assess how well the original objectives have been met, which is essential for ensuring the system functions as intended and minimizes any potential risks associated with incorrect pricing or financial loss.
+
+2. **Open data**. The review of implementation and application of policy and procedures on open data will ensure compliance with guidelines, promoting transparency and reducing the risk of non-compliance issues.
+
+3. **Evolve Programme**. This change involves managing more suppliers and assuming responsibility for elements currently managed by Capita. The audit will assess the efficacy of plans in place to manage disruption risks arising from transitioning to a new IT model.
+
+4. **Business planning and performance management.** Performance management is a key area for the Agency, with work continuing to develop KPIs to improve value for money (VFM). The audit will assess objective setting and KPIs at Directorate and team level, as well as monitoring and reporting of performance, ensuring VFM is achieved.
+
+5. **Training and development budgets**. Ensuring that budgets are aligned with FSA priorities helps ensure resources are being used effectively and efficiently, reducing the risk of misuse or waste.
+
+6. **Science, Evidence, and Information programme**. The audit will review transferring programme outcomes to business as usual, ensuring that valuable data is not lost and can be utilized for future decision-making.
+
+7. **Planning for Brexit**. This audit will review risk identification, assessment, and mitigation plans, helping the organization prepare for potential risks associated with Brexit.
+
+8. **Investment Board**. The audit will examine work of the Investment Board in prioritizing resource allocation, ensuring resources are being directed towards high-priority areas and minimizing waste or misallocation of funds.
+
+9. **Campylobacter Programme**. The audit will review the effectiveness of business as usual controls following implementation of the programme, helping to ensure that campylobacter levels are reduced, protecting public health.
+
+10. **Raw Drinking Milk**. The audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible, ensuring milk is safe for consumption.
+
+11. **ABP official controls (follow-up audit)**. This follow-up audit will assess the effectiveness of management actions taken to address issues identified in the previous report, helping ensure compliance with regulations and minimizing risks associated with non-compliance.
+
+12. **Approved Game Meat Handling Establishments**. The audit will review effectiveness of official controls and follow up on policy related issues highlighted in previous audit reports, ensuring game meat is handled correctly to minimize potential health risks.
+
+13. **Slaughterhouse hygiene verification system**. The audit will review the effectiveness of the recently introduced system in approved slaughterhouses, helping ensure that meat is processed safely and minimizing the risk of foodborne illnesses.
+
+14. **Product Recall system**. The audit will review the effectiveness of the new product recall model, ensuring that contaminated or substandard products are removed from the market swiftly to protect consumers.
+2024-10-07 11:45:25,804 - streamline - INFO - Streamline process completed in 13.36 seconds.
+2024-10-07 11:45:25,804 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 11:46:18,987 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 11:46:18,987 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 11:46:20,229 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 11:46:20,229 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 11:46:20,229 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 11:46:20,229 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 11:46:20,229 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 11:46:21,658 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 11:46:21,659 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 11:46:21,659 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 11:46:25,435 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 11:46:25,435 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 11:46:27,086 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 11:46:27,339 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 11:46:27,339 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 11:46:27,339 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 11:46:27,339 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 11:46:27,341 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 11:46:32,463 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 11:46:32,463 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+Based on the provided dataset, here's an overview of the independent challenges required for each risk management area:
+
+1. Information Security, Assurance: The independent challenge is to ensure that information security and controls comply with Cabinet Office guidelines during the annual audit.
+
+2. Financial assurance: The independent challenge is to audit financial controls operating centrally and in devolved offices annually.
+
+3. Animal By-products: The independent challenge is to assess animal by-products official controls at approved meat establishments, taking into account their links to corporate risks 1 and 4. Since the last audit was conducted in August 2011, a new audit is needed to ensure compliance with current guidelines.
+
+4. FSA audit of FBO controls: The independent challenge is to conduct an annual audit in the first years of the new system, focusing on specific aspects of the system.
+
+5. Animal Welfare Controls incl slaughter licences: The independent challenge is to evaluate the implementation of the Waterfall Test Operating Model Knowledge (WATOK) and deferred audits from 2015/16 due to legislation implementation delays.
+
+6. Incidents Resilience: The independent challenge is to verify that the Incidents team is learning from previous practices, specifically Prometheus with FSS in March 2016, with PHE / Defra in Autumn 2016. This links to corporate risks 3 and 4.
+
+7. Animal Health/ Notifiable Diseases: The independent challenge is to assess animal health controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls. This audit links to corporate risks 1 and 2.
+
+8. Evolve Programme, Open data, LAEMS follow-up audit, Business planning and performance management, Management of Contract for supply of OVs and MHIs, Training and development budgets, Science, Evidence, and Information programme, Planning for Brexit, Investment Board, Campylobacter Programme, Raw Drinking Milk, ABP official controls (follow-up audit), Approved Game Meat Handling Establishments, Slaughterhouse hygiene verification system, Product Recall system: For each of these areas, the independent challenge is to conduct an annual or as-needed audit to review the implementation and effectiveness of various policies, systems, programs, and controls.
+
+For more detailed information about each audit, please refer to the Internal Audit Plan 2017-18 dataset available at this link: [Internal Audit Plan 2017-18](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv) (No link available in the metadata).
+2024-10-07 11:46:32,463 - streamline - INFO - Streamline process completed in 13.48 seconds.
+2024-10-07 11:46:32,464 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 13:08:37,319 - root - INFO - Logging is configured.
+2024-10-07 13:09:51,329 - streamline - INFO - Received user query: 'can you summarize the audits of 2017? '
+2024-10-07 13:09:51,330 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 13:10:38,827 - streamline - INFO - Loaded 20 datasets from datasets.csv.
+2024-10-07 13:10:38,827 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 13:10:38,827 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 13:10:38,897 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 13:10:38,897 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 13:10:41,818 - streamline - INFO - Best Metadata Results (Distances: [1.151926  1.1633773 1.1644808 1.1673822 1.2012842 1.2096303 1.2211199
+ 1.233444  1.2433913 1.246902 ]):
+                                                title                                              links
+5   Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+6   Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+4   Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+17  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+18  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+19  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+3   Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+7   Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+2   Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+0   Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+2024-10-07 13:10:41,818 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 13:10:41,819 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 13:10:51,172 - llm.llm_use - INFO - Metadata selection completed. 1 out of 10 datasets are relevant.
+2024-10-07 13:10:51,172 - streamline - INFO - Refined to 1 relevant datasets after LLM processing.
+2024-10-07 13:10:52,247 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 13:10:52,586 - streamline - INFO - Loaded downloaded data from data.csv with 1170 records.
+2024-10-07 13:10:52,586 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 13:10:52,587 - llm.llm_use - INFO - Received user query: 'can you summarize the audits of 2017? '
+2024-10-07 13:10:52,587 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 13:10:52,623 - llm.llm_use - INFO - Processing dataset with 1170 rows, chunking into 200-row parts.
+2024-10-07 13:10:55,393 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 13:10:57,659 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-07 13:11:01,802 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-07 13:11:04,446 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-07 13:11:08,729 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-07 13:11:12,963 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-07 13:11:12,964 - streamline - INFO - Final Answer:
+Query: can you summarize the audits of 2017? 
+
+Answer based on the provided datasets:
+From the provided dataset, it appears that the roles mentioned include Information Architects, Deputy IT Security Officers, Security Managers, Information & security Team Leaders, and Information Governance Managers. These roles are distributed across various departments such as Operations, Records Management, Finance and Performance, External Requester, Openness Data and Digital, Wales and Regulatory Delivery, Regulatory and Legal Strategy, Policy and Science, NI and Organisational Development, and Security.
+
+The roles seem to be focused on Information Governance, Security, and Records Management. For instance, the Information Architect role appears in various departments and seems to be linked with Records Management (Wisdom, Other) and Information Governance. The Deputy IT Security Officer and Security Manager roles are associated with Security and External Requester. The Information & security Team Leader role is also connected with both Records Management (Other) and Information Governance. The Information Governance Manager role is associated with various departments and seems to be focused on Information Governance.
+
+Please note that I do not have a direct link to the dataset in this context, as no link was provided in the metadata for this specific data chunk. However, the roles and departments mentioned here can be found across multiple open data portals, providing insights into various public sector roles and their associated functions. To gain a comprehensive understanding of these roles and functions, I recommend exploring relevant open data portals such as government open data portals, job listing websites, or academic resources focusing on public sector roles and responsibilities.
+From the provided dataset, it appears that various roles related to Information Governance, Security Management, Records Management, and Information Architecture are listed across different sectors such as Finance and Performance, Openness Data and Digital, Regulatory and Legal Strategy, Wales and Regulatory Delivery, Policy and Science, NI and Organizational Development, External Requester, and Operations.
+
+The roles mentioned include Security Managers, Deputy IT Security Officers, Information Architects, Information & security Team Leaders, Information Governance Managers, and others. These roles are found in various departments such as Finance, Performance, Regulatory, Legal, Openness Data, Wales and Regulatory Delivery, Policy and Science, NI and Organizational Development, Operations, and External Requester.
+
+However, please note that the metadata provided does not include a link to the dataset. To gain further insights into these roles, responsibilities, and their relationship within the organization, you may want to access the actual dataset if it is available online. Unfortunately, I cannot provide a specific dataset link as none was given in the metadata.
+
+Regarding questions or discussions about this dataset, feel free to ask! I'm here to help.
+This dataset appears to be a list of job positions within an organization, along with their respective departments, roles, and responsibilities. Here are some insights I can gather from the data:
+
+1. There are several individuals holding positions related to Information Architecture, such as Information Architects, and one individual in a Deputy IT Security Officer position who works as an Information Architect in different departments like Finance and Performance, Regulatory and Legal Strategy, Policy and Science, Openness Data and Digital, and External Requester.
+
+2. There are multiple individuals in the positions of Security Manager, most of whom work in various areas such as Operations, External Requester, Regulatory and Legal Strategy, Information Governance, Openness Data and Digital, Wales and Regulatory Delivery, Policy and Science, and Finance and Performance.
+
+3. The roles of Deputy IT Security Officer are distributed across several departments like Finance and Performance, Regulatory and Legal Strategy, External Requester, Operations, NI and Organisational Development.
+
+4. Information & security Team Leaders work in various departments like Finance and Performance, Regulatory and Legal Strategy, and Operations.
+
+5. Multiple individuals are listed as Information Governance Managers, working in departments such as External Requester, Regulatory and Legal Strategy, Wales and Regulatory Delivery, and Records Management - Other.
+
+6. The dataset does not provide information about the specific roles or responsibilities of the position titled "Wisdom" found in the department named Regulatory and Legal Strategy.
+
+7. There seems to be a lack of diversity in job titles among the data provided, with most positions being related to Information Architecture, Security Management, Deputy IT Security Officer, Information & security Team Leader, and Information Governance Manager.
+
+8. The dataset does not include specific information about the individuals holding these positions, such as their names or years of experience.
+
+Please note that this analysis is based on the provided dataset and does not include any additional context or external factors that may be relevant to understanding the roles within this organization. For a comprehensive understanding, it would be beneficial to analyze more data points from this organization's open data portal or access more detailed information about the positions listed above.
+
+[No link available in metadata]
+From the provided dataset, it appears that roles such as Security Managers, Deputy IT Security Officers, Information & security Team Leaders, Information Architects, Information Management Caseworkers, and Information Governance Managers are present across different areas of the organization including Private Office, Regulatory and Legal Strategy, Operations, Wales and Regulatory Delivery, NI and Organisational Development, and External Requester. These roles seem to be primarily associated with Information Governance, Security, Records Management, and Open Data & Digital.
+
+Specifically, within the area of Regulatory and Legal Strategy, there are multiple Information Architects and an Information Governance Manager who are involved in Records Management - Wisdom. In Operations, we find Information Architects, Information & security Team Leaders, and Security Managers working on both Records Management - Wisdom and Security. Wales and Regulatory Delivery have an Information Architect and a Security Manager focused on Records Management - Wisdom and Security respectively. NI and Organisational Development has an Information Architect and a Security Manager dealing with Records Management - Other. The External Requester area seems to have various roles including Security Managers, Deputy IT Security Officers, and Information Management Caseworkers who are all involved in Security.
+
+Unfortunately, there is no link available in the metadata for this dataset. If you require more specific information or clarification on any of these roles, please feel free to ask!
+In this dataset, we can observe several roles and positions that have been held within an organization from November 2017 to various dates thereafter. The roles are primarily associated with Security, Information Architecture, Information Governance, and IT Security Officer positions.
+
+Here is a brief analysis of the roles found in the dataset:
+
+1. Security Manager - This role appears multiple times and can be found within Finance and Performance, External Requester, Openness Data and Digital, Wales and Regulatory Delivery, and NI and Organizational Development departments. Security Managers are responsible for managing and ensuring the security of the organization's assets and data.
+
+2. Deputy IT Security Officer - This role can be found within External Requester, Wales and Regulatory Delivery, Openness Data and Digital, Operations, and once in the Private Office. The Deputy IT Security Officer assists the IT Security Officer in maintaining security protocols and responding to potential threats.
+
+3. Information Architect - Roles for Information Architects can be found within Finance and Performance, Regulatory and Legal Strategy, Policy and Science, and Wales and Regulatory Delivery departments. Information architects are responsible for designing the structure of information systems and databases.
+
+4. Information Governance Manager - This role is found in the Policy and Science, External Requester, and once in the Private Office departments. Information governance managers are responsible for creating and implementing policies to manage an organization's data.
+
+5. Information Management Caseworker - Roles for Information Management Caseworkers can be found within Openness Data and Digital, Regulatory and Legal Strategy, Wales and Regulatory Delivery, Private Office, and Records Management - Other departments. These caseworkers are responsible for managing information-related cases according to established policies and procedures.
+
+6. Information & Security Team Leader - This role is found within the Wales and Regulatory Delivery department, responsible for leading teams in managing both information and security aspects of the organization.
+
+Although I cannot provide a specific dataset link in my response, you may search for this organization's open data portal or the relevant government agency to explore these roles further. For example, you can search for "[Your Government Agency] open data portal" or "government [Your Country] open data" and look for datasets related to organizational structure, job titles, positions, etc.
+Based on the provided dataset, it appears that the roles and responsibilities fall under several categories: Records Management (Wisdom and Other), Information Management (Caseworker, Architect), Policy and Science, Finance and Performance, Operations, Regulatory and Legal Strategy, External Requester, Openness Data and Digital, Security, and Deputy IT Security Officer.
+
+The roles with the "Records Management - Wisdom" suffix seem to be involved in managing records according to some established wisdom or best practices in their respective departments.
+
+On the other hand, those with the "Records Management - Other" suffix might handle records management tasks that don't fall under the "Wisdom" category, or perhaps they are handling different types of records or recordkeeping systems.
+
+The roles labeled as "Information Management Caseworker" seem to be involved in managing information within their respective departments. The difference between those under "Openness Data and Digital" versus others is unclear from the provided data alone.
+
+The positions labeled as "Deputy IT Security Officer" are responsible for assisting with IT security matters across various departments, including Finance and Performance, Operations, Policy and Science, Regulatory and Legal Strategy, External Requester, Openness Data and Digital, and Security.
+
+The role titled "Information Architect" seems to be involved in designing or organizing information systems within their respective departments. The difference between those under "Policy and Science," "Finance and Performance," "Operations," "Regulatory and Legal Strategy," and "External Requester" is not explicitly stated in the provided data.
+
+The role labeled as "Security Manager" is responsible for security matters across various departments, including Openness Data and Digital, External Requester, Regulatory and Legal Strategy, and more.
+
+The position titled "Information Governance Manager" seems to be involved in managing information governance within their respective departments, such as Policy and Science or External Requester.
+
+Lastly, the role labeled as "Information & security Team Leader, Finance and Performance" might be a leadership position that oversees both information management and IT security matters within the Finance and Performance department. However, this is an assumption as there's no clear label for this role in the provided data.
+
+Please refer to the original dataset for more detailed information. Unfortunately, no link to the dataset was provided in the metadata.
+2024-10-07 13:11:12,964 - streamline - INFO - Streamline process completed in 81.63 seconds.
+2024-10-07 13:11:12,964 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 13:12:02,027 - streamline - INFO - Received user query: 'can you summarize the audits of 2017?'
+2024-10-07 13:12:02,028 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 13:12:03,285 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 13:12:03,286 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 13:12:03,286 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 13:12:03,286 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 13:12:03,286 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 13:12:04,642 - streamline - INFO - Best Metadata Results (Distances: [0.8213533  0.8213533  0.87650645 0.87866795 0.90044534 0.91602516
+ 0.9343859  0.94644535 0.9521761  0.95809686]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+5   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 13:12:04,643 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 13:12:04,643 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 13:12:07,295 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-07 13:12:07,295 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-07 13:12:08,379 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 13:12:08,942 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 13:12:08,942 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 13:12:08,942 - llm.llm_use - INFO - Received user query: 'can you summarize the audits of 2017?'
+2024-10-07 13:12:08,942 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 13:12:08,944 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 13:12:12,908 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 13:12:12,908 - streamline - INFO - Final Answer:
+Query: can you summarize the audits of 2017?
+
+Answer based on the provided datasets:
+Based on the provided dataset at https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv, the following independent challenges are required for the annual review:
+
+1. Information Security, Assurance that information security and controls comply with Cabinet Office guidelines. This should be audited annually.
+
+2. Financial assurance, Audit financial controls operating centrally and in devolved offices.
+
+3. Animal By-products, Assessment of animal by-products official controls at approved meat establishments. According to the dataset, this was last audited in August 2011, so it is overdue for a review.
+
+4. FSA audit of FBO controls, Commitment for annual audit in the first years of a new system: focus on specific aspects of the system. The dataset does not specify if this has been done annually since the implementation of the new system.
+
+5. Animal Welfare Controls incl slaughter licences, WATOK implementation? Audit deferred from 2015/16 due to legislation implementation date. This audit seems to be pending and should be scheduled for review.
+
+6. Incidents Resilience, Ensure that the Incidents team is learning after practices (Prometheus, with FSS March 2016, with PHE / Defra Autumn 2016). This relates to corporate risks 3 and 4, so it should be reviewed regularly to ensure continuous improvement.
+
+7. Animal Health/ Notifiable Diseases, Assess animal health controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls. This audit links to corporate risks 1 and 2, so it is essential for annual review.
+
+8. The dataset does not provide information about the required independent challenge for auditing incidents team learning after Prometheus with FSS March 2016 and PHE / Defra Autumn 2016 (as per your query). However, based on the provided dataset, it can be inferred that this audit should also be included in the annual review.
+2024-10-07 13:12:12,908 - streamline - INFO - Streamline process completed in 10.88 seconds.
+2024-10-07 13:12:12,908 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:29:18,192 - root - INFO - Logging is configured.
+2024-10-07 14:29:40,319 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:29:40,319 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:30:02,824 - streamline - INFO - Loaded 46 datasets from datasets.csv.
+2024-10-07 14:30:02,824 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:30:02,824 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:30:02,878 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:30:02,878 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:30:04,974 - streamline - INFO - Best Metadata Results (Distances: [1.1709329 1.1935482 1.204344  1.2728865 1.2955027 1.2978067 1.3408546
+ 1.3437613 1.3471984 1.3522102]):
+                                                title                                              links
+43  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+44  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+45  Information Management and Security Team Enqui...  https://fsadata.github.io/information-manageme...
+29  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+30  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+28  Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+41                Privacy Impact Assessments Register  https://fsadata.github.io/privacy-impact-asses...
+27  Non-consolidated Performance Related Pay - HM ...  https://assets.publishing.service.gov.uk/gover...
+42                Privacy Impact Assessments Register  https://fsadata.github.io/privacy-impact-asses...
+31  Non-consolidated Performance Related Pay - HM ...  https://www.gov.uk/government/uploads/system/u...
+2024-10-07 14:30:04,979 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:30:04,980 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:30:14,382 - llm.llm_use - INFO - Metadata selection completed. 1 out of 10 datasets are relevant.
+2024-10-07 14:30:14,382 - streamline - INFO - Refined to 1 relevant datasets after LLM processing.
+2024-10-07 14:30:14,873 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:30:15,212 - streamline - INFO - Loaded downloaded data from data.csv with 1170 records.
+2024-10-07 14:30:15,212 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 14:30:15,212 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:30:15,212 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 14:30:15,251 - llm.llm_use - INFO - Processing dataset with 1170 rows, chunking into 200-row parts.
+2024-10-07 14:30:17,492 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:30:21,342 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-07 14:30:23,581 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-07 14:30:25,316 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-07 14:30:27,016 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-07 14:30:31,074 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-07 14:30:31,075 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+This dataset appears to be a list of job titles, departments, roles, and their respective positions within an organization, dated March 2017. The jobs are categorized under Information Architecture, Information Governance, Records Management, Security, and various other departments such as Finance and Performance, NI and Organisational Development, Openness Data and Digital, Wales and Regulatory Delivery, Regulatory and Legal Strategy, and Policy and Science.
+
+The dataset contains multiple instances of the same job title, but in different departments or roles. For example, there are three Information Architects, two Deputy IT Security Officers, and three Security Managers. The roles with the most number of instances are Information Architect (18 instances) and Information & security Team Leader (2 instances).
+
+It is not possible to determine the exact number of unique job titles in the dataset without counting each instance individually, as some jobs appear more than once but in different contexts.
+
+Unfortunately, there is no link available in the metadata for this dataset, so I cannot provide a direct reference for further reading or verification. However, open data portals usually provide information about their datasets and allow users to download them for analysis.
+In the given dataset, there are various roles and positions related to Information Management, Security, and Records Management across different domains such as Finance and Performance, Openness Data and Digital, Regulatory and Legal Strategy, Wales and Regulatory Delivery, Policy and Science, External Requester, NI and Organisational Development.
+
+The roles and positions found in this dataset include:
+
+1. Information Architect (found 12 times) - Responsible for designing the structure of information systems. They work on various domains like Finance and Performance, Regulatory and Legal Strategy, Wales and Regulatory Delivery, Policy and Science, External Requester, Operations.
+
+2. Security Manager (found 7 times) - Responsible for ensuring the security of data and systems across different domains. They work in areas like Finance and Performance, Openness Data and Digital, Wales and Regulatory Delivery, External Requester.
+
+3. Deputy IT Security Officer (found 3 times) - Assists the IT Security Officer in maintaining the security of information systems. They are found working in Regulatory and Legal Strategy, Openness Data and Digital, Policy and Science.
+
+4. Information & security Team Leader (found 2 times) - Leads a team responsible for both information management and security. They work in Finance and Performance and Openness Data and Digital.
+
+5. Information Governance Manager (found 3 times) - Responsible for the effective and ethical use of information. They are found working in External Requester, Finance and Performance, and Openness Data and Digital.
+
+6. Head of Information Management - Found once in Records Management - Other under Openness Data and Digital.
+
+Please note that I cannot provide a direct link to the dataset as one was not provided in the metadata. However, this data appears to have been sourced from an open data portal or similar repository where government or public sector datasets are shared. To access such datasets, you may want to visit your local or national government's open data portal or search online for open data portals related to your region or area of interest.
+Based on the provided dataset, it appears that roles related to Information Technology Security (IT Security), Information Architecture, Information Governance, and Records Management are predominant throughout July 2017. The roles listed include Deputy IT Security Officer, Security Manager, Information Architect, Information & security Team Leader, and Information Governance Manager. These roles are distributed across various departments such as Operations, Finance and Performance, Regulatory and Legal Strategy, External Requester, Policy and Science, Wales and Regulatory Delivery, and NI and Organisational Development.
+
+It is interesting to note that there are multiple instances of the same role (Information Architect, Security Manager, Information & security Team Leader, Information Governance Manager) across different departments, suggesting a potential focus on these areas within the organization. Additionally, the roles seem to be primarily focused on areas such as Records Management - Wisdom and Records Management - Other, Openness Data and Digital, Finance and Performance, and External Requester.
+
+Unfortunately, there is no link available in the metadata to reference the dataset. However, if you have access to the original source of this data, it would be beneficial for further analysis and context.
+Based on the provided dataset, it appears that there are various roles related to Information Governance, Security, Records Management, and IT Security within different departments such as Private Office, Operations, Finance and Performance, Openness Data and Digital, Wales and Regulatory Delivery, NI and Organisational Development, and External Requester.
+
+The roles include positions like Security Manager, Information & security Team Leader, Deputy IT Security Officer, Information Architect, Information Management Caseworker, and Information Governance Manager. The roles seem to be involved in different aspects of these departments, such as regulatory and legal strategy, operational management, and records management.
+
+However, as no link to the dataset is available in the metadata, I am unable to provide further insights or analysis that might be available on the original source. It would be beneficial to access the dataset directly for a more comprehensive understanding of these roles and their responsibilities within the respective departments.
+From the given dataset, I can observe that there are various roles and positions mentioned across different departments such as Finance and Performance, Security, Information Governance, Regulatory and Legal Strategy, Policy and Science, Wales and Regulatory Delivery, External Requester, Openness Data and Digital, and NI and Organizational Development.
+
+The roles include Security Manager, Deputy IT Security Officer, Information Architect, Information Management Caseworker, Information Governance Manager, Information & Security Team Leader. The roles under the 'Security' department seem to be the most frequent, with 13 instances of different positions. Additionally, there are several positions related to Records Management and Information Governance.
+
+Unfortunately, there is no link available in the metadata to reference the dataset. However, if you have any specific questions about the roles or departments within this dataset, I'd be happy to help answer those!
+Based on the provided dataset, it appears that the roles and responsibilities listed fall under several categories related to Information Management (IM), Records Management (RM), Security, and IT positions such as Information Architect (IA), Deputy IT Security Officer (DITSO), Information Governance Manager (IGM), Information & Security Team Leader (ISTL), and Information Management Caseworker (IMCW).
+
+1. **Information Management**: Roles like IMCW, IA are involved in handling information management cases and designing the architectural structure of data respectively. There are IMCW roles associated with Openness Data and Digital, Finance and Performance, External Requester, Operations, and Regulatory and Legal Strategy departments. The Information Architect roles are distributed across Policy and Science, Regulatory and Legal Strategy, External Requester, Operations, and Finance and Performance departments.
+
+2. **Records Management**: Roles related to Records Management (RM) include IA and IMCW. These positions are primarily found in the following categories: Wisdom, Other, and Openness Data and Digital. Additionally, there is an IGM role assigned to the Information Governance category.
+
+3. **Security**: DITSO roles are distributed across Security, Finance and Performance, Policy and Science, Operations, Regulatory and Legal Strategy, External Requester, and Openness Data and Digital departments. There are also Security Manager roles specifically associated with Openness Data and Digital, External Requester, and Regulatory and Legal Strategy.
+
+4. **Policy and Strategy**: Roles like IA, DITSO, IGM, ISTL are involved in Policy and Strategy departments such as Finance and Performance, Operations, Openness Data and Digital, External Requester, Regulatory and Legal Strategy, and Policy and Science.
+
+Although the provided metadata does not contain a link to the dataset, you can refer to this open data portal for similar datasets: [Open Data Portal](https://data.gov/) (Note that the specific dataset may not be available in this portal as it is just an example of where such datasets could potentially reside.)
+
+For a more accurate and context-specific analysis, please provide a link to the actual dataset metadata if available.
+2024-10-07 14:30:31,076 - streamline - INFO - Streamline process completed in 50.76 seconds.
+2024-10-07 14:30:31,076 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:32:13,759 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:32:13,759 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:32:14,862 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:32:14,862 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:32:14,862 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:32:14,863 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:32:14,863 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:32:16,104 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:32:16,105 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:32:16,106 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:32:19,103 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 14:32:19,103 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 14:32:20,864 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:32:21,546 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 14:32:21,546 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 14:32:21,546 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:32:21,546 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 14:32:21,549 - llm.llm_use - INFO - Processing dataset with 15 rows, chunking into 200-row parts.
+2024-10-07 14:32:24,155 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:32:24,155 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 200-row parts.
+2024-10-07 14:32:25,661 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:32:25,661 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+The Internal Audit Plan dataset you provided encompasses scheduled internal audits for the years 2016 and 2017, as stated in the metadata. To answer your question 'what audits were planned in 2017?', we can identify audits from the dataset that have the year 2017 in their AuditTitle or OutlineScope fields.
+
+Here are the audits planned for the year 2017:
+- Business Audits, Follow up policy initiation and evaluation audit
+- Business Audits, Contract Management: Feed OC delivery
+- Business Audits, Process for recognising assurance schemes
+- Business Audits, Review Security Risk Management return
+- Business Audits, Information Security
+- Official Controls Audits, FSA audit of FBO controls
+- Official Controls Audits, Animal Welfare Controls incl slaughter licences
+- Official Controls Audits, Incidents Resilience
+- Official Controls Audits, Animal Health/ Notifiable Diseases
+
+For more details about these audits or the dataset in general, you can refer to the following link: [Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv).
+To answer your question 'what audits were planned in 2017', I analyzed the provided dataset and found that there are no specific scheduled internal audits for the year 2017 in this dataset (internal-audit-plan-2016-2017).
+
+For the Internal Audit Plan for the year 2017-2018, you can refer to this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv. This dataset will provide you with more information about audits planned for the year 2017.
+2024-10-07 14:32:25,661 - streamline - INFO - Streamline process completed in 11.90 seconds.
+2024-10-07 14:32:25,661 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:33:25,020 - root - INFO - Logging is configured.
+2024-10-07 14:33:29,358 - root - INFO - Logging is configured.
+2024-10-07 14:33:36,845 - root - INFO - Logging is configured.
+2024-10-07 14:33:43,456 - root - INFO - Logging is configured.
+2024-10-07 14:33:56,597 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:33:56,597 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:33:57,864 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:33:57,864 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:33:57,865 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:33:57,893 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:33:57,893 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:33:59,707 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:33:59,708 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:33:59,709 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:34:05,163 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-07 14:34:05,164 - streamline - INFO - Refined to 10 relevant datasets after LLM processing.
+2024-10-07 14:34:07,099 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:40:17,778 - root - INFO - Logging is configured.
+2024-10-07 14:41:49,253 - root - INFO - Logging is configured.
+2024-10-07 14:41:57,054 - root - INFO - Logging is configured.
+2024-10-07 14:42:59,299 - root - INFO - Logging is configured.
+2024-10-07 14:45:59,970 - root - INFO - Logging is configured.
+2024-10-07 14:46:08,243 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:46:08,243 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:46:09,488 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:46:09,488 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:46:09,488 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:46:09,516 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:46:09,516 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:46:11,328 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:46:11,328 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:46:11,329 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:46:19,665 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-07 14:46:19,666 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-07 14:46:20,875 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:46:21,269 - streamline - INFO - Loaded downloaded data from data.csv with 17 records.
+2024-10-07 14:46:21,269 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 14:46:21,269 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:46:21,269 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 14:46:21,271 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 200-row parts.
+2024-10-07 14:46:25,475 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:46:25,475 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+Based on the provided dataset linked at <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>, audits planned for 2017 include:
+
+1. **Stow 1**: Benefits realisation audit following implementation of new meat charging discount system.
+2. **Open data**: To review implementation and application of policy and procedures on open data specifically in relation to publication of data sets.
+3. **Evolve Programme**: Evolve programme will replace the current IT contract with a different model. This change involves gradual disaggregation of services and increasing the number of suppliers to be managed by the FSA as well as the FSA assuming responsibility for elements of the contract that are currently managed by Capita. The audit will review efficacy of plans in place to manage risks arising from transition.
+4. **LAEMS follow-up audit**: Review implementation of agreed actions.
+5. **Business planning and performance management**: Assess objective setting and KPIs at directorate level, cascading these to individual team levels, monitoring and reporting of performance. Also validates controls management assurance framework self-assessment score for Business Planning and Performance Management.
+6. **Management of Contract for supply of OVs and MHIs**: Review effectiveness of contract management arrangements.
+7. **Training and development budgets**: Reviews budgets available at corporate, directorate, and team levels to ensure alignment with FSA priorities.
+8. **Science, Evidence, and Information programme**: Audits review transfer of programme outcomes to business as usual.
+9. **Planning for Brexit**: Audit reviews risk identification, assessment, and mitigation plans.
+10. **Investment Board**: Examines work of the Investment Board in prioritizing resource allocation.
+
+These audits were part of the internal audit plan for 2017 within an organization, providing insights into strategic inspection activities scheduled that year.
+
+For a comprehensive view of all audits planned across years, please refer to the dataset linked at <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>.
+2024-10-07 14:46:25,475 - streamline - INFO - Streamline process completed in 17.23 seconds.
+2024-10-07 14:46:25,475 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:48:14,946 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:48:14,946 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:48:16,157 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:48:16,157 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:48:16,157 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:48:16,158 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:48:16,158 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:48:17,563 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:48:17,563 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:48:17,564 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:48:20,033 - llm.llm_use - INFO - Metadata selection completed. 1 out of 10 datasets are relevant.
+2024-10-07 14:48:20,034 - streamline - INFO - Refined to 1 relevant datasets after LLM processing.
+2024-10-07 14:48:20,544 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:48:20,620 - streamline - INFO - Loaded downloaded data from data.csv with 17 records.
+2024-10-07 14:48:20,620 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 14:48:20,620 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:48:20,620 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 14:48:20,622 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 200-row parts.
+2024-10-07 14:48:24,038 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:48:24,038 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+The audits that were planned for the year 2017-18 as detailed in the "Internal Audit Plan" dataset are:
+
+1. Stow 1: Benefits realisation audit following implementation of a new meat charging discount system to review how well original objectives have been met.
+2. Open data: Reviewing implementation and application of policies and procedures related to open data, focusing on publication of data sets.
+3. Evolve Programme: An assessment of plans in place to manage risks arising from transitioning the IT contract with Capita, which involves gradual disaggregation of services and increasing the number of suppliers for management by the FSA.
+4. LAEMS follow-up audit: Evaluating implementation of agreed actions.
+5. Business planning and performance management: Assessing objective setting, cascading of KPIs to individual team levels, and subsequent monitoring and reporting on performance. Also validates the controls management assurance framework self-assessment score for business planning and performance management.
+6. Management of Contract for supply of OVs and MHIs: Reviewing effectiveness of contract management arrangements.
+7. Training and development budgets: Ensuring that budgets at corporate, directorate, and team levels align with FSA priorities.
+8. Science, Evidence, and Information programme: Reviewing the transfer of program outcomes to business as usual operations.
+9. Planning for Brexit: Reviewing risk identification, assessment, and mitigation plans related to Brexit.
+10. Investment Board audit: Examining work on prioritizing resource allocation by the Investment Board.
+
+These audits were part of the annual audit activities planned within an organization during the fiscal period from 2017-18 as detailed in the dataset "Internal Audit Plan".
+2024-10-07 14:48:24,038 - streamline - INFO - Streamline process completed in 9.09 seconds.
+2024-10-07 14:48:24,038 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:48:49,953 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:48:49,954 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:48:51,099 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:48:51,099 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:48:51,099 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:48:51,099 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:48:51,099 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:48:52,296 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:48:52,297 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:48:52,297 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:48:55,705 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-07 14:48:55,705 - streamline - INFO - Refined to 2 relevant datasets after LLM processing.
+2024-10-07 14:48:56,812 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 14:48:56,994 - streamline - INFO - Loaded downloaded data from data.csv with 17 records.
+2024-10-07 14:48:56,994 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 14:48:56,994 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:48:56,994 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 14:48:56,995 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 200-row parts.
+2024-10-07 14:49:01,919 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 14:49:01,920 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+The audits planned for 2017 were detailed within the "Internal Audit Plan" dataset which is referenced at the provided link (No specific link was mentioned). This resource outlines a list of internal audits scheduled during fiscal period 2017-18, offering an organized overview of planned audit activities. Here's a summary:
+
+- **Business Audits**:
+    - Stow 1: Benefits realisation audit following implementation of new meat charging discount system.
+    - Open data: Review on policy and procedures for open data related to publication of datasets specifically.
+    - Evolve Programme: Examination of plans for transitioning IT contract management. 
+    - LAEMS follow-up audit: Implementation check of agreed actions.
+    - Business planning and performance management: Focuses on setting objectives, KPIs alignment with FSA priorities, monitoring & reporting performance and self-assessment score validation.
+    - Management of Contract for supply of OVs and MHIs: Evaluation of contract effectiveness in management arrangements.
+    - Training and development budgets: Ensuring budgets align with FSA priorities across corporate, directorate, and team levels. 
+    - Science, Evidence, and Information programme: Reviewing transfer to usual business operations post-programme implementation.
+    - Planning for Brexit: Risk identification, assessment, and mitigation strategies.
+    - Investment Board audit: Inspection on prioritization of resource allocation.
+
+- **Official Controls Audits**:
+    - Campylobacter Programme: Verification of effectiveness in controlling the FSA's responsibility area after program implementation.
+    - Raw Drinking Milk: Audit to assess FSA control measures for quality assurance on farms under their direct jurisdiction.
+    - ABP official controls (follow-up audit): Reviewing management actions post-audit identification of issues from a previous 2016/17 audit, with the aim of addressing concerns raised there. 
+    - Approved Game Meat Handling Establishments: Evaluation of official controls effectiveness and follow-ups on related policy.
+    - Slaughterhouse hygiene verification system: Assessing efficacy of the recently introduced system in approved slaughterhouses.
+    - Product Recall System: Examining the current system's efficiency, aiming to implement enhancements based on findings.
+
+Each audit is intended to ensure that operations are aligned with strategic goals, identify potential risks and vulnerabilities, and improve overall effectiveness. These plans were outlined for the fiscal period 2017-18 as per dataset metadata but specific details regarding each audit's timeline or completion status might vary.
+2024-10-07 14:49:01,920 - streamline - INFO - Streamline process completed in 11.97 seconds.
+2024-10-07 14:49:01,920 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 14:56:21,869 - root - INFO - Logging is configured.
+2024-10-07 14:56:39,442 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 14:56:39,442 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 14:56:40,581 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 14:56:40,581 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: nemotron, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 14:56:40,581 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 14:56:40,612 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 14:56:40,612 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 14:56:42,430 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 14:56:42,430 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 14:56:42,431 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 14:56:42,432 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,433 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,434 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,435 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,436 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,437 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,437 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,438 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,439 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,440 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,440 - llm.llm_use - INFO - Metadata selection completed. 0 out of 10 datasets are relevant.
+2024-10-07 14:56:42,440 - streamline - INFO - Refined to 0 relevant datasets after LLM processing.
+2024-10-07 14:56:42,441 - llm.llm_chatbot - ERROR - Request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2024-10-07 14:56:42,441 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 17:29:47,642 - root - INFO - Logging is configured.
+2024-10-07 17:29:58,009 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 17:29:58,009 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 17:29:59,223 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 17:29:59,223 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 17:29:59,223 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 17:29:59,264 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 17:29:59,264 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 17:30:01,069 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 17:30:01,070 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 17:30:01,070 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 17:30:08,623 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 17:30:08,623 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 17:30:10,388 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 17:30:11,110 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 17:30:11,110 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 17:30:11,110 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 17:30:11,110 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 17:30:11,113 - llm.llm_use - INFO - Processing dataset with 15 rows, chunking into 200-row parts.
+2024-10-07 17:30:14,452 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 17:30:14,452 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 200-row parts.
+2024-10-07 17:30:16,359 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 17:30:16,360 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+Based on the provided metadata for the Internal Audit Plan dataset (<https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv>), I am unable to directly reference specific links in my response. However, I can help you find the information you are looking for regarding audits planned in 2017.
+
+Upon examining the OutlineScope column of the dataset, it appears that all the audits planned were across the timeframe of 2016 to 2017. Since you are specifically interested in audits planned in 2017, let's filter out the audits which have a clear reference to the year 2017. I found two audits that mention "Two years into new Feed OC regime" (Business Audits: Contract Management: Feed OC delivery) and "WATOK implementation ? audit deferred from 2015/16 due to legislation implementation date." (Official Controls Audits: Animal Welfare Controls incl slaughter licences). These two audits were planned in 2017, as they are two years into the new Feed OC regime and WATOK implementation was deferred from 2015/16.
+
+You can access the Internal Audit Plan dataset at this link (<https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv>) for more detailed information on each audit, as well as any updates or changes that may have occurred in the 2016 to 2017 timeframe.
+The audits planned for 2017 can be determined from the Internal Audit Plan dataset available at this link: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>. However, as this specific dataset only provides information for the timeframe of 2016 to 2017, it doesn't contain data specifically for 2017. Therefore, I cannot provide a direct answer to your query based on the given dataset. For a comprehensive list of audits planned for 2017, you should check the Internal Audit Plan dataset for the year 2017-18, as mentioned in the metadata: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv>.
+2024-10-07 17:30:16,360 - streamline - INFO - Streamline process completed in 18.35 seconds.
+2024-10-07 17:30:16,360 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 17:31:12,949 - streamline - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 17:31:12,949 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 17:31:14,171 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 17:31:14,171 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 17:31:14,171 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 17:31:14,171 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 17:31:14,171 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 17:31:15,421 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 17:31:15,422 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 17:31:15,422 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 17:31:18,844 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 17:31:18,844 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 17:31:20,455 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 17:31:20,915 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 17:31:20,916 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 17:31:20,916 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017? '
+2024-10-07 17:31:20,916 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 17:31:20,918 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 17:31:25,058 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 17:31:25,059 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017? 
+
+Answer based on the provided datasets:
+The dataset provided lists various internal audits planned for the Financial Services Authority (FSA) in 2017-18. Some of these audits are related to corporate risks as follows:
+
+1. Security Risk Management: This is linked to corporate risk 6 and requires a mandatory annual review with independent challenge. The information security assurance focuses on ensuring that information security and controls comply with Cabinet Office guidelines, while financial assurance involves the audit of financial controls operating centrally and in devolved offices.
+2. Animal By-products: This audit assesses animal by-products official controls at approved meat establishments and links to corporate risks 1 and 4. Although the last audit was conducted in August 2011, it's essential to ensure that these controls are still effective and compliant with current regulations.
+3. Incidents Resilience: This audit focuses on assessing whether the Incidents team is learning from practices after events such as Prometheus and FSS March 2016, and PHE/Defra Autumn 2016. It links to corporate risks 3 and 4.
+4. Animal Health/Notifiable Diseases: This audit assesses animal health controls implemented on behalf of Defra/APHA, including human health controls. It links to corporate risks 1 and 2.
+5. Planning for Brexit: The audit will review risk identification, assessment, and mitigation plans, which are crucial for managing potential corporate risks related to Brexit.
+6. Investment Board: The audit will examine the work of the Investment Board in prioritizing resource allocation, which can impact corporate planning and decision-making.
+7. Campylobacter Programme: This audit will review the effectiveness of business as usual controls following the implementation of the Campylobacter programme, which links to corporate risk 1 (Ensuring food safety).
+8. Raw Drinking Milk: The audit will assess the effectiveness of FSA controls for RDM on farms where the FSA is directly responsible, linking to corporate risk 2 (Ensuring animal health and welfare).
+9. Product Recall system: The audit will review the effectiveness of the new product recall model, which can impact corporate risk 6 (Managing risks related to product safety and quality).
+2024-10-07 17:31:25,059 - streamline - INFO - Streamline process completed in 12.11 seconds.
+2024-10-07 17:31:25,059 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-07 18:33:11,985 - root - INFO - Logging is configured.
+2024-10-07 18:35:39,775 - root - INFO - Logging is configured.
+2024-10-07 18:46:07,915 - root - INFO - Logging is configured.
+2024-10-07 18:46:24,458 - streamline - INFO - Received user query: 'what audits were planned in 2017?'
+2024-10-07 18:46:24,458 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-07 18:46:25,730 - streamline - INFO - Loaded 57 datasets from datasets.csv.
+2024-10-07 18:46:25,730 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.1, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-07 18:46:25,730 - streamline - INFO - Performing FAISS search with top 10 results...
+2024-10-07 18:46:25,777 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-07 18:46:25,777 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-07 18:46:27,571 - streamline - INFO - Best Metadata Results (Distances: [0.74874145 0.74874145 0.78640676 0.85092664 0.8734884  0.8816228
+ 0.9078365  0.91195256 0.91375434 0.91535   ]):
+                  title                                              links
+2   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+3   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+1   Internal Audit Plan  https://fsa-catalogue2.s3.eu-west-2.amazonaws....
+9   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+8   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+10  Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+7   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+4   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+0   Internal Audit Plan  https://fsaopendata.blob.core.windows.net/open...
+6   Internal Audit Plan  https://fsadata.github.io/internal-audit-plan/...
+2024-10-07 18:46:27,571 - streamline - INFO - Saved FAISS search results to datasets2.csv.
+2024-10-07 18:46:27,572 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-07 18:46:34,530 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-07 18:46:34,530 - streamline - INFO - Refined to 3 relevant datasets after LLM processing.
+2024-10-07 18:46:36,135 - streamline - INFO - Generated metadata summaries for refined datasets.
+2024-10-07 18:46:36,918 - streamline - INFO - Loaded downloaded data from data.csv with 33 records.
+2024-10-07 18:46:36,919 - streamline - INFO - Directly analyzing with LLM...
+2024-10-07 18:46:36,919 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2017?'
+2024-10-07 18:46:36,919 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-07 18:46:36,922 - llm.llm_use - INFO - Processing dataset with 33 rows, chunking into 200-row parts.
+2024-10-07 18:46:45,714 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-07 18:46:45,714 - streamline - INFO - Final Answer:
+Query: what audits were planned in 2017?
+
+Answer based on the provided datasets:
+OutlineScope:
+
+1. The Internal Audit Plan for 2016-2017 (available at [Internal Audit Plan](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv)) outlines various audits planned by year, addressing a range of topics from Service Level Agreements (SLAs) and Governance Statements to animal by-products official controls and contract management.
+
+    - SLAs, agreed outcomes, payments: Not explicitly mentioned in the plan, but various audits may touch upon these aspects indirectly depending on the context of each audit.
+    - Corporate risks 6 and 11: Connected to several audits throughout the plan, notably those related to internal controls, financial controls, assurance schemes, and risk management.
+    - Follow up on the report issued May 2014: The specific audit in question is not listed, but follow-ups may occur within the context of ongoing or subsequent audits.
+    - Review timeliness and follow-up on external policy reviews: Not explicitly mentioned, but some audits do address these aspects indirectly (e.g., contract management, business planning).
+    - To meet Dear Accounting Officer Letter 2/15 requirement that mandates statement on effectiveness in Governance Statement: The audit for Business Planning and Performance Management seems to be directly related to this requirement as it assesses the controls management assurance framework self-assessment score.
+    - Tracing non-financial information in the Business Board reporting to source information: This is addressed in the audit for Business Planning and Performance Management.
+    - NAO test financial controls; non-financial assurance to be gained: Indirectly addressed through various audits, such as internal controls, financial controls, contract management, and business planning.
+    - Two years into new Feed OC regime: The audit for the National Trading Standards Board delivery review seems relevant to this point.
+    - Review of the effectiveness of the process for recognising assurance schemes: This is touched upon in the audit for the National Trading Standards Board delivery review.
+    - Mandatory requirement, annual review. Provide the independent challenge required: Not explicitly mentioned, but various audits within the plan provide an independent evaluation and challenge to internal processes and controls.
+    - Assurance that information security and controls comply with Cabinet Office guidelines: This is addressed in the audit for assuring information security and controls.
+    - Audit financial controls operating centrally and in devolved offices: This is covered by the audit for financial controls.
+    - Assessment of animal by-products official controls at approved meat establishments: This is found within the audit for animal by-products official controls.
+    - Commitment for annual audit in first years of new system: Focus on specific aspect of system: Not explicitly mentioned, but various audits cover specific aspects of the systems within their respective areas.
+    - WATOK implementation ? audit deferred from 2015/16 due to legislation implementation date: No specific audit is mentioned for this topic, but it may be addressed indirectly in other audits.
+    - "Are Incidents team learning after the practices (prometheus, with FSS March 2016, with PHE / Defra Autumn 2016). Links to corporate risks 3 and 4.": This topic is not explicitly addressed within the plan, but it may be considered during audits related to incident management or learning and improvement practices.
+    - Assess animal health controls implemented on behalf of Defra / APHA (eg at TB reactor plants) including human health controls: This is covered in the audit for animal health controls.
+    - Benefits realisation audit following implementation of new meat charging discount system: This audit will assess how well the original objectives have been met after implementing the new system.
+    - To review implementation and application of policy and procedures on open data specifically in relation to publication of data sets: This is covered in an audit for open data-related policies and procedures.
+    - Evolve programme: The audit will assess the efficacy of plans in place to manage the risk of disruption arising from the transition to the new model, as well as other aspects such as contract management, budget alignment, risk identification, and mitigation, business continuity, and controls for RDM on farms.
+    - The audit will review effectiveness of contract management arrangements: This is directly addressed in one of the audits planned.
+    - "The audit will review budgets available at corporate, directorate and team level to ensure these are aligned with FSA priorities": This is covered in an audit for budget alignment and prioritization.
+    - Other topics covered within the plan include risk management, internal controls, compliance, data quality, and IT systems.
+2024-10-07 18:46:45,714 - streamline - INFO - Streamline process completed in 21.26 seconds.
+2024-10-07 18:46:45,715 - llm.llm_chatbot - INFO - Closed LLMChatbot session.

@@ -96,23 +96,6 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
         return f"Sorry, I encountered an error while processing your request. Details: {str(e)}"
 
 
-def extract_link_from_metadata(metadata):
-    """
-    Extract the link from the metadata string using regex.
-
-    Args:
-        metadata (str): Metadata string that contains a URL.
-
-    Returns:
-        str: The extracted link, or None if no link is found.
-    """
-    # Regular expression to find URLs in the metadata
-    url_pattern = r"(https?://[^\s]+)"
-    match = re.search(url_pattern, metadata)
-    
-    if match:
-        return match.group(0)  # Return the first matched URL
-    return None
 
 def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
     """
@@ -132,12 +115,6 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
     logger.info(f"Processing dataset with {total_rows} rows, chunking into {chunk_size}-row parts.")
     
     dataset_answer = ""
-    
-    # Extract the link from the metadata using the regex-based function
-    link = extract_link_from_metadata(metadata)
-    
-    # Fall back if no link is found
-    link_reference = f"Link: {link}" if link else "No link available in metadata."
 
     for i in range(0, total_rows, chunk_size):
         # Get the chunk of data
@@ -148,7 +125,6 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
             f"The user query is: '{query}'.\n\n"
             f"Metadata for this dataset:\n{metadata}\n\n"  # Include metadata
             f"Here is a chunk of the dataset:\n{data_chunk}\n\n"  # Include chunked dataset
-            f"Make sure to reference the following link in your response: {link_reference}\n\n"  # Add the link explicitly
             "You are a helpful Chat Bot specialized in answering questions about, discussing, and referencing datasets from open data portals."
             " Please analyze this chunk and answer the query by considering the entire dataset."
             " Always reference the dataset links found in the metadata."

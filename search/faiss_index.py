@@ -9,7 +9,7 @@ def create_faiss_index(metadata):
     Create a FAISS index using the embeddings of the LLM-generated summaries.
     """
     # Load the pre-trained model
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
     
     # Encode the metadata (summaries) into embeddings
     metadata_embeddings = model.encode(metadata)

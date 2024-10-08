@@ -1,9 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Cookie
 from fastapi.responses import HTMLResponse, JSONResponse  # We will use HTMLResponse for formatting
 from pydantic import BaseModel
-from streamline import run_streamline_process  # Import your existing streamline function
+from streamline import run_streamline_process  # Import your existing streamline function‚
 from fastapi.middleware.cors import CORSMiddleware  # Import for CORS handling
-
+import uuid
 app = FastAPI()
 
 # Enable CORS for all origins (you can restrict this to specific origins if necessary)
@@ -15,9 +15,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Define the structure of the input request
+# Define the input model for the request
 class QueryInput(BaseModel):
     query: str
+    follow_up: bool = False  # Optional, default to False for initial queries
+
+user_sessions = {}
 
 @app.get("/", response_class=HTMLResponse)
 def chatbot_ui():
@@ -125,19 +128,25 @@ def chatbot_ui():
     </html>
     """
 
-
-# Endpoint to handle the chatbot queries
 @app.post("/run_analysis/", response_class=JSONResponse)
-def run_analysis(query_input: QueryInput):
+def run_analysis(query_input: QueryInput, user_id: str = Cookie(None)):
     """
-    This endpoint runs the analysis using the 'run_streamline_process' function 
-    and returns the final result formatted for HTML.
+    This endpoint automatically detects whether the query is a follow-up or a new query
+    and handles it accordingly.
     """
-    query = query_input.query  # Extract the query from the request
-    final_answer = run_streamline_process(query)  # Call the streamline process with the query
+    query = query_input.query
+
+    # Generate a new user_id if it's a new session (i.e., no cookie present)
+    if not user_id:
+        user_id = str(uuid.uuid4())  # Generate a unique user ID
+
+    # Automatically detect follow-up vs new query in run_streamline_process
+    final_answer = run_streamline_process(query, user_id)
 
     # Replace newlines with <br> tags to preserve formatting in the frontend
     formatted_answer = final_answer.replace("\n", "<br>")
 
-    # Return the formatted answer as JSON
-    return JSONResponse(content={"final_answer": formatted_answer})
+    # Return the formatted answer as JSON, and set the user_id in a cookie for future requests
+    response = JSONResponse(content={"final_answer": formatted_answer})
+    response.set_cookie(key="user_id", value=user_id)  # Set the user_id as a cookie
+    return response

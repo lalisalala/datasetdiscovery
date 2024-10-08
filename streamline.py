@@ -1,43 +1,84 @@
-
 import os
 import pandas as pd
 from search.metadata_search import query_faiss_index, generate_summaries_for_relevant_datasets
 from search.faiss_index import create_faiss_index
 from search.data_search import download_datasets
 from llm.llm_chatbot import LLMChatbot
-from llm.llm_use import directly_use_llm_for_answer, use_llm_for_metadata_selection
+from llm.llm_use import directly_use_llm_for_answer, use_llm_for_metadata_selection, directly_use_llm_for_follow_up
 from web.webscraping import run_webscraping
 import time
 import logging
 from config_loader import config_loader
+from difflib import SequenceMatcher
 
 logger = logging.getLogger(__name__)
 
-def run_streamline_process(query: str) -> str:
+# Global dictionary for storing user sessions and context
+user_sessions = {}
+
+def run_streamline_process(query: str, user_id: str) -> str:
     """
-    Modified streamline process to integrate with FastAPI.
-    It accepts a query string as an argument.
+    Automatically detect whether the query is a follow-up question or a new query.
     """
-    logger.info(f"Received user query: '{query}'")
+
+    # Retrieve the user's session context
+    user_context = user_sessions.get(user_id, {})
+
+    # Automatically detect if it's a follow-up question
+    follow_up = False  # Default to False (assume it's a new query)
+
+    # Check if there is previous context for this user
+    if user_context:
+        # If we have context, check for relevant keywords or signs of a follow-up
+        previous_answer = user_context.get('previous_answer')
+        if previous_answer:
+            # Simple keyword-based check to detect follow-up queries
+            follow_up_keywords = ["more information", "details", "clarify", "explain", "about dataset", "continue", "expand", "again", "specify", "link"]
+            
+            # Check if the query mentions follow-up keywords or if it's similar to the previous answer
+            if any(keyword in query.lower() for keyword in follow_up_keywords):
+                follow_up = True
+            elif check_similarity(query, previous_answer):  # Optional: you can implement a query similarity check
+                follow_up = True
+
+        # If follow_up is true, use the existing context to handle the query
+        if follow_up:
+            refined_datasets = user_context.get('relevant_datasets')
+            if refined_datasets is not None:
+                # Load the previously downloaded datasets
+                if os.path.exists('data.csv'):
+                    data_df = pd.read_csv('data.csv')
+                else:
+                    return "Error: Downloaded data not found for follow-up question."
+                
+                # Call the follow-up processing function and pass the datasets
+                return directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, user_context['chatbot'], data_df)
+            else:
+                return "Error: No relevant datasets found in the context for follow-up."
+    
+    # If not a follow-up, treat it as a new query and process the entire pipeline
+    return process_new_query(query, user_id)
+
+
+
+def process_new_query(query: str, user_id: str) -> str:
+    """
+    Handle a new query by running the full pipeline and saving the context.
+    """
+    logger.info(f"Received new user query: '{query}'")
 
     start_time = time.time()  # Track start time
-
-    # Define the CSV file for saving the datasets
     csv_file = 'datasets.csv'
 
-    # Always run web scraping to overwrite datasets.csv
+    # Always run web scraping to update datasets.csv
     logger.info("Running web scraping to update datasets.csv.")
     run_webscraping()
 
-    # Load the dataset metadata from the CSV file (without metadata summaries)
     if not os.path.exists(csv_file):
         logger.error(f"CSV file {csv_file} not found after web scraping.")
         return "Error: Datasets not found."
     
     df = pd.read_csv(csv_file)
-    logger.info(f"Loaded {len(df)} datasets from {csv_file}.")
-
-    # Initialize the LLM chatbot with configurations
     llm_config = config_loader.get_llm_config()
     faiss_config = config_loader.get_faiss_config()
 
@@ -48,64 +89,53 @@ def run_streamline_process(query: str) -> str:
         api_url=llm_config.get('api_url', 'http://localhost:11434/api/generate')
     )
 
-    # Use the LLM to dynamically determine the number of top results (k) for FAISS
+    # Use FAISS to find relevant datasets based on the query
     k = faiss_config.get('top_k', 10)
-
-    # Perform FAISS search on the basic metadata (no summaries yet)
-    logger.info(f"Performing FAISS search with top {k} results...")
-    combined_text = df['title'] + " " + df['links']  # No summaries yet
+    combined_text = df['title'] + " " + df['links']
     model, metadata_index = create_faiss_index(combined_text.tolist())
     best_indices, best_distances = query_faiss_index(query, model, metadata_index, k)
 
-    # Ensure indices are within bounds of the DataFrame
     valid_indices = [i for i in best_indices if i < len(df)]
     if not valid_indices:
-        logger.warning("No valid indices found from FAISS search.")
         return "No relevant datasets found."
 
-    # Retrieve relevant datasets based on valid FAISS indices
+    # Retrieve relevant datasets and process further
     relevant_datasets = df.iloc[valid_indices]
-    logger.info(f"Best Metadata Results (Distances: {best_distances}):\n{relevant_datasets[['title', 'links']]}")
-
-    # Save the FAISS search results to datasets2.csv
     datasets2_csv = 'datasets2.csv'
     relevant_datasets.to_csv(datasets2_csv, index=False)
-    logger.info(f"Saved FAISS search results to {datasets2_csv}.")
 
-    # Load the results from datasets2.csv
     df_faiss_results = pd.read_csv(datasets2_csv)
-
-    # Use the LLM to further refine the FAISS results and find the most relevant datasets
     refined_datasets = use_llm_for_metadata_selection(df_faiss_results, query, chatbot)
-    logger.info(f"Refined to {len(refined_datasets)} relevant datasets after LLM processing.")
-
-    # Generate metadata summaries for the found datasets
     refined_datasets_with_summaries = generate_summaries_for_relevant_datasets(refined_datasets, chatbot)
-    logger.info("Generated metadata summaries for refined datasets.")
+    download_datasets(refined_datasets_with_summaries, output_file='data.csv')
 
-    # Download the final refined datasets using the links
-    successful_links = []
-    combined_df = download_datasets(refined_datasets_with_summaries, output_file='data.csv')
-
-    # Load the downloaded datasets (data.csv)
-    data_csv = 'data.csv'
-    if not os.path.exists(data_csv):
-        logger.error(f"Data file {data_csv} not found after downloading datasets.")
+    if not os.path.exists('data.csv'):
         return "Error: Downloaded data not found."
 
-    data_df = pd.read_csv(data_csv)
-    logger.info(f"Loaded downloaded data from {data_csv} with {len(data_df)} records.")
-
-    # Use the LLM to analyze the data and provide the answer
-    logger.info("Directly analyzing with LLM...")
+    data_df = pd.read_csv('data.csv')
     final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
-    logger.info(f"Final Answer:\n{final_answer}")
+
+    # Save the context for follow-up questions
+    user_sessions[user_id] = {
+        'relevant_datasets': refined_datasets_with_summaries,
+        'previous_answer': final_answer,
+        'chatbot': chatbot  # Store chatbot instance for follow-up
+    }
 
     # Calculate total execution time
     end_time = time.time()
     total_time = end_time - start_time
-
-    # Log execution details to a file
     logger.info(f"Streamline process completed in {total_time:.2f} seconds.")
 
-    return final_answer  # Return the final answer for the API
+    return final_answer
+
+def check_similarity(query: str, previous_answer: str) -> bool:
+    """
+    Optional: Implement a simple string similarity check to see if the query is a follow-up.
+    You can enhance this with more sophisticated natural language processing.
+    """
+    # Use basic string similarity to check if the query is a follow-up
+    similarity_ratio = SequenceMatcher(None, query, previous_answer).ratio()
+    
+    # Consider it a follow-up if the similarity ratio is above a threshold (e.g., 0.3)
+    return similarity_ratio > 0.3

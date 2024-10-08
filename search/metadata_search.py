@@ -8,6 +8,7 @@ def generate_summary_with_llm(metadata_row, chatbot):
         f"Title: {metadata_row['title']}\n"
         f"Summary: {metadata_row['summary']}\n"
         f"Link: {metadata_row['links']}\n"
+        f"Dataset Name: {metadata_row['name']}\n"
     )
 
     prompt = (

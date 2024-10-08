@@ -7,6 +7,7 @@ from llm.llm_chatbot import LLMChatbot
 from config_loader import config_loader
 import os 
 import re
+
 logger = logging.getLogger(__name__)
 
 
@@ -126,8 +127,8 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
             f"Metadata for this dataset:\n{metadata}\n\n"  # Include metadata
             f"Here is a chunk of the dataset:\n{data_chunk}\n\n"  # Include chunked dataset
             "You are a helpful Chat Bot specialized in answering questions about, discussing, and referencing datasets from open data portals."
-            " Please analyze this chunk and answer the query by considering the entire dataset."
-            " Always reference the dataset links found in the metadata."
+            " Please analyze the chunks and answer the query by considering the datasets provi‚ded."
+            " Always reference the correct relevant dataset hyperlinks in the beginning once. "
         )
 
         # Send the prompt to the LLM and get the answer for this chunk
@@ -191,3 +192,42 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
 
     return relevant_datasets
 
+def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, previous_answer: str, chatbot: LLMChatbot, data_df: pd.DataFrame) -> str:
+    """
+    Process follow-up questions by using the previous answer, relevant datasets, and downloaded datasets as context.
+    This function optimizes the follow-up response by also referring to the downloaded datasets if needed.
+    """
+    # Construct the follow-up prompt, including the previous answer and relevant datasets
+    follow_up_prompt = (
+        f"Previously, you answered:\n{previous_answer}\n\n"
+        f"The user is now asking a follow-up question: '{query}'.\n"
+        "Based on the previous answer and the relevant datasets, provide a detailed response."
+    )
+
+    # Optionally, include a summary of the datasets in the prompt if necessary
+    dataset_summaries = "\n\n".join([f"Dataset Title: {row['title']}\nSummary: {row['summary']}" for idx, row in refined_datasets.iterrows()])
+
+    # Add dataset summaries to the prompt
+    prompt = follow_up_prompt + "\n\nHere are the relevant datasets:\n" + dataset_summaries
+
+    # If the user is specifically asking for links or information available in the downloaded datasets, process that.
+    if "link" in query.lower() or "url" in query.lower() or "source" in query.lower():
+        # If the user asks for links, extract them from the downloaded datasets
+        links = data_df.get('links', None)
+        if links is not None:
+            link_info = "\n".join(links.dropna())  # Combine all the valid links
+            prompt += f"\n\nHere are the dataset links that you requested:\n{link_info}"
+        else:
+            prompt += "\n\nNo links are available in the downloaded datasets."
+
+    # If the user is asking for specific dataset details (e.g., "more details", "summary"), you can handle that similarly
+    elif "details" in query.lower() or "summary" in query.lower():
+        prompt += "\n\nThe user is asking for more details or summaries from the datasets. Provide further insights based on the dataset content."
+
+    # Send the prompt to the LLM and get the follow-up answer
+    try:
+        follow_up_answer = chatbot.generate_response(context=previous_answer, query=prompt)
+        return follow_up_answer.strip()
+    except Exception as e:
+        logger.error(f"Error processing follow-up question: {e}")
+        return f"Error: Could not process follow-up question. {str(e)}" 

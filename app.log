@@ -10946,3 +10946,693 @@ Name: Local Authority Audits, dtype: object
 2024-10-08 18:58:06,965 - llm.llm_use - INFO - Processing dataset with 46 rows, chunking into 200-row parts.
 2024-10-08 18:58:10,652 - llm.llm_use - INFO - Received response for chunk 1.
 2024-10-08 18:58:10,652 - streamline - INFO - Streamline process completed in 12.52 seconds.
+2024-10-09 12:30:46,416 - root - INFO - Logging is configured.
+2024-10-09 12:30:55,113 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 12:30:55,113 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 12:30:56,406 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 12:30:56,466 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 12:30:56,466 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 12:30:58,884 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 12:31:05,519 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 12:31:07,933 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-09 12:31:07,933 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-09 12:31:07,936 - llm.llm_use - INFO - Processing dataset with 41 rows, chunking into 200-row parts.
+2024-10-09 12:31:10,801 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-09 12:31:10,801 - streamline - INFO - Streamline process completed in 15.69 seconds.
+2024-10-09 12:32:21,049 - streamline - INFO - Received new user query: 'in detail, can you list all the audits in this data? '
+2024-10-09 12:32:21,049 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 12:32:22,258 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 12:32:22,258 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 12:32:22,258 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 12:32:23,531 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 12:32:25,364 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-09 13:00:37,798 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 13:00:37,798 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 13:00:38,981 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 13:00:38,982 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 13:00:38,982 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 13:00:40,426 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 13:00:47,143 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 13:00:49,621 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-09 13:00:49,621 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-09 13:00:49,624 - llm.llm_use - INFO - Processing dataset with 41 rows, chunking into 200-row parts.
+2024-10-09 13:00:54,111 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-09 13:00:54,111 - streamline - INFO - Streamline process completed in 16.31 seconds.
+2024-10-09 15:05:55,654 - root - INFO - Logging is configured.
+2024-10-09 15:15:23,956 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 15:15:23,956 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 15:15:25,195 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 15:15:25,235 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 15:15:25,235 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 15:15:27,061 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 15:15:33,738 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 15:15:36,187 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-09 15:15:36,187 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-09 15:15:36,190 - llm.llm_use - INFO - Processing dataset with 46 rows, chunking into 200-row parts.
+2024-10-09 15:15:41,644 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-09 15:15:41,645 - streamline - INFO - Streamline process completed in 17.69 seconds.
+2024-10-09 18:03:36,910 - root - INFO - Logging is configured.
+2024-10-09 18:44:30,786 - root - INFO - Logging is configured.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,841 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,842 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,843 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,844 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,845 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,846 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,847 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Dataset Metadata: The "Internal Audit Plan 2018-2019" dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Dataset Metadata: The "Internal Audit Plan 2018-2019" dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,848 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,849 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Business Audit does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,850 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,859 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,860 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,861 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,862 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,863 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Official Controls does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,864 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,865 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,866 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,867 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,868 - rdflib.term - WARNING - http://example.org/ontology/Dataset_Local Authority Audits does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,868 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,868 - rdflib.term - WARNING - http://example.org/ontology/hasDataset metadata: the "internal audit plan 2019-20" is a dataset that provides a list of internal audits planned for the specified period does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,868 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:44:30,868 - rdflib.term - WARNING - http://example.org/ontology/has accessible via the link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:45:39,311 - root - INFO - Logging is configured.
+2024-10-09 18:45:53,121 - root - INFO - Logging is configured.
+2024-10-09 18:46:17,476 - streamline - INFO - Received new user query: 'what audits were planned in 2017? '
+2024-10-09 18:46:17,476 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 18:46:18,826 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 18:46:18,875 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 18:46:18,875 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 18:46:21,012 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 18:46:27,787 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 18:46:30,346 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,346 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,347 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,348 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,348 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,348 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,348 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,348 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,349 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,349 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,349 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,349 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,349 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,350 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,350 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,350 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,350 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,350 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,351 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,351 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,351 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,351 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,351 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,352 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,352 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,352 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,352 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,353 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,354 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,354 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,354 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,354 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,354 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,355 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,356 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,357 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,357 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,357 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,357 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 18:46:30,357 - rdflib.term - WARNING - http://example.org/ontology/hasDataset_metadata:_the_"internal_audit_plan_2016-2017"_dataset does not look like a valid URI, trying to serialize this will break.
+2024-10-09 19:07:28,816 - root - INFO - Logging is configured.
+2024-10-09 19:07:38,237 - root - INFO - Logging is configured.
+2024-10-09 19:07:40,629 - root - INFO - Logging is configured.
+2024-10-09 19:07:43,003 - root - INFO - Logging is configured.
+2024-10-09 19:15:42,396 - root - INFO - Logging is configured.
+2024-10-09 19:15:59,851 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 19:15:59,852 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:16:01,211 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:16:01,270 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:16:01,270 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:16:03,084 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:16:09,767 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:17:39,639 - root - INFO - Logging is configured.
+2024-10-09 19:17:48,504 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 19:17:48,504 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:17:49,857 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:17:49,884 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:17:49,884 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:17:51,649 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:17:54,864 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:17:59,699 - streamline - INFO - Streamline process completed in 11.19 seconds.
+2024-10-09 19:21:36,626 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 19:21:36,626 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:21:37,913 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:21:37,914 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:21:37,914 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:21:39,404 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:21:42,905 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:21:47,257 - streamline - INFO - Streamline process completed in 10.63 seconds.
+2024-10-09 19:33:35,461 - root - INFO - Logging is configured.
+2024-10-09 19:33:44,884 - root - INFO - Logging is configured.
+2024-10-09 19:34:12,457 - root - INFO - Logging is configured.
+2024-10-09 19:38:08,844 - root - INFO - Logging is configured.
+2024-10-09 19:38:17,623 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 19:38:17,623 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:38:18,931 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:38:18,960 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:38:18,960 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:38:20,803 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:38:27,674 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:38:35,320 - streamline - INFO - Streamline process completed in 17.70 seconds.
+2024-10-09 19:39:25,409 - streamline - INFO - Received new user query: 'what audits were planned in 2019?'
+2024-10-09 19:39:25,410 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:39:26,675 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:39:26,675 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:39:26,675 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:39:28,014 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:39:31,321 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:39:38,180 - streamline - INFO - Streamline process completed in 12.77 seconds.
+2024-10-09 19:46:21,269 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-09 19:49:04,252 - root - INFO - Logging is configured.
+2024-10-09 19:50:20,935 - root - INFO - Logging is configured.
+2024-10-09 19:51:24,843 - root - INFO - Logging is configured.
+2024-10-09 19:51:30,108 - root - INFO - Logging is configured.
+2024-10-09 19:51:44,289 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 19:51:44,290 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:53:47,712 - root - INFO - Logging is configured.
+2024-10-09 19:54:51,838 - root - INFO - Logging is configured.
+2024-10-09 19:55:01,691 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 19:55:01,691 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:55:03,042 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:55:03,073 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:55:03,073 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:55:04,928 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:55:11,821 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:55:35,256 - root - INFO - Logging is configured.
+2024-10-09 19:55:37,834 - root - INFO - Logging is configured.
+2024-10-09 19:55:40,224 - root - INFO - Logging is configured.
+2024-10-09 19:55:43,125 - root - INFO - Logging is configured.
+2024-10-09 19:55:45,507 - root - INFO - Logging is configured.
+2024-10-09 19:55:52,506 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-09 19:55:52,507 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 19:55:53,781 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 19:55:53,807 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 19:55:53,807 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 19:55:55,611 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 19:55:58,026 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 19:56:05,497 - streamline - INFO - Streamline process completed in 12.99 seconds.
+2024-10-09 20:04:55,232 - root - INFO - Logging is configured.
+2024-10-09 20:16:45,651 - root - INFO - Logging is configured.
+2024-10-09 20:17:13,421 - root - INFO - Logging is configured.
+2024-10-09 20:17:29,503 - root - INFO - Logging is configured.
+2024-10-09 20:19:40,228 - root - INFO - Logging is configured.
+2024-10-09 20:19:45,348 - root - INFO - Logging is configured.
+2024-10-09 20:19:48,140 - root - INFO - Logging is configured.
+2024-10-09 20:19:50,968 - root - INFO - Logging is configured.
+2024-10-09 20:19:53,763 - root - INFO - Logging is configured.
+2024-10-09 20:19:56,548 - root - INFO - Logging is configured.
+2024-10-09 20:19:59,337 - root - INFO - Logging is configured.
+2024-10-09 20:20:28,072 - root - INFO - Logging is configured.
+2024-10-09 20:20:45,214 - root - INFO - Logging is configured.
+2024-10-09 20:20:56,438 - root - INFO - Logging is configured.
+2024-10-09 20:21:58,812 - root - INFO - Logging is configured.
+2024-10-09 20:22:08,233 - root - INFO - Logging is configured.
+2024-10-09 20:22:08,273 - streamline - INFO - Received new user query: 'in detail, what does DAERA mean? '
+2024-10-09 20:22:08,274 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:22:09,578 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:22:09,625 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:22:09,625 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:22:11,714 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:22:21,693 - llm.llm_use - INFO - Metadata selection completed. 0 out of 10 datasets are relevant.
+2024-10-09 20:22:34,995 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:22:34,995 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:22:35,973 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:22:35,974 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:22:35,974 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:22:37,545 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:22:40,776 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:23:42,958 - root - INFO - Logging is configured.
+2024-10-09 20:23:57,349 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:23:57,349 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:23:58,526 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:23:58,556 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:23:58,556 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:24:00,341 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:24:03,891 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:25:20,147 - root - INFO - Logging is configured.
+2024-10-09 20:25:26,672 - root - INFO - Logging is configured.
+2024-10-09 20:25:35,015 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:25:35,015 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:25:36,243 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:25:36,273 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:25:36,273 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:25:38,058 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:25:41,103 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:26:49,216 - root - INFO - Logging is configured.
+2024-10-09 20:27:00,550 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:27:00,550 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:27:01,791 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:27:01,819 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:27:01,820 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:27:03,680 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:27:07,289 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:27:12,023 - streamline - INFO - Streamline process completed in 11.47 seconds.
+2024-10-09 20:28:15,258 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:28:15,258 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:28:16,567 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:28:16,568 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:28:16,568 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:28:18,089 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:28:21,408 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:28:25,471 - streamline - INFO - Streamline process completed in 10.21 seconds.
+2024-10-09 20:28:42,708 - streamline - INFO - Received new user query: 'please list all the audits that were planned in 2019? '
+2024-10-09 20:28:42,709 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:28:43,185 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-09 20:28:44,001 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:28:44,002 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:28:44,002 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:28:45,298 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:28:48,304 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:28:53,384 - streamline - INFO - Streamline process completed in 10.67 seconds.
+2024-10-09 20:28:53,384 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-09 20:33:16,884 - root - INFO - Logging is configured.
+2024-10-09 20:34:43,457 - root - INFO - Logging is configured.
+2024-10-09 20:35:30,682 - root - INFO - Logging is configured.
+2024-10-09 20:35:56,893 - root - INFO - Logging is configured.
+2024-10-09 20:36:15,518 - root - INFO - Logging is configured.
+2024-10-09 20:36:39,616 - root - INFO - Logging is configured.
+2024-10-09 20:36:55,558 - root - INFO - Logging is configured.
+2024-10-09 20:36:58,822 - root - INFO - Logging is configured.
+2024-10-09 20:37:30,459 - root - INFO - Logging is configured.
+2024-10-09 20:37:43,120 - root - INFO - Logging is configured.
+2024-10-09 20:37:45,498 - root - INFO - Logging is configured.
+2024-10-09 20:37:47,865 - root - INFO - Logging is configured.
+2024-10-09 20:37:50,250 - root - INFO - Logging is configured.
+2024-10-09 20:37:52,625 - root - INFO - Logging is configured.
+2024-10-09 20:38:33,518 - root - INFO - Logging is configured.
+2024-10-09 20:39:10,572 - root - INFO - Logging is configured.
+2024-10-09 20:39:57,792 - root - INFO - Logging is configured.
+2024-10-09 20:40:14,703 - root - INFO - Logging is configured.
+2024-10-09 20:40:50,200 - root - INFO - Logging is configured.
+2024-10-09 20:40:56,718 - root - INFO - Logging is configured.
+2024-10-09 20:41:12,971 - root - INFO - Logging is configured.
+2024-10-09 20:41:15,342 - root - INFO - Logging is configured.
+2024-10-09 20:41:17,742 - root - INFO - Logging is configured.
+2024-10-09 20:41:20,124 - root - INFO - Logging is configured.
+2024-10-09 20:41:22,518 - root - INFO - Logging is configured.
+2024-10-09 20:41:24,893 - root - INFO - Logging is configured.
+2024-10-09 20:41:33,673 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:41:33,673 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:41:34,967 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:41:34,997 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:41:34,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:41:42,527 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:41:51,328 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:42:56,414 - root - INFO - Logging is configured.
+2024-10-09 20:43:03,427 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:43:03,428 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:43:04,647 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:43:04,676 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:43:04,676 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:43:06,511 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:43:10,289 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:43:13,422 - streamline - INFO - Streamline process completed in 9.99 seconds.
+2024-10-09 20:43:42,109 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:43:42,110 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:43:43,399 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:43:43,400 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:43:43,400 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:43:44,666 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:43:48,275 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:43:51,425 - streamline - INFO - Streamline process completed in 9.32 seconds.
+2024-10-09 20:45:16,767 - root - INFO - Logging is configured.
+2024-10-09 20:45:30,659 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:45:30,659 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:45:31,938 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:45:31,969 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:45:31,969 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:45:33,714 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:45:37,059 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:45:40,716 - streamline - INFO - Streamline process completed in 10.06 seconds.
+2024-10-09 20:46:55,826 - root - INFO - Logging is configured.
+2024-10-09 20:47:08,616 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:47:08,616 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:47:09,919 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:47:09,971 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:47:09,971 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:47:11,745 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:47:14,843 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:47:47,093 - root - INFO - Logging is configured.
+2024-10-09 20:47:54,878 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:47:54,878 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:47:56,067 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:47:56,096 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:47:56,096 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:47:57,956 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:48:00,897 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:48:05,480 - streamline - INFO - Streamline process completed in 10.60 seconds.
+2024-10-09 20:48:47,784 - root - INFO - Logging is configured.
+2024-10-09 20:49:10,662 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:49:10,662 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:49:12,015 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:49:12,044 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:49:12,044 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:49:13,827 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:49:16,863 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:49:21,532 - streamline - INFO - Streamline process completed in 10.87 seconds.
+2024-10-09 20:49:44,470 - root - INFO - Logging is configured.
+2024-10-09 20:49:46,864 - root - INFO - Logging is configured.
+2024-10-09 20:49:49,269 - root - INFO - Logging is configured.
+2024-10-09 20:49:51,636 - root - INFO - Logging is configured.
+2024-10-09 20:50:09,909 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 20:50:09,909 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 20:50:10,937 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 20:50:10,967 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 20:50:10,967 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 20:50:12,726 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 20:50:16,168 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 20:50:20,148 - streamline - INFO - Streamline process completed in 10.24 seconds.
+2024-10-09 20:52:41,461 - root - INFO - Logging is configured.
+2024-10-09 20:53:34,636 - root - INFO - Logging is configured.
+2024-10-09 20:54:05,077 - root - INFO - Logging is configured.
+2024-10-09 20:54:38,589 - root - INFO - Logging is configured.
+2024-10-09 20:55:37,571 - root - INFO - Logging is configured.
+2024-10-09 20:56:05,236 - root - INFO - Logging is configured.
+2024-10-09 20:56:37,621 - root - INFO - Logging is configured.
+2024-10-09 20:57:14,958 - root - INFO - Logging is configured.
+2024-10-09 20:58:16,056 - root - INFO - Logging is configured.
+2024-10-09 20:58:46,691 - root - INFO - Logging is configured.
+2024-10-09 20:59:15,445 - root - INFO - Logging is configured.
+2024-10-09 20:59:28,797 - root - INFO - Logging is configured.
+2024-10-09 20:59:31,627 - root - INFO - Logging is configured.
+2024-10-09 20:59:48,643 - root - INFO - Logging is configured.
+2024-10-09 20:59:51,109 - root - INFO - Logging is configured.
+2024-10-09 20:59:53,959 - root - INFO - Logging is configured.
+2024-10-09 20:59:56,770 - root - INFO - Logging is configured.
+2024-10-09 21:00:10,698 - root - INFO - Logging is configured.
+2024-10-09 21:00:14,782 - root - INFO - Logging is configured.
+2024-10-09 21:00:59,750 - root - INFO - Logging is configured.
+2024-10-09 21:01:32,411 - root - INFO - Logging is configured.
+2024-10-09 21:01:57,100 - root - INFO - Logging is configured.
+2024-10-09 21:02:14,249 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 21:02:14,249 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 21:02:15,495 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 21:02:15,529 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 21:02:15,529 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 21:02:17,497 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 21:02:23,669 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 21:02:31,178 - streamline - INFO - Streamline process completed in 16.93 seconds.
+2024-10-09 21:03:06,318 - root - INFO - Logging is configured.
+2024-10-09 21:04:03,542 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 21:04:03,542 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 21:04:04,752 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 21:04:04,780 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 21:04:04,780 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 21:04:06,552 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 21:04:09,149 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 21:04:14,120 - streamline - INFO - Streamline process completed in 10.58 seconds.
+2024-10-09 21:04:30,930 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-09 21:04:30,930 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-09 21:04:31,887 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-09 21:04:31,888 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-09 21:04:31,888 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-09 21:04:33,342 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-09 21:04:36,585 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-09 21:04:41,430 - streamline - INFO - Streamline process completed in 10.50 seconds.

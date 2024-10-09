@@ -6,6 +6,8 @@ from search.data_search import download_datasets
 from llm.llm_chatbot import LLMChatbot
 from llm.llm_use import directly_use_llm_for_answer, use_llm_for_metadata_selection, directly_use_llm_for_follow_up
 from web.webscraping import run_webscraping
+from sparql_query import retrieve_audit_data
+from graph import generate_dynamic_rdf_with_core
 import time
 import logging
 from config_loader import config_loader
@@ -32,7 +34,6 @@ def run_streamline_process(query: str, user_id: str) -> str:
         # If we have context, check for relevant keywords or signs of a follow-up
         previous_answer = user_context.get('previous_answer')
         if previous_answer:
-            # Simple keyword-based check to detect follow-up queries
             follow_up_keywords = ["more information", "details", "clarify", "explain", "about dataset", "continue", "expand", "again", "specify", "link"]
             
             # Check if the query mentions follow-up keywords or if it's similar to the previous answer
@@ -59,11 +60,12 @@ def run_streamline_process(query: str, user_id: str) -> str:
     # If not a follow-up, treat it as a new query and process the entire pipeline
     return process_new_query(query, user_id)
 
-
+from graph import generate_dynamic_rdf_with_core  # Import the updated RDF generation function
 
 def process_new_query(query: str, user_id: str) -> str:
     """
     Handle a new query by running the full pipeline and saving the context.
+    Now includes querying the RDF knowledge graph and passing the results to the LLM for enhanced responses.
     """
     logger.info(f"Received new user query: '{query}'")
 
@@ -89,7 +91,7 @@ def process_new_query(query: str, user_id: str) -> str:
         api_url=llm_config.get('api_url', 'http://localhost:11434/api/generate')
     )
 
-    # Use FAISS to find relevant datasets based on the query
+    # Step 1: Use FAISS to find relevant datasets based on the query
     k = faiss_config.get('top_k', 10)
     combined_text = df['title'] + " " + df['links']
     model, metadata_index = create_faiss_index(combined_text.tolist())
@@ -99,7 +101,7 @@ def process_new_query(query: str, user_id: str) -> str:
     if not valid_indices:
         return "No relevant datasets found."
 
-    # Retrieve relevant datasets and process further
+    # Step 2: Retrieve relevant datasets and process them further
     relevant_datasets = df.iloc[valid_indices]
     datasets2_csv = 'datasets2.csv'
     relevant_datasets.to_csv(datasets2_csv, index=False)
@@ -112,10 +114,33 @@ def process_new_query(query: str, user_id: str) -> str:
     if not os.path.exists('data.csv'):
         return "Error: Downloaded data not found."
 
-    data_df = pd.read_csv('data.csv')
-    final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
+    # Step 3: Generate the RDF knowledge graph from data.csv
+    generate_dynamic_rdf_with_core('data.csv', output_rdf_file='data_ontology.ttl')  # Ensure the RDF graph is generated
 
-    # Save the context for follow-up questions
+    # Step 4: Query the RDF knowledge graph using SPARQL based on the user's query
+    try:
+        sparql_results = retrieve_audit_data(query)
+    except FileNotFoundError:
+        logger.error("RDF file 'data_ontology.ttl' not found. Ensure the RDF graph is generated.")
+        return "Error: RDF knowledge graph not found. Ensure the RDF graph is generated before querying."
+
+    # Step 5: Read data.csv and pass to the LLM
+    data_df = pd.read_csv('data.csv')
+
+    # Step 6: Integrate SPARQL results into the LLM prompt (if any relevant RDF data is found)
+    graph_answer = ""
+    if sparql_results:
+        for row in sparql_results:
+            dataset, audit, scope = row
+            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\n\n"
+
+        # If RDF graph data is found, include it in the LLM's prompt
+        final_answer = directly_use_llm_for_answer(data_df, query, chatbot, additional_context=graph_answer)
+    else:
+        # If no RDF graph data is found, proceed without additional context
+        final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
+
+    # Step 7: Save the context for follow-up questions
     user_sessions[user_id] = {
         'relevant_datasets': refined_datasets_with_summaries,
         'previous_answer': final_answer,

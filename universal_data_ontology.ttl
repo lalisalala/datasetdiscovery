@@ -1,0 +1,222 @@
+@prefix ex: <http://example.org/ontology/> .
+
+ex:Dataset_0 a ex:Dataset ;
+    ex:hasAudittitle "Minimum Security Standards" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess FSA compliance with the Cabinet Office Minimum Security Standards. " .
+
+ex:Dataset_1 a ex:Dataset ;
+    ex:hasAudittitle "Payroll Leavers / Joiners" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls." .
+
+ex:Dataset_10 a ex:Dataset ;
+    ex:hasAudittitle "Shellfish" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. " .
+
+ex:Dataset_11 a ex:Dataset ;
+    ex:hasAudittitle "Food Chain Information and Collection & Communication of Inspection Results " ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess the effectiveness of the food chain information system." .
+
+ex:Dataset_12 a ex:Dataset ;
+    ex:hasAudittitle "Wine Inspection" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess management assurance of OFFC delivery of the wine standards " .
+
+ex:Dataset_13 a ex:Dataset ;
+    ex:hasAudittitle "Raw Drinking Milk" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "Follow up audit to assess effectiveness of management actions implemented to address " .
+
+ex:Dataset_14 a ex:Dataset ;
+    ex:hasAudittitle "Warm meat legislation" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess the oversight and delivery of the warm meat legislation." .
+
+ex:Dataset_15 a ex:Dataset ;
+    ex:hasAudittitle "Export Certification" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess the system of certifying exports. " .
+
+ex:Dataset_16 a ex:Dataset ;
+    ex:hasAudittitle "Allergens in England, Wales and Northern Ireland" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England " .
+
+ex:Dataset_17 a ex:Dataset ;
+    ex:hasAudittitle "LA Approved Premises in England" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the effectiveness of LA approval of premises for those establishments requiring LA approval." .
+
+ex:Dataset_18 a ex:Dataset ;
+    ex:hasAudittitle "Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs." .
+
+ex:Dataset_19 a ex:Dataset ;
+    ex:hasAudittitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  " .
+
+ex:Dataset_2 a ex:Dataset ;
+    ex:hasAudittitle "Post Project Evaluation Reviews" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the end of project processes, transition to business as usual and that leanings are captured / shared. " .
+
+ex:Dataset_20 a ex:Dataset ;
+    ex:hasAudittitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales " ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "Follow-up audits to assess progress by LAs in addressing agreed action plans." .
+
+ex:Dataset_21 a ex:Dataset ;
+    ex:hasAudittitle "AuditTitle" ;
+    ex:hasCategory "Category" ;
+    ex:hasOutlinescope "OutlineScope" .
+
+ex:Dataset_22 a ex:Dataset ;
+    ex:hasAudittitle "Minimum Security Standards" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "To assess FSA compliance with the Cabinet Office Minimum Security Standards." .
+
+ex:Dataset_23 a ex:Dataset ;
+    ex:hasAudittitle "Managing Attendance" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   " .
+
+ex:Dataset_24 a ex:Dataset ;
+    ex:hasAudittitle "Asset Management" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA policies on asset procurement, records, security and disposal " .
+
+ex:Dataset_25 a ex:Dataset ;
+    ex:hasAudittitle "General Data Protection Regulation" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. " .
+
+ex:Dataset_26 a ex:Dataset ;
+    ex:hasAudittitle "Product Recall Delivery Assurance audit" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "Gateway Review type assessment to provide project delivery assurance" .
+
+ex:Dataset_27 a ex:Dataset ;
+    ex:hasAudittitle "Supplier Management- IT Help Desk Services" ;
+    ex:hasCategory "Business Audit" ;
+    ex:hasOutlinescope "The audit will review effectiveness of supplier management arrangements." .
+
+ex:Dataset_28 a ex:Dataset ;
+    ex:hasAudittitle "Minced meat, meat preparations and ready to eat products" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law" .
+
+ex:Dataset_29 a ex:Dataset ;
+    ex:hasAudittitle "Eggs Hygiene " ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law." .
+
+ex:Dataset_3 a ex:Dataset ;
+    ex:hasAudittitle "DAERA Contract Management" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess management controls and reporting on the contract with DAERA. " .
+
+ex:Dataset_30 a ex:Dataset ;
+    ex:hasAudittitle "Bovine TB" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. " .
+
+ex:Dataset_31 a ex:Dataset ;
+    ex:hasAudittitle "Notifiable Diseases" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law." .
+
+ex:Dataset_32 a ex:Dataset ;
+    ex:hasAudittitle "Game Handling Establishments follow -up audit" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "Follow up audit to assess effectiveness of management actions implemented in addressing issues identified" .
+
+ex:Dataset_33 a ex:Dataset ;
+    ex:hasAudittitle "Approval and re-approval of meat establishments" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law." .
+
+ex:Dataset_34 a ex:Dataset ;
+    ex:hasAudittitle "Animal Welfare" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." .
+
+ex:Dataset_35 a ex:Dataset ;
+    ex:hasAudittitle "Animal -by-Products" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "Further follow-up audit requested by ARAC to review effectiveness of management actions" .
+
+ex:Dataset_36 a ex:Dataset ;
+    ex:hasAudittitle "Raw Drinking Milk" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "Follow up audit to assess effectiveness of management actions implemented to address issues identified. " .
+
+ex:Dataset_37 a ex:Dataset ;
+    ex:hasAudittitle "Cutting Establishments Unannounced Inspections" ;
+    ex:hasCategory "Official Controls" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for cutting establishments." .
+
+ex:Dataset_38 a ex:Dataset ;
+    ex:hasAudittitle "Complaints about food hygiene/ food premises and infectious disease control-England" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law." .
+
+ex:Dataset_39 a ex:Dataset ;
+    ex:hasAudittitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans " .
+
+ex:Dataset_4 a ex:Dataset ;
+    ex:hasAudittitle "Information / Data Security" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the effectiveness of management actions on information/ data security " .
+
+ex:Dataset_40 a ex:Dataset ;
+    ex:hasAudittitle "Organisation and Management of Official controls delivered by LAs in Northern Ireland" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  " .
+
+ex:Dataset_41 a ex:Dataset ;
+    ex:hasAudittitle "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  " ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" .
+
+ex:Dataset_42 a ex:Dataset ;
+    ex:hasAudittitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  " .
+
+ex:Dataset_43 a ex:Dataset ;
+    ex:hasAudittitle "Allergens -England " ;
+    ex:hasCategory "Local Authority Audits" ;
+    ex:hasOutlinescope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" .
+
+ex:Dataset_5 a ex:Dataset ;
+    ex:hasAudittitle "Product Recall Delivery Assurance" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the effectiveness of the product recall system implemented in 2019." .
+
+ex:Dataset_6 a ex:Dataset ;
+    ex:hasAudittitle "Conflicts of Interest Policy" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the process, compliance and reporting of conflicts of interest for Board Members and FSA staff." .
+
+ex:Dataset_7 a ex:Dataset ;
+    ex:hasAudittitle "Financial Assurance" ;
+    ex:hasCategory "Business Audits" ;
+    ex:hasOutlinescope "To assess the effectiveness of the key financial systems and related controls in FSA, Wales and Northern Ireland." .
+
+ex:Dataset_8 a ex:Dataset ;
+    ex:hasAudittitle "Official Veterinarian / Official Auxiliaries Training" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess management delivery and oversight of Official Veterinarian / Official Auxiliaries Training" .
+
+ex:Dataset_9 a ex:Dataset ;
+    ex:hasAudittitle "Animal Welfare[1]" ;
+    ex:hasCategory "Official Controls Audits" ;
+    ex:hasOutlinescope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." .
+

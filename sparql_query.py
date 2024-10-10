@@ -22,18 +22,17 @@ def query_rdf_graph(query_string):
 
 def retrieve_audit_data(query):
     """
-    Query the RDF graph to retrieve datasets, audits, and scope based on the user's query.
+    Query the RDF graph to retrieve datasets, audits, scope, and dataset links based on the user's query.
     """
-    # SPARQL query with user's query embedded
     sparql_query = f"""
     PREFIX ex: <http://example.org/ontology/>
-    SELECT ?dataset ?audit ?scope
+    SELECT ?dataset ?audit ?scope ?link
     WHERE {{
       ?dataset ex:hasCategory ?category .
       ?category ex:includesAudit ?audit .
       ?audit ex:hasScope ?scope .
+      ?dataset ex:hasLink ?link .
       FILTER(CONTAINS(LCASE(?scope), "{query.lower()}"))
     }}
     """
-    # Execute the query and return the results
     return query_rdf_graph(sparql_query)

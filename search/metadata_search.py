@@ -56,3 +56,4 @@ def query_faiss_index(query, model, metadata_index, k=5):
         print(f"Error querying FAISS index: {e}")
         raise
 
+

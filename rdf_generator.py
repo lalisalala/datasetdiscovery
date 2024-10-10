@@ -1,3 +1,4 @@
+#rdf_generation.py
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, RDFS
 import pandas as pd

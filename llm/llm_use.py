@@ -1,3 +1,5 @@
+# llm/llm_use.py
+
 import pandas as pd
 import logging
 from typing import Any
@@ -13,10 +15,9 @@ logger = logging.getLogger(__name__)
 def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 200, additional_context: str = "") -> str:
     """
     Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
-    Now includes querying the RDF graph to improve accuracy.
+    Now includes querying the RDF graph to improve accuracy, and dataset links are referenced.
     
     The `additional_context` is used to provide graph-based results (SPARQL results).
-    The function will also ensure that the metadata (like dataset links) is included in the final output.
     """
     # Load the dataset with metadata (e.g., title, links) and convert it to string format
     if isinstance(data_input, pd.DataFrame):
@@ -26,11 +27,16 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
 
     metadata = ""  # Prepare a variable to collect metadata (e.g., titles, links)
     
-    # Assuming the data_df has 'title' and 'links' columns for metadata
+    # Assuming the data_df has 'title', 'links', and possibly 'summary' columns for metadata
     if 'title' in data_df.columns and 'links' in data_df.columns:
-        # Build the metadata references (dataset title and link)
+        # Build the metadata references (dataset title, summary, and link)
         for idx, row in data_df.iterrows():
-            metadata += f"Dataset Title: {row['title']}\nLink: {row['links']}\n\n"
+            metadata += f"Dataset Title: {row['title']}\n"
+            metadata += f"Link: {row['links']}\n\n"  # Include the dataset link
+            
+            # Optionally include a summary if available
+            if 'summary' in row:
+                metadata += f"Summary: {row['summary']}\n\n"
 
     # Prepare the prompt for the LLM
     if additional_context:
@@ -38,24 +44,27 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
             f"User query: {query}\n\n"
             f"Based on the knowledge graph, here are the relevant datasets and audits:\n{additional_context}\n\n"
             "Please analyze the dataset contents and provide a detailed response."
-            f"\n\nMetadata for reference:\n{metadata}"  # Include metadata for reference
+            f"\n\nMetadata for reference (including dataset links):\n{metadata}"  # Include metadata with links
         )
     else:
         llm_prompt = (
             f"User query: {query}\n\n"
             "Please proceed using the datasets directly."
-            f"\n\nMetadata for reference:\n{metadata}"  # Include metadata for reference
+            f"\n\nMetadata for reference (including dataset links):\n{metadata}"  # Include metadata with links
         )
 
     # Use the LLM to generate a final response
     try:
         final_llm_answer = chatbot.generate_response(context=data_df.to_csv(index=False), query=llm_prompt)
         
-        # Append the metadata (title and link) to the final response
+        # Log the final LLM answer
+        logger.info(f"Final LLM Answer for query '{query}':\n{final_llm_answer.strip()}")
+
+        # Append the metadata (including links) to the final response
         final_response = (
             f"{final_llm_answer.strip()}\n\n"
-            "References:\n"
-            f"{metadata}"  # Ensure metadata is appended to the final output
+            "References (Dataset Links):\n"
+            f"{metadata}"  # Ensure metadata with links is appended to the final output
         )
 
         return final_response
@@ -63,6 +72,7 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     except Exception as e:
         logger.error(f"Error generating LLM response: {e}")
         return f"Error generating response: {str(e)}"
+
 
 def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
     """
@@ -171,8 +181,8 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
     graph_answer = ""
     if sparql_results:
         for row in sparql_results:
-            dataset, audit, scope = row
-            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\n\n"
+            dataset, audit, scope, link = row  # Fetch link from the RDF query result
+            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\nLink: {link}\n\n"  # Include the link
 
         # Use the graph-based information as context for the follow-up question
         follow_up_prompt = (
@@ -190,7 +200,7 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
         )
 
     # Optionally: Include a summary of the datasets in the prompt if necessary
-    dataset_summaries = "\n\n".join([f"Dataset Title: {row['title']}\nSummary: {row['summary']}" for idx, row in refined_datasets.iterrows()])
+    dataset_summaries = "\n\n".join([f"Dataset Title: {row['title']}\nSummary: {row['summary']}\nLink: {row['links']}" for idx, row in refined_datasets.iterrows()])
     follow_up_prompt += "\n\nHere are the relevant datasets:\n" + dataset_summaries
 
     # If the user is asking for links or information from the downloaded datasets, include that in the prompt
@@ -205,6 +215,10 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
     # Step 3: Use the LLM to generate a final response
     try:
         follow_up_answer = chatbot.generate_response(context=previous_answer, query=follow_up_prompt)
+        
+        # Log the final follow-up LLM answer
+        logger.info(f"Final LLM Follow-Up Answer for query '{query}':\n{follow_up_answer.strip()}")
+
         return follow_up_answer.strip()
     except Exception as e:
         logger.error(f"Error processing follow-up question: {e}")

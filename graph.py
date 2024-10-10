@@ -1,6 +1,6 @@
 import pandas as pd
 from rdflib import Graph, URIRef, Literal, Namespace
-from rdflib.namespace import RDF, RDFS, XSD
+from rdflib.namespace import RDF
 import re
 
 def sanitize_uri_value(value: str) -> str:
@@ -8,87 +8,56 @@ def sanitize_uri_value(value: str) -> str:
     Sanitize the input string to ensure it's a valid URI component.
     Replaces spaces with underscores and removes invalid characters.
     """
-    return value.replace(" ", "_").replace("/", "_").replace("?", "").replace("&", "").replace(",", "")
+    # Replace spaces with underscores and remove invalid characters
+    sanitized_value = re.sub(r'[^\w]', '_', value)
+    return sanitized_value
 
 def generate_dynamic_rdf_with_core(csv_file, output_rdf_file='universal_data_ontology.ttl'):
     """
-    Generate RDF from the provided data.csv, considering that metadata is a header
-    and associating it with each dataset.
+    Generate RDF from the provided CSV file, dynamically using the CSV columns as properties
+    and treating each row as an individual resource.
     """
     # Create a new RDF graph
     g = Graph()
 
-    # Define the namespace for your core ontology
+    # Define the namespace for your ontology
     EX = Namespace("http://example.org/ontology/")
     g.bind("ex", EX)
 
-    # Core RDF Classes
+    # Load the CSV content into a DataFrame
+    df = pd.read_csv(csv_file)
+
+    # Define the class for a dataset
     Dataset = URIRef(EX.Dataset)
-    Field = URIRef(EX.Field)
-    Value = URIRef(EX.Value)
+    hasMetadata = URIRef(EX.hasMetadata)
 
-    # Core RDF Properties
-    hasField = URIRef(EX.hasField)
-    hasValue = URIRef(EX.hasValue)
-    hasTitle = URIRef(EX.hasTitle)
-    hasLink = URIRef(EX.hasLink)
-    hasDescription = URIRef(EX.hasDescription)
-    hasMetadata = URIRef(EX.hasMetadata)  # New property to capture metadata
+    # Add metadata for the dataset
+    dataset_uri = URIRef(EX[f"Dataset_0"])
+    g.add((dataset_uri, RDF.type, Dataset))
+    g.add((dataset_uri, hasMetadata, Literal(f"Metadata for the dataset loaded from {csv_file}.")))
 
-    # Load the CSV content
-    with open(csv_file, 'r') as file:
-        lines = file.readlines()
+    # Iterate through each row in the CSV file and create triples dynamically
+    for idx, row in df.iterrows():
+        # Create a unique URI for each row (audit/record)
+        row_uri = URIRef(EX[f"Row_{idx+1}"])
 
-    current_dataset_metadata = None
-    all_data_with_metadata = []
-    dataset_started = False
-    current_data = []
+        # Add the row as an instance of ex:Row
+        g.add((row_uri, RDF.type, URIRef(EX.Row)))
 
-    # Iterate through the lines and dynamically generate RDF triples
-    for line in lines:
-        line = line.strip()
+        # Link each row to the dataset
+        g.add((row_uri, URIRef(EX.partOf), dataset_uri))
 
-        # Detect new dataset metadata header
-        if line.startswith("Dataset Metadata:"):
-            if dataset_started:
-                # Process the previous dataset before starting a new one
-                all_data_with_metadata.append((current_dataset_metadata, current_data))
-                current_data = []  # Reset the dataset content
+        # Iterate through each column in the row and add triples dynamically
+        for column_name in df.columns:
+            # Sanitize the column name to use it as a URI
+            sanitized_column_name = sanitize_uri_value(column_name.strip())
 
-            # Capture the metadata for the new dataset
-            current_dataset_metadata = re.sub(r"Dataset Metadata:\s*", "", line)
-            dataset_started = True
+            # Create a dynamic RDF property for this column
+            property_uri = URIRef(EX[sanitized_column_name])
 
-        # Detect CSV data (i.e., after the metadata header)
-        elif dataset_started and "," in line:
-            current_data.append(line)
+            # Add the property and value to the row
+            g.add((row_uri, property_uri, Literal(row[column_name])))
 
-    # Process the last dataset
-    if current_data:
-        all_data_with_metadata.append((current_dataset_metadata, current_data))
-
-    # Process each dataset with its metadata
-    for idx, (metadata, data_lines) in enumerate(all_data_with_metadata):
-        # Create a unique URI for the dataset
-        dataset_uri = URIRef(EX[sanitize_uri_value(f"Dataset_{idx}")])
-
-        # Add the dataset as a subject in RDF
-        g.add((dataset_uri, RDF.type, Dataset))
-
-        # Add the metadata as a property
-        g.add((dataset_uri, hasMetadata, Literal(metadata)))
-
-        # Process the dataset CSV data (starting from the second line, which contains actual data)
-        if data_lines:
-            header = data_lines[0].split(",")  # Extract the CSV header (Category, AuditTitle, OutlineScope)
-            for line in data_lines[1:]:
-                row = line.split(",")
-
-                # Add fields and values based on the CSV header
-                for col_name, value in zip(header, row):
-                    field_uri = URIRef(EX[sanitize_uri_value(f"has{col_name.strip()}")])  # Sanitize field URI
-                    g.add((dataset_uri, field_uri, Literal(value)))  # Add field and value triples
-
-    # Serialize the graph to an RDF file (Turtle format)
+    # Serialize the graph to a Turtle file
     g.serialize(output_rdf_file, format="turtle")
     print(f"RDF graph saved to {output_rdf_file}")

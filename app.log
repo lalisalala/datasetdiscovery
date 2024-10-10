@@ -11636,3 +11636,1533 @@ Name: Local Authority Audits, dtype: object
 2024-10-09 21:04:33,342 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
 2024-10-09 21:04:36,585 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
 2024-10-09 21:04:41,430 - streamline - INFO - Streamline process completed in 10.50 seconds.
+2024-10-10 11:08:56,675 - root - INFO - Logging is configured.
+2024-10-10 11:09:02,790 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 11:09:02,790 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:09:04,090 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:09:04,144 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:09:04,145 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:09:06,154 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:09:12,339 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 11:09:19,510 - streamline - INFO - Streamline process completed in 16.72 seconds.
+2024-10-10 11:13:14,946 - root - INFO - Logging is configured.
+2024-10-10 11:13:21,731 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 11:13:21,731 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:13:22,971 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:13:23,013 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:13:23,013 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:13:24,788 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:13:27,946 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 11:13:33,871 - streamline - INFO - Streamline process completed in 12.14 seconds.
+2024-10-10 11:15:10,550 - root - INFO - Logging is configured.
+2024-10-10 11:16:55,829 - root - INFO - Logging is configured.
+2024-10-10 11:17:00,421 - root - INFO - Logging is configured.
+2024-10-10 11:17:12,213 - root - INFO - Logging is configured.
+2024-10-10 11:17:30,220 - streamline - INFO - Received new user query: 'what audits were planned n 2018? '
+2024-10-10 11:17:30,220 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:17:31,428 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:17:31,457 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:17:31,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:17:33,297 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:17:36,366 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 11:17:38,420 - llm.llm_use - INFO - Received user query: 'what audits were planned n 2018? '
+2024-10-10 11:17:38,420 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 11:17:38,422 - llm.llm_use - INFO - Processing dataset with 41 rows, chunking into 200-row parts.
+2024-10-10 11:17:45,034 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 11:17:45,034 - streamline - INFO - Streamline process completed in 14.81 seconds.
+2024-10-10 11:18:39,497 - root - INFO - Logging is configured.
+2024-10-10 11:18:49,255 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 11:18:49,255 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:18:50,455 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:18:50,485 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:18:50,485 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:18:52,506 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:18:55,675 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 11:18:57,685 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-10 11:18:57,685 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 11:18:57,688 - llm.llm_use - INFO - Processing dataset with 41 rows, chunking into 200-row parts.
+2024-10-10 11:19:03,241 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 11:19:03,241 - streamline - INFO - Streamline process completed in 13.99 seconds.
+2024-10-10 11:23:07,268 - root - INFO - Logging is configured.
+2024-10-10 11:23:24,104 - root - INFO - Logging is configured.
+2024-10-10 11:24:00,515 - streamline - INFO - Received new user query: 'did closing fire stations worsen performance? '
+2024-10-10 11:24:00,515 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:24:01,899 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:24:01,928 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:24:01,928 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:24:03,798 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:24:13,384 - llm.llm_use - INFO - Metadata selection completed. 0 out of 10 datasets are relevant.
+2024-10-10 11:25:24,760 - root - INFO - Logging is configured.
+2024-10-10 11:25:46,291 - streamline - INFO - Received new user query: 'did fire station closing in London worse performance? '
+2024-10-10 11:25:46,291 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:25:47,608 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:25:47,645 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:25:47,645 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:25:49,476 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:25:56,599 - llm.llm_use - INFO - Metadata selection completed. 5 out of 10 datasets are relevant.
+2024-10-10 11:48:07,704 - root - INFO - Logging is configured.
+2024-10-10 11:49:10,519 - streamline - INFO - Received new user query: 'this dataset is about pm25 levels, can you explain to me what is in each column?'
+2024-10-10 11:49:10,519 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:49:12,141 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:49:12,168 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:49:12,168 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:49:14,092 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:49:22,013 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 11:57:05,466 - root - INFO - Logging is configured.
+2024-10-10 11:57:21,763 - streamline - INFO - Received new user query: 'how many sheep died in 2020? '
+2024-10-10 11:57:21,763 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:57:23,302 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:57:23,336 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:57:23,336 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:57:25,139 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:57:34,172 - llm.llm_use - INFO - Metadata selection completed. 0 out of 10 datasets are relevant.
+2024-10-10 11:57:52,207 - root - INFO - Logging is configured.
+2024-10-10 11:58:11,776 - streamline - INFO - Received new user query: 'what is the dataset on sheep and goats in 2020? '
+2024-10-10 11:58:11,776 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 11:58:13,290 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 11:58:13,323 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 11:58:13,323 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 11:58:15,101 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 11:58:17,855 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 12:26:19,157 - root - INFO - Logging is configured.
+2024-10-10 12:26:34,397 - streamline - INFO - Received new user query: 'show me the data to the pm25'
+2024-10-10 12:26:34,397 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:26:36,047 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:26:36,109 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:26:36,109 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:26:38,063 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:26:44,523 - llm.llm_use - INFO - Metadata selection completed. 9 out of 10 datasets are relevant.
+2024-10-10 12:26:57,540 - llm.llm_use - INFO - Received user query: 'show me the data to the pm25'
+2024-10-10 12:26:57,540 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:26:57,545 - llm.llm_use - INFO - Processing dataset with 20 rows, chunking into 200-row parts.
+2024-10-10 12:27:38,176 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:27:38,177 - streamline - INFO - Streamline process completed in 63.78 seconds.
+2024-10-10 12:29:08,297 - streamline - INFO - Received new user query: 'what is the data on pm2.5 map and exposure'
+2024-10-10 12:29:08,297 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:29:09,907 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:29:09,907 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:29:09,907 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:29:11,212 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:29:15,217 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:29:18,949 - llm.llm_use - INFO - Received user query: 'what is the data on pm2.5 map and exposure'
+2024-10-10 12:29:18,950 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:29:19,963 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 200-row parts.
+2024-10-10 12:29:23,700 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:29:26,986 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:29:30,222 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:29:36,756 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 12:29:38,225 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 12:29:41,675 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 12:29:44,038 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 12:29:48,301 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 12:29:50,325 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 12:29:52,864 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 12:29:56,264 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 12:29:59,076 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 12:30:04,164 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 12:30:05,708 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 12:30:08,334 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 12:30:12,208 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 12:30:16,381 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 12:30:19,530 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 12:30:21,732 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 12:30:26,148 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 12:30:28,415 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 12:30:32,347 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 12:30:35,731 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 12:30:37,557 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 12:30:41,452 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 12:30:45,695 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 12:30:48,418 - llm.llm_use - INFO - Received response for chunk 27.
+2024-10-10 12:30:49,662 - llm.llm_use - INFO - Received response for chunk 28.
+2024-10-10 12:30:54,486 - llm.llm_use - INFO - Received response for chunk 29.
+2024-10-10 12:30:56,430 - llm.llm_use - INFO - Received response for chunk 30.
+2024-10-10 12:30:57,905 - llm.llm_use - INFO - Received response for chunk 31.
+2024-10-10 12:30:59,926 - llm.llm_use - INFO - Received response for chunk 32.
+2024-10-10 12:31:02,880 - llm.llm_use - INFO - Received response for chunk 33.
+2024-10-10 12:31:06,103 - llm.llm_use - INFO - Received response for chunk 34.
+2024-10-10 12:31:08,633 - llm.llm_use - INFO - Received response for chunk 35.
+2024-10-10 12:31:11,507 - llm.llm_use - INFO - Received response for chunk 36.
+2024-10-10 12:31:20,894 - llm.llm_use - INFO - Received response for chunk 37.
+2024-10-10 12:31:22,814 - llm.llm_use - INFO - Received response for chunk 38.
+2024-10-10 12:31:24,786 - llm.llm_use - INFO - Received response for chunk 39.
+2024-10-10 12:31:27,722 - llm.llm_use - INFO - Received response for chunk 40.
+2024-10-10 12:31:29,902 - llm.llm_use - INFO - Received response for chunk 41.
+2024-10-10 12:31:31,613 - llm.llm_use - INFO - Received response for chunk 42.
+2024-10-10 12:31:34,747 - llm.llm_use - INFO - Received response for chunk 43.
+2024-10-10 12:31:37,408 - llm.llm_use - INFO - Received response for chunk 44.
+2024-10-10 12:31:38,743 - llm.llm_use - INFO - Received response for chunk 45.
+2024-10-10 12:31:41,351 - llm.llm_use - INFO - Received response for chunk 46.
+2024-10-10 12:31:45,418 - llm.llm_use - INFO - Received response for chunk 47.
+2024-10-10 12:31:50,134 - llm.llm_use - INFO - Received response for chunk 48.
+2024-10-10 12:31:52,679 - llm.llm_use - INFO - Received response for chunk 49.
+2024-10-10 12:31:54,571 - llm.llm_use - INFO - Received response for chunk 50.
+2024-10-10 12:31:56,549 - llm.llm_use - INFO - Received response for chunk 51.
+2024-10-10 12:32:01,635 - llm.llm_use - INFO - Received response for chunk 52.
+2024-10-10 12:32:03,506 - llm.llm_use - INFO - Received response for chunk 53.
+2024-10-10 12:32:05,755 - llm.llm_use - INFO - Received response for chunk 54.
+2024-10-10 12:32:10,094 - llm.llm_use - INFO - Received response for chunk 55.
+2024-10-10 12:32:15,323 - llm.llm_use - INFO - Received response for chunk 56.
+2024-10-10 12:32:23,825 - llm.llm_use - INFO - Received response for chunk 57.
+2024-10-10 12:32:25,669 - llm.llm_use - INFO - Received response for chunk 58.
+2024-10-10 12:32:28,081 - llm.llm_use - INFO - Received response for chunk 59.
+2024-10-10 12:32:31,091 - llm.llm_use - INFO - Received response for chunk 60.
+2024-10-10 12:32:35,384 - llm.llm_use - INFO - Received response for chunk 61.
+2024-10-10 12:32:38,630 - llm.llm_use - INFO - Received response for chunk 62.
+2024-10-10 12:32:41,495 - llm.llm_use - INFO - Received response for chunk 63.
+2024-10-10 12:32:44,891 - llm.llm_use - INFO - Received response for chunk 64.
+2024-10-10 12:32:47,962 - llm.llm_use - INFO - Received response for chunk 65.
+2024-10-10 12:32:50,847 - llm.llm_use - INFO - Received response for chunk 66.
+2024-10-10 12:32:52,288 - llm.llm_use - INFO - Received response for chunk 67.
+2024-10-10 12:32:54,082 - llm.llm_use - INFO - Received response for chunk 68.
+2024-10-10 12:33:03,216 - llm.llm_use - INFO - Received response for chunk 69.
+2024-10-10 12:33:05,556 - llm.llm_use - INFO - Received response for chunk 70.
+2024-10-10 12:33:10,401 - llm.llm_use - INFO - Received response for chunk 71.
+2024-10-10 12:33:13,059 - llm.llm_use - INFO - Received response for chunk 72.
+2024-10-10 12:33:15,700 - llm.llm_use - INFO - Received response for chunk 73.
+2024-10-10 12:33:18,422 - llm.llm_use - INFO - Received response for chunk 74.
+2024-10-10 12:33:21,789 - llm.llm_use - INFO - Received response for chunk 75.
+2024-10-10 12:33:26,349 - llm.llm_use - INFO - Received response for chunk 76.
+2024-10-10 12:33:35,161 - llm.llm_use - INFO - Received response for chunk 77.
+2024-10-10 12:33:37,948 - llm.llm_use - INFO - Received response for chunk 78.
+2024-10-10 12:33:39,682 - llm.llm_use - INFO - Received response for chunk 79.
+2024-10-10 12:33:43,067 - llm.llm_use - INFO - Received response for chunk 80.
+2024-10-10 12:33:46,437 - llm.llm_use - INFO - Received response for chunk 81.
+2024-10-10 12:33:59,512 - llm.llm_use - INFO - Received response for chunk 82.
+2024-10-10 12:34:02,477 - llm.llm_use - INFO - Received response for chunk 83.
+2024-10-10 12:34:05,891 - llm.llm_use - INFO - Received response for chunk 84.
+2024-10-10 12:34:09,252 - llm.llm_use - INFO - Received response for chunk 85.
+2024-10-10 12:34:11,068 - llm.llm_use - INFO - Received response for chunk 86.
+2024-10-10 12:34:22,218 - llm.llm_use - INFO - Received response for chunk 87.
+2024-10-10 12:34:29,243 - llm.llm_use - INFO - Received response for chunk 88.
+2024-10-10 12:34:31,321 - llm.llm_use - INFO - Received response for chunk 89.
+2024-10-10 12:34:34,732 - llm.llm_use - INFO - Received response for chunk 90.
+2024-10-10 12:34:38,383 - llm.llm_use - INFO - Received response for chunk 91.
+2024-10-10 12:34:41,812 - llm.llm_use - INFO - Received response for chunk 92.
+2024-10-10 12:34:44,366 - llm.llm_use - INFO - Received response for chunk 93.
+2024-10-10 12:34:46,330 - llm.llm_use - INFO - Received response for chunk 94.
+2024-10-10 12:34:48,089 - llm.llm_use - INFO - Received response for chunk 95.
+2024-10-10 12:34:52,197 - llm.llm_use - INFO - Received response for chunk 96.
+2024-10-10 12:34:54,971 - llm.llm_use - INFO - Received response for chunk 97.
+2024-10-10 12:35:00,627 - root - INFO - Logging is configured.
+2024-10-10 12:35:36,185 - streamline - INFO - Received new user query: 'what is the data on the pm2.5 map and exposure in .csv? '
+2024-10-10 12:35:36,185 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:35:37,766 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:35:37,798 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:35:37,798 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:35:39,550 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:35:44,723 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:35:49,889 - llm.llm_use - INFO - Received user query: 'what is the data on the pm2.5 map and exposure in .csv? '
+2024-10-10 12:35:49,890 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:35:50,922 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 200-row parts.
+2024-10-10 12:35:52,866 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:35:55,521 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:35:57,328 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:35:59,446 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 12:36:01,949 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 12:36:04,287 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 12:36:06,798 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 12:36:09,912 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 12:36:14,838 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 12:36:17,273 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 12:36:19,941 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 12:36:22,309 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 12:36:24,110 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 12:36:27,135 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 12:36:30,257 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 12:36:33,428 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 12:36:35,391 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 12:36:40,543 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 12:36:49,997 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 12:36:51,600 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 12:36:52,997 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 12:36:54,905 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 12:36:57,110 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 12:37:01,752 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 12:37:04,894 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 12:37:06,144 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 12:37:09,018 - llm.llm_use - INFO - Received response for chunk 27.
+2024-10-10 12:37:11,836 - llm.llm_use - INFO - Received response for chunk 28.
+2024-10-10 12:37:13,082 - llm.llm_use - INFO - Received response for chunk 29.
+2024-10-10 12:37:16,522 - llm.llm_use - INFO - Received response for chunk 30.
+2024-10-10 12:37:19,946 - llm.llm_use - INFO - Received response for chunk 31.
+2024-10-10 12:37:21,896 - llm.llm_use - INFO - Received response for chunk 32.
+2024-10-10 12:37:25,344 - llm.llm_use - INFO - Received response for chunk 33.
+2024-10-10 12:37:28,091 - llm.llm_use - INFO - Received response for chunk 34.
+2024-10-10 12:37:30,043 - llm.llm_use - INFO - Received response for chunk 35.
+2024-10-10 12:37:32,528 - llm.llm_use - INFO - Received response for chunk 36.
+2024-10-10 12:37:35,983 - llm.llm_use - INFO - Received response for chunk 37.
+2024-10-10 12:37:40,184 - llm.llm_use - INFO - Received response for chunk 38.
+2024-10-10 12:37:44,016 - llm.llm_use - INFO - Received response for chunk 39.
+2024-10-10 12:37:46,333 - llm.llm_use - INFO - Received response for chunk 40.
+2024-10-10 12:37:47,790 - llm.llm_use - INFO - Received response for chunk 41.
+2024-10-10 12:37:56,807 - llm.llm_use - INFO - Received response for chunk 42.
+2024-10-10 12:37:59,113 - llm.llm_use - INFO - Received response for chunk 43.
+2024-10-10 12:38:01,100 - llm.llm_use - INFO - Received response for chunk 44.
+2024-10-10 12:38:03,316 - llm.llm_use - INFO - Received response for chunk 45.
+2024-10-10 12:38:06,240 - llm.llm_use - INFO - Received response for chunk 46.
+2024-10-10 12:38:15,251 - llm.llm_use - INFO - Received response for chunk 47.
+2024-10-10 12:38:19,273 - llm.llm_use - INFO - Received response for chunk 48.
+2024-10-10 12:38:28,143 - llm.llm_use - INFO - Received response for chunk 49.
+2024-10-10 12:38:30,750 - llm.llm_use - INFO - Received response for chunk 50.
+2024-10-10 12:38:33,461 - llm.llm_use - INFO - Received response for chunk 51.
+2024-10-10 12:38:37,636 - llm.llm_use - INFO - Received response for chunk 52.
+2024-10-10 12:38:39,370 - llm.llm_use - INFO - Received response for chunk 53.
+2024-10-10 12:38:41,931 - llm.llm_use - INFO - Received response for chunk 54.
+2024-10-10 12:38:43,628 - llm.llm_use - INFO - Received response for chunk 55.
+2024-10-10 12:38:47,084 - llm.llm_use - INFO - Received response for chunk 56.
+2024-10-10 12:38:49,298 - llm.llm_use - INFO - Received response for chunk 57.
+2024-10-10 12:38:52,579 - llm.llm_use - INFO - Received response for chunk 58.
+2024-10-10 12:38:55,418 - llm.llm_use - INFO - Received response for chunk 59.
+2024-10-10 12:38:58,949 - llm.llm_use - INFO - Received response for chunk 60.
+2024-10-10 12:39:01,724 - llm.llm_use - INFO - Received response for chunk 61.
+2024-10-10 12:39:05,349 - llm.llm_use - INFO - Received response for chunk 62.
+2024-10-10 12:39:07,339 - llm.llm_use - INFO - Received response for chunk 63.
+2024-10-10 12:39:10,182 - llm.llm_use - INFO - Received response for chunk 64.
+2024-10-10 12:39:12,090 - llm.llm_use - INFO - Received response for chunk 65.
+2024-10-10 12:39:13,866 - llm.llm_use - INFO - Received response for chunk 66.
+2024-10-10 12:39:16,562 - llm.llm_use - INFO - Received response for chunk 67.
+2024-10-10 12:39:18,688 - llm.llm_use - INFO - Received response for chunk 68.
+2024-10-10 12:39:20,621 - llm.llm_use - INFO - Received response for chunk 69.
+2024-10-10 12:39:23,039 - llm.llm_use - INFO - Received response for chunk 70.
+2024-10-10 12:39:26,757 - llm.llm_use - INFO - Received response for chunk 71.
+2024-10-10 12:39:29,857 - llm.llm_use - INFO - Received response for chunk 72.
+2024-10-10 12:39:31,891 - llm.llm_use - INFO - Received response for chunk 73.
+2024-10-10 12:39:33,674 - llm.llm_use - INFO - Received response for chunk 74.
+2024-10-10 12:39:35,775 - llm.llm_use - INFO - Received response for chunk 75.
+2024-10-10 12:39:38,264 - llm.llm_use - INFO - Received response for chunk 76.
+2024-10-10 12:39:41,201 - llm.llm_use - INFO - Received response for chunk 77.
+2024-10-10 12:39:43,479 - llm.llm_use - INFO - Received response for chunk 78.
+2024-10-10 12:39:46,681 - llm.llm_use - INFO - Received response for chunk 79.
+2024-10-10 12:39:50,878 - llm.llm_use - INFO - Received response for chunk 80.
+2024-10-10 12:39:54,777 - llm.llm_use - INFO - Received response for chunk 81.
+2024-10-10 12:39:57,421 - llm.llm_use - INFO - Received response for chunk 82.
+2024-10-10 12:40:01,309 - llm.llm_use - INFO - Received response for chunk 83.
+2024-10-10 12:40:03,056 - llm.llm_use - INFO - Received response for chunk 84.
+2024-10-10 12:40:05,936 - llm.llm_use - INFO - Received response for chunk 85.
+2024-10-10 12:40:07,406 - llm.llm_use - INFO - Received response for chunk 86.
+2024-10-10 12:40:09,703 - llm.llm_use - INFO - Received response for chunk 87.
+2024-10-10 12:40:12,473 - llm.llm_use - INFO - Received response for chunk 88.
+2024-10-10 12:40:16,048 - llm.llm_use - INFO - Received response for chunk 89.
+2024-10-10 12:40:21,399 - llm.llm_use - INFO - Received response for chunk 90.
+2024-10-10 12:40:23,917 - llm.llm_use - INFO - Received response for chunk 91.
+2024-10-10 12:40:26,332 - llm.llm_use - INFO - Received response for chunk 92.
+2024-10-10 12:40:28,284 - llm.llm_use - INFO - Received response for chunk 93.
+2024-10-10 12:43:16,570 - root - INFO - Logging is configured.
+2024-10-10 12:43:36,414 - streamline - INFO - Received new user query: 'what data do you have on the pm2.5 map and exposure? '
+2024-10-10 12:43:36,414 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:43:37,945 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:43:37,973 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:43:37,973 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:43:39,797 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:43:44,767 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:43:49,666 - llm.llm_use - INFO - Received user query: 'what data do you have on the pm2.5 map and exposure? '
+2024-10-10 12:43:49,666 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:43:50,646 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 1000-row parts.
+2024-10-10 12:43:52,919 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:43:56,269 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:44:01,308 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:44:03,202 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 12:44:05,510 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 12:44:07,587 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 12:44:11,689 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 12:44:14,337 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 12:44:16,350 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 12:44:18,270 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 12:44:21,370 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 12:44:23,174 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 12:44:25,878 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 12:44:29,535 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 12:44:33,940 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 12:44:36,104 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 12:44:38,756 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 12:44:40,881 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 12:44:42,881 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 12:44:47,535 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 12:44:51,233 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 12:44:54,003 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 12:44:57,532 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 12:45:00,927 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 12:45:02,770 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 12:45:05,074 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 12:45:05,088 - streamline - INFO - Streamline process completed in 88.67 seconds.
+2024-10-10 12:52:55,261 - root - INFO - Logging is configured.
+2024-10-10 12:53:13,295 - streamline - INFO - Received new user query: 'can you find me the dataset about pm2.5 levels and send me the hyperlink to it? '
+2024-10-10 12:53:13,295 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:53:14,874 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:53:14,905 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:53:14,905 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:53:16,675 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:53:20,433 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:53:24,629 - llm.llm_use - INFO - Received user query: 'can you find me the dataset about pm2.5 levels and send me the hyperlink to it? '
+2024-10-10 12:53:24,629 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:53:25,634 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 1000-row parts.
+2024-10-10 12:53:28,162 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:53:30,997 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:53:33,724 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:55:33,964 - root - INFO - Logging is configured.
+2024-10-10 12:56:02,899 - streamline - INFO - Received new user query: 'what are the columns of the dataset on pm2.5 levels? '
+2024-10-10 12:56:02,899 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:56:04,398 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:56:04,430 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:56:04,430 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:56:06,187 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:56:09,666 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:56:13,299 - llm.llm_use - INFO - Received user query: 'what are the columns of the dataset on pm2.5 levels? '
+2024-10-10 12:56:13,299 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:56:14,307 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 1000-row parts.
+2024-10-10 12:56:17,204 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:56:18,890 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:56:20,701 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:56:29,751 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 12:56:34,091 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 12:56:37,598 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 12:56:39,682 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 12:56:41,988 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 12:56:44,801 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 12:56:52,970 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 12:56:55,352 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 12:57:05,009 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 12:57:07,523 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 12:57:09,518 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 12:57:12,968 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 12:57:17,852 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 12:57:21,635 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 12:57:26,137 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 12:57:30,384 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 12:57:33,401 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 12:57:34,748 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 12:57:37,779 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 12:57:40,128 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 12:57:42,913 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 12:57:44,579 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 12:57:47,438 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 12:57:47,453 - streamline - INFO - Streamline process completed in 104.55 seconds.
+2024-10-10 12:59:05,206 - root - INFO - Logging is configured.
+2024-10-10 12:59:07,593 - root - INFO - Logging is configured.
+2024-10-10 12:59:32,360 - streamline - INFO - Received new user query: 'what data do you have on pm2.5 map and exposure? '
+2024-10-10 12:59:32,360 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 12:59:34,141 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 12:59:34,169 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 12:59:34,169 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 12:59:35,937 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 12:59:40,122 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 12:59:45,320 - llm.llm_use - INFO - Received user query: 'what data do you have on pm2.5 map and exposure? '
+2024-10-10 12:59:45,320 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 12:59:46,339 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 1000-row parts.
+2024-10-10 12:59:49,235 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 12:59:52,100 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 12:59:54,500 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 12:59:56,436 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:00:01,995 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:00:07,835 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:00:09,559 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 13:00:11,540 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 13:00:13,964 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 13:00:17,011 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 13:00:18,846 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 13:00:22,430 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 13:00:25,169 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 13:00:27,065 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 13:00:28,641 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 13:00:30,410 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 13:00:32,339 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 13:00:35,432 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 13:00:39,570 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 13:00:43,573 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 13:00:46,501 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 13:00:49,901 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 13:00:53,088 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 13:00:56,530 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 13:00:59,989 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 13:01:02,655 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 13:01:02,670 - streamline - INFO - Streamline process completed in 90.31 seconds.
+2024-10-10 13:06:36,809 - root - INFO - Logging is configured.
+2024-10-10 13:07:53,892 - streamline - INFO - Received new user query: 'Can you summarize what data you have on pm2.5 levels? '
+2024-10-10 13:07:53,892 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:07:55,518 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:07:55,602 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:07:55,602 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:07:57,420 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:08:05,368 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:08:10,638 - llm.llm_use - INFO - Received user query: 'Can you summarize what data you have on pm2.5 levels? '
+2024-10-10 13:08:10,638 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:08:11,663 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 1000-row parts.
+2024-10-10 13:08:15,557 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:08:17,010 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:08:20,658 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:08:23,291 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:08:25,839 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:08:27,907 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:08:29,497 - llm.llm_use - INFO - Received response for chunk 7.
+2024-10-10 13:08:31,376 - llm.llm_use - INFO - Received response for chunk 8.
+2024-10-10 13:08:37,649 - llm.llm_use - INFO - Received response for chunk 9.
+2024-10-10 13:08:42,761 - llm.llm_use - INFO - Received response for chunk 10.
+2024-10-10 13:08:44,872 - llm.llm_use - INFO - Received response for chunk 11.
+2024-10-10 13:08:50,538 - llm.llm_use - INFO - Received response for chunk 12.
+2024-10-10 13:08:56,142 - llm.llm_use - INFO - Received response for chunk 13.
+2024-10-10 13:08:59,319 - llm.llm_use - INFO - Received response for chunk 14.
+2024-10-10 13:09:01,109 - llm.llm_use - INFO - Received response for chunk 15.
+2024-10-10 13:09:05,467 - llm.llm_use - INFO - Received response for chunk 16.
+2024-10-10 13:09:07,071 - llm.llm_use - INFO - Received response for chunk 17.
+2024-10-10 13:09:10,225 - llm.llm_use - INFO - Received response for chunk 18.
+2024-10-10 13:09:12,009 - llm.llm_use - INFO - Received response for chunk 19.
+2024-10-10 13:09:13,894 - llm.llm_use - INFO - Received response for chunk 20.
+2024-10-10 13:09:16,026 - llm.llm_use - INFO - Received response for chunk 21.
+2024-10-10 13:09:18,599 - llm.llm_use - INFO - Received response for chunk 22.
+2024-10-10 13:09:21,931 - llm.llm_use - INFO - Received response for chunk 23.
+2024-10-10 13:09:25,671 - llm.llm_use - INFO - Received response for chunk 24.
+2024-10-10 13:09:27,635 - llm.llm_use - INFO - Received response for chunk 25.
+2024-10-10 13:09:36,936 - llm.llm_use - INFO - Received response for chunk 26.
+2024-10-10 13:09:36,951 - streamline - INFO - Streamline process completed in 103.06 seconds.
+2024-10-10 13:11:16,038 - root - INFO - Logging is configured.
+2024-10-10 13:11:25,736 - root - INFO - Logging is configured.
+2024-10-10 13:11:49,646 - streamline - INFO - Received new user query: 'do you have a dataset about pm2.5 levels? '
+2024-10-10 13:11:49,646 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:11:51,214 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:11:51,260 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:11:51,260 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:11:53,228 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:11:56,834 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:12:06,491 - llm.llm_use - INFO - Received user query: 'do you have a dataset about pm2.5 levels? '
+2024-10-10 13:12:06,491 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:12:07,452 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 10000-row parts.
+2024-10-10 13:12:15,053 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:12:22,524 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:12:25,935 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:12:25,949 - streamline - INFO - Streamline process completed in 36.30 seconds.
+2024-10-10 13:16:15,223 - root - INFO - Logging is configured.
+2024-10-10 13:16:25,697 - root - INFO - Logging is configured.
+2024-10-10 13:16:39,132 - streamline - INFO - Received new user query: 'what data do you have on the pm2.5? '
+2024-10-10 13:16:39,132 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:16:40,762 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:16:40,793 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:16:40,793 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:16:42,579 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:16:46,974 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:16:51,984 - llm.llm_use - INFO - Received user query: 'what data do you have on the pm2.5? '
+2024-10-10 13:16:51,985 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:16:52,976 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:17:01,709 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:17:07,100 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:17:10,689 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:17:14,776 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:17:19,523 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:17:21,349 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:17:21,364 - streamline - INFO - Streamline process completed in 42.23 seconds.
+2024-10-10 13:18:12,603 - streamline - INFO - Received new user query: 'what internal audits were planned in 2019? '
+2024-10-10 13:18:12,604 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:18:14,145 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:18:14,145 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:18:14,146 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:18:15,421 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:18:19,250 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 13:18:21,723 - llm.llm_use - INFO - Received user query: 'what internal audits were planned in 2019? '
+2024-10-10 13:18:21,723 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:18:21,726 - llm.llm_use - INFO - Processing dataset with 46 rows, chunking into 5000-row parts.
+2024-10-10 13:18:25,855 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:18:25,855 - streamline - INFO - Streamline process completed in 13.25 seconds.
+2024-10-10 13:18:25,855 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-10 13:18:51,815 - root - INFO - Logging is configured.
+2024-10-10 13:19:00,118 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 13:19:00,118 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:19:01,265 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:19:01,292 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:19:01,292 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:19:03,060 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:19:06,137 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 13:19:08,321 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-10 13:19:08,322 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:19:08,325 - llm.llm_use - INFO - Processing dataset with 46 rows, chunking into 5000-row parts.
+2024-10-10 13:19:11,084 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:19:11,084 - streamline - INFO - Streamline process completed in 10.97 seconds.
+2024-10-10 13:19:34,827 - streamline - INFO - Received new user query: 'what information have you got on pm2.5 dataset? '
+2024-10-10 13:19:34,827 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:19:36,274 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:19:36,274 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:19:36,274 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:19:37,523 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:19:40,839 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:19:45,927 - llm.llm_use - INFO - Received user query: 'what information have you got on pm2.5 dataset? '
+2024-10-10 13:19:45,927 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:19:47,037 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:19:52,571 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:19:56,441 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:20:01,149 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:20:05,187 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:20:08,659 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:20:10,772 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:20:10,786 - streamline - INFO - Streamline process completed in 35.96 seconds.
+2024-10-10 13:20:10,787 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-10 13:24:47,447 - root - INFO - Logging is configured.
+2024-10-10 13:25:07,892 - streamline - INFO - Received new user query: 'the dataset about pm2.5 levels, can you explain to me what is in each column?'
+2024-10-10 13:25:07,892 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:25:09,558 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:25:09,590 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:25:09,590 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:25:11,368 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:25:15,698 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:25:21,104 - llm.llm_use - INFO - Received user query: 'the dataset about pm2.5 levels, can you explain to me what is in each column?'
+2024-10-10 13:25:21,104 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:25:22,104 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:25:28,313 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:25:32,433 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:25:36,413 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:25:42,219 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:25:46,385 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:25:50,628 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:25:50,642 - streamline - INFO - Streamline process completed in 42.75 seconds.
+2024-10-10 13:26:52,705 - root - INFO - Logging is configured.
+2024-10-10 13:26:56,043 - streamline - INFO - Received new user query: 'the dataset about pm2.5 levels, can you explain to me what is in each column?'
+2024-10-10 13:26:56,043 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:26:57,602 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:26:57,632 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:26:57,632 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:26:59,394 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:27:04,871 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:27:32,535 - root - INFO - Logging is configured.
+2024-10-10 13:27:39,073 - streamline - INFO - Received new user query: 'the dataset about pm2.5 levels, can you explain to me what is in each column?'
+2024-10-10 13:27:39,073 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:27:40,473 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:27:40,503 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:27:40,504 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:27:42,217 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:27:46,801 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:27:51,839 - llm.llm_use - INFO - Received user query: 'the dataset about pm2.5 levels, can you explain to me what is in each column?'
+2024-10-10 13:27:51,839 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:27:52,843 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:27:56,249 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:28:02,846 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:28:06,329 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:28:10,244 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:28:14,430 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:28:18,220 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:28:18,234 - streamline - INFO - Streamline process completed in 39.16 seconds.
+2024-10-10 13:30:06,252 - root - INFO - Logging is configured.
+2024-10-10 13:30:43,064 - streamline - INFO - Received new user query: 'this dataset is about pm25 levels, can you explain to me what is in each column?'
+2024-10-10 13:30:43,064 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:30:44,703 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:30:44,733 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:30:44,733 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:30:46,485 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:30:50,104 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:30:54,972 - llm.llm_use - INFO - Received user query: 'this dataset is about pm25 levels, can you explain to me what is in each column?'
+2024-10-10 13:30:54,972 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:30:55,971 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:31:00,138 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:31:03,950 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:31:07,730 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:31:10,696 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:31:14,771 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:31:16,089 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:31:16,103 - streamline - INFO - Streamline process completed in 33.04 seconds.
+2024-10-10 13:32:35,205 - root - INFO - Logging is configured.
+2024-10-10 13:32:59,970 - streamline - INFO - Received new user query: 'the dataset about pm2.5, what do the columns in that dataset stand for? '
+2024-10-10 13:32:59,971 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:33:01,595 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:33:01,624 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:33:01,624 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:33:03,444 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:33:07,450 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:33:12,552 - llm.llm_use - INFO - Received user query: 'the dataset about pm2.5, what do the columns in that dataset stand for? '
+2024-10-10 13:33:12,553 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:33:13,515 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:33:18,024 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:33:24,636 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:33:27,990 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:33:33,036 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:33:36,356 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:33:37,841 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:33:37,855 - streamline - INFO - Streamline process completed in 37.88 seconds.
+2024-10-10 13:34:20,257 - root - INFO - Logging is configured.
+2024-10-10 13:34:32,670 - streamline - INFO - Received new user query: 'do you have data on the pm2.5 ? '
+2024-10-10 13:34:32,670 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:34:34,218 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0.01, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:34:34,248 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:34:34,248 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:34:35,986 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:34:40,164 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:34:44,635 - llm.llm_use - INFO - Received user query: 'do you have data on the pm2.5 ? '
+2024-10-10 13:34:44,635 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:34:45,623 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:34:53,028 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:34:56,739 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:35:01,412 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:35:10,654 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:35:14,600 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:35:16,901 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:35:16,915 - streamline - INFO - Streamline process completed in 44.25 seconds.
+2024-10-10 13:40:09,107 - root - INFO - Logging is configured.
+2024-10-10 13:40:41,885 - root - INFO - Logging is configured.
+2024-10-10 13:40:54,617 - streamline - INFO - Received new user query: 'this dataset is about pm25 levels, can you explain to me what is in each column?'
+2024-10-10 13:40:54,618 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:40:56,166 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:40:56,197 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:40:56,197 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:40:58,138 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:41:05,703 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:41:10,709 - llm.llm_use - INFO - Received user query: 'this dataset is about pm25 levels, can you explain to me what is in each column?'
+2024-10-10 13:41:10,709 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:41:11,715 - llm.llm_use - INFO - Processing dataset with 25947 rows, chunking into 5000-row parts.
+2024-10-10 13:41:19,229 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:41:24,773 - llm.llm_use - INFO - Received response for chunk 2.
+2024-10-10 13:41:28,882 - llm.llm_use - INFO - Received response for chunk 3.
+2024-10-10 13:41:33,469 - llm.llm_use - INFO - Received response for chunk 4.
+2024-10-10 13:41:38,541 - llm.llm_use - INFO - Received response for chunk 5.
+2024-10-10 13:41:40,796 - llm.llm_use - INFO - Received response for chunk 6.
+2024-10-10 13:41:40,796 - llm.llm_use - INFO - Final answer generated by LLM: To answer your query effectively, I have analyzed the provided datasets that are related to Southwark, a borough located in London, England. These datasets appear to be geographical coordinates of various locations within Southwark.
+
+Here's an overview of some points of interest and their respective coordinates:
+
+1. Dataset E00019710, E00019711, E00019790, E00019718, E00019719, E00167982, and E00167981: These datasets seem to correspond to locations with latitude and longitude coordinates that are relatively close together. It appears these points represent a cluster of locations within Southwark, mostly around the lower half of the borough.
+
+   Links to the original datasets for further reference:
+   - https://data.london.gov.uk/dataset/borough-boundary-ward-boundaries-2018
+   - https://data.london.gov.uk/dataset/london-borough-wards-geography
+   - https://data.london.gov.uk/dataset/london-boroughs-administrative-boundaries
+
+2. Dataset E00020146, E00020147, E00020144, E00020145, E00020142, E00020143, E00020140, E00020141, E00020148, E00020149: These datasets also seem to correspond to locations with latitude and longitude coordinates that are spread throughout Southwark.
+
+   Links to the original datasets for further reference:
+   - https://data.london.gov.uk/dataset/borough-boundary-ward-boundaries-2018
+   - https://data.london.gov.uk/dataset/london-boroughs-administrative-boundaries
+
+3. Dataset E00019906, E00019987, E00019907, E00019986, E00019904, E00019985, E00019905, and E00019984: These datasets also correspond to locations with latitude and longitude coordinates within Southwark. It appears these points are located in the northern part of the borough.
+
+   Links to the original datasets for further reference:
+   - https://data.london.gov.uk/dataset/borough-boundary-ward-boundaries-2018
+   - https://data.london.gov.uk/dataset/london-boroughs-administrative-boundaries
+   - https://data.london.gov.uk/dataset/borough-boundary-ward-boundaries-2018-polygon
+To begin with, let us consider the data set provided, which is accessible at <https://data.london.gov.uk/dataset>. This dataset provides a list of geographic coordinates for various locations within the borough of Lambeth in London, United Kingdom.
+
+When examining the dataset, we can observe that it contains multiple rows with four columns each: "Dataset ID," "Borough," "Latitude," and "Longitude." The Borough column indicates that all these data points are specific to the borough of Lambeth.
+
+To answer your potential questions based on this dataset, let us assume the following queries:
+
+1. What is the latitude and longitude of a randomly selected location in Lambeth?
+   To find a randomly selected location, we can pick any row from the dataset. For example, if I were to choose the first row, E00015953, it has a Latitude of 16.43129256676 and Longitude of -0.087745 (since the longitudes are in the negative half-plane in the WGS84 coordinate system).
+
+2. How many unique locations do we have within Lambeth, based on this dataset?
+   To find the number of unique locations, we can use a function that removes duplicates from the data set. Since the Borough column indicates that all these data points are specific to Lambeth, and there's no duplicate borough value in the dataset, it is safe to assume that every unique Dataset ID corresponds to a distinct location within Lambeth. However, without actually counting or deduplicating the data, I can't give an exact number for this particular dataset.
+
+3. What is the maximum and minimum latitude value found in the dataset?
+   To find the max and min latitude values, we can simply look at the minimum and maximum Latitude values present in the dataset. In the given data set, the minimum latitude is 15.72045796493, and the maximum latitude is 18.627796026377.
+In this dataset, you will find geographical coordinates for various locations within the area of Harrow, London. The data is sourced from the Open Data Portal (<https://data.london.gov.uk/>) and can be useful for a variety of purposes such as creating maps or applications that rely on location data.
+
+To specifically answer your query about the latitudes and longitudes of locations within Harrow, let me provide you with some examples:
+- E00010710 (15.241685284168, N)
+- E00010791 (15.015697685588, N)
+- E00010711 (15.550349736825, N)
+- E00010790 (14.8980025073, W)
+- E00010718 (15.273227551691, N)
+- E00010799 (15.067236099069, W)
+- And many more can be found in the dataset.
+The dataset you've provided appears to be geospatial data for various points of interest (POIs) within the Croydon area, as denoted by the "E" prefix in the identifiers. This data seems to include latitude and longitude coordinates for each POI.
+
+When asked to locate specific types of POIs within Croydon, we can use spatial querying techniques to filter and analyze this dataset accordingly. For instance:
+
+1. To find all schools in Croydon, you could search for POIs that have the "Education" or "School" category by using a GIS software or tool with the ability to perform spatial queries on datasets.
+
+2. To find hospitals within Croydon, you could search for POIs that have the "Healthcare" or "Hospital" category.
+
+3. To find parks in Croydon, you could search for POIs that have the "Park" or "Recreation" category.
+
+However, I must note that this dataset does not explicitly provide categories for each POI. In order to perform categorical queries, additional data (such as a 'category' column) may need to be available in the dataset.
+
+For now, you can manually analyze the dataset and search for POIs that seem likely to fit your criteria based on their coordinates. For example, if you find a POI with longitude around 15.60 and latitude around 51.38, it could potentially be a school or a hospital (although this is just an approximation).
+
+References:
+- Open Data Portal (URL not provided)
+To start, let me reference the London Datastore (<https://data.london.gov.uk/>) where I have obtained the dataset you provided. This data contains coordinates of various locations in Barnet, a borough in North London.
+
+Now, I will answer some common questions related to the data you provided:
+
+1. What is the minimum and maximum latitude found in the dataset for Barnet?
+   - The minimum latitude is 14.81783530409 (coordinate E00000867) and the maximum latitude is 17.334890907646 (coordinate E00001033).
+
+2. What is the average latitude of locations in Barnet?
+   - To find the average latitude, I will sum all the latitude values in the dataset and then divide by the total number of entries. The average latitude of locations in Barnet is approximately 15.967230487218.
+
+3. What are the coordinates with longitude closest to 16.0 degrees for Barnet?
+   - There are two records with longitudes close to 16.0 degrees in Barnet: E00000679 with latitude 16.002284891465 and E00000678 with latitude 16.244815641375.
+
+4. Are there any coordinates in the dataset outside of London's boundary?
+   - The lowest latitude value, 14.81783530409, falls outside the typical range for London (coordinate E00000867). However, this might be due to a data anomaly or error.
+Based on the data provided which can be found at <https://geoportal.statistics.gov.uk/>, the given coordinates correspond to various locations within the Barking and Dagenham district in London, England.
+
+Here are some key points to note:
+- The dataset seems to contain place names along with their geographical coordinates.
+- There are multiple instances of Barking and Dagenham, suggesting that there are different locations sharing the same name within this district.
+- The coordinates provided range from (15.040262259543, 51.667251005011) to (15.886749749045, 51.886749749045).
+- Some of the coordinates are relatively close to each other, suggesting that they may correspond to nearby locations within Barking and Dagenham.
+- The dataset does not provide additional context or information about these locations beyond their names and geographical coordinates. It would be necessary to research further using additional resources if more specific details are required.
+2024-10-10 13:41:40,811 - streamline - INFO - Streamline process completed in 46.19 seconds.
+2024-10-10 13:49:20,650 - streamline - INFO - Received new user query: 'can you give me a dataset on water pollution? '
+2024-10-10 13:49:20,650 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 13:49:22,472 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 13:49:22,473 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 13:49:22,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 13:49:23,780 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 13:49:30,400 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 13:49:32,192 - llm.llm_use - INFO - Received user query: 'can you give me a dataset on water pollution? '
+2024-10-10 13:49:32,192 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 13:49:32,197 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 5000-row parts.
+2024-10-10 13:49:33,010 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 13:49:33,010 - llm.llm_use - INFO - Final answer generated by LLM: The dataset "Water pollution, substantiated incidents" provides details of reported instances of water pollution in the UK, which can be found at [http://data.defra.gov.uk/ops/ea/Amended+/water_pollution_substantiated_incidents.csv]. This dataset is named 'Water pollution'. If you're looking for a dataset on water pollution, I would recommend checking out this resource.
+2024-10-10 13:49:33,011 - streamline - INFO - Streamline process completed in 12.36 seconds.
+2024-10-10 13:49:33,011 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-10 14:08:03,549 - streamline - INFO - Received new user query: 'in detail, what is this dataset saying?'
+2024-10-10 14:08:03,550 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 14:08:06,547 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 14:08:06,548 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 14:08:06,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 14:08:07,861 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 14:08:19,430 - root - INFO - Logging is configured.
+2024-10-10 14:08:43,410 - streamline - INFO - Received new user query: 'can you give me a dataset on water pollution? '
+2024-10-10 14:08:43,410 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 14:08:44,947 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 14:08:44,990 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 14:08:44,990 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 14:08:46,769 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 14:08:49,519 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 14:08:51,327 - llm.llm_use - INFO - Received user query: 'can you give me a dataset on water pollution? '
+2024-10-10 14:08:51,327 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 14:08:51,329 - llm.llm_use - INFO - Processing dataset with 21 rows, chunking into 5000-row parts.
+2024-10-10 14:08:57,416 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 14:08:57,416 - llm.llm_use - INFO - Final answer generated by LLM: To begin, let me provide you with an overview of the datasets available:
+
+1. [Environment Agency](https://environment.data.gov.uk/) - provides data on water pollution incidents in England.
+2. [Scottish Environment Protection Agency (SEPA)](https://www.sepa.org.uk/about-us/open-data/) - offers information on water pollution incidents in Scotland.
+3. [Environment and Heritage Service](http://webarchive.nationalarchives.gov.uk/20190625104738/https://www.environment.gov.uk/environment/quality-issues/water/monitoring-and-reporting/open-data/) (now part of the Department for Environment, Food and Rural Affairs) - offers historical data on water pollution incidents in England and Wales before 1999.
+
+Now let me answer your queries regarding the datasets:
+
+- What are the total number of substantiated water pollution incidents with an impact on the water environment in England from 1999 to 2003? The data provided shows figures for years 1999, 2000, 2001, 2002 and 2003. In these years, the Environment Agency reported a total of 14,510, 19,720, 19,086, 17,863, and 13,813 incidents respectively (source: [Environment Agency](https://environment.data.gov.uk/))
+
+- How many substantiated water pollution incidents with an impact on the water environment were reported in England for each year from 2004 to 2007? The data provided does not offer figures for years after 2003, so I cannot provide specific numbers for these years. You can find the most recent data by visiting the [Environment Agency's open data portal](https://environment.data.gov.uk/).
+
+- What is the total number of water pollution incidents reported in Scotland from 1998 to 2003? The data provided shows figures for years 1998, 2000, 2001, 2002, and 2003. In these years, SEPA reported a total of 1,409, 3,020, 3,081, 2,752, and 1,480 incidents respectively (source: [Scottish Environment Protection Agency](https://www.sepa.org.uk/about-us/open-data/))
+
+Please note that the data provided does not offer figures for years before 1998 or after 2003 for Scotland, and it includes some water pollution incidents with no significant environmental impact (source: [Environment Agency](https://environment.data.gov.uk/) and [Scottish Environment Protection Agency](https://www.sepa.org.uk/about-us/open-data/)).
+
+Additionally, I want to clarify that figures before 1999 for England are not comparable to the data after 1999 due to differences in methodology (source: [Environment Agency](https://environment.data.gov.uk/)).
+2024-10-10 14:08:57,416 - streamline - INFO - Streamline process completed in 14.01 seconds.
+2024-10-10 14:10:52,847 - streamline - INFO - Received new user query: 'in detail, what are the columns name of this dataset? '
+2024-10-10 14:10:52,847 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 14:10:54,505 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 14:10:54,506 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 14:10:54,506 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 14:10:55,775 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 14:10:57,957 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-10 14:11:07,429 - llm.llm_use - INFO - Received user query: 'in detail, what are the columns name of this dataset? '
+2024-10-10 14:11:07,429 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 14:11:07,435 - llm.llm_use - INFO - Processing dataset with 23 rows, chunking into 5000-row parts.
+2024-10-10 14:11:10,412 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 14:11:10,412 - llm.llm_use - INFO - Processing dataset with 17 rows, chunking into 5000-row parts.
+2024-10-10 14:12:14,550 - root - INFO - Logging is configured.
+2024-10-10 14:12:32,422 - streamline - INFO - Received new user query: 'how was the water pollution like in the UK? '
+2024-10-10 14:12:32,422 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 14:12:34,247 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 14:12:34,277 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 14:12:34,277 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 14:12:36,073 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 14:12:38,793 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 14:12:40,405 - llm.llm_use - INFO - Received user query: 'how was the water pollution like in the UK? '
+2024-10-10 14:12:40,405 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 14:12:40,409 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 5000-row parts.
+2024-10-10 14:12:41,739 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 14:12:41,739 - llm.llm_use - INFO - Final answer generated by LLM: Based on the Water Pollution dataset you provided (<http://data.defra.gov.uk/ops/ea/Amended+/water_pollution_substantiated_incidents.csv>), it appears that water pollution incidents in the UK varied over the years from 2002 to 2005. The number of substantiated instances of water pollution increased from 1,091 in 2004 to 1,890 in 2005, then decreased slightly to 1,744 in 2006. If you would like more specific information or insights about this dataset or other related datasets, feel free to ask!
+2024-10-10 14:12:41,739 - streamline - INFO - Streamline process completed in 9.32 seconds.
+2024-10-10 15:36:02,766 - root - INFO - Logging is configured.
+2024-10-10 15:36:13,126 - streamline - INFO - Received new user query: 'how was the water pollution like in the uk? '
+2024-10-10 15:36:13,126 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 15:36:14,832 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 15:36:14,870 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 15:36:14,870 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 15:36:17,049 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 15:36:23,375 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 15:36:24,944 - llm.llm_use - INFO - Received user query: 'how was the water pollution like in the uk? '
+2024-10-10 15:36:24,944 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 15:36:24,949 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 5000-row parts.
+2024-10-10 15:36:26,851 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 15:36:26,851 - llm.llm_use - INFO - Final answer generated by LLM: The water pollution in the UK can be observed through the "Water pollution, substantiated incidents" dataset accessible at <http://data.defra.gov.uk/ops/ea/Amended+/water_pollution_substantiated_incidents.csv>. According to this dataset, the number of substantiated water pollution cases in the UK from 2002 to 2005 was:
+   - In 2002: 1,805 incidents
+   - In 2003: 1,534 incidents
+   - In 2004: 1,091 incidents
+   - In 2005: 1,056 incidents.
+
+The trend shows an increase in the number of water pollution cases from 2002 to 2005, reaching a peak in 2005. However, it is essential to analyze further years' data to get a comprehensive understanding of water pollution trends in the UK over time.
+2024-10-10 15:36:26,851 - streamline - INFO - Streamline process completed in 13.73 seconds.
+2024-10-10 15:41:37,780 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 15:41:37,780 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 15:41:39,604 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 15:41:39,604 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 15:41:39,604 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 15:41:40,999 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 15:41:48,452 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 15:41:50,878 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2018? '
+2024-10-10 15:41:50,878 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 15:41:50,881 - llm.llm_use - INFO - Processing dataset with 41 rows, chunking into 5000-row parts.
+2024-10-10 15:42:00,002 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 15:42:00,002 - llm.llm_use - INFO - Final answer generated by LLM: Here are some queries based on the datasets provided:
+
+1. For assessing the effectiveness of FSA official controls for cutting establishments, you can refer to the "Follow up audit to assess effectiveness of management actions implemented to address issues identified. Cutting Establishments Unannounced Inspections" from the [Internal Audit Plan 2017-18](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv) dataset.
+
+2. To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law for food hygiene/food premises and infectious disease control in England, you can refer to "Complaints about food hygiene/ food premises and infectious disease control-England" from the same dataset.
+
+3. For following up on the progress by LAs in Wales in implementing full audit action plans, you can check "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" from the same dataset.
+
+4. To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland, you can look at "Organisation and Management of Official controls delivered by LAs in Northern Ireland" from the same dataset.
+
+5. For evaluating the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England where LAs achieved less than 90% of planned interventions at premises rated A-E, you can consider "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E" from the same dataset.
+
+6. To fully assess the effectiveness of the new model audits for Animal Feed Law Enforcement Services in Wales, you can check the "Delivery of Animal Feed Law Enforcement Services in Wales" from the same dataset.
+
+7. For assessing the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England regarding allergens, you can look at "Allergens -England" from the same dataset.
+
+8. To review the efficacy of the plans in place to manage the risk of disruption arising from the transition to the new model for the Evolve Programme, you can consider the "Evolve Programme" from the same dataset.
+
+9. For assessing objective setting and KPIs at Directorate and cascading these to individual team level and the subsequent monitoring and reporting of performance in Business planning and performance management, you can check "Business planning and performance management" from the same dataset.
+
+10. To review effectiveness of contract management arrangements for the Management of Contract for supply of OVs and MHIs, you can look at "Management of Contract for supply of OVs and MHIs" from the same dataset.
+
+11. For assessing budgets available at corporate, directorate, and team level to ensure these are aligned with FSA priorities in Training and development budgets, you can consider "Training and development budgets" from the same dataset.
+
+12. To review transfer of programme outcomes to business as usual for Science, Evidence and Information programme, you can look at "Science, Evidence  and Information programme" from the same dataset.
+
+13. For evaluating risk identification, assessment, and mitigation plans related to Planning for Brexit, you can consider "Planning for Brexit" from the same dataset.
+
+14. To examine work of the Investment Board in prioritizing resource allocation, you can look at "Investment Board" from the same dataset.
+
+15. For reviewing effectiveness of business as usual controls following implementation of the Campylobacter Programme, you can consider "Campylobacter Programme" from the same dataset.
+
+16. To assess effectiveness of FSA controls for RDM on farms where the FSA is directly responsible, you can look at "Raw Drinking Milk" from the same dataset.
+
+17. For assessing effectiveness of management actions taken to address issues identified in the report after the original audit in 2016/17 for ABP official controls (follow-up audit), you can consider "ABP official controls (follow-up audit)" from the same dataset.
+
+18. To review effectiveness of the recently introduced system in approved slaughter houses for Slaughterhouse hygiene verification system, you can look at "Slaughterhouse hygiene verification system" from the same dataset.
+
+19. For evaluating the effectiveness of the new product recall model, you can consider "Product Recall - New Model" from the [Internal Audit Plan 2020-21](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2020-21.csv) dataset.
+2024-10-10 15:42:00,002 - streamline - INFO - Streamline process completed in 22.22 seconds.
+2024-10-10 15:42:00,002 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-10 17:35:34,441 - root - INFO - Logging is configured.
+2024-10-10 17:35:43,116 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 17:35:43,116 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 17:35:45,036 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 17:35:45,075 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 17:35:45,075 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 17:35:46,894 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 17:35:55,225 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 17:35:57,742 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-10 17:35:57,742 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-10 17:35:57,744 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 5000-row parts.
+2024-10-10 17:36:01,516 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 17:36:01,516 - llm.llm_use - INFO - Processing dataset with 23 rows, chunking into 5000-row parts.
+2024-10-10 17:36:04,671 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-10 17:36:04,671 - llm.llm_use - INFO - Final answer generated by LLM: The audits planned for the year 2019 can be found in the "The Internal Audit Plan 2019-20" dataset, which is available at this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. In this dataset, audits are categorized as Business Audits or Official Controls Audits, and Local Authority Audits. Some of the planned audits for 2019 under each category include:
+
+1. Business Audits:
+   - Minimum Security Standards
+   - Payroll Leavers / Joiners
+   - Post Project Evaluation Reviews
+   - DAERA Contract Management
+   - Information / Data Security
+   - Product Recall Delivery Assurance
+   - Conflicts of Interest Policy
+   - Financial Assurance
+   - [Others, depending on the range of rows in your dataset]
+
+2. Official Controls Audits:
+   - Official Veterinarian / Official Auxiliaries Training
+   - Animal Welfare[1]
+   - Shellfish
+   - Food Chain Information and Collection & Communication of Inspection Results
+   - Wine Inspection
+   - Raw Drinking Milk (Follow up audit)
+   - Warm meat legislation
+   - Export Certification
+   - [Others, depending on the range of rows in your dataset]
+
+3. Local Authority Audits:
+   - Allergens in England, Wales and Northern Ireland
+   - LA Approved Premises in England
+   - Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland
+   - Delivery of Animal Feed Law Enforcement Services in Wales
+   - Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+   - [Others, depending on the range of rows in your dataset]
+The audits planned for 2019 can be found in the "Internal Audit Plan 2019-20" dataset, which is available at this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv. In this dataset, you will find the following audits planned for 2019:
+
+- Business Audit: Minimum Security Standards, Managing Attendance, Asset Management, General Data Protection Regulation, Product Recall Delivery Assurance audit, Supplier Management- IT Help Desk Services.
+- Official Controls: Minced meat, meat preparations and ready to eat products, Eggs Hygiene, Bovine TB, Notifiable Diseases, Game Handling Establishments follow-up audit, Approval and re-approval of meat establishments, Animal Welfare, Animal -by-Products, Raw Drinking Milk, Cutting Establishments Unannounced Inspections.
+- Local Authority Audits: Complaints about food hygiene/ food premises and infectious disease control-England, Follow-up audits of LAs to check progress in implementing full audit action plans in Wales, Organization and Management of Official controls delivered by LAs in Northern Ireland, Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E, Delivery of Animal Feed Law Enforcement Services in Wales, Allergens -England.
+2024-10-10 17:36:04,671 - streamline - INFO - Streamline process completed in 21.56 seconds.
+2024-10-10 17:44:46,812 - root - INFO - Logging is configured.
+2024-10-10 17:45:36,157 - root - INFO - Logging is configured.
+2024-10-10 17:47:31,604 - root - INFO - Logging is configured.
+2024-10-10 17:47:52,066 - streamline - INFO - Received new user query: 'What audits were planned in 2018?'
+2024-10-10 17:47:52,066 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 17:47:53,877 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 17:47:53,904 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 17:47:53,904 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 17:47:55,692 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 17:48:02,242 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 17:48:07,636 - streamline - INFO - Streamline process completed in 15.57 seconds.
+2024-10-10 17:52:50,623 - root - INFO - Logging is configured.
+2024-10-10 18:00:47,831 - root - INFO - Logging is configured.
+2024-10-10 18:01:08,115 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 18:01:08,116 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:01:09,982 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:01:10,011 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:01:10,012 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:01:11,862 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:01:19,608 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:01:25,144 - llm.llm_use - ERROR - Error generating LLM response: name 'final_answer' is not defined
+2024-10-10 18:01:25,144 - streamline - INFO - Streamline process completed in 17.03 seconds.
+2024-10-10 18:08:02,538 - root - INFO - Logging is configured.
+2024-10-10 18:08:27,798 - root - INFO - Logging is configured.
+2024-10-10 18:08:30,218 - root - INFO - Logging is configured.
+2024-10-10 18:08:37,150 - streamline - INFO - Received new user query: 'what audits were planned in 2018? '
+2024-10-10 18:08:37,151 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:08:38,959 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:08:39,000 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:08:39,000 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:08:40,749 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:08:47,461 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:08:53,788 - llm.llm_use - ERROR - Error generating LLM response: name 'final_answer' is not defined
+2024-10-10 18:08:53,789 - streamline - INFO - Streamline process completed in 16.64 seconds.
+2024-10-10 18:09:31,421 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:09:31,421 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:09:32,724 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:09:32,725 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:09:32,725 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:09:34,151 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:09:37,456 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:09:42,973 - llm.llm_use - ERROR - Error generating LLM response: name 'final_answer' is not defined
+2024-10-10 18:09:42,973 - streamline - INFO - Streamline process completed in 11.55 seconds.
+2024-10-10 18:12:59,242 - root - INFO - Logging is configured.
+2024-10-10 18:13:01,606 - root - INFO - Logging is configured.
+2024-10-10 18:13:17,559 - root - INFO - Logging is configured.
+2024-10-10 18:13:19,942 - root - INFO - Logging is configured.
+2024-10-10 18:13:22,329 - root - INFO - Logging is configured.
+2024-10-10 18:13:24,721 - root - INFO - Logging is configured.
+2024-10-10 18:13:35,158 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:13:35,158 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:13:36,953 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:13:36,988 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:13:36,989 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:13:38,745 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:13:41,652 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:13:46,721 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided metadata, here are the internal audits that were planned for the year 2019:
+
+1. Minimum Security Standards
+2. Payroll Leavers / Joiners
+3. Post Project Evaluation Reviews
+4. DAERA Contract Management
+5. Information / Data Security
+6. Product Recall Delivery Assurance
+7. Conflicts of Interest Policy
+8. Financial Assurance
+9. Official Veterinarian / Official Auxiliaries Training
+10. Animal Welfare
+11. Shellfish
+12. Food Chain Information and Collection & Communication of Inspection Results
+13. Wine Inspection
+14. Raw Drinking Milk (Follow up audit)
+15. Warm meat legislation
+16. Export Certification
+17. "Allergens in England, Wales and Northern Ireland"
+18. LA Approved Premises in England
+19. Food Hygiene Rating Scheme implementation - formal review in Northern Ireland
+20. Delivery of Animal Feed Law Enforcement Services in Wales
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+
+Please find the dataset for the year 2019 at this link: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv>
+2024-10-10 18:13:46,721 - streamline - INFO - Streamline process completed in 11.56 seconds.
+2024-10-10 18:21:17,181 - root - INFO - Logging is configured.
+2024-10-10 18:21:19,552 - root - INFO - Logging is configured.
+2024-10-10 18:21:53,563 - root - INFO - Logging is configured.
+2024-10-10 18:22:01,817 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:22:01,817 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:22:03,582 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:22:03,613 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:22:03,613 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:22:05,424 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:22:11,898 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:22:16,961 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+The audits planned in 2019, as per the provided Internal Audit Plan 2019-20 dataset, include:
+
+1. Minimum Security Standards
+2. Payroll Leavers / Joiners
+3. Post Project Evaluation Reviews
+4. DAERA Contract Management
+5. Information / Data Security
+6. Product Recall Delivery Assurance
+7. Conflicts of Interest Policy
+8. Financial Assurance
+9. Official Veterinarian / Official Auxiliaries Training
+10. Animal Welfare
+11. Shellfish
+12. Food Chain Information and Collection & Communication of Inspection Results
+13. Wine Inspection
+14. Raw Drinking Milk (follow up audit)
+15. Warm meat legislation
+16. Export Certification
+17. "Allergens in England, Wales and Northern Ireland"
+18. LA Approved Premises in England
+19. Food Hygiene Rating Scheme implementation - formal review in Northern Ireland
+20. Delivery of Animal Feed Law Enforcement Services in Wales
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+
+You can find the dataset here: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv>
+2024-10-10 18:22:16,961 - streamline - INFO - Streamline process completed in 15.14 seconds.
+2024-10-10 18:24:49,871 - root - INFO - Logging is configured.
+2024-10-10 18:24:52,283 - root - INFO - Logging is configured.
+2024-10-10 18:24:54,696 - root - INFO - Logging is configured.
+2024-10-10 18:24:57,074 - root - INFO - Logging is configured.
+2024-10-10 18:24:59,451 - root - INFO - Logging is configured.
+2024-10-10 18:25:08,427 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:25:08,427 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:25:10,174 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:25:10,204 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:25:10,204 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:25:11,971 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:25:14,710 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:25:19,617 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided dataset for "Internal Audit Plan 2019-20", the following audits were planned for the year 2019:
+
+* Minimum Security Standards
+* Payroll Leavers / Joiners
+* Post Project Evaluation Reviews
+* DAERA Contract Management
+* Information / Data Security
+* Product Recall Delivery Assurance
+* Conflicts of Interest Policy
+* Financial Assurance
+* Official Veterinarian / Official Auxiliaries Training
+* Animal Welfare
+* Shellfish
+* Food Chain Information and Collection & Communication of Inspection Results
+* Wine Inspection
+* Raw Drinking Milk (Follow up audit)
+* Warm meat legislation
+* Export Certification
+* "Allergens in England, Wales and Northern Ireland"
+* LA Approved Premises in England
+* Food Hygiene Rating Scheme implementation - formal review in Northern Ireland
+* Delivery of Animal Feed Law Enforcement Services in Wales
+* Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+
+You can access the dataset via this link: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv>
+2024-10-10 18:25:19,617 - streamline - INFO - Streamline process completed in 11.19 seconds.
+2024-10-10 18:27:47,987 - streamline - INFO - Received new user query: 'in detail, what is the metadata of this data'
+2024-10-10 18:27:47,987 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:27:49,666 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:27:49,667 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:27:49,667 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:27:51,008 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:27:54,362 - llm.llm_use - INFO - Metadata selection completed. 10 out of 10 datasets are relevant.
+2024-10-10 18:27:59,768 - root - INFO - Logging is configured.
+2024-10-10 18:28:12,686 - streamline - INFO - Received new user query: 'what audits were planned 2019? '
+2024-10-10 18:28:12,686 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:28:14,369 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:28:14,397 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:28:14,397 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:28:16,192 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:28:18,840 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:28:23,889 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned 2019? ':
+Based on the provided "Internal Audit Plan 2019-20" dataset, the following are the audits that were planned for the year 2019:
+
+1. Business Audits:
+   - Minimum Security Standards
+   - Payroll Leavers / Joiners
+   - Post Project Evaluation Reviews
+   - DAERA Contract Management
+   - Information / Data Security
+   - Product Recall Delivery Assurance
+   - Conflicts of Interest Policy
+   - Financial Assurance
+
+2. Official Controls Audits:
+   - Official Veterinarian / Official Auxiliaries Training
+   - Animal Welfare
+   - Shellfish
+   - Food Chain Information and Collection & Communication of Inspection Results
+   - Wine Inspection
+   - Raw Drinking Milk (Follow up audit)
+   - Warm meat legislation
+   - Export Certification
+
+3. Local Authority Audits:
+   - Allergens in England, Wales and Northern Ireland
+   - LA Approved Premises in England
+   - Food Hygiene Rating Scheme implementation (formal review in Northern Ireland)
+   - Delivery of Animal Feed Law Enforcement Services in Wales
+   - Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+   - Organisation and Management of Official controls delivered by LAs in Northern Ireland
+   - Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E
+   - Delivery of Animal Feed Law Enforcement Services in Wales
+   - Allergens -England
+2024-10-10 18:28:23,890 - streamline - INFO - Streamline process completed in 11.20 seconds.
+2024-10-10 18:28:47,603 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, what is the metadata? ':
+In the context of data analysis, metadata refers to data that describes and gives information about other data. In the case of the Internal Audit Plan datasets you provided, the metadata would include details such as:
+
+1. **Title**: The name of the dataset, which in this case is "Internal Audit Plan".
+
+2. **Summary**: A brief description of what the dataset contains. For example, it lists internal audits planned by year.
+
+3. **Link**: The URL where the dataset can be accessed. Each dataset has a unique link, such as the 2019-20 plan being available at https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv.
+
+4. **Year**: The year each audit was planned for. In the provided datasets, audits were planned for the years 2018-19 and 2019-20.
+
+5. **Audit Type**: Each audit is categorized into one of three types: Business Audits, Official Controls Audits, or Local Authority Audits. For instance, Minimum Security Standards, Payroll Leavers / Joiners, etc., belong to the Business Audits category.
+
+6. **Specific Audit**: Each audit has a unique name, such as Minimum Security Standards, Official Veterinarian / Official Auxiliaries Training, Allergens in England, Wales and Northern Ireland, etc. These specific audits make up the data within each dataset.
+
+In essence, metadata helps users understand the context, structure, and content of a dataset, making it easier to locate, access, and analyze the data as needed.
+2024-10-10 18:29:10,877 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, where is the link of this dataset? ':
+To clarify, the dataset you are referring to is the "Internal Audit Plan 2019-20". The link for this dataset can be found at: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+
+This is the most relevant dataset to your question as it contains the list of internal audits planned for the year 2019, which was discussed in my previous answer. If you wish to explore other years' audit plans, you may find the Internal Audit Plan 2018-19 and Internal Audit Plan 2023-24 at the following links:
+
+- Dataset Title: Internal Audit Plan
+  Summary: List of internal audits planned by year.
+  Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+
+- Dataset Title: Internal Audit Plan
+  Summary: List of internal audits planned by year.
+  Link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/InternalAuditPlan2324.csv
+2024-10-10 18:29:46,890 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, do you also have the dataset link to 2019-2020 ? ':
+To clarify, the dataset for the year 2019-2020 Internal Audit Plan is indeed available. Here is the link to the dataset as mentioned in my previous response:
+
+Dataset Title: Internal Audit Plan
+Summary: List of internal audits planned by year.
+Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+
+For your convenience, I have also provided the links to the datasets for the previous years 2018-19 and the current year's plan (2023-24) as follows:
+
+Dataset Title: Internal Audit Plan
+Summary: List of internal audits planned by year.
+Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+
+Dataset Title: Internal Audit Plan
+Summary: List of internal audits planned by year.
+Link: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/InternalAuditPlan2324.csv
+2024-10-10 18:30:46,401 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, what is the allergens in England, Wales and Northern Ireland audit? ':
+To clarify, the 'Allergens in England, Wales and Northern Ireland' audit is a part of the Local Authority Audits planned for the year 2019. This audit focuses on ensuring compliance with regulations related to allergens across food establishments in England, Wales, and Northern Ireland.
+
+The dataset does not provide specific details about the objectives or scope of this particular audit, but it can be inferred that the aim is to verify whether local authorities are effectively enforcing allergen control measures and ensuring safety for consumers with food allergies. This audit might also assess the effectiveness of communication, training, and awareness initiatives related to allergens within the respective regions.
+
+For more information about this audit, it is recommended to access the Internal Audit Plan datasets from the provided links:
+- Internal Audit Plan 2019-20: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+- Internal Audit Plan 2018-19: https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/InternalAuditPlan2324.csv
+2024-10-10 18:41:21,968 - root - INFO - Logging is configured.
+2024-10-10 18:44:50,700 - root - INFO - Logging is configured.
+2024-10-10 18:46:04,460 - root - INFO - Logging is configured.
+2024-10-10 18:46:18,194 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:46:18,195 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:46:19,916 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:46:19,944 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:46:19,945 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:46:21,696 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:46:29,003 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:46:36,659 - llm.llm_use - INFO - Generated SPARQL query:
+To create a SPARQL query for your requirement, I'll assume that the Internal Audit Plan 2019-20 dataset has been loaded into the RDF knowledge graph as follows:
+
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix aud: <http://example.org/audit/> .
+
+Audit a rdf:Type aud:Audit ;
+    dct:title ?Title ;
+    aud:plannedYear "2019"^^xsd:gYear ;
+    aud:outlineScope ?Scope .
+
+InternalAuditPlan2019 rdf:Type aud:InternalAuditPlan ;
+    dct:title "Internal Audit Plan 2019-20" ;
+    aud:hasAudit [ a aud:Audit ] .
+```
+
+With this structure, the SPARQL query for your user query would look like:
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX aud: <http://example.org/audit/>
+
+SELECT DISTINCT ?Title ?Scope ?DatasetLink
+WHERE {
+  BIND(<http://example.org/datasets/InternalAuditPlan2019> AS ?DatasetLink)
+  ?Plan a aud:InternalAuditPlan ;
+    dct:title ?Title ;
+    aud:hasAudit ?Audit .
+  ?Audit a aud:Audit ;
+      dct:title ?Title ;
+      aud:plannedYear "2019"^^xsd:gYear ;
+      aud:outlineScope ?Scope .
+}
+```
+
+Replace `<http://example.org/datasets/InternalAuditPlan2019>` with the actual URL or identifier of your dataset in the RDF knowledge graph. This query retrieves the title, scope, and dataset link for each audit planned in 2019 from the Internal Audit Plan 2019-20 dataset.
+2024-10-10 18:46:36,663 - llm.llm_use - ERROR - Error executing SPARQL query: Expected {SelectQuery | ConstructQuery | DescribeQuery | AskQuery}, found 'To'  (at char 0), (line:1, col:1)
+2024-10-10 18:46:40,536 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+In response to your question regarding audits that were planned for the year 2019, here is a summary of some of the major audits that we found in our knowledge graph:
+
+1. **Internal Audit (Various Organizations):** While it's not possible to list all the internal audits that took place in 2019 for every organization, we can mention a few significant ones. For instance, several large tech companies like Google, Microsoft, and Amazon conducted their annual internal audits. These audits are typically focused on assessing the effectiveness of their internal controls, financial reporting processes, compliance with laws and regulations, and other operational aspects.
+
+2. **Financial Audit (Government Agencies):** The U.S. Government Accountability Office (GAO) conducted numerous financial audits in 2019. One such audit was for the Department of Defense, which was aimed at assessing the efficiency and effectiveness of their financial management systems. Similarly, the Federal Reserve Bank also conducted various financial audits throughout the year.
+
+3. **IT Audit (Various Industries):** Many industries, including banking, healthcare, and retail, underwent IT audits in 2019. These audits are designed to evaluate an organization's information technology infrastructure, systems, and controls to ensure they are secure, reliable, and compliant with relevant regulations.
+
+4. **Sarbanes-Oxley Act (SOX) Compliance Audit (Public Companies):** Public companies in the United States that are subject to the Sarbanes-Oxley Act were required to conduct SOX compliance audits in 2019. These audits focus on assessing the company's internal controls over financial reporting and IT systems.
+
+5. **Environmental Audit (Manufacturing Industries):** In response to increasing environmental concerns, many manufacturing industries conducted environmental audits in 2019. These audits are designed to evaluate a company's compliance with environmental regulations and the impact of their operations on the environment.
+
+6. **Operational Audit (Various Organizations):** Many organizations performed operational audits in 2019, which are aimed at evaluating the efficiency and effectiveness of their business processes, strategies, and management practices. These audits help identify areas for improvement and ensure that the organization is operating effectively and efficiently.
+2024-10-10 18:46:40,536 - streamline - INFO - Streamline process completed in 22.34 seconds.
+2024-10-10 18:47:56,273 - root - INFO - Logging is configured.
+2024-10-10 18:48:02,465 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:48:02,465 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:48:04,226 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:48:04,256 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:48:04,256 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:48:06,141 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:48:09,813 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:48:14,717 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided metadata, the following internal audits were planned for the year 2019:
+
+1. Minimum Security Standards
+2. Payroll Leavers / Joiners
+3. Post Project Evaluation Reviews
+4. DAERA Contract Management
+5. Information / Data Security
+6. Product Recall Delivery Assurance
+7. Conflicts of Interest Policy
+8. Financial Assurance
+9. Official Veterinarian / Official Auxiliaries Training
+10. Animal Welfare
+11. Shellfish
+12. Food Chain Information and Collection & Communication of Inspection Results
+13. Wine Inspection
+14. Raw Drinking Milk (follow-up audit)
+15. Warm meat legislation
+16. Export Certification
+17. "Allergens in England, Wales and Northern Ireland"
+18. LA Approved Premises in England
+19. Food Hygiene Rating Scheme implementation (formal review in Northern Ireland)
+20. Delivery of Animal Feed Law Enforcement Services in Wales
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+22. Follow-up audits of LAs to assess progress by LAs in addressing agreed action plans (for 2018-19, but likely carried over to 2019)
+2024-10-10 18:48:14,717 - streamline - INFO - Streamline process completed in 12.25 seconds.
+2024-10-10 18:48:17,467 - streamline - INFO - Received new user query: 'what data do you have on water pollution? '
+2024-10-10 18:48:17,467 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:48:19,175 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:48:19,175 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:48:19,175 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:48:20,424 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:48:23,343 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 18:48:24,855 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,856 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,857 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,858 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,858 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,858 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,858 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,858 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,859 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,860 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,860 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,860 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,860 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,861 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,862 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,863 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,864 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/has"Table_18__Water_pollution does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,865 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:48:24,866 - rdflib.term - WARNING - http://example.org/ontology/hassubstantiated_incidents:_1990-2005" does not look like a valid URI, trying to serialize this will break.
+2024-10-10 18:50:09,730 - root - INFO - Logging is configured.
+2024-10-10 18:50:20,832 - streamline - INFO - Received new user query: 'what information do you have on water pollution? '
+2024-10-10 18:50:20,832 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:50:22,462 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:50:22,492 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:50:22,492 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:50:24,442 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:50:27,663 - llm.llm_use - INFO - Metadata selection completed. 2 out of 10 datasets are relevant.
+2024-10-10 18:50:30,829 - llm.llm_use - INFO - Final LLM Answer for query 'what information do you have on water pollution? ':
+Title: Water pollution, substantiated incidents
+   Source: Environment Agency, available at http://data.defra.gov.uk/ops/ea/Amended+/water_pollution_substantiated_incidents.csv
+   Name: Water pollution
+
+The information provided in the dataset you've shared contains the number of substantiated water pollution incidents in the United Kingdom from 2002 to 2015. Each row represents a year, and the corresponding column contains the count of reported incidents for that specific year.
+
+Here is a summary of the data:
+- Year 2002 had 1,805 incidents
+- Year 2003 had 1,789 incidents
+- Year 2004 had 2,843 incidents
+- ...
+- Year 2015 had 1,203 incidents.
+2024-10-10 18:50:30,829 - streamline - INFO - Streamline process completed in 10.00 seconds.
+2024-10-10 18:51:35,905 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'To clarify, what are the column names? ':
+In the dataset titled "Water pollution, substantiated incidents," the columns represent different years for which the data is available. Since each row corresponds to a year, there are no column names in the traditional sense. Instead, the numerical values provided in each column signify the count of reported water pollution incidents for the respective year.
+
+In this dataset, it is the Year column that contains the numeric values representing the years from 2002 to 2015. The first value (1,805) corresponds to the year 2002, the second value (1,789) corresponds to the year 2003, and so on until the last value (1,203) which represents the year 2015.
+2024-10-10 18:52:28,149 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 18:52:28,149 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 18:52:29,737 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 18:52:29,737 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 18:52:29,737 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 18:52:31,165 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 18:52:34,357 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 18:52:39,548 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided metadata, the following is a list of audits that were planned for the year 2019:
+
+1. Minimum Security Standards
+2. Payroll Leavers / Joiners
+3. Post Project Evaluation Reviews
+4. DAERA Contract Management
+5. Information / Data Security
+6. Product Recall Delivery Assurance
+7. Conflicts of Interest Policy
+8. Financial Assurance
+9. Official Veterinarian / Official Auxiliaries Training
+10. Animal Welfare[1]
+11. Shellfish
+12. Food Chain Information and Collection & Communication of Inspection Results
+13. Wine Inspection
+14. Raw Drinking Milk
+15. Warm meat legislation
+16. Export Certification
+17. "Allergens in England, Wales and Northern Ireland"
+18. LA Approved Premises in England
+19. Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland
+20. Delivery of Animal Feed Law Enforcement Services in Wales
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+22. Follow-up audits of LAs to assess progress by LAs in addressing agreed action plans
+23. Game Handling Establishments follow-up audit
+24. Approval and re-approval of meat establishments
+25. Cutting Establishments Unannounced Inspections
+26. Complaints about food hygiene/ food premises and infectious disease control-England
+2024-10-10 18:52:39,548 - streamline - INFO - Streamline process completed in 11.40 seconds.
+2024-10-10 19:07:25,203 - root - INFO - Logging is configured.
+2024-10-10 19:07:37,021 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-10 19:07:37,021 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-10 19:07:38,776 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-10 19:07:38,806 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-10 19:07:38,806 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-10 19:07:40,614 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-10 19:07:48,041 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-10 19:07:54,067 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided dataset for the Internal Audit Plan 2019-20, here are the planned audits for the year 2019:
+
+1. Business Audits in 2019:
+   - Minimum Security Standards
+   - Payroll Leavers / Joiners
+   - Post Project Evaluation Reviews
+   - DAERA Contract Management
+   - Information / Data Security
+   - Product Recall Delivery Assurance
+   - Conflicts of Interest Policy
+   - Financial Assurance
+
+2. Official Controls Audits in 2019:
+   - Official Veterinarian / Official Auxiliaries Training
+   - Animal Welfare
+   - Shellfish
+   - Food Chain Information and Collection & Communication of Inspection Results
+   - Wine Inspection
+   - Raw Drinking Milk (Follow up audit)
+   - Warm meat legislation
+   - Export Certification
+
+3. Local Authority Audits in 2019:
+   - Allergens in England, Wales and Northern Ireland
+   - LA Approved Premises in England
+   - Food Hygiene Rating Scheme implementation (formal review in Northern Ireland)
+   - Delivery of Animal Feed Law Enforcement Services in Wales
+   - Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+   - Organisation and Management of Official controls delivered by LAs in Northern Ireland
+   - Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E
+   - Delivery of Animal Feed Law Enforcement Services in Wales (new model audits)
+   - Allergens -England
+2024-10-10 19:07:54,067 - streamline - INFO - Streamline process completed in 17.05 seconds.
+2024-10-10 19:09:36,403 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify what is the metadata ':
+In the context of your provided datasets, metadata refers to data or information about the data itself. This can include details such as the title, description, source, and structure (i.e., columns and their data types) of each dataset.
+
+For instance:
+
+1. The Internal Audit Plan 2019-20 dataset has the following metadata:
+   - Title: Internal Audit Plan
+   - Summary: List of internal audits planned by year.
+   - Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+
+This tells us that the dataset is a list of internal audit plans for the years 2019 and 2020, which can be found at the provided link.
+
+Similarly, you have other datasets for Internal Audit Plan for the years 2018-19 and 2023-24 with their respective metadata as well. These datasets would contain the planned audits for those respective years. By examining these datasets' metadata, one can quickly understand what each dataset contains without having to open or analyze the entire dataset itself.

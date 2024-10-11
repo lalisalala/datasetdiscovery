@@ -13166,3 +13166,219 @@ For instance:
 This tells us that the dataset is a list of internal audit plans for the years 2019 and 2020, which can be found at the provided link.
 
 Similarly, you have other datasets for Internal Audit Plan for the years 2018-19 and 2023-24 with their respective metadata as well. These datasets would contain the planned audits for those respective years. By examining these datasets' metadata, one can quickly understand what each dataset contains without having to open or analyze the entire dataset itself.
+2024-10-11 12:29:54,281 - root - INFO - Logging is configured.
+2024-10-11 12:30:04,246 - streamline - INFO - Received new user query: 'what audits were planned in 2020? '
+2024-10-11 12:30:04,246 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 12:30:06,062 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 12:30:06,092 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 12:30:06,092 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 12:30:07,855 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 12:30:11,201 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 12:35:18,237 - root - INFO - Logging is configured.
+2024-10-11 12:35:33,910 - streamline - INFO - Received new user query: 'what audits were planned in 2020? '
+2024-10-11 12:35:33,910 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 12:35:35,709 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 12:35:35,740 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 12:35:35,740 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 12:35:37,551 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 12:35:44,827 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 12:35:50,168 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2020? ':
+Based on the provided metadata, the following are the audits that were planned for the year 2020:
+
+1. Business Audit - Performance Management
+2. Business Audit - EU Exit Assurances
+3. Business Audit - Risk Management
+4. Business Audit - Learnings from Incident Response
+5. Business Audit - Operational timesheet and throughput recording
+6. Business Audit - Minimum Security Standards
+7. Business Audit - Post Project Evaluation Reviews
+8. Business Audit - Contract Management
+9. Official Controls - Management of OV & MHI Contract
+10. Official Controls - Traceability
+11. Official Controls - Raw Drinking Milk (Follow up audit)
+12. Official Controls - Flexibility in Official Veterinarian Attendance
+13. Official Controls - Microbiological Criteria
+14. Official Controls Northern Ireland - DAERA - Food Chain Information
+15. Local Authority Audits England - Officer authorisation and competency
+16. Local Authority Audits England - Shellfish
+17. Local Authority Audits England - Database and internal OFFC monitoring
+18. Local Authority Audits Wales - Out of hours response test
+19. Local Authority Audits Wales - Farm Assured Welsh Livestock scheme
+20. Local Authority Audits Wales - Follow up audits
+21. Local Authority Audits Wales - Local Authority Enforcement Monitoring System (LAEMS)
+22. Local Authority Audits Wales - Allergens
+23. Local Authority Audits Northern Ireland - Allergens
+2024-10-11 12:35:50,168 - streamline - INFO - Streamline process completed in 16.26 seconds.
+2024-10-11 12:42:03,788 - root - INFO - Logging is configured.
+2024-10-11 12:42:22,181 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 12:42:22,181 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 12:42:23,849 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 12:42:23,877 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 12:42:23,877 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 12:42:25,668 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 12:42:33,592 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 12:42:39,475 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Based on the provided metadata, the following are the audits that were planned for the year 2019 as per the "Internal Audit Plan 2019-20" dataset:
+
+1. Minimum Security Standards
+2. Payroll Leavers / Joiners
+3. Post Project Evaluation Reviews
+4. DAERA Contract Management
+5. Information / Data Security
+6. Product Recall Delivery Assurance
+7. Conflicts of Interest Policy
+8. Financial Assurance
+9. Official Veterinarian / Official Auxiliaries Training
+10. Animal Welfare
+11. Shellfish
+12. Food Chain Information and Collection & Communication of Inspection Results
+13. Wine Inspection
+14. Raw Drinking Milk (Follow up audit)
+15. Warm meat legislation
+16. Export Certification
+17. Allergens in England, Wales and Northern Ireland (Local Authority Audits)
+18. LA Approved Premises in England
+19. Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland (Local Authority Audits)
+20. Delivery of Animal Feed Law Enforcement Services in Wales (Local Authority Audits)
+21. Follow-up audits of LAs to check progress in implementing full audit action plans in Wales (Local Authority Audits)
+22. Organisation and Management of Official controls delivered by LAs in Northern Ireland (Local Authority Audits)
+23. Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E (Local Authority Audits)
+2024-10-11 12:42:39,475 - streamline - INFO - Streamline process completed in 17.29 seconds.
+2024-10-11 14:01:06,063 - root - INFO - Logging is configured.
+2024-10-11 14:03:17,506 - root - INFO - Logging is configured.
+2024-10-11 14:03:22,916 - root - INFO - Logging is configured.
+2024-10-11 14:03:35,895 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:03:35,895 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:03:37,672 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:03:37,790 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:03:37,790 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:03:40,927 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:03:47,701 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:10:35,182 - root - INFO - Logging is configured.
+2024-10-11 14:12:07,071 - root - INFO - Logging is configured.
+2024-10-11 14:12:25,412 - root - INFO - Logging is configured.
+2024-10-11 14:12:40,148 - root - INFO - Logging is configured.
+2024-10-11 14:12:52,286 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:12:52,286 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:12:54,050 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:12:54,109 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:12:54,109 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:12:56,085 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:13:03,299 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:13:47,541 - root - INFO - Logging is configured.
+2024-10-11 14:13:58,367 - root - INFO - Logging is configured.
+2024-10-11 14:14:09,193 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:14:09,193 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:14:10,918 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:14:10,944 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:14:10,944 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:14:12,708 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:14:15,644 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:14:24,348 - root - INFO - Logging is configured.
+2024-10-11 14:14:26,763 - root - INFO - Logging is configured.
+2024-10-11 14:14:29,153 - root - INFO - Logging is configured.
+2024-10-11 14:15:26,907 - root - INFO - Logging is configured.
+2024-10-11 14:15:38,411 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:15:38,412 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:15:40,284 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:15:40,313 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:15:40,313 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:15:42,053 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:15:44,979 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:17:02,939 - root - INFO - Logging is configured.
+2024-10-11 14:17:39,936 - root - INFO - Logging is configured.
+2024-10-11 14:17:48,696 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:17:48,696 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:17:50,413 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:17:50,440 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:17:50,440 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:17:52,274 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:17:55,813 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:18:33,611 - root - INFO - Logging is configured.
+2024-10-11 14:18:57,689 - root - INFO - Logging is configured.
+2024-10-11 14:19:09,054 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:19:09,054 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:19:10,931 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:19:10,960 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:19:10,960 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:19:12,790 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:19:15,890 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:19:25,910 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Title: Internal Audit Plan 2018-2019
+   ------------------------------
+
+   Summary: List of internal audits planned by year.
+
+   Links: [Internal Audit Plan 2018-19](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv)
+
+   Name: Internal Audit Plan 2018-2019
+
+   Category | AuditTitle                             | OutlineScope
+   --------|--------------------------------------|---------------
+   Business Audit     | Minimum Security Standards          | Assess FSA compliance with the Cabinet Office Minimum Security Standards.
+   Business Audit     | Managing Attendance                | Assess effectiveness of policy on managing attendance.
+   Business Audit     | Asset Management                   | Assess effectiveness of asset procurement, records, security and disposal policies.
+   Business Audit     | General Data Protection Regulation| Assess effectiveness of systems and processes for compliance with GDPR.
+   Business Audit     | Product Recall Delivery Assurance audit  | Gateway Review type assessment to provide project delivery assurance.
+   Business Audit     | Supplier Management- IT Help Desk Services| Review effectiveness of supplier management arrangements.
+   Official Controls   | Minced meat, meat preparations and ready to eat products | To assess effectiveness of FSA official controls for these product categories in achieving the objectives of EU law.
+   Official Controls   | Eggs Hygiene                       | To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law.
+   Official Controls   | Bovine TB                          | To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law.
+   Official Controls   | Notifiable Diseases                | To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law.
+   Official Controls   | Game Handling Establishments follow-up audit      | Follow up audit to assess effectiveness of management actions implemented in addressing issues identified.
+   Official Controls   | Approval and re-approval of meat establishments| To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law.
+   Official Controls   | Animal Welfare                      | To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law.
+   Official Controls   | Animal -by-Products                | Further follow-up audit requested by ARAC to review effectiveness of management actions.
+   Official Controls   | Raw Drinking Milk                     | Follow up audit to assess effectiveness of management actions implemented to address issues identified.
+   Official Controls   | Cutting Establishments Unannounced Inspections| To assess effectiveness of FSA official controls for cutting establishments.
+   Local Authority Audits| Complaints about food hygiene/ food premises and infectious disease control-England| To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law.
+   Local Authority Audits| Follow-up audits of LAs to check progress in implementing full audit action plans in Wales| Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans.
+   Local Authority Audits| Organisation and Management of Official controls delivered by LAs in Northern Ireland| To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations.
+   Local Authority Audits| Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E | To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England.
+   Local Authority Audits| Delivery of Animal Feed Law Enforcement Services in Wales| To fully assess the effectiveness of the new model audits will be undertaken across each of the 6 feed regions.
+   Local Authority Audits| Allergens -England | To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England.
+2024-10-11 14:19:25,911 - streamline - INFO - Streamline process completed in 16.86 seconds.
+2024-10-11 14:22:00,312 - root - INFO - Logging is configured.
+2024-10-11 14:22:09,618 - root - INFO - Logging is configured.
+2024-10-11 14:22:17,979 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 14:22:17,980 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 14:22:19,695 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 14:22:19,724 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 14:22:19,724 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 14:22:21,434 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 14:22:23,942 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 14:22:34,316 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Title: Internal Audit Plan 2018-2019
+   -------------------------------
+
+   Summary: List of internal audits planned by year.
+
+   Links: <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv>
+
+   Name: Internal Audit Plan 2018-2019
+
+   Category | Audit Title                                               | Outline Scope
+   ---------|--------------------------------------------------------|--------------
+   Business Audit          | Minimum Security Standards                              | To assess FSA compliance with the Cabinet Office Minimum Security Standards.
+   Business Audit          | Managing Attendance                                  | Audit will assess effectiveness of the policy on managing attendance in the context of OWOW.
+   Business Audit          | Asset Management                                     | To assess effectiveness of FSA policies on asset procurement, records, security and disposal.
+   Business Audit          | General Data Protection Regulation              | To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation.
+   Business Audit          | Product Recall Delivery Assurance audit           | Gateway Review type assessment to provide project delivery assurance.
+   Business Audit          | Supplier Management- IT Help Desk Services         | The audit will review effectiveness of supplier management arrangements.
+   Official Controls       | Minced meat, meat preparations and ready to eat products| To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law.
+   Official Controls       | Eggs Hygiene                                      | To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law.
+   Official Controls       | Bovine TB                                        | To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law.
+   Official Controls       | Notifiable Diseases                              | To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law.
+   Official Controls       | Game Handling Establishments follow-up audit         | Follow up audit to assess effectiveness of management actions implemented in addressing issues identified.
+   Official Controls       | Approval and re-approval of meat establishments     | To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law.
+   Official Controls       | Animal Welfare                                    | To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law.
+   Official Controls       | Animal -by-Products                              | Further follow-up audit requested by ARAC to review effectiveness of management actions.
+   Official Controls       | Raw Drinking Milk                                | Follow up audit to assess effectiveness of management actions implemented to address issues identified.
+   Official Controls       | Cutting Establishments Unannounced Inspections | To assess effectiveness of FSA official controls for cutting establishments.
+   Local Authority Audits  | Complaints about food hygiene/ food premises and infectious disease control-England| To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law.
+   Local Authority Audits  | Follow-up audits of LAs to check progress in implementing full audit action plans in Wales          |Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans.
+   Local Authority Audits  | Organisation and Management of Official controls delivered by LAs in Northern Ireland     |To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations.
+   Local Authority Audits  | Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E      |To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England.
+   Local Authority Audits  | Delivery of Animal Feed Law Enforcement Services in Wales                            | To fully assess the effectiveness of the new model audits will be undertaken across each of the 6 feed regions.
+   Local Authority Audits  | Allergens -England                                          | To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England.
+2024-10-11 14:22:34,316 - streamline - INFO - Streamline process completed in 16.34 seconds.

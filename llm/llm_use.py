@@ -19,59 +19,47 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     
     The `additional_context` is used to provide graph-based results (SPARQL results).
     """
-    # Load the dataset with metadata (e.g., title, links) and convert it to string format
-    if isinstance(data_input, pd.DataFrame):
-        data_df = data_input
-    else:
-        data_df = pd.read_csv(data_input)
-
-    metadata = ""  # Prepare a variable to collect metadata (e.g., titles, links)
+    # Assuming `data_input` is a list of tuples [(metadata, DataFrame), ...]
+    llm_input = ""
     
-    # Assuming the data_df has 'title', 'links', and possibly 'summary' columns for metadata
-    if 'title' in data_df.columns and 'links' in data_df.columns:
-        # Build the metadata references (dataset title, summary, and link)
-        for idx, row in data_df.iterrows():
-            metadata += f"Dataset Title: {row['title']}\n"
-            metadata += f"Link: {row['links']}\n\n"  # Include the dataset link
-            
-            # Optionally include a summary if available
-            if 'summary' in row:
-                metadata += f"Summary: {row['summary']}\n\n"
+    for metadata, df in data_input:
+        # Convert metadata dictionary to a formatted string
+        metadata_str = "\n".join([f"{key}: {value}" for key, value in metadata.items()])
 
-    # Prepare the prompt for the LLM
+        # Convert the DataFrame to a CSV string
+        data_str = df.to_csv(index=False)
+
+        # Append both metadata and dataset to the input
+        llm_input += f"Metadata:\n{metadata_str}\n\nData:\n{data_str}\n\n"
+
+    # Prepare the LLM prompt
     if additional_context:
         llm_prompt = (
             f"User query: {query}\n\n"
             f"Based on the knowledge graph, here are the relevant datasets and audits:\n{additional_context}\n\n"
             "Please analyze the dataset contents and provide a detailed response."
-            f"\n\nMetadata for reference (including dataset links):\n{metadata}"  # Include metadata with links
+            f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
         )
     else:
         llm_prompt = (
             f"User query: {query}\n\n"
             "Please proceed using the datasets directly."
-            f"\n\nMetadata for reference (including dataset links):\n{metadata}"  # Include metadata with links
+            f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
         )
 
     # Use the LLM to generate a final response
     try:
-        final_llm_answer = chatbot.generate_response(context=data_df.to_csv(index=False), query=llm_prompt)
+        final_llm_answer = chatbot.generate_response(context=llm_input, query=llm_prompt)
         
         # Log the final LLM answer
         logger.info(f"Final LLM Answer for query '{query}':\n{final_llm_answer.strip()}")
 
-        # Append the metadata (including links) to the final response
-        final_response = (
-            f"{final_llm_answer.strip()}\n\n"
-            "References (Dataset Links):\n"
-            f"{metadata}"  # Ensure metadata with links is appended to the final output
-        )
-
-        return final_response
+        return final_llm_answer.strip()
 
     except Exception as e:
         logger.error(f"Error generating LLM response: {e}")
         return f"Error generating response: {str(e)}"
+
 
 
 def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):

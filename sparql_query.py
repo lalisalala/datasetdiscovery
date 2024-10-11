@@ -1,4 +1,3 @@
-# sparql_query.py
 from rdflib import Graph
 
 def query_rdf_graph(query_string):
@@ -26,13 +25,14 @@ def retrieve_audit_data(query):
     """
     sparql_query = f"""
     PREFIX ex: <http://example.org/ontology/>
-    SELECT ?dataset ?audit ?scope ?link
+    SELECT ?dataset ?title ?summary ?link ?row ?property ?value
     WHERE {{
-      ?dataset ex:hasCategory ?category .
-      ?category ex:includesAudit ?audit .
-      ?audit ex:hasScope ?scope .
+      ?dataset ex:hasTitle ?title .
+      ?dataset ex:hasSummary ?summary .
       ?dataset ex:hasLink ?link .
-      FILTER(CONTAINS(LCASE(?scope), "{query.lower()}"))
+      ?row ex:partOf ?dataset .
+      ?row ?property ?value .
+      FILTER(CONTAINS(LCASE(?value), "{query.lower()}"))
     }}
     """
     return query_rdf_graph(sparql_query)

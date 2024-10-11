@@ -1,4 +1,3 @@
-#streamline.py
 import os
 import pandas as pd
 from search.metadata_search import query_faiss_index, generate_summaries_for_relevant_datasets
@@ -23,7 +22,6 @@ def run_streamline_process(query: str, user_id: str) -> str:
     """
     Automatically detect whether the query is a follow-up question or a new query.
     """
-
     # Retrieve the user's session context
     user_context = user_sessions.get(user_id, {})
 
@@ -47,14 +45,13 @@ def run_streamline_process(query: str, user_id: str) -> str:
         if follow_up:
             refined_datasets = user_context.get('relevant_datasets')
             if refined_datasets is not None:
-                # Load the previously downloaded datasets
-                if os.path.exists('data.csv'):
-                    data_df = pd.read_csv('data.csv')
-                else:
-                    return "Error: Downloaded data not found for follow-up question."
-                
+                # Retrieve previous all_data to continue processing
+                all_data = user_context.get('all_data')
+                if not all_data:
+                    return "Error: No previous datasets found in the context for follow-up."
+
                 # Call the follow-up processing function and pass the datasets
-                return directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, user_context['chatbot'], data_df)
+                return directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, user_context['chatbot'], all_data)
             else:
                 return "Error: No relevant datasets found in the context for follow-up."
     
@@ -80,7 +77,7 @@ def process_new_query(query: str, user_id: str) -> str:
     if not os.path.exists(csv_file):
         logger.error(f"CSV file {csv_file} not found after web scraping.")
         return "Error: Datasets not found."
-    
+
     df = pd.read_csv(csv_file)
     llm_config = config_loader.get_llm_config()
     faiss_config = config_loader.get_faiss_config()
@@ -110,13 +107,11 @@ def process_new_query(query: str, user_id: str) -> str:
     df_faiss_results = pd.read_csv(datasets2_csv)
     refined_datasets = use_llm_for_metadata_selection(df_faiss_results, query, chatbot)
     refined_datasets_with_summaries = generate_summaries_for_relevant_datasets(refined_datasets, chatbot)
-    download_datasets(refined_datasets_with_summaries, output_file='data.csv')
 
-    if not os.path.exists('data.csv'):
-        return "Error: Downloaded data not found."
+    all_data_with_metadata = download_datasets(refined_datasets_with_summaries, output_file='data.csv')
 
     # Step 3: Generate the RDF knowledge graph from data.csv
-    generate_dynamic_rdf_with_core('data.csv', output_rdf_file='data_ontology.ttl')  # Ensure the RDF graph is generated
+    generate_dynamic_rdf_with_core(all_data_with_metadata, output_rdf_file='data_ontology.ttl')  # Ensure the RDF graph is generated
 
     # Step 4: Query the RDF knowledge graph using SPARQL based on the user's query
     try:
@@ -125,21 +120,18 @@ def process_new_query(query: str, user_id: str) -> str:
         logger.error("RDF file 'data_ontology.ttl' not found. Ensure the RDF graph is generated.")
         return "Error: RDF knowledge graph not found. Ensure the RDF graph is generated before querying."
 
-    # Step 5: Read data.csv and pass to the LLM
-    data_df = pd.read_csv('data.csv')
-
-    # Step 6: Integrate SPARQL results into the LLM prompt (if any relevant RDF data is found)
-    graph_answer = ""
+    # Step 5: Use the all_data_with_metadata to provide input to the LLM
     if sparql_results:
+        graph_answer = ""
         for row in sparql_results:
-            dataset, audit, scope = row
-            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\n\n"
+            dataset, audit, scope, link = row
+            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\nLink: {link}\n\n"
 
-        # If RDF graph data is found, include it in the LLM's prompt
-        final_answer = directly_use_llm_for_answer(data_df, query, chatbot, additional_context=graph_answer)
+        # Use the graph-based context
+        final_answer = directly_use_llm_for_answer(all_data_with_metadata, query, chatbot, additional_context=graph_answer)
     else:
-        # If no RDF graph data is found, proceed without additional context
-        final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
+        # No SPARQL results; proceed without additional context
+        final_answer = directly_use_llm_for_answer(all_data_with_metadata, query, chatbot)
 
     # Step 7: Save the context for follow-up questions
     user_sessions[user_id] = {
@@ -148,7 +140,6 @@ def process_new_query(query: str, user_id: str) -> str:
         'chatbot': chatbot  # Store chatbot instance for follow-up
     }
 
-    # Calculate total execution time
     end_time = time.time()
     total_time = end_time - start_time
     logger.info(f"Streamline process completed in {total_time:.2f} seconds.")

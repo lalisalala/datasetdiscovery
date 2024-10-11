@@ -1,328 +1,272 @@
 @prefix ex: <http://example.org/ontology/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:Row_1 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Category" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "AuditTitle" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "OutlineScope" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_1 a ex:Row ;
+    ex:AuditTitle "Minimum Security Standards" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess FSA compliance with the Cabinet Office Minimum Security Standards. " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_10 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Official Veterinarian / Official Auxiliaries Training" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess management delivery and oversight of Official Veterinarian / Official Auxiliaries Training" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_10 a ex:Row ;
+    ex:AuditTitle "Animal Welfare[1]" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_11 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Animal Welfare[1]" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_11 a ex:Row ;
+    ex:AuditTitle "Shellfish" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_12 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Shellfish" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_12 a ex:Row ;
+    ex:AuditTitle "Food Chain Information and Collection & Communication of Inspection Results " ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the effectiveness of the food chain information system." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_13 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Food Chain Information and Collection & Communication of Inspection Results " ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the effectiveness of the food chain information system." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_13 a ex:Row ;
+    ex:AuditTitle "Wine Inspection" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess management assurance of OFFC delivery of the wine standards " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_14 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Wine Inspection" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess management assurance of OFFC delivery of the wine standards " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_14 a ex:Row ;
+    ex:AuditTitle "Raw Drinking Milk" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_15 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Raw Drinking Milk" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Follow up audit to assess effectiveness of management actions implemented to address " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_15 a ex:Row ;
+    ex:AuditTitle "Warm meat legislation" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the oversight and delivery of the warm meat legislation." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_16 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Warm meat legislation" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the oversight and delivery of the warm meat legislation." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_16 a ex:Row ;
+    ex:AuditTitle "Export Certification" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the system of certifying exports. " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_17 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Export Certification" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the system of certifying exports. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_17 a ex:Row ;
+    ex:AuditTitle "Allergens in England, Wales and Northern Ireland" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_18 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Allergens in England, Wales and Northern Ireland" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_18 a ex:Row ;
+    ex:AuditTitle "LA Approved Premises in England" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the effectiveness of LA approval of premises for those establishments requiring LA approval." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_19 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "LA Approved Premises in England" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the effectiveness of LA approval of premises for those establishments requiring LA approval." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_19 a ex:Row ;
+    ex:AuditTitle "Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_2 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Minimum Security Standards" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess FSA compliance with the Cabinet Office Minimum Security Standards. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_2 a ex:Row ;
+    ex:AuditTitle "Payroll Leavers / Joiners" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_20 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_20 a ex:Row ;
+    ex:AuditTitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_21 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Delivery of Animal Feed Law Enforcement Services in Wales" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_21 a ex:Row ;
+    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales " ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "Follow-up audits to assess progress by LAs in addressing agreed action plans." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_22 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales " ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Follow-up audits to assess progress by LAs in addressing agreed action plans." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_3 a ex:Row ;
+    ex:AuditTitle "Post Project Evaluation Reviews" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the end of project processes, transition to business as usual and that leanings are captured / shared. " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_23 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Dataset Metadata: The Internal Audit Plan 2018-2019 dataset is a list of internal audits scheduled for execution over the specified period" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ " accessible through this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv." ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "NaN"^^xsd:double ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_4 a ex:Row ;
+    ex:AuditTitle "DAERA Contract Management" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess management controls and reporting on the contract with DAERA. " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_24 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Category" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "AuditTitle" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "OutlineScope" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_5 a ex:Row ;
+    ex:AuditTitle "Information / Data Security" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the effectiveness of management actions on information/ data security " ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_25 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Minimum Security Standards" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess FSA compliance with the Cabinet Office Minimum Security Standards." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_6 a ex:Row ;
+    ex:AuditTitle "Product Recall Delivery Assurance" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the effectiveness of the product recall system implemented in 2019." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_26 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Managing Attendance" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_7 a ex:Row ;
+    ex:AuditTitle "Conflicts of Interest Policy" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the process, compliance and reporting of conflicts of interest for Board Members and FSA staff." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_27 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Asset Management" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA policies on asset procurement, records, security and disposal " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_8 a ex:Row ;
+    ex:AuditTitle "Financial Assurance" ;
+    ex:Category "Business Audits" ;
+    ex:OutlineScope "To assess the effectiveness of the key financial systems and related controls in FSA, Wales and Northern Ireland." ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_28 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "General Data Protection Regulation" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_1_9 a ex:Row ;
+    ex:AuditTitle "Official Veterinarian / Official Auxiliaries Training" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess management delivery and oversight of Official Veterinarian / Official Auxiliaries Training" ;
+    ex:partOf ex:Dataset_1 .
 
-ex:Row_29 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Product Recall Delivery Assurance audit" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Gateway Review type assessment to provide project delivery assurance" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_1 a ex:Row ;
+    ex:AuditTitle "Minimum Security Standards" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess FSA compliance with the Cabinet Office Minimum Security Standards." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_3 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Payroll Leavers / Joiners" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_10 a ex:Row ;
+    ex:AuditTitle "Notifiable Diseases" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_30 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audit" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Supplier Management- IT Help Desk Services" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "The audit will review effectiveness of supplier management arrangements." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_11 a ex:Row ;
+    ex:AuditTitle "Game Handling Establishments follow -up audit" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented in addressing issues identified" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_31 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Minced meat, meat preparations and ready to eat products" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_12 a ex:Row ;
+    ex:AuditTitle "Approval and re-approval of meat establishments" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_32 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Eggs Hygiene " ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_13 a ex:Row ;
+    ex:AuditTitle "Animal Welfare" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_33 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Bovine TB" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_14 a ex:Row ;
+    ex:AuditTitle "Animal -by-Products" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Further follow-up audit requested by ARAC to review effectiveness of management actions" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_34 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Notifiable Diseases" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_15 a ex:Row ;
+    ex:AuditTitle "Raw Drinking Milk" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address issues identified. " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_35 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Game Handling Establishments follow -up audit" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Follow up audit to assess effectiveness of management actions implemented in addressing issues identified" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_16 a ex:Row ;
+    ex:AuditTitle "Cutting Establishments Unannounced Inspections" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for cutting establishments." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_36 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Approval and re-approval of meat establishments" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_17 a ex:Row ;
+    ex:AuditTitle "Complaints about food hygiene/ food premises and infectious disease control-England" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_37 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Animal Welfare" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_18 a ex:Row ;
+    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_38 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Animal -by-Products" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Further follow-up audit requested by ARAC to review effectiveness of management actions" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_19 a ex:Row ;
+    ex:AuditTitle "Organisation and Management of Official controls delivered by LAs in Northern Ireland" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_39 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Raw Drinking Milk" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Follow up audit to assess effectiveness of management actions implemented to address issues identified. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_2 a ex:Row ;
+    ex:AuditTitle "Managing Attendance" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_4 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Post Project Evaluation Reviews" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the end of project processes, transition to business as usual and that leanings are captured / shared. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_20 a ex:Row ;
+    ex:AuditTitle "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  " ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_40 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Official Controls" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Cutting Establishments Unannounced Inspections" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess effectiveness of FSA official controls for cutting establishments." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_21 a ex:Row ;
+    ex:AuditTitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_41 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Complaints about food hygiene/ food premises and infectious disease control-England" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_22 a ex:Row ;
+    ex:AuditTitle "Allergens -England " ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_42 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_3 a ex:Row ;
+    ex:AuditTitle "Asset Management" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess effectiveness of FSA policies on asset procurement, records, security and disposal " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_43 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Organisation and Management of Official controls delivered by LAs in Northern Ireland" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_4 a ex:Row ;
+    ex:AuditTitle "General Data Protection Regulation" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_44 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  " ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_5 a ex:Row ;
+    ex:AuditTitle "Product Recall Delivery Assurance audit" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "Gateway Review type assessment to provide project delivery assurance" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_45 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Delivery of Animal Feed Law Enforcement Services in Wales" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_6 a ex:Row ;
+    ex:AuditTitle "Supplier Management- IT Help Desk Services" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "The audit will review effectiveness of supplier management arrangements." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_46 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Local Authority Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Allergens -England " ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_7 a ex:Row ;
+    ex:AuditTitle "Minced meat, meat preparations and ready to eat products" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law" ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_5 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "DAERA Contract Management" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess management controls and reporting on the contract with DAERA. " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_8 a ex:Row ;
+    ex:AuditTitle "Eggs Hygiene " ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law." ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_6 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Information / Data Security" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the effectiveness of management actions on information/ data security " ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Row_2_9 a ex:Row ;
+    ex:AuditTitle "Bovine TB" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. " ;
+    ex:partOf ex:Dataset_2 .
 
-ex:Row_7 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Product Recall Delivery Assurance" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the effectiveness of the product recall system implemented in 2019." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
+ex:Dataset_1 a ex:Dataset ;
+    ex:links "https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv" ;
+    ex:name "Internal Audit Plan 2019-20" ;
+    ex:summary "List of internal audits planned by year." ;
+    ex:title "Internal Audit Plan" .
 
-ex:Row_8 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Conflicts of Interest Policy" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the process, compliance and reporting of conflicts of interest for Board Members and FSA staff." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
-
-ex:Row_9 a ex:Row ;
-    ex:Dataset_Metadata__The_Internal_Audit_Plan_2019_20 "Business Audits" ;
-    ex:available_at__this_link__https___fsadata_github_io_internal_audit_plan_data_internal_audit_plan_2019_20_csv_ "Financial Assurance" ;
-    ex:is_a_comprehensive_list_of_internal_audits_planned_for_the_specified_time_period "To assess the effectiveness of the key financial systems and related controls in FSA, Wales and Northern Ireland." ;
-    ex:organized_by_year_ "NaN"^^xsd:double ;
-    ex:partOf ex:Dataset_0 .
-
-ex:Dataset_0 a ex:Dataset ;
-    ex:hasMetadata "Metadata for the dataset loaded from data.csv." .
+ex:Dataset_2 a ex:Dataset ;
+    ex:links "https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv" ;
+    ex:name "Internal Audit Plan 2018-2019" ;
+    ex:summary "List of internal audits planned by year." ;
+    ex:title "Internal Audit Plan" .
 

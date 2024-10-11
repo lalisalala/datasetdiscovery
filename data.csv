@@ -1,4 +1,9 @@
-Dataset Metadata: The Internal Audit Plan 2019-20, available at [this link](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv), is a comprehensive list of internal audits planned for the specified time period, organized by year.
+Metadata:
+title: Internal Audit Plan
+summary: List of internal audits planned by year.
+links: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+name: Internal Audit Plan 2019-20
+
 Category,AuditTitle,OutlineScope
 Business Audits,Minimum Security Standards,To assess FSA compliance with the Cabinet Office Minimum Security Standards. 
 Business Audits,Payroll Leavers / Joiners,"To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls."
@@ -23,7 +28,12 @@ Local Authority Audits,Delivery of Animal Feed Law Enforcement Services in Wales
 Local Authority Audits,Follow-up audits of LAs to check progress in implementing full audit action plans in Wales ,Follow-up audits to assess progress by LAs in addressing agreed action plans.
 
 
-Dataset Metadata: The Internal Audit Plan 2018-2019 dataset is a list of internal audits scheduled for execution over the specified period, accessible through this link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv.
+Metadata:
+title: Internal Audit Plan
+summary: List of internal audits planned by year.
+links: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+name: Internal Audit Plan 2018-2019
+
 Category,AuditTitle,OutlineScope
 Business Audit,Minimum Security Standards,To assess FSA compliance with the Cabinet Office Minimum Security Standards.
 Business Audit,Managing Attendance,Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   

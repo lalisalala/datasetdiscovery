@@ -8,14 +8,13 @@ def sanitize_uri_value(value: str) -> str:
     Sanitize the input string to ensure it's a valid URI component.
     Replaces spaces with underscores and removes invalid characters.
     """
-    # Replace spaces with underscores and remove invalid characters
     sanitized_value = re.sub(r'[^\w]', '_', value)
     return sanitized_value
 
-def generate_dynamic_rdf_with_core(csv_file, output_rdf_file='universal_data_ontology.ttl'):
+def generate_dynamic_rdf_with_core(all_data_with_metadata, output_rdf_file='universal_data_ontology.ttl'):
     """
-    Generate RDF from the provided CSV file, dynamically using the CSV columns as properties
-    and treating each row as an individual resource.
+    Generate RDF from the provided metadata and datasets.
+    Now uses a list of tuples, where each tuple contains metadata and a DataFrame for the dataset.
     """
     # Create a new RDF graph
     g = Graph()
@@ -24,39 +23,42 @@ def generate_dynamic_rdf_with_core(csv_file, output_rdf_file='universal_data_ont
     EX = Namespace("http://example.org/ontology/")
     g.bind("ex", EX)
 
-    # Load the CSV content into a DataFrame
-    df = pd.read_csv(csv_file)
-
-    # Define the class for a dataset
+    # Define a class for the dataset
     Dataset = URIRef(EX.Dataset)
-    hasMetadata = URIRef(EX.hasMetadata)
 
-    # Add metadata for the dataset
-    dataset_uri = URIRef(EX[f"Dataset_0"])
-    g.add((dataset_uri, RDF.type, Dataset))
-    g.add((dataset_uri, hasMetadata, Literal(f"Metadata for the dataset loaded from {csv_file}.")))
+    # Iterate through each dataset and create triples dynamically
+    for idx, (metadata, df) in enumerate(all_data_with_metadata):
+        # Create a unique URI for the dataset
+        dataset_uri = URIRef(EX[f"Dataset_{str(idx + 1)}"])
+        g.add((dataset_uri, RDF.type, Dataset))
 
-    # Iterate through each row in the CSV file and create triples dynamically
-    for idx, row in df.iterrows():
-        # Create a unique URI for each row (audit/record)
-        row_uri = URIRef(EX[f"Row_{idx+1}"])
+        # Add metadata as properties to the dataset
+        for key, value in metadata.items():
+            # Sanitize the metadata key and create a dynamic RDF property
+            sanitized_key = sanitize_uri_value(key)
+            property_uri = URIRef(EX[sanitized_key])
+            g.add((dataset_uri, property_uri, Literal(value)))
 
-        # Add the row as an instance of ex:Row
-        g.add((row_uri, RDF.type, URIRef(EX.Row)))
+        # Iterate through each row in the DataFrame and create triples
+        for row_idx, row in df.iterrows():
+            # Create a unique URI for each row (audit/record)
+            row_uri = URIRef(EX[f"Row_{str(idx + 1)}_{str(row_idx + 1)}"])
 
-        # Link each row to the dataset
-        g.add((row_uri, URIRef(EX.partOf), dataset_uri))
+            # Add the row as an instance of ex:Row and link it to the dataset
+            g.add((row_uri, RDF.type, URIRef(EX.Row)))
+            g.add((row_uri, URIRef(EX.partOf), dataset_uri))
 
-        # Iterate through each column in the row and add triples dynamically
-        for column_name in df.columns:
-            # Sanitize the column name to use it as a URI
-            sanitized_column_name = sanitize_uri_value(column_name.strip())
+            # Dynamically generate properties based on the column names
+            for column_name in df.columns:
+                # Sanitize the column name to create a valid URI
+                sanitized_column_name = sanitize_uri_value(column_name.strip())
 
-            # Create a dynamic RDF property for this column
-            property_uri = URIRef(EX[sanitized_column_name])
+                # Create a dynamic RDF property for this column
+                property_uri = URIRef(EX[sanitized_column_name])
 
-            # Add the property and value to the row
-            g.add((row_uri, property_uri, Literal(row[column_name])))
+                # Add the property and value to the row (skipping NaNs)
+                if pd.notna(row[column_name]):
+                    g.add((row_uri, property_uri, Literal(row[column_name])))
 
     # Serialize the graph to a Turtle file
     g.serialize(output_rdf_file, format="turtle")

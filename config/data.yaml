@@ -5,3 +5,5 @@ datasets:
   - url: "https://www.data.gov.uk/dataset/8ec49ee6-4823-428e-b22a-f232ca85a7cb/non-consolidated-performance-related-pay-hm-revenue-customs-and-valuation-office-agency"
   - url: "https://www.data.gov.uk/dataset/4f8d6861-a375-4b6d-b78d-8408820d1819/privacy-impact-assessments-register"
   - url: "https://www.data.gov.uk/dataset/b57b19a9-7e3c-4147-9e54-2c5dea5e2473/information-management-and-security-team-enquiry-log"
+  - url: "https://www.data.gov.uk/dataset/85626c92-96ae-477b-aa20-7474d6e7daaf/water-pollution-substantiated-incidents "
+  - url: "https://www.data.gov.uk/dataset/5b636d68-ed33-4682-9d4d-f5a42ea0aee1/pm2-5-map-and-exposure-data"

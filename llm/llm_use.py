@@ -11,7 +11,7 @@ import re
 logger = logging.getLogger(__name__)
 
 
-def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 200) -> str:
+def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 5000) -> str:
     """
     Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
 
@@ -190,6 +190,7 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
             continue  # Skip this dataset and proceed with others
 
     # Filter the dataframe to include only relevant datasets
+
     relevant_datasets = df.iloc[relevant_indices].reset_index(drop=True)
     logger.info(f"Metadata selection completed. {len(relevant_datasets)} out of {total_datasets} datasets are relevant.")
 

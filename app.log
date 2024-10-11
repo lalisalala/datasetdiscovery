@@ -11636,3 +11636,57 @@ Name: Local Authority Audits, dtype: object
 2024-10-09 21:04:33,342 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
 2024-10-09 21:04:36,585 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
 2024-10-09 21:04:41,430 - streamline - INFO - Streamline process completed in 10.50 seconds.
+2024-10-11 11:52:07,783 - root - INFO - Logging is configured.
+2024-10-11 11:52:36,960 - root - INFO - Logging is configured.
+2024-10-11 11:53:43,983 - root - INFO - Logging is configured.
+2024-10-11 11:53:53,497 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-11 11:53:53,497 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-11 11:53:54,707 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-11 11:53:54,767 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-11 11:53:54,767 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-11 11:53:56,653 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-11 11:54:03,819 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-11 11:54:06,234 - llm.llm_use - INFO - Received user query: 'what audits were planned in 2019? '
+2024-10-11 11:54:06,234 - llm.llm_use - INFO - Data input is a DataFrame, proceeding with DataFrame processing.
+2024-10-11 11:54:06,237 - llm.llm_use - INFO - Processing dataset with 22 rows, chunking into 200-row parts.
+2024-10-11 11:54:08,920 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-11 11:54:08,920 - llm.llm_use - INFO - Processing dataset with 23 rows, chunking into 200-row parts.
+2024-10-11 11:54:13,149 - llm.llm_use - INFO - Received response for chunk 1.
+2024-10-11 11:54:13,149 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ': The audits that were planned in 2019 can be found in the "Internal Audit Plan 2019-20" dataset available at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv]. The audits include, but are not limited to, the following:
+
+   - Business Audits: Minimum Security Standards, Payroll Leavers / Joiners, Post Project Evaluation Reviews, DAERA Contract Management, Information / Data Security, Product Recall Delivery Assurance, Conflicts of Interest Policy, Financial Assurance.
+   - Official Controls Audits: Official Veterinarian / Official Auxiliaries Training, Animal Welfare, Shellfish, Food Chain Information and Collection & Communication of Inspection Results, Wine Inspection, Raw Drinking Milk (follow up audit), Warm meat legislation, Export Certification.
+   - Local Authority Audits: Allergens in England, Wales and Northern Ireland, LA Approved Premises in England, Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland, Delivery of Animal Feed Law Enforcement Services in Wales, Follow-up audits of LAs to check progress in implementing full audit action plans in Wales.
+The audits planned for the year 2019 are listed in the "Internal Audit Plan 2019-20" dataset, which can be found at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv]. The following are the audits planned for that year:
+
+1. Business Audit - Minimum Security Standards
+2. Business Audit - Managing Attendance
+3. Business Audit - Asset Management
+4. Business Audit - General Data Protection Regulation (GDPR)
+5. Business Audit - Product Recall Delivery Assurance audit
+6. Business Audit - Supplier Management-IT Help Desk Services
+7. Official Controls - Minced meat, meat preparations and ready to eat products
+8. Official Controls - Eggs Hygiene
+9. Official Controls - Bovine TB
+10. Official Controls - Notifiable Diseases
+11. Official Controls - Game Handling Establishments follow-up audit
+12. Official Controls - Approval and re-approval of meat establishments
+13. Official Controls - Animal Welfare
+14. Official Controls - Animal-by-products
+15. Official Controls - Raw Drinking Milk
+16. Official Controls - Cutting Establishments Unannounced Inspections
+17. Local Authority Audits - Complaints about food hygiene/food premises and infectious disease control-England
+18. Local Authority Audits - Follow-up audits of LAs to check progress in implementing full audit action plans in Wales
+19. Local Authority Audits - Organization and Management of Official controls delivered by LAs in Northern Ireland
+20. Local Authority Audits - Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E
+21. Local Authority Audits - Delivery of Animal Feed Law Enforcement Services in Wales
+22. Local Authority Audits - Allergens -England
+2024-10-11 11:54:13,149 - streamline - INFO - Streamline process completed in 19.65 seconds.
+2024-10-11 11:54:52,569 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, what is the link to the dataset? ': The link to the dataset I provided earlier is [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv]. This dataset contains the internal audits planned for 2019, which includes Business Audits, Official Controls Audits, and Local Authority Audits. The list of audits can be found under the "Audit Title" column in this CSV file. You can use this link to access the data and explore the planned audits for that year.
+2024-10-11 11:55:09,391 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, what does the FSA stand for? ': The FSA stands for Food Standards Agency, which is a government department in the United Kingdom responsible for food safety and hygiene in England, Wales, and Northern Ireland. The agency's mission is to protect public health in relation to food.
+
+The Internal Audit Plan datasets you referred to are part of the Food Standards Agency's internal audit plan for the years 2019-2020. These audits were designed to ensure that the FSA's processes, procedures, and systems related to food safety and hygiene are effective and compliant with relevant regulations.
+
+The planned audits covered various aspects such as business audits (e.g., Minimum Security Standards, General Data Protection Regulation), official controls audits (e.g., Animal Welfare, Eggs Hygiene, Bovine TB), and local authority audits (e.g., Complaints about food hygiene/food premises and infectious disease control, Delivery of Animal Feed Law Enforcement Services).
+
+The Food Standards Agency works closely with Local Authorities in England, Wales, and Northern Ireland to enforce food safety laws and regulations. The internal audits help identify areas for improvement within the FSA and local authorities to ensure continued compliance with food safety standards and enhance public protection.

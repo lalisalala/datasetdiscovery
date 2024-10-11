@@ -1,61 +1,30 @@
 Metadata:
-title: Internal Audit Plan
-summary: List of internal audits planned by year.
-links: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
-name: Internal Audit Plan 2019-20
+title: Water pollution, substantiated incidents
+summary: Water pollution, substantiated incidents
+links: http://data.defra.gov.uk/ops/ea/Amended+/water_pollution_substantiated_incidents.csv
+name: Water pollution
 
-Category,AuditTitle,OutlineScope
-Business Audits,Minimum Security Standards,To assess FSA compliance with the Cabinet Office Minimum Security Standards. 
-Business Audits,Payroll Leavers / Joiners,"To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls."
-Business Audits,Post Project Evaluation Reviews,"To assess the end of project processes, transition to business as usual and that leanings are captured / shared. "
-Business Audits,DAERA Contract Management,To assess management controls and reporting on the contract with DAERA. 
-Business Audits,Information / Data Security,To assess the effectiveness of management actions on information/ data security 
-Business Audits,Product Recall Delivery Assurance,To assess the effectiveness of the product recall system implemented in 2019.
-Business Audits,Conflicts of Interest Policy,"To assess the process, compliance and reporting of conflicts of interest for Board Members and FSA staff."
-Business Audits,Financial Assurance,"To assess the effectiveness of the key financial systems and related controls in FSA, Wales and Northern Ireland."
-Official Controls Audits,Official Veterinarian / Official Auxiliaries Training,To assess management delivery and oversight of Official Veterinarian / Official Auxiliaries Training
-Official Controls Audits,Animal Welfare[1],To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law.
-Official Controls Audits,Shellfish,To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. 
-Official Controls Audits,Food Chain Information and Collection & Communication of Inspection Results ,To assess the effectiveness of the food chain information system.
-Official Controls Audits,Wine Inspection,To assess management assurance of OFFC delivery of the wine standards 
-Official Controls Audits,Raw Drinking Milk,Follow up audit to assess effectiveness of management actions implemented to address 
-Official Controls Audits,Warm meat legislation,To assess the oversight and delivery of the warm meat legislation.
-Official Controls Audits,Export Certification,To assess the system of certifying exports. 
-Local Authority Audits,"Allergens in England, Wales and Northern Ireland",To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England 
-Local Authority Audits,LA Approved Premises in England,To assess the effectiveness of LA approval of premises for those establishments requiring LA approval.
-Local Authority Audits,Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland,To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs.
-Local Authority Audits,Delivery of Animal Feed Law Enforcement Services in Wales,To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  
-Local Authority Audits,Follow-up audits of LAs to check progress in implementing full audit action plans in Wales ,Follow-up audits to assess progress by LAs in addressing agreed action plans.
-
-
-Metadata:
-title: Internal Audit Plan
-summary: List of internal audits planned by year.
-links: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
-name: Internal Audit Plan 2018-2019
-
-Category,AuditTitle,OutlineScope
-Business Audit,Minimum Security Standards,To assess FSA compliance with the Cabinet Office Minimum Security Standards.
-Business Audit,Managing Attendance,Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   
-Business Audit,Asset Management,"To assess effectiveness of FSA policies on asset procurement, records, security and disposal "
-Business Audit,General Data Protection Regulation,To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. 
-Business Audit,Product Recall Delivery Assurance audit,Gateway Review type assessment to provide project delivery assurance
-Business Audit,Supplier Management- IT Help Desk Services,The audit will review effectiveness of supplier management arrangements.
-Official Controls,"Minced meat, meat preparations and ready to eat products","To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law"
-Official Controls,Eggs Hygiene ,To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law.
-Official Controls,Bovine TB,To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. 
-Official Controls,Notifiable Diseases,To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law.
-Official Controls,Game Handling Establishments follow -up audit,Follow up audit to assess effectiveness of management actions implemented in addressing issues identified
-Official Controls,Approval and re-approval of meat establishments,To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law.
-Official Controls,Animal Welfare,To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law.
-Official Controls,Animal -by-Products,Further follow-up audit requested by ARAC to review effectiveness of management actions
-Official Controls,Raw Drinking Milk,Follow up audit to assess effectiveness of management actions implemented to address issues identified. 
-Official Controls,Cutting Establishments Unannounced Inspections,To assess effectiveness of FSA official controls for cutting establishments.
-Local Authority Audits,Complaints about food hygiene/ food premises and infectious disease control-England,To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law.
-Local Authority Audits,Follow-up audits of LAs to check progress in implementing full audit action plans in Wales,Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans 
-Local Authority Audits,Organisation and Management of Official controls delivered by LAs in Northern Ireland,To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  
-Local Authority Audits,Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  ,To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England
-Local Authority Audits,Delivery of Animal Feed Law Enforcement Services in Wales,To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  
-Local Authority Audits,Allergens -England ,To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England
+"Table 18  Water pollution, substantiated incidents: 1990-2005",Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16,Unnamed: 17,Unnamed: 18,Unnamed: 19
+United Kingdom,,,,,,,,,,,,,,,,,,,Number
+,,,,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999 1,2000,2001,2002,2003,2004,2005
+EA Region,,1,,,,,,,,,,,,,,,,,
+North West,,,,..,"3,020","3,270","3,656","3,532","3,717","2,818","2,160","2,201","1,668","1,757","1,734","1,805","1,534","1,091","1,056"
+North East,,,,..,"3,379","3,059","3,642","3,243","2,576","2,143","2,404","1,993","1,828","1,822","1,952","1,789","1,971","1,692","1,448"
+Midlands,,,,..,"4,355","4,420","4,876","4,895","4,259","4,305","4,411","4,061","2,804","3,106","2,862","2,843","2,464","1,955","1,890"
+Anglian,,,,..,"2,140","2,462","2,625","2,819","2,156","2,417","2,411","2,163","1,726","1,369","1,606","1,716","1,616","1,418","1,290"
+Thames,,,,..,"1,939","1,955","2,071","2,006","1,972","1,959","1,917","1,819","1,208","1,379","1,510","1,630","1,447","1,211","1,203"
+Southern,,,,..,"1,735","1,089","1,355","1,316","1,235","1,189","1,174","1,138","1,317","1,540","1,585","1,511","1,543","1,218",955
+South West,,,,..,"3,953","4,278","4,129","4,340","4,558","3,042","2,847","2,603","2,463","2,294","2,292","1,929","1,882","1,689","1,744"
+EA Wales,,,,..,"1,949","2,798","2,945","3,264","2,990","2,285","2,247","1,885","1,360","1,395","1,475","1,287","1,356","1,309","1,260"
+England and Wales,,1,,"21,000","22,470","23,331","25,299","25,415","23,463","20,158","19,571","17,863","14,374","14,662","15,016","14,510","13,813","11,583","10,846"
+Scotland,,"2,3,4",,..,"3,208","3,020","3,081","3,170","2,752","2,878",3356,2329,"2,306","2,345","1,829","1,409","1,708","1,480","1,377"
+Northern Ireland,,4,,..,..,..,..,..,..,"2,087","1,826","1,644","1,507","1,705","1,546","1,510","1,551","1,227","1,174"
+Source: Environment Agency; Scottish Environment Protection Agency; Environment and Heritage Service.,,,,,,,,,,,,,,,,,,,
+1,"Figures before 1999 not comparable to figures after 1999. Before 1999, English and Welsh figures include some substantiated water ",,,,,,,,,,,,,,,,,,
+,pollution incidents which were assessed as having no impact on the water environment. From 1999 only substantiated water pollution ,,,,,,,,,,,,,,,,,,
+,incidents with an impact on the water environment are included.,,,,,,,,,,,,,,,,,,
+2,1991 figure includes broad estimates for unavailable data.,,,,,,,,,,,,,,,,,,
+3,Data for all years relate to financial years. ,,,,,,,,,,,,,,,,,,
+4,Includes some water pollution incidents which have no significant environmental impact.,,,,,,,,,,,,,,,,,,
 
 

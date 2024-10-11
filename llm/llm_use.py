@@ -155,9 +155,7 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
 
     return relevant_datasets
 
-from sparql_query import retrieve_audit_data  # Import the SPARQL query function
-
-def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, previous_answer: str, chatbot: LLMChatbot, data_df: pd.DataFrame) -> str:
+def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, previous_answer: str, chatbot: LLMChatbot, data_df: list) -> str:
     """
     Process follow-up questions by using the previous answer, relevant datasets, and downloaded datasets as context.
     This function optimizes the follow-up response by referring to the RDF graph first, and then using the LLM.
@@ -169,38 +167,56 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
     graph_answer = ""
     if sparql_results:
         for row in sparql_results:
-            dataset, audit, scope, link = row  # Fetch link from the RDF query result
-            graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\nLink: {link}\n\n"  # Include the link
+            dataset, title, summary, link, row_uri, property_uri, value = row
+            # Build the context from the retrieved RDF graph information
+            graph_answer += (
+                f"Dataset Title: {title}\n"
+                f"Summary: {summary}\n"
+                f"Link: {link}\n"  # Ensure the link is included
+                f"Row: {row_uri}\n"
+                f"Property: {property_uri}\n"
+                f"Value: {value}\n\n"
+            )
 
-        # Use the graph-based information as context for the follow-up question
+    # Step 3: Create a follow-up prompt
+    if graph_answer:
+        # If relevant data was found in the RDF graph, use it to add context to the LLM prompt
         follow_up_prompt = (
             f"Previously, you answered:\n{previous_answer}\n\n"
             f"The user is now asking a follow-up question: '{query}'.\n"
             f"Based on the knowledge graph, here are the relevant datasets and audits:\n{graph_answer}\n\n"
-            "Please provide a detailed response considering the datasets and the user's follow-up question."
+            "Please provide a detailed response considering the datasets, their audits, and the user's follow-up question."
         )
     else:
-        # If no relevant data was found in the RDF graph, use the previous answer and dataset context
+        # If no relevant data was found in the RDF graph, fall back to using previous context
         follow_up_prompt = (
             f"Previously, you answered:\n{previous_answer}\n\n"
             f"The user is now asking a follow-up question: '{query}'.\n"
-            "Based on the previous answer and the relevant datasets, provide a detailed response."
+            "Based on the previous answer and the relevant datasets, please provide a detailed response."
         )
 
     # Optionally: Include a summary of the datasets in the prompt if necessary
-    dataset_summaries = "\n\n".join([f"Dataset Title: {row['title']}\nSummary: {row['summary']}\nLink: {row['links']}" for idx, row in refined_datasets.iterrows()])
-    follow_up_prompt += "\n\nHere are the relevant datasets:\n" + dataset_summaries
+    dataset_summaries = "\n\n".join([
+        f"Dataset Title: {row['title']}\nSummary: {row['summary']}\nLink: {row['links']}"
+        for _, row in refined_datasets.iterrows()
+    ])
+    follow_up_prompt += "\n\nHere are the relevant datasets from previous searches:\n" + dataset_summaries
 
     # If the user is asking for links or information from the downloaded datasets, include that in the prompt
+    link_info = ""
+    for metadata, df in data_df:
+        # Ensure that we properly get the links from metadata
+        if 'links' in metadata:
+            link_info += f"{metadata['links']}\n"
+
+    # If the user's query explicitly asks for links, make sure to include them
     if "link" in query.lower() or "url" in query.lower() or "source" in query.lower():
-        links = data_df.get('links', None)
-        if links is not None:
-            link_info = "\n".join(links.dropna())  # Combine all the valid links
+        if link_info:
             follow_up_prompt += f"\n\nHere are the dataset links that you requested:\n{link_info}"
         else:
             follow_up_prompt += "\n\nNo links are available in the downloaded datasets."
 
-    # Step 3: Use the LLM to generate a final response
+    # Step 4: Use the LLM to generate a final response
     try:
         follow_up_answer = chatbot.generate_response(context=previous_answer, query=follow_up_prompt)
         
@@ -208,6 +224,7 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
         logger.info(f"Final LLM Follow-Up Answer for query '{query}':\n{follow_up_answer.strip()}")
 
         return follow_up_answer.strip()
+
     except Exception as e:
         logger.error(f"Error processing follow-up question: {e}")
         return f"Error: Could not process follow-up question. {str(e)}"

@@ -34,31 +34,25 @@ def run_streamline_process(query: str, user_id: str) -> str:
         previous_answer = user_context.get('previous_answer')
         if previous_answer:
             follow_up_keywords = ["more information", "details", "clarify", "explain", "about dataset", "continue", "expand", "again", "specify", "link"]
-            
+
             # Check if the query mentions follow-up keywords or if it's similar to the previous answer
             if any(keyword in query.lower() for keyword in follow_up_keywords):
                 follow_up = True
-            elif check_similarity(query, previous_answer):  # Optional: you can implement a query similarity check
+            elif check_similarity(query, previous_answer):
                 follow_up = True
 
         # If follow_up is true, use the existing context to handle the query
         if follow_up:
             refined_datasets = user_context.get('relevant_datasets')
-            if refined_datasets is not None:
-                # Retrieve previous all_data to continue processing
-                all_data = user_context.get('all_data')
-                if not all_data:
-                    return "Error: No previous datasets found in the context for follow-up."
-
+            all_data = user_context.get('all_data_with_metadata')
+            if refined_datasets is not None and all_data is not None:
                 # Call the follow-up processing function and pass the datasets
                 return directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, user_context['chatbot'], all_data)
             else:
-                return "Error: No relevant datasets found in the context for follow-up."
-    
+                return "Error: No previous datasets found in the context for follow-up."
+
     # If not a follow-up, treat it as a new query and process the entire pipeline
     return process_new_query(query, user_id)
-
-from graph import generate_dynamic_rdf_with_core  # Import the updated RDF generation function
 
 def process_new_query(query: str, user_id: str) -> str:
     """
@@ -137,7 +131,8 @@ def process_new_query(query: str, user_id: str) -> str:
     user_sessions[user_id] = {
         'relevant_datasets': refined_datasets_with_summaries,
         'previous_answer': final_answer,
-        'chatbot': chatbot  # Store chatbot instance for follow-up
+        'chatbot': chatbot,  # Store chatbot instance for follow-up
+        'all_data_with_metadata': all_data_with_metadata  # Store the full dataset context for follow-ups
     }
 
     end_time = time.time()

@@ -26,6 +26,9 @@ def scrape_metadata_from_url(url):
         summary = extract_summary(soup)
         dataset_title = extract_dataset_title(soup)
         dataset_links = extract_dataset_links(soup)
+        publisher = extract_publisher(soup)
+        topic = extract_topic(soup)
+        dataset_format = extract_format(soup)
 
         for dataset in dataset_links:
             datasets.append({
@@ -33,12 +36,60 @@ def scrape_metadata_from_url(url):
                 "summary": summary, 
                 "name": dataset['name'],
                 "links": dataset['link'],  # Only link, no content download
+                "publisher": publisher,
+                "topic": topic,
+                "format": dataset_format
             })
 
     except Exception as e:
         print(f"Failed to scrape {url}: {e}")
 
     return datasets
+
+def extract_publisher(soup):
+    # Search for the <dt> tag that contains 'Published by:'
+    publisher_label = soup.find('dt', text='Published by:')
+    
+    if publisher_label:
+        # Find the next <dd> tag after the <dt> tag
+        publisher_element = publisher_label.find_next('dd')
+        if publisher_element:
+            return publisher_element.text.strip()
+    
+    # If no 'Published by:' label is found, return a default value
+    return "Unknown Publisher"
+
+def extract_topic(soup):
+    # Search for the <dt> tag that contains 'Topic:'
+    topic_label = soup.find('dt', text='Topic:')
+    
+    if topic_label:
+        # Find the next <dd> tag after the <dt> tag
+        topic_element = topic_label.find_next('dd')
+        if topic_element:
+            return topic_element.text.strip()
+    
+    # If no 'Topic:' label is found, return a default value
+    return "Unknown Topic"
+
+def extract_format(soup):
+    # Look for the <td> tag with class 'govuk-table__cell'
+    format_element = soup.find('td', class_='govuk-table__cell')
+
+    if format_element:
+        # Clean up the format by stripping extra spaces and unwanted text
+        format_text = format_element.text.strip()
+
+        # Extract format by searching for 'Format:' and remove other descriptions
+        if "Format:" in format_text:
+            # Split by 'Format:' and take only the format, trimming extra text
+            format_text = format_text.split("Format:")[-1].split(",")[0].strip()
+
+        # Return the cleaned-up format text
+        return format_text
+    
+    # If no valid format is found, return a default value
+    return "Unknown Format"
 
 
 def download_and_extract_dataset(link):

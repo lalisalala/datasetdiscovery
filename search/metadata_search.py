@@ -4,25 +4,34 @@ def generate_summary_with_llm(metadata_row, chatbot):
     """
     Generate a summary for a specific dataset using the LLM.
     """
+    # Updated metadata content to include the new fields: publisher, topic, and format
     metadata_content = (
         f"Title: {metadata_row['title']}\n"
         f"Summary: {metadata_row['summary']}\n"
         f"Link: {metadata_row['links']}\n"
         f"Dataset Name: {metadata_row['name']}\n"
+        f"Publisher: {metadata_row['publisher']}\n"
+        f"Topic: {metadata_row['topic']}\n"
+        f"Format: {metadata_row['format']}\n"
     )
 
+    # Updated prompt for the LLM
     prompt = (
         f"Based on the following dataset metadata, generate a concise summary in 1-2 sentences:\n\n"
         f"{metadata_content}\n\n"
         "Please provide a concise summary including all the mentioned metadata."
     )
+
+    # Generate the new summary using the LLM
     new_summary = chatbot.generate_response(context=metadata_content, query=prompt)
     return new_summary.strip()
+
 
 def generate_summaries_for_relevant_datasets(relevant_datasets, chatbot):
     """
     Generate summaries only for relevant datasets.
     """
+    # Apply the new summary generation function to each row
     relevant_datasets['metadatasummary'] = relevant_datasets.apply(
         lambda row: generate_summary_with_llm(row, chatbot), axis=1
     )

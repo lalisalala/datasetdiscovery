@@ -11,7 +11,7 @@ import re
 logger = logging.getLogger(__name__)
 
 
-def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 5000) -> str:
+def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 500) -> str:
     """
     Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
 

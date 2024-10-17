@@ -1,10 +1,6 @@
 import pandas as pd
 import requests
 
-
-import pandas as pd
-import requests
-
 def download_datasets(relevant_datasets, output_file='data.csv', successful_links=None):
     """
     Download and save relevant datasets based on the first FAISS or LLM selection.
@@ -24,11 +20,16 @@ def download_datasets(relevant_datasets, output_file='data.csv', successful_link
     with open(output_file, 'w') as f:
         for _, row in relevant_datasets.iterrows():
             dataset_link = row['links']
+            
+            # Updated metadata to include publisher, topic, and format
             metadata = {
                 "title": row.get("title", ""),
                 "summary": row.get("summary", ""),
                 "links": dataset_link,
-                "name": row.get("name", "")
+                "name": row.get("name", ""),
+                "publisher": row.get("publisher", "Unknown Publisher"),  # Newly added
+                "topic": row.get("topic", "Unknown Topic"),              # Newly added
+                "format": row.get("format", "Unknown Format")            # Newly added
             }
 
             try:
@@ -70,5 +71,3 @@ def download_datasets(relevant_datasets, output_file='data.csv', successful_link
 
     # Return the list of tuples containing metadata and DataFrame for each dataset
     return all_data_with_metadata
-
-

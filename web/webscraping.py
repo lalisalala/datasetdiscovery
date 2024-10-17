@@ -25,20 +25,22 @@ def scrape_metadata_from_url(url):
 
         summary = extract_summary(soup)
         dataset_title = extract_dataset_title(soup)
-        dataset_links = extract_dataset_links(soup)
+        dataset_links = extract_dataset_links(soup)  # Extracts format per dataset
         publisher = extract_publisher(soup)
         topic = extract_topic(soup)
-        dataset_format = extract_format(soup)
 
         for dataset in dataset_links:
+            # Clean up the dataset name by removing unwanted text
+            cleaned_name = dataset['name'].strip()  # We only keep the visible name
+            
             datasets.append({
                 "title": dataset_title, 
                 "summary": summary, 
-                "name": dataset['name'],
-                "links": dataset['link'],  # Only link, no content download
+                "name": cleaned_name,  # Cleaned name (visible text only)
+                "links": dataset['link'],  
                 "publisher": publisher,
                 "topic": topic,
-                "format": dataset_format
+                "format": dataset['format']  # Correct format for each dataset
             })
 
     except Exception as e:
@@ -47,50 +49,54 @@ def scrape_metadata_from_url(url):
     return datasets
 
 def extract_publisher(soup):
-    # Search for the <dt> tag that contains 'Published by:'
     publisher_label = soup.find('dt', text='Published by:')
-    
     if publisher_label:
-        # Find the next <dd> tag after the <dt> tag
         publisher_element = publisher_label.find_next('dd')
         if publisher_element:
             return publisher_element.text.strip()
-    
-    # If no 'Published by:' label is found, return a default value
     return "Unknown Publisher"
 
 def extract_topic(soup):
-    # Search for the <dt> tag that contains 'Topic:'
     topic_label = soup.find('dt', text='Topic:')
-    
     if topic_label:
-        # Find the next <dd> tag after the <dt> tag
         topic_element = topic_label.find_next('dd')
         if topic_element:
             return topic_element.text.strip()
-    
-    # If no 'Topic:' label is found, return a default value
     return "Unknown Topic"
 
-def extract_format(soup):
-    # Look for the <td> tag with class 'govuk-table__cell'
-    format_element = soup.find('td', class_='govuk-table__cell')
-
-    if format_element:
-        # Clean up the format by stripping extra spaces and unwanted text
-        format_text = format_element.text.strip()
-
-        # Extract format by searching for 'Format:' and remove other descriptions
-        if "Format:" in format_text:
-            # Split by 'Format:' and take only the format, trimming extra text
-            format_text = format_text.split("Format:")[-1].split(",")[0].strip()
-
-        # Return the cleaned-up format text
-        return format_text
+def extract_dataset_links(soup):
+    """
+    Extract dataset links and their corresponding formats from the table.
+    Each row in the table represents a dataset with its own download link and format.
+    """
+    links = []
     
-    # If no valid format is found, return a default value
-    return "Unknown Format"
+    # Find all rows in the table body
+    rows = soup.find_all('tr', class_='govuk-table__row')
+    
+    for row in rows:
+        # Extract the download link and dataset name from the first <td> cell
+        dataset_cell = row.find('td', class_='govuk-table__cell')
+        if dataset_cell:
+            link_element = dataset_cell.find('a', class_='govuk-link', attrs={'data-ga-event': 'download'})
+            if link_element:
+                link = link_element['href']
 
+                # Extract the visible text (ignore anything in <span class="visually-hidden">)
+                dataset_name = ''.join(link_element.find_all(text=True, recursive=False)).strip()
+
+                # Extract the format from the second <td> cell in the same row
+                format_cell = row.find_all('td', class_='govuk-table__cell')[1]
+                file_format = format_cell.text.strip() if format_cell else "Unknown Format"
+
+                # Add the dataset info to the list
+                links.append({
+                    "name": dataset_name,
+                    "link": link,
+                    "format": file_format
+                })
+    
+    return links
 
 def download_and_extract_dataset(link):
     try:
@@ -134,25 +140,6 @@ def extract_dataset_title(soup):
     title_element = soup.find('h1', class_='heading-large', attrs={'property': 'dc:title'})
     return title_element.text.strip() if title_element else "Unnamed Dataset"
 
-def extract_dataset_links(soup):
-    links = []
-    link_elements = soup.find_all('a', class_='govuk-link', attrs={'data-ga-event': 'download'})
-    
-    for element in link_elements:
-        link = element['href']
-
-        # The title of the dataset follows the "Download " span
-        span_element = element.find('span', class_='visually-hidden')
-        if span_element and span_element.text.strip() == 'Download':
-            # Extract the name of the dataset which follows the "Download " text
-            name = element.text.split('Download ')[-1].split(',')[0].strip()
-        else:
-            name = "Unknown Dataset"
-        
-        links.append({"title": name, "link": link, "name": name})
-    
-    return links
-
 def save_to_csv(datasets, filename='datasets.csv'):
     df = pd.DataFrame(datasets)
     df.to_csv(filename, index=False)
@@ -164,4 +151,4 @@ def run_webscraping(yaml_path='config/data.yaml', output_file='datasets.csv'):
 
 if __name__ == "__main__":
     datasets = scrape_datasets('config/data.yaml')
-    save_to_csv(datasets) 
+    save_to_csv(datasets)

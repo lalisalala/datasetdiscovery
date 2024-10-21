@@ -3,20 +3,96 @@ from bs4 import BeautifulSoup
 import yaml
 import pandas as pd
 import os
+from llm.llm_chatbot import LLMChatbot
+from config_loader import config_loader
+import logging
 
-def scrape_datasets(yaml_path='config/data.yaml'):
+logger = logging.getLogger(__name__)
+
+def extract_topic(soup, title, summary, chatbot: LLMChatbot):
+    """
+    Extract the topic metadata from the dataset's HTML. If the extracted topic is missing 
+    or not in the predefined list, use the LLM to generate a fitting topic based on the 
+    dataset's title and summary.
+    """
+    # Predefined valid topics
+    predefined_topics = [
+        "Business and economy", "Crime and justice", "Defence", "Education", 
+        "Environment", "Government", "Government spending", "Health", 
+        "Mapping", "Society", "Towns and cities", "Transport", 
+        "Digital service performance", "Government reference data"
+    ]
+
+    # Check for a 'Topic:' label in the dataset HTML
+    topic_label = soup.find('dt', text='Topic:')
+    if topic_label:
+        topic_element = topic_label.find_next('dd')
+        if topic_element:
+            extracted_topic = topic_element.text.strip()
+
+            # If the extracted topic is not in the predefined list, use the LLM
+            if extracted_topic not in predefined_topics:
+                return generate_llm_topic(title, summary, chatbot)
+
+            # If the topic is valid, return it
+            return extracted_topic
+
+    # If no topic is found, use the LLM to infer the topic
+    return generate_llm_topic(title, summary, chatbot)
+
+def generate_llm_topic(title, summary, chatbot: LLMChatbot) -> str:
+    """
+    Use the LLM to generate a suitable topic if the extracted topic is missing or invalid.
+    The LLM will pick a topic from the predefined list.
+    """
+    predefined_topics = [
+        "Business and economy", "Crime and justice", "Defence", "Education", 
+        "Environment", "Government", "Government spending", "Health", 
+        "Mapping", "Society", "Towns and cities", "Transport", 
+        "Digital service performance", "Government reference data"
+    ]
+
+    # Create the prompt for the LLM
+    prompt = (
+        f"Based on the following dataset title and summary, choose the most fitting topic from the predefined list:\n\n"
+        f"Title: {title}\n"
+        f"Summary: {summary}\n\n"
+        f"Predefined topics: {', '.join(predefined_topics)}\n\n"
+        "Please select the most appropriate topic for this dataset."
+    )
+
+    # Generate the LLM response
+    try:
+        llm_response = chatbot.generate_response(context=summary, query=prompt)
+        logger.info(f"LLM topic generation response: {llm_response}")
+
+        # Ensure the LLM chooses from the predefined topics (simple check)
+        for topic in predefined_topics:
+            if topic.lower() in llm_response.lower():
+                return topic
+
+        # If no valid topic was found, fallback to "Unknown Topic"
+        return "Unknown Topic"
+    
+    except Exception as e:
+        logger.error(f"Failed to generate topic using LLM: {e}")
+        return "Unknown Topic"
+def scrape_datasets(yaml_path='config/data.yaml', chatbot: LLMChatbot = None):
+    if chatbot is None:
+        raise ValueError("chatbot instance is required for topic generation.")
+
     with open(yaml_path, 'r') as file:
         data = yaml.safe_load(file)
     urls = [dataset['url'] for dataset in data['datasets']]
     
     all_datasets = []
     for url in urls:
-        datasets = scrape_metadata_from_url(url)
+        datasets = scrape_metadata_from_url(url, chatbot)  # Pass chatbot to scrape_metadata_from_url
         all_datasets.extend(datasets)
     
     return all_datasets
 
-def scrape_metadata_from_url(url):
+def scrape_metadata_from_url(url, chatbot: LLMChatbot):
     datasets = []
     try:
         response = requests.get(url)
@@ -27,7 +103,7 @@ def scrape_metadata_from_url(url):
         dataset_title = extract_dataset_title(soup)
         dataset_links = extract_dataset_links(soup)  # Extracts format per dataset
         publisher = extract_publisher(soup)
-        topic = extract_topic(soup)
+        topic = extract_topic(soup, dataset_title, summary, chatbot)  # Use chatbot for missing topic
 
         for dataset in dataset_links:
             # Clean up the dataset name by removing unwanted text
@@ -55,14 +131,6 @@ def extract_publisher(soup):
         if publisher_element:
             return publisher_element.text.strip()
     return "Unknown Publisher"
-
-def extract_topic(soup):
-    topic_label = soup.find('dt', text='Topic:')
-    if topic_label:
-        topic_element = topic_label.find_next('dd')
-        if topic_element:
-            return topic_element.text.strip()
-    return "Unknown Topic"
 
 def extract_dataset_links(soup):
     """
@@ -146,9 +214,17 @@ def save_to_csv(datasets, filename='datasets.csv'):
     print(f"Data saved to {filename}")
 
 def run_webscraping(yaml_path='config/data.yaml', output_file='datasets.csv'):
-    datasets = scrape_datasets(yaml_path)
+    # Load the LLM chatbot configuration
+    llm_config = config_loader.get_llm_config()
+    chatbot = LLMChatbot(
+        model_name=llm_config.get('model_name', 'mistral'),
+        temperature=llm_config.get('temperature', 0.7),
+        max_tokens=llm_config.get('max_tokens', 1024),
+        api_url=llm_config.get('api_url', 'http://localhost:11434/api/generate')
+    )
+
+    datasets = scrape_datasets(yaml_path, chatbot=chatbot)
     save_to_csv(datasets, output_file)
 
 if __name__ == "__main__":
-    datasets = scrape_datasets('config/data.yaml')
-    save_to_csv(datasets)
+    run_webscraping('config/data.yaml')

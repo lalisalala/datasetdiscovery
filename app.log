@@ -14496,3 +14496,110 @@ Based on the provided data, there are several audits related to Official Control
 
 It's important to note that these audits serve as a way for the Food Standards Agency (FSA) to ensure compliance with various regulations and standards, and to identify areas for improvement in the delivery of food law enforcement services.
 2024-10-17 19:03:57,529 - streamline - INFO - Streamline process completed in 18.01 seconds.
+2024-10-21 13:10:36,122 - root - INFO - Logging is configured.
+2024-10-21 14:05:26,296 - streamline - INFO - Received new user query: 'what audits were planned 2019? '
+2024-10-21 14:05:26,297 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-21 14:05:28,150 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-21 14:05:29,186 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-21 14:05:29,186 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-21 14:05:31,032 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-21 14:05:38,940 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-21 14:05:45,401 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned 2019? ':
+The data provided lists various internal audits planned by the Food Standards Agency (FSA) across different categories, with a focus on Business Audit, Official Controls, and Local Authority Audits. Here's a summary of each category:
+
+1. **Business Audit**: These audits assess the FSA's compliance with various standards and regulations, including minimum security standards, managing attendance, asset management, General Data Protection Regulation (GDPR), product recall delivery assurance, supplier management for IT help desk services, and Supplier Management- IT Help Desk Services.
+
+2. **Official Controls**: These audits evaluate the effectiveness of FSA official controls in achieving the objectives of EU law. Some examples include minced meat, meat preparations and ready to eat products, eggs hygiene, Bovine TB, Notifiable Diseases, Game Handling Establishments follow-up audit, Approval and re-approval of meat establishments, Animal Welfare, Animal-by-Products, Raw Drinking Milk, Cutting Establishments Unannounced Inspections, Delivery of Animal Feed Law Enforcement Services in Wales, Allergens -England. These audits also include follow-up audits to review the effectiveness of management actions.
+
+3. **Local Authority Audits**: These audits assess the adequacy and effectiveness of Local Authorities (LA) arrangements in delivering feed and food law enforcement services. Examples include complaints about food hygiene/food premises and infectious disease control in England, follow-up audits to check progress in implementing full audit action plans in Wales, organization and management of official controls delivered by LAs in Northern Ireland, audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E, Delivery of Animal Feed Law Enforcement Services in Wales, Allergens -England.
+
+The metadata provides information about the Internal Audit Plan for the year 2018-2019, published by the Food Standards Agency. The data is presented in a CSV format and can be accessed at the provided link.
+2024-10-21 14:05:45,401 - streamline - INFO - Streamline process completed in 19.10 seconds.
+2024-10-21 14:06:07,061 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, what is the link to these audits? ':
+To clarify, the links provided in my previous response are for the datasets that contain information about the internal audits planned by the Food Standards Agency (FSA) across different categories during the years 2018-2019 and 2019-2020. These datasets can be accessed at the following links:
+
+* <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv>
+* <https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv>
+
+These datasets provide details on the various internal audits planned by the FSA, including Business Audits, Official Controls, and Local Authority Audits, for each year specified. The data is presented in a CSV format, allowing users to easily download and analyze the information as needed.
+2024-10-21 14:22:53,529 - root - INFO - Logging is configured.
+2024-10-21 14:23:03,964 - root - INFO - Logging is configured.
+2024-10-21 14:33:54,847 - root - INFO - Logging is configured.
+2024-10-21 14:41:07,603 - root - INFO - Logging is configured.
+2024-10-21 14:52:11,070 - root - INFO - Logging is configured.
+2024-10-21 14:52:51,142 - root - INFO - Logging is configured.
+2024-10-21 14:53:09,008 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-21 14:53:09,008 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-21 14:54:24,760 - root - INFO - Logging is configured.
+2024-10-21 14:54:32,741 - streamline - INFO - Received new user query: 'what audits were plannedi n2019? '
+2024-10-21 14:54:32,741 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-21 15:00:11,304 - root - INFO - Logging is configured.
+2024-10-21 15:00:29,852 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-21 15:00:29,852 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-21 15:00:29,853 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-21 15:00:31,654 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-21 15:00:31,655 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-21 15:00:31,700 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-21 15:00:31,700 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-21 15:00:33,483 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-21 15:00:40,998 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-21 15:00:52,516 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Title: Internal Audit Plan 2018-2019
+   Summary: List of internal audits planned by year.
+   Links: [Internal Audit Plan 2018-19 CSV Data](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv)
+   Publisher: Food Standards Agency
+   Topic: Towns and cities, Local Authority Audits, Official Controls
+   Format: CSV
+
+   The table below presents various audits planned for the year 2018-2019, including Business Audits and Official Controls (related to food safety) as well as Local Authority Audits. Each audit has a title, outline scope, and category.
+
+   | Category            | Audit Title                                | Outline Scope                                                                              |
+   |--------------------|-----------------------------------------|--------------------------------------------------------------------------------------------|
+   | Business Audit     | Minimum Security Standards              | To assess FSA compliance with the Cabinet Office Minimum Security Standards.                |
+   | Business Audit     | Managing Attendance                    | To assess effectiveness of the policy on managing attendance in the context of OWOW       |
+   | Business Audit     | Asset Management                      | To assess effectiveness of FSA policies on asset procurement, records, security and disposal  |
+   | Business Audit     | General Data Protection Regulation    | To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. |
+   | Business Audit     | Product Recall Delivery Assurance audit| Gateway Review type assessment to provide project delivery assurance                          |
+   | Business Audit     | Supplier Management- IT Help Desk Services| The audit will review effectiveness of supplier management arrangements.                    |
+   | Official Controls   | Minced meat, meat preparations and ready to eat products| To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law  |
+   | Official Controls   | Eggs Hygiene                           | To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law.    |
+   | Official Controls   | Bovine TB                              | To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law.  |
+   | Official Controls   | Notifiable Diseases                   | To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law.  |
+   | Official Controls   | Game Handling Establishments follow -up audit| Follow up audit to assess effectiveness of management actions implemented in addressing issues identified  |
+   | Official Controls   | Approval and re-approval of meat establishments| To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law. |
+   | Official Controls   | Animal Welfare                         | To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law.  |
+   | Official Controls   | Animal -by-Products                    | Further follow-up audit requested by ARAC to review effectiveness of management actions |
+   | Official Controls   | Raw Drinking Milk                     | Follow up audit to assess effectiveness of management actions implemented to address issues identified.  |
+   | Official Controls   | Cutting Establishments Unannounced Inspections| To assess effectiveness of FSA official controls for cutting establishments.              |
+   | Local Authority Audits| Complaints about food hygiene/ food premises and infectious disease control-England| To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law. |
+   | Local Authority Audits| Follow-up audits of LAs to check progress in implementing full audit action plans in Wales  |Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans                |
+   | Local Authority Audits| Organisation and Management of Official controls delivered by LAs in Northern Ireland      |To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations    |
+   | Local Authority Audits| Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E     |To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations    |
+   | Local Authority Audits| Delivery of Official Controls within LAs in Scotland                | To assess the adequacy/effectiveness of LA arrangements in delivering official controls in Scotland.                     |
+2024-10-21 15:00:52,517 - streamline - INFO - Streamline process completed in 22.66 seconds.
+2024-10-21 15:06:40,357 - root - INFO - Logging is configured.
+2024-10-21 15:06:48,284 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-21 15:06:48,284 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-21 15:06:48,285 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-21 15:06:54,002 - web.webscraping - INFO - LLM topic generation response: The most fitting topic for this dataset is "Environment".
+2024-10-21 15:06:54,100 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-21 15:06:54,102 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-21 15:06:54,141 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2024-10-21 15:06:54,141 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-21 15:06:55,961 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-21 15:06:58,917 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-21 15:07:04,326 - llm.llm_use - INFO - Final LLM Answer for query 'what audits were planned in 2019? ':
+Here is a summary of the internal audits planned by the Food Standards Agency (FSA) as per the Internal Audit Plan 2018-2019:
+
+1. **Business Audit** - Minimum Security Standards, Managing Attendance, Asset Management, General Data Protection Regulation, Product Recall Delivery Assurance audit, Supplier Management- IT Help Desk Services
+   - To assess FSA compliance with various standards and regulations
+   - To evaluate the effectiveness of policies and systems
+
+2. **Official Controls** - Minced meat, meat preparations and ready to eat products, Eggs Hygiene, Bovine TB, Notifiable Diseases, Game Handling Establishments follow-up audit, Approval and re-approval of meat establishments, Animal Welfare, Animal-by-Products, Raw Drinking Milk, Cutting Establishments Unannounced Inspections
+   - To assess the effectiveness of FSA official controls in achieving objectives of EU law for various food categories and animal welfare regulations
+   - Follow-up audits to review management actions implemented to address issues identified
+
+3. **Local Authority Audits** - Complaints about food hygiene/food premises and infectious disease control-England, Follow-up audits of LAs to check progress in implementing full audit action plans in Wales, Organisation and Management of Official controls delivered by LAs in Northern Ireland, Delivery of Animal Feed Law Enforcement Services in Wales, Allergens -England
+   - To assess the adequacy/effectiveness of local authority arrangements for delivering feed and food law enforcement services across England, Wales, and Northern Ireland
+   - Follow-up audits to check progress on addressing agreed action plans
+2024-10-21 15:07:04,326 - streamline - INFO - Streamline process completed in 16.04 seconds.

@@ -11,7 +11,7 @@ import re
 logger = logging.getLogger(__name__)
 
 
-def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 500) -> str:
+def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 1000) -> str:
     """
     Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
 
@@ -130,8 +130,8 @@ def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
             f"Metadata for this dataset:\n{metadata}\n\n"  # Include metadata
             f"Here is a chunk of the dataset:\n{data_chunk}\n\n"  # Include chunked dataset
             "You are a helpful Chat Bot specialized in answering questions about, discussing, and referencing datasets from open data portals."
-            " Please analyze the chunks and answer the query by considering the datasets provi‚ded."
-            " Always reference the correct relevant dataset hyperlinks in the beginning once. "
+            " Please analyze the chunks and answer the query by considering the datasets provided."
+            " Reference the correct relevant dataset hyperlink in the beginning once. "
         )
 
         # Send the prompt to the LLM and get the answer for this chunk

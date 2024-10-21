@@ -78,7 +78,13 @@ def process_new_query(query: str, user_id: str) -> str:
         logger.error(f"CSV file {csv_file} not found after web scraping.")
         return "Error: Datasets not found."
     
-    df = pd.read_csv(csv_file)
+    # Attempt to read the CSV with error handling using on_bad_lines parameter
+    try:
+        df = pd.read_csv(csv_file, on_bad_lines='skip', engine='python', sep=',')
+    except pd.errors.ParserError as e:
+        logger.error(f"Error reading the CSV file: {e}")
+        return f"Error: Failed to read the datasets.csv file due to parsing issues. Details: {e}"
+    
     llm_config = config_loader.get_llm_config()
     faiss_config = config_loader.get_faiss_config()
 
@@ -104,7 +110,12 @@ def process_new_query(query: str, user_id: str) -> str:
     datasets2_csv = 'datasets2.csv'
     relevant_datasets.to_csv(datasets2_csv, index=False)
 
-    df_faiss_results = pd.read_csv(datasets2_csv)
+    try:
+        df_faiss_results = pd.read_csv(datasets2_csv)
+    except pd.errors.ParserError as e:
+        logger.error(f"Error reading FAISS results CSV: {e}")
+        return f"Error: Failed to read datasets2.csv file due to parsing issues."
+
     refined_datasets = use_llm_for_metadata_selection(df_faiss_results, query, chatbot)
     refined_datasets_with_summaries = generate_summaries_for_relevant_datasets(refined_datasets, chatbot)
     download_datasets(refined_datasets_with_summaries, output_file='data.csv')
@@ -112,7 +123,13 @@ def process_new_query(query: str, user_id: str) -> str:
     if not os.path.exists('data.csv'):
         return "Error: Downloaded data not found."
 
-    data_df = pd.read_csv('data.csv')
+    # Attempt to read the final dataset with error handling
+    try:
+        data_df = pd.read_csv('data.csv', on_bad_lines='skip', engine='python', sep=',')
+    except pd.errors.ParserError as e:
+        logger.error(f"Error reading final data.csv: {e}")
+        return f"Error: Failed to read the data.csv file due to parsing issues. Details: {e}"
+
     final_answer = directly_use_llm_for_answer(data_df, query, chatbot)
 
     # Save the context for follow-up questions

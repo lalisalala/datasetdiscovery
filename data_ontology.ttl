@@ -1,262 +1,744 @@
 @prefix ex: <http://example.org/ontology/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ex:Row_1_1 a ex:Row ;
     ex:AuditTitle "Minimum Security Standards" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess FSA compliance with the Cabinet Office Minimum Security Standards. " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_10 a ex:Row ;
-    ex:AuditTitle "Animal Welfare[1]" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_11 a ex:Row ;
-    ex:AuditTitle "Shellfish" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_12 a ex:Row ;
-    ex:AuditTitle "Food Chain Information and Collection & Communication of Inspection Results " ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To assess the effectiveness of the food chain information system." ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_13 a ex:Row ;
-    ex:AuditTitle "Wine Inspection" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To assess management assurance of OFFC delivery of the wine standards " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_14 a ex:Row ;
-    ex:AuditTitle "Raw Drinking Milk" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_15 a ex:Row ;
-    ex:AuditTitle "Warm meat legislation" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To assess the oversight and delivery of the warm meat legislation." ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_16 a ex:Row ;
-    ex:AuditTitle "Export Certification" ;
-    ex:Category "Official Controls Audits" ;
-    ex:OutlineScope "To assess the system of certifying exports. " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_17 a ex:Row ;
-    ex:AuditTitle "Allergens in England, Wales and Northern Ireland" ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_18 a ex:Row ;
-    ex:AuditTitle "LA Approved Premises in England" ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the effectiveness of LA approval of premises for those establishments requiring LA approval." ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_19 a ex:Row ;
-    ex:AuditTitle "Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland" ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs." ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_2 a ex:Row ;
     ex:AuditTitle "Payroll Leavers / Joiners" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the completeness, timeliness and accuracy of joiner and leaver records to provide assurance on management controls." ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_20 a ex:Row ;
-    ex:AuditTitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  " ;
-    ex:partOf ex:Dataset_1 .
-
-ex:Row_1_21 a ex:Row ;
-    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales " ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "Follow-up audits to assess progress by LAs in addressing agreed action plans." ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_3 a ex:Row ;
     ex:AuditTitle "Post Project Evaluation Reviews" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the end of project processes, transition to business as usual and that leanings are captured / shared. " ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_4 a ex:Row ;
     ex:AuditTitle "DAERA Contract Management" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess management controls and reporting on the contract with DAERA. " ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_5 a ex:Row ;
     ex:AuditTitle "Information / Data Security" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the effectiveness of management actions on information/ data security " ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_6 a ex:Row ;
     ex:AuditTitle "Product Recall Delivery Assurance" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the effectiveness of the product recall system implemented in 2019." ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_7 a ex:Row ;
     ex:AuditTitle "Conflicts of Interest Policy" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the process, compliance and reporting of conflicts of interest for Board Members and FSA staff." ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_8 a ex:Row ;
     ex:AuditTitle "Financial Assurance" ;
     ex:Category "Business Audits" ;
     ex:OutlineScope "To assess the effectiveness of the key financial systems and related controls in FSA, Wales and Northern Ireland." ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Business_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_10,
+        ex:Row_1_11,
+        ex:Row_1_12,
+        ex:Row_1_13,
+        ex:Row_1_14,
+        ex:Row_1_15,
+        ex:Row_1_16,
+        ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_1_9,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Business_Audit a skos:Concept ;
+    skos:prefLabel "Business Audit" .
+
+ex:Business_Audits a skos:Concept ;
+    skos:prefLabel "Business Audits" .
+
+ex:Official_Controls_Audits a skos:Concept ;
+    skos:prefLabel "Official Controls Audits" .
+
+ex:Row_1_10 a ex:Row ;
+    ex:AuditTitle "Animal Welfare[1]" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_11 a ex:Row ;
+    ex:AuditTitle "Shellfish" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To asess the suitability and effectiveness of arrangements for developing and implementing guidance to enable and confirm successful delivery of shellfish official controls. " ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_12 a ex:Row ;
+    ex:AuditTitle "Food Chain Information and Collection & Communication of Inspection Results " ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the effectiveness of the food chain information system." ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_13 a ex:Row ;
+    ex:AuditTitle "Wine Inspection" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess management assurance of OFFC delivery of the wine standards " ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_14 a ex:Row ;
+    ex:AuditTitle "Raw Drinking Milk" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address " ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_15 a ex:Row ;
+    ex:AuditTitle "Warm meat legislation" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the oversight and delivery of the warm meat legislation." ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_1_16 a ex:Row ;
+    ex:AuditTitle "Export Certification" ;
+    ex:Category "Official Controls Audits" ;
+    ex:OutlineScope "To assess the system of certifying exports. " ;
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Row_1_9 a ex:Row ;
     ex:AuditTitle "Official Veterinarian / Official Auxiliaries Training" ;
     ex:Category "Official Controls Audits" ;
     ex:OutlineScope "To assess management delivery and oversight of Official Veterinarian / Official Auxiliaries Training" ;
-    ex:partOf ex:Dataset_1 .
+    ex:hasCategory ex:Official_Controls_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_1_17,
+        ex:Row_1_18,
+        ex:Row_1_19,
+        ex:Row_1_20,
+        ex:Row_1_21,
+        ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_2,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
-ex:Row_2_1 a ex:Row ;
-    ex:AuditTitle "Minimum Security Standards" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "To assess FSA compliance with the Cabinet Office Minimum Security Standards." ;
-    ex:partOf ex:Dataset_2 .
+ex:Official_Controls a skos:Concept ;
+    skos:prefLabel "Official Controls" .
 
-ex:Row_2_10 a ex:Row ;
-    ex:AuditTitle "Notifiable Diseases" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_2 .
+ex:Local_Authority_Audits a skos:Concept ;
+    skos:prefLabel "Local Authority Audits" .
 
-ex:Row_2_11 a ex:Row ;
-    ex:AuditTitle "Game Handling Establishments follow -up audit" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented in addressing issues identified" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_12 a ex:Row ;
-    ex:AuditTitle "Approval and re-approval of meat establishments" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_13 a ex:Row ;
-    ex:AuditTitle "Animal Welfare" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_14 a ex:Row ;
-    ex:AuditTitle "Animal -by-Products" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "Further follow-up audit requested by ARAC to review effectiveness of management actions" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_15 a ex:Row ;
-    ex:AuditTitle "Raw Drinking Milk" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address issues identified. " ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_16 a ex:Row ;
-    ex:AuditTitle "Cutting Establishments Unannounced Inspections" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for cutting establishments." ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_17 a ex:Row ;
-    ex:AuditTitle "Complaints about food hygiene/ food premises and infectious disease control-England" ;
+ex:Row_1_17 a ex:Row ;
+    ex:AuditTitle "Allergens in England, Wales and Northern Ireland" ;
     ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_2 .
+    ex:OutlineScope "To assess the adequacy / effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England " ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_2,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
-ex:Row_2_18 a ex:Row ;
-    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" ;
+ex:Row_1_18 a ex:Row ;
+    ex:AuditTitle "LA Approved Premises in England" ;
     ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans " ;
-    ex:partOf ex:Dataset_2 .
+    ex:OutlineScope "To assess the effectiveness of LA approval of premises for those establishments requiring LA approval." ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_2,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
-ex:Row_2_19 a ex:Row ;
-    ex:AuditTitle "Organisation and Management of Official controls delivered by LAs in Northern Ireland" ;
+ex:Row_1_19 a ex:Row ;
+    ex:AuditTitle "Food Hygiene Rating Scheme implementation ? formal review in Northern Ireland" ;
     ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  " ;
-    ex:partOf ex:Dataset_2 .
+    ex:OutlineScope "To assess compliance with the statutory requirements set out in the Food Hygiene Rating Act (Northern Ireland) 2016 and the suitability and effectiveness of the relevant official controls delivered by LAs." ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_2,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
-ex:Row_2_2 a ex:Row ;
-    ex:AuditTitle "Managing Attendance" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   " ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_20 a ex:Row ;
-    ex:AuditTitle "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  " ;
-    ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_21 a ex:Row ;
+ex:Row_1_20 a ex:Row ;
     ex:AuditTitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
     ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  " ;
-    ex:partOf ex:Dataset_2 .
+    ex:OutlineScope "To fully assess the effectiveness of the new model audits will be undertaken across the Wales regional feed services.  " ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_2,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
-ex:Row_2_22 a ex:Row ;
-    ex:AuditTitle "Allergens -England " ;
+ex:Row_1_21 a ex:Row ;
+    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales " ;
     ex:Category "Local Authority Audits" ;
-    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_3 a ex:Row ;
-    ex:AuditTitle "Asset Management" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "To assess effectiveness of FSA policies on asset procurement, records, security and disposal " ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_4 a ex:Row ;
-    ex:AuditTitle "General Data Protection Regulation" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. " ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_5 a ex:Row ;
-    ex:AuditTitle "Product Recall Delivery Assurance audit" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "Gateway Review type assessment to provide project delivery assurance" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_6 a ex:Row ;
-    ex:AuditTitle "Supplier Management- IT Help Desk Services" ;
-    ex:Category "Business Audit" ;
-    ex:OutlineScope "The audit will review effectiveness of supplier management arrangements." ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_7 a ex:Row ;
-    ex:AuditTitle "Minced meat, meat preparations and ready to eat products" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law" ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_8 a ex:Row ;
-    ex:AuditTitle "Eggs Hygiene " ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law." ;
-    ex:partOf ex:Dataset_2 .
-
-ex:Row_2_9 a ex:Row ;
-    ex:AuditTitle "Bovine TB" ;
-    ex:Category "Official Controls" ;
-    ex:OutlineScope "To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. " ;
-    ex:partOf ex:Dataset_2 .
+    ex:OutlineScope "Follow-up audits to assess progress by LAs in addressing agreed action plans." ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_1 ;
+    schema:relatedTo ex:Row_2_1,
+        ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_2,
+        ex:Row_2_3,
+        ex:Row_2_4,
+        ex:Row_2_5,
+        ex:Row_2_6,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Dataset_1 a ex:Dataset ;
     ex:format "CSV" ;
@@ -265,7 +747,146 @@ ex:Dataset_1 a ex:Dataset ;
     ex:publisher "Food Standards Agency" ;
     ex:summary "List of internal audits planned by year." ;
     ex:title "Internal Audit Plan" ;
-    ex:topic "Towns and cities" .
+    ex:topic "Towns and cities" ;
+    schema:relatedTo ex:Dataset_2 .
+
+ex:Row_2_1 a ex:Row ;
+    ex:AuditTitle "Minimum Security Standards" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess FSA compliance with the Cabinet Office Minimum Security Standards." ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_2_2 a ex:Row ;
+    ex:AuditTitle "Managing Attendance" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "Audit will assess effectiveness of the policy on managing attendance in the context of OWOW   " ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_2_3 a ex:Row ;
+    ex:AuditTitle "Asset Management" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess effectiveness of FSA policies on asset procurement, records, security and disposal " ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_2_4 a ex:Row ;
+    ex:AuditTitle "General Data Protection Regulation" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "To assess effectiveness of FSA systems and processes established to ensure compliance with the new Regulation. " ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_2_5 a ex:Row ;
+    ex:AuditTitle "Product Recall Delivery Assurance audit" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "Gateway Review type assessment to provide project delivery assurance" ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
+
+ex:Row_2_6 a ex:Row ;
+    ex:AuditTitle "Supplier Management- IT Help Desk Services" ;
+    ex:Category "Business Audit" ;
+    ex:OutlineScope "The audit will review effectiveness of supplier management arrangements." ;
+    ex:hasCategory ex:Business_Audit ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_10,
+        ex:Row_2_11,
+        ex:Row_2_12,
+        ex:Row_2_13,
+        ex:Row_2_14,
+        ex:Row_2_15,
+        ex:Row_2_16,
+        ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22,
+        ex:Row_2_7,
+        ex:Row_2_8,
+        ex:Row_2_9 .
 
 ex:Dataset_2 a ex:Dataset ;
     ex:format "CSV" ;
@@ -275,4 +896,176 @@ ex:Dataset_2 a ex:Dataset ;
     ex:summary "List of internal audits planned by year." ;
     ex:title "Internal Audit Plan" ;
     ex:topic "Towns and cities" .
+
+ex:Row_2_10 a ex:Row ;
+    ex:AuditTitle "Notifiable Diseases" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for Notifiable Diseases in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_11 a ex:Row ;
+    ex:AuditTitle "Game Handling Establishments follow -up audit" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented in addressing issues identified" ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_12 a ex:Row ;
+    ex:AuditTitle "Approval and re-approval of meat establishments" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for approval and re-approval of premises in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_13 a ex:Row ;
+    ex:AuditTitle "Animal Welfare" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for animal welfare in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_14 a ex:Row ;
+    ex:AuditTitle "Animal -by-Products" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Further follow-up audit requested by ARAC to review effectiveness of management actions" ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_15 a ex:Row ;
+    ex:AuditTitle "Raw Drinking Milk" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "Follow up audit to assess effectiveness of management actions implemented to address issues identified. " ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_16 a ex:Row ;
+    ex:AuditTitle "Cutting Establishments Unannounced Inspections" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for cutting establishments." ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_7 a ex:Row ;
+    ex:AuditTitle "Minced meat, meat preparations and ready to eat products" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for minced meat, meat preparations and ready to eat products in achieving the objectives of EU law" ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_8 a ex:Row ;
+    ex:AuditTitle "Eggs Hygiene " ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for eggs hygiene implemented by APHA in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_9 a ex:Row ;
+    ex:AuditTitle "Bovine TB" ;
+    ex:Category "Official Controls" ;
+    ex:OutlineScope "To assess effectiveness of FSA official controls for TB in achieving the objectives of EU law. " ;
+    ex:hasCategory ex:Official_Controls ;
+    ex:partOf ex:Dataset_2 ;
+    schema:relatedTo ex:Row_2_17,
+        ex:Row_2_18,
+        ex:Row_2_19,
+        ex:Row_2_20,
+        ex:Row_2_21,
+        ex:Row_2_22 .
+
+ex:Row_2_17 a ex:Row ;
+    ex:AuditTitle "Complaints about food hygiene/ food premises and infectious disease control-England" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements in achieving the objectives of EU law." ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
+
+ex:Row_2_18 a ex:Row ;
+    ex:AuditTitle "Follow-up audits of LAs to check progress in implementing full audit action plans in Wales" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "Follow-up audits will be carried out to assess progress by LAs in addressing agreed action plans " ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
+
+ex:Row_2_19 a ex:Row ;
+    ex:AuditTitle "Organisation and Management of Official controls delivered by LAs in Northern Ireland" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in Northern Ireland and following up on agreed recommendations  " ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
+
+ex:Row_2_20 a ex:Row ;
+    ex:AuditTitle "Audit engagement with all LAs in England achieving less than 90% of planned interventions at premises rated A-E  " ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
+
+ex:Row_2_21 a ex:Row ;
+    ex:AuditTitle "Delivery of Animal Feed Law Enforcement Services in Wales" ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To fully assess the/effectiveness of the new model audits will be undertaken across each of the 6 feed regions.  " ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
+
+ex:Row_2_22 a ex:Row ;
+    ex:AuditTitle "Allergens -England " ;
+    ex:Category "Local Authority Audits" ;
+    ex:OutlineScope "To assess the adequacy/effectiveness of LA arrangements for the delivery of feed and food law enforcement services in England" ;
+    ex:hasCategory ex:Local_Authority_Audits ;
+    ex:partOf ex:Dataset_2 .
 

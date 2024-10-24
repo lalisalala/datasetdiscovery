@@ -15029,3 +15029,122 @@ You can access the dataset here: https://fsadata.github.io/internal-audit-plan/d
 Based on your request, the data you are looking for is available in the following dataset: "Internal Audit Plan 2019-20" which can be found at this link: [https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv](https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv). This dataset provides a list of internal audits planned by the Food Standards Agency (FSA) for the year 2019-2020, as previously mentioned in your search results. You can use this data to learn about the various types of audits being conducted during that period and their objectives.
 
 You can access the dataset here: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+2024-10-24 16:31:03,751 - root - INFO - Logging is configured.
+2024-10-24 16:31:14,703 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 16:31:14,703 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 16:31:14,703 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 16:32:00,806 - web.webscraping - INFO - LLM topic generation response: The most appropriate predefined topic for this dataset is "Environment" or "Towns and cities". Both topics are suitable since the report primarily discusses air pollution levels (PM2.5) in London, which is a city, and the focus of the data is on environmental quality.
+2024-10-24 16:32:00,904 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 16:32:00,905 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 16:32:00,935 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 16:32:00,935 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 16:32:02,863 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 16:32:16,555 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 16:32:16,555 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 16:32:16,555 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 16:32:59,228 - web.webscraping - INFO - LLM topic generation response: The most fitting topic for this dataset is "Environment".
+2024-10-24 16:32:59,418 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 16:32:59,419 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 16:32:59,420 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 16:32:59,420 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 16:33:01,589 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 16:37:47,713 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-24 16:39:20,341 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-24 16:52:30,611 - streamline - INFO - Streamline process completed in 1275.91 seconds.
+2024-10-24 16:53:14,533 - streamline - INFO - Streamline process completed in 1257.98 seconds.
+2024-10-24 17:37:58,113 - root - INFO - Logging is configured.
+2024-10-24 17:38:10,061 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 17:38:10,061 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 17:38:10,062 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:38:49,271 - web.webscraping - INFO - LLM topic generation response: The most appropriate topic for this dataset would be "Environment".
+2024-10-24 17:39:04,879 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 17:39:04,881 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:39:04,888 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 17:39:04,888 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 17:39:06,721 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 17:41:51,592 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-24 17:42:48,899 - root - INFO - Logging is configured.
+2024-10-24 17:43:03,590 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 17:43:03,590 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 17:43:03,591 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: mistral, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:43:24,870 - root - INFO - Logging is configured.
+2024-10-24 17:43:33,882 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 17:43:33,882 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 17:43:33,883 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:43:58,254 - web.webscraping - INFO - LLM topic generation response: Environment
+2024-10-24 17:44:13,934 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 17:44:13,936 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:44:13,963 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 17:44:13,964 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 17:44:15,834 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 17:44:51,832 - root - INFO - Logging is configured.
+2024-10-24 17:45:18,201 - root - INFO - Logging is configured.
+2024-10-24 17:45:43,487 - root - INFO - Logging is configured.
+2024-10-24 17:46:11,740 - root - INFO - Logging is configured.
+2024-10-24 17:46:32,874 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 17:46:32,874 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 17:46:32,875 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:47:26,591 - web.webscraping - INFO - LLM topic generation response: The most appropriate topic for this dataset is "Environment". The report focuses on PM2.5 concentrations and exposure in London, air quality guidelines set by the World Health Organisation (WHO), the impact of pollution on public health, and strategies to reduce PM2.5 levels within the context of transportation and environmental policies. These topics are directly related to environmental concerns, particularly air quality and its effects on society and urban planning.
+2024-10-24 17:47:27,040 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 17:47:27,041 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 17:47:27,067 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 17:47:27,067 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 17:47:29,154 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 17:49:56,694 - llm.llm_use - INFO - Metadata selection completed. 3 out of 10 datasets are relevant.
+2024-10-24 17:54:45,653 - streamline - INFO - Streamline process completed in 492.78 seconds.
+2024-10-24 18:00:23,055 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, for the year of 2019-2020, what audits were planned? ':
+For the year 2019-2020, as per the data provided in the Internal Audit Plan dataset available on fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv, several audits were planned by the Food Standards Agency (FSA) to ensure food safety and compliance with EU regulations. The audit plan categorizes these activities into four main categories:
+
+### Business Audit
+This category includes:
+1. **Minimum Security Standards**: Ensuring alignment with government security guidelines.
+2. **Managing Attendance**: Evaluating policies on employee attendance management.
+3. **Asset Management**: Reviewing procurement, record-keeping, security measures, and asset disposal procedures.
+4. **General Data Protection Regulation (GDPR)**: Assessing systems established for GDPR compliance.
+
+### Official Controls
+Comprises audits focusing on:
+1. **Minced Meat, Meat Preparations & Ready-to-Eat Products**: Evaluating adherence to EU standards for quality and safety.
+2. **Eggs Hygiene**: Inspection of hygiene practices in egg production according to EU laws.
+3. **Bovine TB Control**: Reviewing measures against the spread of bovine tuberculosis within specified guidelines.
+4. **Notifiable Diseases**: Checking compliance with control measures for diseases legally required to be reported.
+5. **Game Handling Establishments Follow-up Audit**: Ensuring implementation of corrective actions after initial audits.
+
+### Local Authority Audits
+Involves assessments such as:
+1. **Complaints about Food Hygiene & Premises & Infectious Disease Control in England**: Evaluating local authority enforcement capacities related to food hygiene and disease control.
+2. **Delivery of Animal Feed Enforcement Services in Wales**: Assessing service effectiveness across various regions.
+3. **Approval and Re-approval of Meat Establishments**: Reviewing processes ensuring premises adhere to EU regulations.
+
+### Further Audits
+Additional checks include:
+1. **Cutting Establishments Unannounced Inspections**: Ensuring rigorous compliance on meat processing facilities.
+2. **Allergens in England**: Assessing local authority enforcement against allergen-related issues.
+3. **Organisation and Management of Official Controls Delivered by Local Authorities in Northern Ireland**: Reviewing the effectiveness of local services across Northern Ireland.
+
+The datasets mentioned provide comprehensive insight into the annual audit plans for food safety management within the UK's food industry during 2019-2020, focusing on security standards, personnel practices, asset management, data protection regulations, and thorough control measures to uphold public health protection.
+
+You can access the dataset here: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+
+You can access the dataset here: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv
+2024-10-24 18:16:45,667 - root - INFO - Logging is configured.
+2024-10-24 18:16:48,061 - root - INFO - Logging is configured.
+2024-10-24 18:16:58,249 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-24 18:16:58,249 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-24 18:16:58,249 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 18:17:43,219 - web.webscraping - INFO - LLM topic generation response: The most fitting topic for this dataset is "Environment". The report focuses on PM2.5 pollution in London, which is an environmental issue related to air quality and health. It discusses findings from research by GLA and TfL, evaluates exposure data, and aims to meet World Health Organisation guidelines by 2030, all of which are concerns within the realm of environmental policy and public health.
+2024-10-24 18:17:43,667 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-24 18:17:43,668 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-24 18:17:43,693 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-24 18:17:43,694 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-24 18:17:45,851 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-24 18:19:56,177 - llm.llm_use - INFO - Metadata selection completed. 1 out of 10 datasets are relevant.
+2024-10-24 18:24:54,239 - streamline - INFO - Streamline process completed in 475.99 seconds.
+2024-10-24 18:43:41,945 - llm.llm_use - INFO - Final LLM Follow-Up Answer for query 'to clarify, can you send the link of the dataset again? ':
+Certainly, I understand that you need the link to the dataset again. Here it is:
+
+Dataset Title: Internal Audit Plan
+Summary: List of internal audits planned by year.
+Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
+
+You can access this document directly through the provided link. The dataset offers a comprehensive overview of all the audits that were scheduled for 2019, which are designed to ensure compliance with relevant laws, policies, and standards across various sectors under Food Standards Agency's jurisdiction. If you need further assistance or have more questions about these audits, feel free to ask!

@@ -16,14 +16,16 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     The `additional_context` is used to provide graph-based results (SPARQL results).
     """
     llm_input = ""
+    all_links = []  # Store all dataset links for inclusion later if necessary
     
     for metadata, df in data_input:
         # Convert metadata dictionary to a formatted string
         metadata_str = "\n".join([f"{key}: {value}" for key, value in metadata.items()])
 
-        # Ensure that we properly include links in the response
+        # Store links for later use
         if 'links' in metadata:
             metadata_str += f"\nLink: {metadata['links']}"
+            all_links.append(metadata['links'])  # Collect all the links for post-processing
 
         # Convert the DataFrame to a CSV string
         data_str = df.to_csv(index=False)
@@ -53,10 +55,10 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     try:
         final_llm_answer = chatbot.generate_response(context=llm_input, query=llm_prompt)
         
-        # Post-process to ensure links are included
-        for metadata, _ in data_input:
-            if 'links' in metadata and metadata['links'] not in final_llm_answer:
-                final_llm_answer += f"\n\nYou can access the dataset here: {metadata['links']}"
+        # Post-process the response to ensure all dataset links are included
+        for link in all_links:
+            if link not in final_llm_answer:
+                final_llm_answer += f"\n\nYou can access the dataset here: {link}"
         
         return final_llm_answer.strip()
 

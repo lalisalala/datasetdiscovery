@@ -1,5 +1,5 @@
 llm:
-  model_name: "mistral"
+  model_name: "qwen2"
   temperature: 0
   max_tokens: 2000
   api_url: "http://localhost:11434/api/generate"

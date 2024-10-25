@@ -15148,3 +15148,17 @@ Summary: List of internal audits planned by year.
 Link: https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv
 
 You can access this document directly through the provided link. The dataset offers a comprehensive overview of all the audits that were scheduled for 2019, which are designed to ensure compliance with relevant laws, policies, and standards across various sectors under Food Standards Agency's jurisdiction. If you need further assistance or have more questions about these audits, feel free to ask!
+2024-10-25 15:22:54,155 - root - INFO - Logging is configured.
+2024-10-25 15:24:11,101 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-25 15:24:11,101 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-25 15:24:11,102 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-25 15:25:01,842 - web.webscraping - INFO - LLM topic generation response: The most appropriate topic for this dataset is "Environment". This is because the report discusses PM2.5 concentrations and exposure in London, which are environmental concerns related to air quality and pollution. Additionally, it mentions the potential for meeting World Health Organisation guidelines by 2030, which indicates a focus on health standards influenced by environmental factors.
+2024-10-25 15:25:02,247 - llm.llm_chatbot - INFO - Closed LLMChatbot session.
+2024-10-25 15:25:02,249 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate
+2024-10-25 15:25:02,298 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-25 15:25:02,298 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L6-v2
+2024-10-25 15:25:05,470 - llm.llm_use - INFO - Starting metadata selection for 10 datasets.
+2024-10-25 15:48:36,142 - root - INFO - Logging is configured.
+2024-10-25 15:48:46,792 - streamline - INFO - Received new user query: 'what audits were planned in 2019? '
+2024-10-25 15:48:46,793 - streamline - INFO - Running web scraping to update datasets.csv.
+2024-10-25 15:48:46,793 - llm.llm_chatbot - INFO - Initialized LLMChatbot with model: qwen2, temperature: 0, max_tokens: 2000, api_url: http://localhost:11434/api/generate

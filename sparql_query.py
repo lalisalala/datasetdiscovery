@@ -36,3 +36,5 @@ def retrieve_audit_data(query):
     }
     """
     return query_rdf_graph(sparql_query)
+
+

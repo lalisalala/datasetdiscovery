@@ -1,6 +1,22 @@
 @prefix ex: <http://example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:AuditTitle a ex:Column ;
+    rdfs:label "AuditTitle" ;
+    ex:belongsToDataset ex:Dataset_1 ;
+    ex:dataType "object" .
+
+ex:Category a ex:Column ;
+    rdfs:label "Category" ;
+    ex:belongsToDataset ex:Dataset_1 ;
+    ex:dataType "object" .
+
+ex:OutlineScope a ex:Column ;
+    rdfs:label "OutlineScope" ;
+    ex:belongsToDataset ex:Dataset_1 ;
+    ex:dataType "object" .
 
 ex:Row_1_1 a ex:Row ;
     ex:AuditTitle "Minimum Security Standards" ;

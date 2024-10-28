@@ -1,10 +1,9 @@
 import pandas as pd
 import logging
 from typing import Any
-from llm.llm_chatbot import LLMChatbot 
+from llm.llm_chatbot import LLMChatbot
 from config_loader import config_loader
-import re
-from sparql_query import retrieve_audit_data  # Import the SPARQL query function
+from sparql_query import retrieve_audit_data, query_rdf_graph
 
 logger = logging.getLogger(__name__)
 
@@ -12,9 +11,24 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     """
     Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
     Now includes querying the RDF graph to improve accuracy, and dataset links are referenced.
-
-    The `additional_context` is used to provide graph-based results (SPARQL results).
+    
+    For broader queries about available datasets, limits response to FAISS search results.
     """
+    # Check if query is asking about available datasets
+    broad_query_keywords = ["what datasets", "available datasets", "do you have datasets on", "datasets on"]
+    if any(keyword in query.lower() for keyword in broad_query_keywords):
+        # Directly respond with dataset titles, summaries, and links from FAISS results without deeper processing
+        dataset_overview = []
+        for metadata, _ in data_input:
+            dataset_info = f"Title: {metadata.get('title', 'N/A')}\nSummary: {metadata.get('summary', 'No summary provided')}"
+            if 'links' in metadata:
+                dataset_info += f"\nLink: {metadata['links']}"
+            dataset_overview.append(dataset_info)
+        
+        # Combine overview of datasets into a single response
+        return "\n\n".join(dataset_overview)
+    
+    # If it’s a specific query, continue with the usual process of dataset analysis
     llm_input = ""
     all_links = []  # Store all dataset links for inclusion later if necessary
     
@@ -33,20 +47,13 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
         # Append both metadata and dataset to the input
         llm_input += f"Metadata:\n{metadata_str}\n\nData:\n{data_str}\n\n"
 
-    # Prepare the LLM prompt
-    if additional_context:
-        llm_prompt = (
-            f"User query: {query}\n\n"
-            f"Based on the knowledge graph, here are the relevant datasets and audits:\n{additional_context}\n\n"
-            "Please analyze the dataset contents and provide a detailed response. Ensure that dataset links are included in your response."
-            f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
-        )
-    else:
-        llm_prompt = (
-            f"User query: {query}\n\n"
-            "Please proceed using the datasets directly. Ensure that dataset links are included in your response."
-            f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
-        )
+    # Prepare the LLM prompt with additional context if provided
+    llm_prompt = (
+        f"User query: {query}\n\n"
+        f"{'Based on the knowledge graph, here are the relevant datasets and audits:\n' + additional_context if additional_context else ''}"
+        "\n\nPlease analyze the dataset contents and provide a detailed response, including dataset links."
+        f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
+    )
 
     # Log the final prompt for debugging
     logger.debug(f"Final LLM Prompt:\n{llm_prompt}")
@@ -65,56 +72,6 @@ def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chu
     except Exception as e:
         logger.error(f"Error generating LLM response: {e}")
         return f"Error generating response: {str(e)}"
-
-
-def process_dataset_chunk(metadata, dataset, query, chatbot, chunk_size):
-    """
-    Process a dataset in chunks with the associated metadata.
-
-    Args:
-        metadata (str): Metadata summary for the dataset.
-        dataset (pd.DataFrame): The actual dataset to process.
-        query (str): The user query.
-        chatbot (LLMChatbot): The chatbot instance to generate responses.
-        chunk_size (int): The number of rows to include in each chunk.
-
-    Returns:
-        str: The combined answer for all chunks, structured clearly with metadata and dataset content.
-    """
-    total_rows = len(dataset)
-    logger.info(f"Processing dataset with {total_rows} rows, chunking into {chunk_size}-row parts.")
-    
-    dataset_answer = ""
-
-    for i in range(0, total_rows, chunk_size):
-        # Get the chunk of data
-        data_chunk = dataset.iloc[i:i+chunk_size].to_csv(index=False)
-
-        # Structure the LLM prompt for better response generation
-        prompt = (
-            f"The user query is: '{query}'.\n\n"
-            f"Metadata for this dataset (including links):\n{metadata}\n\n"  # Include metadata with links
-            f"Here is a chunk of the dataset:\n{data_chunk}\n\n"
-            "Please ensure the dataset link is referenced in your response."
-        )
-
-        # Log the chunk prompt for debugging
-        logger.debug(f"Chunk LLM Prompt:\n{prompt}")
-
-        # Send the prompt to the LLM and get the answer for this chunk
-        try:
-            chunk_answer = chatbot.generate_response(context=data_chunk, query=prompt)
-            dataset_answer += chunk_answer + "\n"
-            logger.info(f"Received response for chunk {i // chunk_size + 1}.")
-        except Exception as api_error:
-            logger.error(f"Error in LLM API call for chunk {i // chunk_size + 1}: {api_error}")
-            return f"Error: The LLM encountered an issue while processing chunk {i // chunk_size + 1}. Details: {str(api_error)}"
-
-    # Post-process to ensure links are included in the final answer
-    if 'links' in metadata and metadata['links'] not in dataset_answer:
-        dataset_answer += f"\n\nYou can access the dataset here: {metadata['links']}"
-
-    return dataset_answer
 
 
 def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMChatbot) -> pd.DataFrame:
@@ -167,55 +124,62 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
 
 def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, previous_answer: str, chatbot: LLMChatbot, data_df: list) -> str:
     """
-    Process follow-up questions by using the previous answer, relevant datasets, and downloaded datasets as context.
-    This function optimizes the follow-up response by referring to the RDF graph first, and then using the LLM.
+    Process follow-up questions by dynamically re-querying the RDF knowledge graph based on each follow-up question.
+    This ensures the follow-up response is based on the latest and most relevant graph data, with specific handling for structure-related questions.
     """
-    # Step 1: Query the RDF graph for relevant information (related to the follow-up question)
-    sparql_results = retrieve_audit_data(query)  # Query the RDF knowledge graph based on the follow-up query
+    # Detect if the query is asking specifically about the dataset structure
+    structure_keywords = ["structure", "columns", "fields", "data layout", "schema"]
+    is_structure_query = any(keyword in query.lower() for keyword in structure_keywords)
 
-    # Step 2: Process the SPARQL results (if any) and integrate them into the follow-up response
+    # Step 1: Run a specific SPARQL query based on whether this is a structure-related question
+    if is_structure_query:
+        # SPARQL query to retrieve column names and data types specifically for a structure-related question
+        sparql_query = """
+        PREFIX ex: <http://example.org/ontology/>
+        SELECT ?column ?label ?dataType
+        WHERE {
+          ?column a ex:Column ;
+                  rdfs:label ?label ;
+                  ex:dataType ?dataType .
+        }
+        """
+        sparql_results = query_rdf_graph(sparql_query)  # Query the RDF graph for column structure
+    else:
+        # General SPARQL query for non-structure related follow-up questions
+        sparql_results = retrieve_audit_data(query)  # Use existing function to query relevant audit data
+
+    # Step 2: Process the SPARQL results and build the appropriate context
     graph_answer = ""
     if sparql_results:
-        for row in sparql_results:
-            dataset, title, summary, link, row_uri, property_uri, value = row
-            # Build the context from the retrieved RDF graph information
-            graph_answer += (
-                f"Dataset Title: {title}\n"
-                f"Summary: {summary}\n"
-                f"Link: {link}\n"  # Ensure the link is included
-                f"Row: {row_uri}\n"
-                f"Property: {property_uri}\n"
-                f"Value: {value}\n\n"
+        if is_structure_query:
+            # For structure-related queries, format column data specifically
+            graph_answer = "Dataset Structure:\n\n" + "\n".join(
+                [f"Column: {row.label}, Data Type: {row.dataType}" for row in sparql_results]
             )
+        else:
+            # For general queries, format the retrieved audit data
+            for row in sparql_results:
+                dataset, title, summary, link, row_uri, property_uri, value = row
+                graph_answer += (
+                    f"Dataset Title: {title}\n"
+                    f"Summary: {summary}\n"
+                    f"Link: {link}\n"
+                    f"Row: {row_uri}\n"
+                    f"Property: {property_uri}\n"
+                    f"Value: {value}\n\n"
+                )
 
-    # Step 3: Create a follow-up prompt
-    if graph_answer:
-        # If relevant data was found in the RDF graph, use it to add context to the LLM prompt
-        follow_up_prompt = (
-            f"Previously, you answered:\n{previous_answer}\n\n"
-            f"The user is now asking a follow-up question: '{query}'.\n"
-            f"Based on the knowledge graph, here are the relevant datasets and audits:\n{graph_answer}\n\n"
-            "Please provide a detailed response considering the datasets, their audits, and the user's follow-up question."
-            " Ensure that dataset links are included in your response."
-        )
-    else:
-        # If no relevant data was found in the RDF graph, fall back to using previous context
-        follow_up_prompt = (
-            f"Previously, you answered:\n{previous_answer}\n\n"
-            f"The user is now asking a follow-up question: '{query}'.\n"
-            "Based on the previous answer and the relevant datasets, please provide a detailed response."
-            " Ensure that dataset links are included in your response."
-        )
-
-    # Optionally: Include a summary of the datasets in the prompt if necessary
-    dataset_summaries = "\n\n".join([
-        f"Dataset Title: {row['title']}\nSummary: {row['summary']}\nLink: {row['links']}"
-        for _, row in refined_datasets.iterrows()
-    ])
-    follow_up_prompt += "\n\nHere are the relevant datasets from previous searches:\n" + dataset_summaries
+    # Step 3: Create a follow-up prompt using the formatted `graph_answer`
+    follow_up_prompt = (
+        f"Previously, you answered:\n{previous_answer}\n\n"
+        f"The user is now asking a follow-up question: '{query}'.\n"
+        f"{'Please provide the dataset structure, listing columns and their data types.' if is_structure_query else ''}"
+        f"Here is the latest information from the knowledge graph:\n{graph_answer}\n\n"
+        "Please answer the user's follow-up question, including dataset links where applicable."
+    )
 
     # Log the final follow-up prompt for debugging
-    logger.debug(f"Final Follow-up LLM Prompt:\n{follow_up_prompt}")
+    logger.debug(f"Final Dynamic Follow-up LLM Prompt:\n{follow_up_prompt}")
 
     # Step 4: Use the LLM to generate a final response
     try:

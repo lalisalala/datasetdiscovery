@@ -3,7 +3,7 @@ import logging
 from typing import Any
 from llm.llm_chatbot import LLMChatbot
 from config_loader import config_loader
-from sparql_query import retrieve_audit_data, query_rdf_graph
+from sparql_query import retrieve_audit_data, query_rdf_graph, classify_query, build_dynamic_sparql_query
 
 logger = logging.getLogger(__name__)
 
@@ -122,42 +122,27 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
     return relevant_datasets
 
 
-def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, previous_answer: str, chatbot: LLMChatbot, data_df: list) -> str:
+def directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, chatbot, data_df):
     """
-    Process follow-up questions by dynamically re-querying the RDF knowledge graph based on each follow-up question.
-    This ensures the follow-up response is based on the latest and most relevant graph data, with specific handling for structure-related questions.
+    Improved follow-up function with dynamic SPARQL query generation.
     """
-    # Detect if the query is asking specifically about the dataset structure
-    structure_keywords = ["structure", "columns", "fields", "data layout", "schema"]
-    is_structure_query = any(keyword in query.lower() for keyword in structure_keywords)
+    # Step 1: Classify query type
+    query_type = classify_query(query)
 
-    # Step 1: Run a specific SPARQL query based on whether this is a structure-related question
-    if is_structure_query:
-        # SPARQL query to retrieve column names and data types specifically for a structure-related question
-        sparql_query = """
-        PREFIX ex: <http://example.org/ontology/>
-        SELECT ?column ?label ?dataType
-        WHERE {
-          ?column a ex:Column ;
-                  rdfs:label ?label ;
-                  ex:dataType ?dataType .
-        }
-        """
-        sparql_results = query_rdf_graph(sparql_query)  # Query the RDF graph for column structure
-    else:
-        # General SPARQL query for non-structure related follow-up questions
-        sparql_results = retrieve_audit_data(query)  # Use existing function to query relevant audit data
+    # Step 2: Generate SPARQL query dynamically
+    sparql_query = build_dynamic_sparql_query(query_type)
 
-    # Step 2: Process the SPARQL results and build the appropriate context
+    # Step 3: Execute the query on the RDF graph
+    sparql_results = query_rdf_graph(sparql_query)
+
+    # Step 4: Format the SPARQL results
     graph_answer = ""
     if sparql_results:
-        if is_structure_query:
-            # For structure-related queries, format column data specifically
+        if query_type == "structure":
             graph_answer = "Dataset Structure:\n\n" + "\n".join(
                 [f"Column: {row.label}, Data Type: {row.dataType}" for row in sparql_results]
             )
-        else:
-            # For general queries, format the retrieved audit data
+        elif query_type == "content":
             for row in sparql_results:
                 dataset, title, summary, link, row_uri, property_uri, value = row
                 graph_answer += (
@@ -168,33 +153,21 @@ def directly_use_llm_for_follow_up(query: str, refined_datasets: pd.DataFrame, p
                     f"Property: {property_uri}\n"
                     f"Value: {value}\n\n"
                 )
+        else:
+            graph_answer = "\n".join([f"{row.s}, {row.p}, {row.o}" for row in sparql_results])
 
-    # Step 3: Create a follow-up prompt using the formatted `graph_answer`
+    # Step 5: Create follow-up prompt for LLM
     follow_up_prompt = (
-        f"Previously, you answered:\n{previous_answer}\n\n"
-        f"The user is now asking a follow-up question: '{query}'.\n"
-        f"{'Please provide the dataset structure, listing columns and their data types.' if is_structure_query else ''}"
-        f"Here is the latest information from the knowledge graph:\n{graph_answer}\n\n"
-        "Please answer the user's follow-up question, including dataset links where applicable."
+        f"Previously:\n{previous_answer}\n\n"
+        f"Follow-up question: '{query}'\n"
+        f"Latest graph data:\n{graph_answer}\n\n"
+        "Provide an updated response."
     )
 
-    # Log the final follow-up prompt for debugging
-    logger.debug(f"Final Dynamic Follow-up LLM Prompt:\n{follow_up_prompt}")
-
-    # Step 4: Use the LLM to generate a final response
     try:
+        # Step 6: Use the chatbot to generate a response
         follow_up_answer = chatbot.generate_response(context=previous_answer, query=follow_up_prompt)
-
-        # Post-process to ensure links are included
-        for metadata, _ in data_df:
-            if 'links' in metadata and metadata['links'] not in follow_up_answer:
-                follow_up_answer += f"\n\nYou can access the dataset here: {metadata['links']}"
-        
-        # Log the final follow-up LLM answer
-        logger.info(f"Final LLM Follow-Up Answer for query '{query}':\n{follow_up_answer.strip()}")
-
         return follow_up_answer.strip()
-
     except Exception as e:
-        logger.error(f"Error processing follow-up question: {e}")
-        return f"Error: Could not process follow-up question. {str(e)}"
+        logger.error(f"Error generating follow-up: {e}")
+        return "Could not process the follow-up question. Please try again."

@@ -1,11 +1,652 @@
-title,summary,name,links,publisher,topic,format
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2021-22,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2021-22.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2019-20,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2019-20.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2020-21,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2020-21.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2018-2019,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2018-19.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2017-2018,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2017-18.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2016-2017,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2016-2017.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2015-2016,https://fsadata.github.io/internal-audit-plan/data/internal-audit-plan-2015-2016.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2022-23,https://fsaopendata.blob.core.windows.net/opendatacatalog/fsa-catalogue2/AnnualAuditAssurancePlan2022-23.csv,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2024-25,https://fsaopendata.blob.core.windows.net/opendatacatalog/InternalAuditPlan2024-25.xlsx,Food Standards Agency,Towns and cities,CSV
-Internal Audit Plan,List of internal audits planned by year.,Internal Audit Plan 2023-24,https://fsaopendata.blob.core.windows.net/opendatacatalog/fsa-catalogue2/InternalAuditPlan2324.csv,Food Standards Agency,Towns and cities,CSV
+title,summary,publisher,topic,name,links,format,hash
+Air Quality Summary Statistics,"Data for London air quality monitoring sites showing whether annual monitoring objectives were met for different species of pollutant. Data for 2016 includes the first two months of the year only so this is an indicative outlook. This data was accessed using the London Air API.
+For some species, all monitoring sites taking measurements have met the monitoring objectives over the last decade. Note that the total number of sites measuring a given species changes from year to year. Here all sites are grouped together regardless of their type (e.g. roadside, suburban, industrial) or geographic location.
+For other species, 60-100% of the monitoring sites taking measurements have met annual objectives over the last decade. All reportable sites are now compliant with the PM10 objective.
+The percentage of sites meeting annual nitrogen dioxide monitoring objectives has shown relatively little change but there have been improvements in recent years. 
+The percentage of sites meeting annual monitoring objectives for ozone has fluctuated widely in the past but in recent years has increased.",Greater London Authority (Gla),Unknown Topic,e7cab585-b760-4dfd-8de4-cdff81174594,https://data.london.gov.uk/download/air-quality-summary-statistics/e7cab585-b760-4dfd-8de4-cdff81174594/annual-objectives-by-site-and-species.csv,Csv,
+London Average Air Quality Levels,"The data shows roadside and background average readings for Nitric Oxide, Nitrogen Dioxide, Oxides of Nitrogen, Ozone, Particulate Matter (PM10 and PM2.5), and Sulphur Dioxide. Measured in Micrograms per Cubic Meter of Air (ug/m3). The spreadsheet shows which Index level each reading falls in, and contains charts showing pollutant levels by time of day per month.
+
+
+
+Trend graphs of Nitrogen Dioxide and Particulate Matter PM2.5 are on the London Dashboard.
+
+
+
+Link to GLA Air Quality page",King'S College London,"Air-Pollution, Air-Quality, Aq, Daily, Emissions, Hourly, Index, Levels, Monitoring, Nitrogen-Dioxide, No, No2, Nox, O3, Particulate-Matter, Pm10, Pm25, Pollution, So2",576175f3-b515-4c77-a6a2-6e222a3e5340,https://data.london.gov.uk/download/london-average-air-quality-levels/576175f3-b515-4c77-a6a2-6e222a3e5340/air-quality-london-time-of-day.csv,Csv,
+London Average Air Quality Levels,"The data shows roadside and background average readings for Nitric Oxide, Nitrogen Dioxide, Oxides of Nitrogen, Ozone, Particulate Matter (PM10 and PM2.5), and Sulphur Dioxide. Measured in Micrograms per Cubic Meter of Air (ug/m3). The spreadsheet shows which Index level each reading falls in, and contains charts showing pollutant levels by time of day per month.
+
+
+
+Trend graphs of Nitrogen Dioxide and Particulate Matter PM2.5 are on the London Dashboard.
+
+
+
+Link to GLA Air Quality page",King'S College London,"Air-Pollution, Air-Quality, Aq, Daily, Emissions, Hourly, Index, Levels, Monitoring, Nitrogen-Dioxide, No, No2, Nox, O3, Particulate-Matter, Pm10, Pm25, Pollution, So2",1d9847eb-56ac-4168-9e74-93609fcee134,https://data.london.gov.uk/download/london-average-air-quality-levels/1d9847eb-56ac-4168-9e74-93609fcee134/air-quality-london-monthly-averages.csv,Csv,
+London Atmospheric Emissions Inventory (Laei) 2013 Air Quality Focus Areas - December 2016 Update,"There are 187 Air Quality Focus Areas in London. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure.
+The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute.
+ 
+1. Supporting Information (.ZIP - 113.4KB) - Definition, methodology and list of focus areas LAEI 2013
+2. GIS files (.ZIP - 43.2KB) - GIS geographies in ArcGIS and MapInfo formats.
+3. Images (.ZIP - 199.4MB) - Maps with focus areas at both London and borough level.
+
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-GB
+  X-NONE
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:""Table Normal"";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"""";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:""Times New Roman"",""serif"";}",Gla And Tfl Air Quality,"Air-Pollution, Air-Quality, Exposure, Hotspots, Nitrogen-Dioxide, No2",7fe48065-2cfa-40f6-a923-c7d1a8503a85,https://data.london.gov.uk/download/laei-2013-london-focus-areas/7fe48065-2cfa-40f6-a923-c7d1a8503a85/1.%2520Supporting%2520Information.zip,ZIP Archive,
+London Atmospheric Emissions Inventory (Laei) 2010 Air Quality Focus Areas,"The LAEI 2010 has since been superseded. Click here for the full list of releases.
+There are 187 Air Quality Focus Areas in the Capital. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure. The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute.
+GIS Files (Zip) 117 KB
+Supporting Information (Zip) 241 KB",Greater London Authority (Gla),"Air-Quality, Exposure, Focus-Areas, Gis, Hotspots, Laqm, Nitrogen-Dioxide, Particulate-Matter, Pollution",bd482f3b-30e8-42fd-899d-277cc04ea4da,https://data.london.gov.uk/download/air-quality-focus-areas/bd482f3b-30e8-42fd-899d-277cc04ea4da,Html,
+London Atmospheric Emissions Inventory (Laei) 2013 Air Quality Focus Areas - December 2016 Update,"There are 187 Air Quality Focus Areas in London. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure.
+The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute.
+ 
+1. Supporting Information (.ZIP - 113.4KB) - Definition, methodology and list of focus areas LAEI 2013
+2. GIS files (.ZIP - 43.2KB) - GIS geographies in ArcGIS and MapInfo formats.
+3. Images (.ZIP - 199.4MB) - Maps with focus areas at both London and borough level.
+
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-GB
+  X-NONE
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:""Table Normal"";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"""";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:""Times New Roman"",""serif"";}",Gla And Tfl Air Quality,"Air-Pollution, Air-Quality, Exposure, Hotspots, Nitrogen-Dioxide, No2",09755781-bc3a-473d-b3c6-c641c9e4548f,https://data.london.gov.uk/download/laei-2013-london-focus-areas/09755781-bc3a-473d-b3c6-c641c9e4548f/3.%2520Images.zip,ZIP Archive,
+London Average Air Quality Levels,"The data shows roadside and background average readings for Nitric Oxide, Nitrogen Dioxide, Oxides of Nitrogen, Ozone, Particulate Matter (PM10 and PM2.5), and Sulphur Dioxide. Measured in Micrograms per Cubic Meter of Air (ug/m3). The spreadsheet shows which Index level each reading falls in, and contains charts showing pollutant levels by time of day per month.
+
+
+
+Trend graphs of Nitrogen Dioxide and Particulate Matter PM2.5 are on the London Dashboard.
+
+
+
+Link to GLA Air Quality page",King'S College London,"Air-Pollution, Air-Quality, Aq, Daily, Emissions, Hourly, Index, Levels, Monitoring, Nitrogen-Dioxide, No, No2, Nox, O3, Particulate-Matter, Pm10, Pm25, Pollution, So2",acce7f88-70f0-4fd0-9160-f02a9d96b2c3,https://data.london.gov.uk/download/london-average-air-quality-levels/acce7f88-70f0-4fd0-9160-f02a9d96b2c3/air-quality-london.xlsx,Excel Spreadsheet,
+London Atmospheric Emissions Inventory (Laei) 2013 Air Quality Focus Areas - December 2016 Update,"There are 187 Air Quality Focus Areas in London. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure.
+The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute.
+ 
+1. Supporting Information (.ZIP - 113.4KB) - Definition, methodology and list of focus areas LAEI 2013
+2. GIS files (.ZIP - 43.2KB) - GIS geographies in ArcGIS and MapInfo formats.
+3. Images (.ZIP - 199.4MB) - Maps with focus areas at both London and borough level.
+
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-GB
+  X-NONE
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:""Table Normal"";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"""";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:""Times New Roman"",""serif"";}",Gla And Tfl Air Quality,"Air-Pollution, Air-Quality, Exposure, Hotspots, Nitrogen-Dioxide, No2",4ffaf189-1d1d-4ea6-ab56-7047b88c0873,https://data.london.gov.uk/download/laei-2013-london-focus-areas/4ffaf189-1d1d-4ea6-ab56-7047b88c0873/2.%2520GIS%2520files.zip,ZIP Archive,
+Air Quality Monitoring Sites,"Location of monitoring stations from- London Air Quality Network (https://www.londonair.org.uk/LondonAir/General/about.aspx)- AQE (https://www.airqualityengland.co.uk/)- Breathe London (These monitors are part of a new study in London called 'Breathe London'that is testing out lower cost monitors across the city, for more information on the Breathe London project please see here-https://www.breathelondon.org/)A range of pollutants are typically monitored including NOx, particulates, CO2 and SO2, but vary from site to site.",Greater London Authority (Gla),"Airqualitymap, Aq, C40, Kings, Laei, Maplondon",40bac2d9-cd75-4f35-a63c-3bf8b5530e81,https://data.london.gov.uk/download/air_quality_monitoring_sites/40bac2d9-cd75-4f35-a63c-3bf8b5530e81,Html,
+Analysing Air Pollution Exposure In London,"Updated in Februrary 2017.
+Air quality in London has improved in recent years as a result of policies to reduce emissions, primarily from road transport. However, recently updated maps of pollution concentrations for 2013 (LAEI 2013) still show significant areas of exceedances of the annual mean NO2 EU Limit Values. Improvements are planned to address these, as recently announced in the Mayor’s package of air quality measures.
+
+The Updated Analysis of Air Pollution Exposure in London research provides an update to similar analysis undertaken in 2013 (which looked at pollution exposure in 2010), published recently by City Hall. It examines pollution exposure in London in 2013 and considers how exposure varies by indicators of age, relative deprivation and ethnic groups in London. It also looks at total exposure (broken down by borough) and exposure at schools.   Through the research described in this report, City Hall is seeking to understand the inequalities in accessing clean air in London and considering how this will be improved by planned air pollution policies.
+The spreadsheet lists the schools located in areas where average concentrations of Nitrogen Dioxide (NO2) are over the legal and safe limit as defined by the EU Limit Values; the Limit Value is 40 μg/m3. The modelled NO2 data used in this report is from the 2013 London Atmospheric Emissions Inventory (LAEI), and the list of schools used is from Edubase public portal from the Department of Education.  The list is shown by borough and in descending order with the most polluted first. Further analysis of this data and other indications of the links between air pollution and social gradient in London can be found in the Updated Analysis of Air Pollution Exposure in London.",Greater London Authority (Gla),"Air, Air Pollution, Dioxide, Exposure, Nitrogen, No2, Pollution, Schools",63404327-f3a5-4a15-b003-3a95fd27b497,https://data.london.gov.uk/download/analysing-air-pollution-exposure-in-london/63404327-f3a5-4a15-b003-3a95fd27b497/ListofSchools_LAEI2013.xlsx,Excel Spreadsheet,

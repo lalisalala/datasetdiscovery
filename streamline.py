@@ -5,7 +5,7 @@ from search.faiss_index import create_faiss_index
 from search.data_search import download_datasets
 from llm.llm_chatbot import LLMChatbot
 from llm.llm_use import directly_use_llm_for_answer, use_llm_for_metadata_selection, directly_use_llm_for_follow_up
-from web.webscraping import run_webscraping
+from datastore_api_access import run_datastore_access  # Updated import
 from sparql_query import retrieve_audit_data
 from graph import generate_dynamic_rdf_with_core
 import time
@@ -13,6 +13,8 @@ import logging
 from config_loader import config_loader
 from difflib import SequenceMatcher
 
+# Setup logging configuration
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Global dictionary for storing user sessions and context
@@ -64,15 +66,20 @@ def process_new_query(query: str, user_id: str) -> str:
     start_time = time.time()  # Track start time
     csv_file = 'datasets.csv'
 
-    # Always run web scraping to update datasets.csv
-    logger.info("Running web scraping to update datasets.csv.")
-    run_webscraping()
+    # Always run the API data fetch to update datasets.csv
+    logger.info("Running datastore API access to fetch datasets and update datasets.csv.")
+    run_datastore_access()  # Updated call to fetch data via API
 
     if not os.path.exists(csv_file):
-        logger.error(f"CSV file {csv_file} not found after web scraping.")
+        logger.error(f"CSV file {csv_file} not found after datastore API access.")
         return "Error: Datasets not found."
 
     df = pd.read_csv(csv_file)
+
+    logger.info(f"Acquired metadata for {len(df)} datasets. Listing datasets:")
+    for idx, row in df.iterrows():
+        logger.info(f"Dataset {idx + 1}: {row['title']} | Publisher: {row['publisher']} | Topic: {row['topic']}")
+
     llm_config = config_loader.get_llm_config()
     faiss_config = config_loader.get_faiss_config()
 
@@ -91,6 +98,7 @@ def process_new_query(query: str, user_id: str) -> str:
 
     valid_indices = [i for i in best_indices if i < len(df)]
     if not valid_indices:
+        logger.info("No relevant datasets found for the given query.")
         return "No relevant datasets found."
 
     # Step 2: Retrieve relevant datasets and process them further
@@ -127,7 +135,7 @@ def process_new_query(query: str, user_id: str) -> str:
         # No SPARQL results; proceed without additional context
         final_answer = directly_use_llm_for_answer(all_data_with_metadata, query, chatbot)
 
-    # Step 7: Save the context for follow-up questions
+    # Step 6: Save the context for follow-up questions
     user_sessions[user_id] = {
         'relevant_datasets': refined_datasets_with_summaries,
         'previous_answer': final_answer,

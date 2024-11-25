@@ -37,4 +37,47 @@ def retrieve_audit_data(query):
     """
     return query_rdf_graph(sparql_query)
 
+def build_dynamic_sparql_query(query_type):
+    """Generate a SPARQL query dynamically based on query type."""
+    if query_type == "structure":
+        return """
+        PREFIX ex: <http://example.org/ontology/>
+        SELECT ?column ?label ?dataType
+        WHERE {
+            ?column a ex:Column ;
+                    rdfs:label ?label ;
+                    ex:dataType ?dataType .
+        }
+        """
+    elif query_type == "content":
+        return """
+        PREFIX ex: <http://example.org/ontology/>
+        SELECT ?dataset ?title ?summary ?link ?row ?property ?value
+        WHERE {
+            ?dataset ex:hasTitle ?title ;
+                     ex:hasSummary ?summary ;
+                     ex:hasLink ?link .
+            ?row ex:partOf ?dataset ;
+                 ?property ?value .
+        }
+        """
+    else:  # Fallback for general queries
+        return """
+        PREFIX ex: <http://example.org/ontology/>
+        SELECT ?s ?p ?o
+        WHERE {
+            ?s ?p ?o .
+        }
+        LIMIT 50
+        """
+def classify_query(query):
+    """Classify query type based on keywords."""
+    structure_keywords = ["structure", "columns", "fields", "schema"]
+    content_keywords = ["summary", "data", "values", "rows"]
 
+    if any(keyword in query.lower() for keyword in structure_keywords):
+        return "structure"
+    elif any(keyword in query.lower() for keyword in content_keywords):
+        return "content"
+    else:
+        return "general"

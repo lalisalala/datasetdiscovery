@@ -6,12 +6,13 @@ from search.data_search import download_datasets
 from llm.llm_chatbot import LLMChatbot
 from llm.llm_use import directly_use_llm_for_answer, use_llm_for_metadata_selection, directly_use_llm_for_follow_up
 from datastore_api_access import run_datastore_access  # Updated import
-from sparql_query import retrieve_audit_data
+from sparql_query import retrieve_metadata
 from graph import generate_dynamic_rdf_with_core
 import time
 import logging
 from config_loader import config_loader
 from difflib import SequenceMatcher
+import re
 
 # Setup logging configuration
 logging.basicConfig(level=logging.INFO)
@@ -19,6 +20,46 @@ logger = logging.getLogger(__name__)
 
 # Global dictionary for storing user sessions and context
 user_sessions = {}
+
+
+def postprocess_metadata(metadata_list):
+    """
+    Post-process the metadata list to clean formatting issues and ensure consistency.
+    Args:
+        metadata_list (list): List of metadata dictionaries for datasets.
+
+    Returns:
+        list: Cleaned and standardized metadata list.
+    """
+    def clean_text(value):
+        """Clean text by removing unwanted characters and formatting artifacts."""
+        if not isinstance(value, str):
+            return value
+        # Remove newlines, tabs, and carriage returns
+        cleaned_value = re.sub(r'[\r\n\t]+', ' ', value)
+        # Collapse multiple spaces into a single space
+        cleaned_value = re.sub(r'\s+', ' ', cleaned_value)
+        # Remove known artifacts
+        artifacts = [
+            "Normal 0", "false false false", "MicrosoftInternetExplorer4", 
+            "/\\* Style Definitions \\*/", "table.MsoNormalTable"
+        ]
+        for artifact in artifacts:
+            cleaned_value = cleaned_value.replace(artifact, '')
+        return cleaned_value.strip()
+
+    # Process each dataset's metadata
+    cleaned_metadata_list = []
+    for metadata in metadata_list:
+        cleaned_metadata = {key: clean_text(value) for key, value in metadata.items()}
+        # Additional processing for specific fields (if needed)
+        if 'topic' in cleaned_metadata and cleaned_metadata['topic']:
+            # Ensure topics are consistently comma-separated
+            cleaned_metadata['topic'] = ", ".join([t.strip() for t in cleaned_metadata['topic'].split(',')])
+        cleaned_metadata_list.append(cleaned_metadata)
+
+    return cleaned_metadata_list
+
 
 def run_streamline_process(query: str, user_id: str) -> str:
     """
@@ -56,10 +97,11 @@ def run_streamline_process(query: str, user_id: str) -> str:
     # If not a follow-up, treat it as a new query and process the entire pipeline
     return process_new_query(query, user_id)
 
+
 def process_new_query(query: str, user_id: str) -> str:
     """
     Handle a new query by running the full pipeline and saving the context.
-    Now includes querying the RDF knowledge graph and passing the results to the LLM for enhanced responses.
+    The pipeline now generates RDF based solely on metadata and does not download dataset content.
     """
     logger.info(f"Received new user query: '{query}'")
 
@@ -103,26 +145,28 @@ def process_new_query(query: str, user_id: str) -> str:
 
     # Step 2: Retrieve relevant datasets and process them further
     relevant_datasets = df.iloc[valid_indices]
-    datasets2_csv = 'datasets2.csv'
-    relevant_datasets.to_csv(datasets2_csv, index=False)
 
-    df_faiss_results = pd.read_csv(datasets2_csv)
-    refined_datasets = use_llm_for_metadata_selection(df_faiss_results, query, chatbot)
-    refined_datasets_with_summaries = generate_summaries_for_relevant_datasets(refined_datasets, chatbot)
+    # Save the relevant datasets to a CSV file for inspection
+    relevant_datasets.to_csv("datasets2.csv", index=False)
+    logger.info(f"Saved {len(relevant_datasets)} relevant datasets to 'datasets2.csv'.")
 
-    all_data_with_metadata = download_datasets(refined_datasets_with_summaries, output_file='data.csv')
+    # Convert to a list of metadata dictionaries
+    metadata_list = relevant_datasets.to_dict(orient='records')  # Convert to list of metadata dictionaries
+    
+    # Post-process the metadata to clean formatting issues
+    metadata_list = postprocess_metadata(metadata_list)
 
-    # Step 3: Generate the RDF knowledge graph from data.csv
-    generate_dynamic_rdf_with_core(all_data_with_metadata, output_rdf_file='data_ontology.ttl')  # Ensure the RDF graph is generated
+    # Step 3: Generate the RDF knowledge graph based on metadata
+    generate_dynamic_rdf_with_core(metadata_list, output_rdf_file='metadata_ontology.ttl')
 
     # Step 4: Query the RDF knowledge graph using SPARQL based on the user's query
     try:
-        sparql_results = retrieve_audit_data(query)
+        sparql_results = retrieve_metadata(query)
     except FileNotFoundError:
-        logger.error("RDF file 'data_ontology.ttl' not found. Ensure the RDF graph is generated.")
+        logger.error("RDF file 'metadata_ontology.ttl' not found. Ensure the RDF graph is generated.")
         return "Error: RDF knowledge graph not found. Ensure the RDF graph is generated before querying."
 
-    # Step 5: Use the all_data_with_metadata to provide input to the LLM
+    # Step 5: Use SPARQL query results to provide input to the LLM
     if sparql_results:
         graph_answer = ""
         for row in sparql_results:
@@ -130,17 +174,16 @@ def process_new_query(query: str, user_id: str) -> str:
             graph_answer += f"Dataset: {dataset}\nAudit: {audit}\nScope: {scope}\nLink: {link}\n\n"
 
         # Use the graph-based context
-        final_answer = directly_use_llm_for_answer(all_data_with_metadata, query, chatbot, additional_context=graph_answer)
+        final_answer = directly_use_llm_for_answer(metadata_list, query, chatbot, additional_context=graph_answer)
     else:
         # No SPARQL results; proceed without additional context
-        final_answer = directly_use_llm_for_answer(all_data_with_metadata, query, chatbot)
+        final_answer = directly_use_llm_for_answer(metadata_list, query, chatbot)
 
     # Step 6: Save the context for follow-up questions
     user_sessions[user_id] = {
-        'relevant_datasets': refined_datasets_with_summaries,
+        'relevant_datasets': metadata_list,
         'previous_answer': final_answer,
         'chatbot': chatbot,  # Store chatbot instance for follow-up
-        'all_data_with_metadata': all_data_with_metadata  # Store the full dataset context for follow-ups
     }
 
     end_time = time.time()
@@ -148,6 +191,7 @@ def process_new_query(query: str, user_id: str) -> str:
     logger.info(f"Streamline process completed in {total_time:.2f} seconds.")
 
     return final_answer
+
 
 def check_similarity(query: str, previous_answer: str) -> bool:
     """

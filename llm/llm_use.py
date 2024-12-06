@@ -1,82 +1,75 @@
-import pandas as pd
 import logging
 from typing import Any
+import pandas as pd  
 from llm.llm_chatbot import LLMChatbot
-from config_loader import config_loader
-from sparql_query import retrieve_audit_data, query_rdf_graph, classify_query, build_dynamic_sparql_query
+from sparql_query import retrieve_metadata, query_rdf_graph, classify_query, build_dynamic_sparql_query_optimized
 
 logger = logging.getLogger(__name__)
 
-def directly_use_llm_for_answer(data_input, query: str, chatbot: LLMChatbot, chunk_size: int = 200, additional_context: str = "") -> str:
+def directly_use_llm_for_answer(metadata_list, query: str, chatbot: LLMChatbot, additional_context: str = "") -> str:
     """
-    Use the LLM to analyze multiple datasets and metadata in a file or DataFrame, chunked for token management.
-    Now includes querying the RDF graph to improve accuracy, and dataset links are referenced.
-    
-    For broader queries about available datasets, limits response to FAISS search results.
+    Use the LLM to analyze metadata and generate structured responses for users.
+    Args:
+        metadata_list (list): A list of metadata dictionaries for relevant datasets.
+        query (str): The user's query.
+        chatbot (LLMChatbot): Instance of the chatbot.
+        additional_context (str): Additional information from the knowledge graph or SPARQL queries.
+
+    Returns:
+        str: LLM-generated response in a user-friendly format.
     """
-    # Check if query is asking about available datasets
-    broad_query_keywords = ["what datasets", "available datasets", "do you have datasets on", "datasets on"]
-    if any(keyword in query.lower() for keyword in broad_query_keywords):
-        # Directly respond with dataset titles, summaries, and links from FAISS results without deeper processing
-        dataset_overview = []
-        for metadata, _ in data_input:
-            dataset_info = f"Title: {metadata.get('title', 'N/A')}\nSummary: {metadata.get('summary', 'No summary provided')}"
-            if 'links' in metadata:
-                dataset_info += f"\nLink: {metadata['links']}"
-            dataset_overview.append(dataset_info)
-        
-        # Combine overview of datasets into a single response
-        return "\n\n".join(dataset_overview)
-    
-    # If it’s a specific query, continue with the usual process of dataset analysis
-    llm_input = ""
-    all_links = []  # Store all dataset links for inclusion later if necessary
-    
-    for metadata, df in data_input:
-        # Convert metadata dictionary to a formatted string
-        metadata_str = "\n".join([f"{key}: {value}" for key, value in metadata.items()])
+    # Prepare metadata summary for LLM input
+    metadata_summary = ""
+    for idx, metadata in enumerate(metadata_list, start=1):
+        # Format each dataset's metadata with key details
+        metadata_summary += f"Dataset {idx}:\n"
+        metadata_summary += f"  Title: {metadata.get('title', 'N/A')}\n"
+        metadata_summary += f"  Summary: {metadata.get('summary', 'N/A')}\n"
+        metadata_summary += f"  Publisher: {metadata.get('publisher', 'N/A')}\n"
+        metadata_summary += f"  Topics: {metadata.get('topic', 'N/A')}\n"
+        metadata_summary += f"  Format: {metadata.get('format', 'N/A')}\n"
+        metadata_summary += f"  Link: {metadata.get('links', 'N/A')}\n\n"
 
-        # Store links for later use
-        if 'links' in metadata:
-            metadata_str += f"\nLink: {metadata['links']}"
-            all_links.append(metadata['links'])  # Collect all the links for post-processing
-
-        # Convert the DataFrame to a CSV string
-        data_str = df.to_csv(index=False)
-
-        # Append both metadata and dataset to the input
-        llm_input += f"Metadata:\n{metadata_str}\n\nData:\n{data_str}\n\n"
-
-    # Prepare the LLM prompt with additional context if provided
+    # Prepare the LLM prompt
     llm_prompt = (
+        f"You are an intelligent assistant helping users find datasets.\n\n"
         f"User query: {query}\n\n"
-        f"{'Based on the knowledge graph, here are the relevant datasets and audits:\n' + additional_context if additional_context else ''}"
-        "\n\nPlease analyze the dataset contents and provide a detailed response, including dataset links."
-        f"\n\nMetadata for reference (including dataset links):\n{llm_input}"  # Include metadata with links
+        f"{'Additional context from the knowledge graph:\n' + additional_context if additional_context else ''}\n\n"
+        "Here is the metadata for relevant datasets:\n"
+        + metadata_summary
+        + "\n\nPlease provide a clear and concise summary of the most relevant datasets that match the user's query."
     )
 
-    # Log the final prompt for debugging
-    logger.debug(f"Final LLM Prompt:\n{llm_prompt}")
+    # Log the prompt for debugging
+    logger.debug(f"LLM Prompt:\n{llm_prompt}")
 
-    # Use the LLM to generate a final response
     try:
-        final_llm_answer = chatbot.generate_response(context=llm_input, query=llm_prompt)
-        
-        # Post-process the response to ensure all dataset links are included
-        for link in all_links:
-            if link not in final_llm_answer:
-                final_llm_answer += f"\n\nYou can access the dataset here: {link}"
-        
-        return final_llm_answer.strip()
+        # Use the LLM to generate a response
+        final_answer = chatbot.generate_response(context=metadata_summary, query=llm_prompt)
+
+        # Post-process the response to ensure it's user-friendly
+        unified_output = "Here are the datasets matching your query:\n\n"
+        for idx, metadata in enumerate(metadata_list, start=1):
+            unified_output += f"Dataset {idx}:\n"
+            unified_output += f"  Title: {metadata.get('title', 'N/A')}\n"
+            unified_output += f"  Summary: {metadata.get('summary', 'N/A')}\n"
+            unified_output += f"  Publisher: {metadata.get('publisher', 'N/A')}\n"
+            unified_output += f"  Topics: {metadata.get('topic', 'N/A')}\n"
+            unified_output += f"  Format: {metadata.get('format', 'N/A')}\n"
+            unified_output += f"  Link: {metadata.get('links', 'N/A')}\n\n"
+
+        # Combine the LLM response and formatted dataset details
+        return unified_output.strip()
 
     except Exception as e:
         logger.error(f"Error generating LLM response: {e}")
         return f"Error generating response: {str(e)}"
 
 
-def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMChatbot) -> pd.DataFrame:
+
+def use_llm_for_metadata_selection(df, query: str, chatbot: LLMChatbot) -> pd.DataFrame:
     """
-    Use the LLM to parse through the metadata summaries and select relevant datasets.
+    Use the LLM to select relevant datasets based on metadata.
 
     Args:
         df (pd.DataFrame): Dataframe containing metadata (title, summary, links).
@@ -84,7 +77,7 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
         chatbot (LLMChatbot): An instance of the LLMChatbot class.
 
     Returns:
-        pd.DataFrame: A dataframe containing only the relevant datasets based on the LLM's decision.
+        pd.DataFrame: A dataframe containing only the relevant datasets.
     """
     relevant_indices = []
     total_datasets = len(df)
@@ -122,15 +115,24 @@ def use_llm_for_metadata_selection(df: pd.DataFrame, query: str, chatbot: LLMCha
     return relevant_datasets
 
 
-def directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, chatbot, data_df):
+def directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, chatbot):
     """
-    Improved follow-up function with dynamic SPARQL query generation.
+    Improved follow-up function using SPARQL results and metadata.
+
+    Args:
+        query (str): The follow-up query.
+        refined_datasets (list): Metadata for the refined datasets.
+        previous_answer (str): The previous LLM answer for context.
+        chatbot (LLMChatbot): Instance of the chatbot.
+
+    Returns:
+        str: LLM-generated follow-up response.
     """
     # Step 1: Classify query type
     query_type = classify_query(query)
 
     # Step 2: Generate SPARQL query dynamically
-    sparql_query = build_dynamic_sparql_query(query_type)
+    sparql_query = build_dynamic_sparql_query_optimized(query_type)
 
     # Step 3: Execute the query on the RDF graph
     sparql_results = query_rdf_graph(sparql_query)
@@ -138,21 +140,10 @@ def directly_use_llm_for_follow_up(query, refined_datasets, previous_answer, cha
     # Step 4: Format the SPARQL results
     graph_answer = ""
     if sparql_results:
-        if query_type == "structure":
-            graph_answer = "Dataset Structure:\n\n" + "\n".join(
-                [f"Column: {row.label}, Data Type: {row.dataType}" for row in sparql_results]
+        if query_type == "metadata":
+            graph_answer = "Metadata Overview:\n\n" + "\n".join(
+                [f"{row.dataset}: Title={row.title}, Summary={row.summary}, Link={row.link}" for row in sparql_results]
             )
-        elif query_type == "content":
-            for row in sparql_results:
-                dataset, title, summary, link, row_uri, property_uri, value = row
-                graph_answer += (
-                    f"Dataset Title: {title}\n"
-                    f"Summary: {summary}\n"
-                    f"Link: {link}\n"
-                    f"Row: {row_uri}\n"
-                    f"Property: {property_uri}\n"
-                    f"Value: {value}\n\n"
-                )
         else:
             graph_answer = "\n".join([f"{row.s}, {row.p}, {row.o}" for row in sparql_results])
 

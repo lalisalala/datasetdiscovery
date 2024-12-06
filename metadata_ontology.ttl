@@ -1,0 +1,180 @@
+@prefix ex: <http://example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:Dataset_1 a ex:Dataset ;
+    rdfs:label "Air Quality Summary Statistics" ;
+    ex:fileFormat "Csv" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Greater London Authority (Gla)" ;
+    ex:summary "Data for London air quality monitoring sites showing whether annual monitoring objectives were met for different species of pollutant. Data for 2016 includes the first two months of the year only so this is an indicative outlook. This data was accessed using the London Air API. For some species, all monitoring sites taking measurements have met the monitoring objectives over the last decade. Note that the total number of sites measuring a given species changes from year to year. Here all sites are grouped together regardless of their type (e.g. roadside, suburban, industrial) or geographic location. For other species, 60-100% of the monitoring sites taking measurements have met annual objectives over the last decade. All reportable sites are now compliant with the PM10 objective. The percentage of sites meeting annual nitrogen dioxide monitoring objectives has shown relatively little change but there have been improvements in recent years. The percentage of sites meeting annual monitoring objectives for ozone has fluctuated widely in the past but in recent years has increased." ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_3,
+        ex:Dataset_4,
+        ex:Dataset_5,
+        ex:Dataset_6,
+        ex:Dataset_7,
+        ex:Dataset_8 ;
+    schema:url <https://data.london.gov.uk/download/air-quality-summary-statistics/e7cab585-b760-4dfd-8de4-cdff81174594/annual-objectives-by-site-and-species.csv> .
+
+ex:Dataset_2 a ex:Dataset ;
+    rdfs:label "London Atmospheric Emissions Inventory (Laei) 2013 Air Quality Focus Areas - December 2016 Update" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Air_Pollution,
+        ex:Air_Quality,
+        ex:Exposure,
+        ex:Hotspots,
+        ex:Nitrogen_Dioxide,
+        ex:No2 ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "There are 187 Air Quality Focus Areas in London. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure. The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute. 1. Supporting Information (.ZIP - 113.4KB) - Definition, methodology and list of focus areas LAEI 2013 2. GIS files (.ZIP - 43.2KB) - GIS geographies in ArcGIS and MapInfo formats. 3. Images (.ZIP - 199.4MB) - Maps with focus areas at both London and borough level. EN-GB X-NONE X-NONE /* Style Definitions */ {mso-style-name:\"Table Normal\"; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:\"\"; mso-padding-alt:0cm 5.4pt 0cm 5.4pt; mso-para-margin:0cm; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:10.0pt; font-family:\"Times New Roman\",\"serif\";}" ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_3,
+        ex:Dataset_4,
+        ex:Dataset_5,
+        ex:Dataset_6,
+        ex:Dataset_7,
+        ex:Dataset_8,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/laei-2013-london-focus-areas/7fe48065-2cfa-40f6-a923-c7d1a8503a85/1.%2520Supporting%2520Information.zip> .
+
+ex:Air_Pollution a skos:Concept ;
+    skos:prefLabel "Air-Pollution" .
+
+ex:Dataset_3 a ex:Dataset ;
+    rdfs:label "Laei 2019 - Borough Air Quality Data For Llaqm" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "Following the release of the latest London Atmospheric Emissions Inventory (LAEI) 2019, additional data has been produced at Borough level, to assist London boroughs with their LLAQM (London Local Air Quality Management) duties. The data below is based on the NOx, NO2, PM10 and PM2.5 emissions and ground level NOx, NO2 and PM concentrations already published as part of the LAEI 2019. It includes the following datasets, which can be downloaded below: Maps of ground level concentrations across each borough for NOx, NO2, PM2.5 (annual mean), and PM10 (both annual mean and number of daily means over 50µg/m3) for years 2019, 2025 and 2030. Maps are provided as JPG and PDF files, and in two versions: one with an OS base map included (Conc2) and one without it (Conc1). Dashboards of emissions at borough level (tables and graphs) by source type for 2013, 2016, 2019, 2025 and 2030, for NOx, PM10, PM2.5 and CO2 Charts and tables of emissions by source type at borough level for NOx, PM10, PM2.5 and CO2, as reported in the dashboard of emissions. Additionally, a more detailed split of emissions for 2019, 2025 and 2030 is provided in alternative charts. Update 25 04 2023: Emissions and Concentration Maps for forecast years 2025 and 2030 have been added." ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_5,
+        ex:Dataset_6,
+        ex:Dataset_8,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/laei-2019---borough-air-quality-data-for-llaqm/9ff81522-8e3f-46b8-b090-3dadee490846/Westminster.zip> .
+
+ex:Dataset_4 a ex:Dataset ;
+    rdfs:label "London Atmospheric Emissions Inventory (Laei) 2010 Air Quality Focus Areas" ;
+    ex:fileFormat "Excel Spreadsheet" ;
+    ex:hasTopic ex:Air_Quality,
+        ex:Exposure,
+        ex:Focus_Areas,
+        ex:Gis,
+        ex:Hotspots,
+        ex:Laqm,
+        ex:Nitrogen_Dioxide,
+        ex:Particulate_Matter,
+        ex:Pollution ;
+    ex:publisher "Greater London Authority (Gla)" ;
+    ex:summary "The LAEI 2010 has since been superseded. Click here for the full list of releases. There are 187 Air Quality Focus Areas in the Capital. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure. The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute. GIS Files (Zip) 117 KB Supporting Information (Zip) 241 KB" ;
+    schema:relatedTo ex:Dataset_7,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/air-quality-focus-areas/4c3b8f5c-af90-41b5-9670-63c8f11fe566/focus-areas.xls> .
+
+ex:Focus_Areas a skos:Concept ;
+    skos:prefLabel "Focus-Areas" .
+
+ex:Gis a skos:Concept ;
+    skos:prefLabel "Gis" .
+
+ex:Laqm a skos:Concept ;
+    skos:prefLabel "Laqm" .
+
+ex:No2 a skos:Concept ;
+    skos:prefLabel "No2" .
+
+ex:Particulate_Matter a skos:Concept ;
+    skos:prefLabel "Particulate-Matter" .
+
+ex:Pollution a skos:Concept ;
+    skos:prefLabel "Pollution" .
+
+ex:Dataset_5 a ex:Dataset ;
+    rdfs:label "Laei 2019 - Borough Air Quality Data For Llaqm" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "Following the release of the latest London Atmospheric Emissions Inventory (LAEI) 2019, additional data has been produced at Borough level, to assist London boroughs with their LLAQM (London Local Air Quality Management) duties. The data below is based on the NOx, NO2, PM10 and PM2.5 emissions and ground level NOx, NO2 and PM concentrations already published as part of the LAEI 2019. It includes the following datasets, which can be downloaded below: Maps of ground level concentrations across each borough for NOx, NO2, PM2.5 (annual mean), and PM10 (both annual mean and number of daily means over 50µg/m3) for years 2019, 2025 and 2030. Maps are provided as JPG and PDF files, and in two versions: one with an OS base map included (Conc2) and one without it (Conc1). Dashboards of emissions at borough level (tables and graphs) by source type for 2013, 2016, 2019, 2025 and 2030, for NOx, PM10, PM2.5 and CO2 Charts and tables of emissions by source type at borough level for NOx, PM10, PM2.5 and CO2, as reported in the dashboard of emissions. Additionally, a more detailed split of emissions for 2019, 2025 and 2030 is provided in alternative charts. Update 25 04 2023: Emissions and Concentration Maps for forecast years 2025 and 2030 have been added." ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_6,
+        ex:Dataset_8,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/laei-2019---borough-air-quality-data-for-llaqm/949be68a-c402-4005-be62-7063408f2a9e/Ealing.zip> .
+
+ex:Dataset_7 a ex:Dataset ;
+    rdfs:label "London Atmospheric Emissions Inventory (Laei) 2010 Air Quality Focus Areas" ;
+    ex:fileFormat "Html" ;
+    ex:hasTopic ex:Air_Quality,
+        ex:Exposure,
+        ex:Focus_Areas,
+        ex:Gis,
+        ex:Hotspots,
+        ex:Laqm,
+        ex:Nitrogen_Dioxide,
+        ex:Particulate_Matter,
+        ex:Pollution ;
+    ex:publisher "Greater London Authority (Gla)" ;
+    ex:summary "The LAEI 2010 has since been superseded. Click here for the full list of releases. There are 187 Air Quality Focus Areas in the Capital. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure. The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute. GIS Files (Zip) 117 KB Supporting Information (Zip) 241 KB" ;
+    schema:relatedTo ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/air-quality-focus-areas/bd482f3b-30e8-42fd-899d-277cc04ea4da> .
+
+ex:Air_Quality a skos:Concept ;
+    skos:prefLabel "Air-Quality" .
+
+ex:Dataset_6 a ex:Dataset ;
+    rdfs:label "Laei 2019 - Borough Air Quality Data For Llaqm" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "Following the release of the latest London Atmospheric Emissions Inventory (LAEI) 2019, additional data has been produced at Borough level, to assist London boroughs with their LLAQM (London Local Air Quality Management) duties. The data below is based on the NOx, NO2, PM10 and PM2.5 emissions and ground level NOx, NO2 and PM concentrations already published as part of the LAEI 2019. It includes the following datasets, which can be downloaded below: Maps of ground level concentrations across each borough for NOx, NO2, PM2.5 (annual mean), and PM10 (both annual mean and number of daily means over 50µg/m3) for years 2019, 2025 and 2030. Maps are provided as JPG and PDF files, and in two versions: one with an OS base map included (Conc2) and one without it (Conc1). Dashboards of emissions at borough level (tables and graphs) by source type for 2013, 2016, 2019, 2025 and 2030, for NOx, PM10, PM2.5 and CO2 Charts and tables of emissions by source type at borough level for NOx, PM10, PM2.5 and CO2, as reported in the dashboard of emissions. Additionally, a more detailed split of emissions for 2019, 2025 and 2030 is provided in alternative charts. Update 25 04 2023: Emissions and Concentration Maps for forecast years 2025 and 2030 have been added." ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_8,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/laei-2019---borough-air-quality-data-for-llaqm/089583d8-255f-4da5-9f2d-b5f2ee7da175/Hounslow.zip> .
+
+ex:Exposure a skos:Concept ;
+    skos:prefLabel "Exposure" .
+
+ex:Hotspots a skos:Concept ;
+    skos:prefLabel "Hotspots" .
+
+ex:Nitrogen_Dioxide a skos:Concept ;
+    skos:prefLabel "Nitrogen-Dioxide" .
+
+ex:Dataset_8 a ex:Dataset ;
+    rdfs:label "Laei 2019 - Borough Air Quality Data For Llaqm" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "Following the release of the latest London Atmospheric Emissions Inventory (LAEI) 2019, additional data has been produced at Borough level, to assist London boroughs with their LLAQM (London Local Air Quality Management) duties. The data below is based on the NOx, NO2, PM10 and PM2.5 emissions and ground level NOx, NO2 and PM concentrations already published as part of the LAEI 2019. It includes the following datasets, which can be downloaded below: Maps of ground level concentrations across each borough for NOx, NO2, PM2.5 (annual mean), and PM10 (both annual mean and number of daily means over 50µg/m3) for years 2019, 2025 and 2030. Maps are provided as JPG and PDF files, and in two versions: one with an OS base map included (Conc2) and one without it (Conc1). Dashboards of emissions at borough level (tables and graphs) by source type for 2013, 2016, 2019, 2025 and 2030, for NOx, PM10, PM2.5 and CO2 Charts and tables of emissions by source type at borough level for NOx, PM10, PM2.5 and CO2, as reported in the dashboard of emissions. Additionally, a more detailed split of emissions for 2019, 2025 and 2030 is provided in alternative charts. Update 25 04 2023: Emissions and Concentration Maps for forecast years 2025 and 2030 have been added." ;
+    schema:relatedTo ex:Dataset_10,
+        ex:Dataset_9 ;
+    schema:url <https://data.london.gov.uk/download/laei-2019---borough-air-quality-data-for-llaqm/ebc91435-b5c8-4963-9cc1-93dbdaa36390/Croydon.zip> .
+
+ex:Unknown_Topic a skos:Concept ;
+    skos:prefLabel "Unknown Topic" .
+
+ex:Dataset_10 a ex:Dataset ;
+    rdfs:label "Laei 2019 - Borough Air Quality Data For Llaqm" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Unknown_Topic ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "Following the release of the latest London Atmospheric Emissions Inventory (LAEI) 2019, additional data has been produced at Borough level, to assist London boroughs with their LLAQM (London Local Air Quality Management) duties. The data below is based on the NOx, NO2, PM10 and PM2.5 emissions and ground level NOx, NO2 and PM concentrations already published as part of the LAEI 2019. It includes the following datasets, which can be downloaded below: Maps of ground level concentrations across each borough for NOx, NO2, PM2.5 (annual mean), and PM10 (both annual mean and number of daily means over 50µg/m3) for years 2019, 2025 and 2030. Maps are provided as JPG and PDF files, and in two versions: one with an OS base map included (Conc2) and one without it (Conc1). Dashboards of emissions at borough level (tables and graphs) by source type for 2013, 2016, 2019, 2025 and 2030, for NOx, PM10, PM2.5 and CO2 Charts and tables of emissions by source type at borough level for NOx, PM10, PM2.5 and CO2, as reported in the dashboard of emissions. Additionally, a more detailed split of emissions for 2019, 2025 and 2030 is provided in alternative charts. Update 25 04 2023: Emissions and Concentration Maps for forecast years 2025 and 2030 have been added." ;
+    schema:url <https://data.london.gov.uk/download/laei-2019---borough-air-quality-data-for-llaqm/17c5514a-fc82-412c-aa5b-8313d58fe434/Brent.zip> .
+
+ex:Dataset_9 a ex:Dataset ;
+    rdfs:label "London Atmospheric Emissions Inventory (Laei) 2013 Air Quality Focus Areas - December 2016 Update" ;
+    ex:fileFormat "ZIP Archive" ;
+    ex:hasTopic ex:Air_Pollution,
+        ex:Air_Quality,
+        ex:Exposure,
+        ex:Hotspots,
+        ex:Nitrogen_Dioxide,
+        ex:No2 ;
+    ex:publisher "Gla And Tfl Air Quality" ;
+    ex:summary "There are 187 Air Quality Focus Areas in London. These are locations that not only exceed the EU annual mean limit value for NO2 but are also locations with high human exposure. The Focus Areas were defined to address concerns raised by boroughs within the LAQM review process and forecasted air pollution trends. This is not an exhaustive list of London’s hotspot locations, but where the GLA believe the problem to be most acute. 1. Supporting Information (.ZIP - 113.4KB) - Definition, methodology and list of focus areas LAEI 2013 2. GIS files (.ZIP - 43.2KB) - GIS geographies in ArcGIS and MapInfo formats. 3. Images (.ZIP - 199.4MB) - Maps with focus areas at both London and borough level. EN-GB X-NONE X-NONE /* Style Definitions */ {mso-style-name:\"Table Normal\"; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:\"\"; mso-padding-alt:0cm 5.4pt 0cm 5.4pt; mso-para-margin:0cm; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:10.0pt; font-family:\"Times New Roman\",\"serif\";}" ;
+    schema:relatedTo ex:Dataset_10 ;
+    schema:url <https://data.london.gov.uk/download/laei-2013-london-focus-areas/09755781-bc3a-473d-b3c6-c641c9e4548f/3.%2520Images.zip> .
+
